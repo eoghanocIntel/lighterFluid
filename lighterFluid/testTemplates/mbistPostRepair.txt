@@ -1,0 +1,28 @@
+Test MbistVminTC ###TestName###
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::###Levels###";
+	TimingsTc = "BASE::###Timings###";
+	Patlist = "###Patlist###";
+	VoltageTargets = VminVars.###PowerTarget###;
+	StartVoltages = VminVars.###PowerHighLimit###;
+	EndVoltageLimits = VminVars.###PowerHighLimit###;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	SetPointsPreInstance = VminVars.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_###Module###/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_###Module###/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}

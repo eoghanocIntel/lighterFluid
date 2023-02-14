@@ -1,0 +1,13 @@
+Test MbistRasterRepairTC ###TestName###
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::###Levels###";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "###Patlist###";
+	RasterInputFile = "./Modules/ARR_###Module###/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::###Timings###";
+}
