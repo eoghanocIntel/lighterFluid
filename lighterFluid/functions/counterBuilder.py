@@ -32,7 +32,7 @@ def counterBuilder(dataset):
 
         for j in range(0,int(dataset.portCount[i])):
             # we need to check if the current port is in the pass port list (ignore if so)
-            if str(j) in dataset.passPorts[i]:
+            if str(j) in str(dataset.passPorts[i]):
                 continue;
             else:
                 counterData = dummyCounter + currTest + "_" + str(j); 

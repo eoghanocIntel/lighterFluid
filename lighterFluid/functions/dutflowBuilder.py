@@ -103,7 +103,7 @@ def printASmolBoi(currTest):
         except:
             nextTest = "GoTo " + currTest.PortList[i];
 
-        if (str(i) in currTest.passPorts):
+        if (str(i) in str(currTest.passPorts)):
             body = body + """
 		Result {portNo}
 		{{
@@ -153,7 +153,7 @@ def printABigBoi(currComp):
         except:
             nextTest = "GoTo " + currComp.PortList[i];
 
-        if (str(i) in currComp.passPorts):
+        if (str(i) in str(currComp.passPorts)):
             body = body + """
 		Result {portNo}
 		{{

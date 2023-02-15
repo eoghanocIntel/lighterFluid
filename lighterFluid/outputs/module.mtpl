@@ -3,10 +3,10 @@ Version 1.0;
 
 ProgramStyle = Modular;
 TestPlan ARR_CCF;Import ARR_CCF;
-Import fuseConfig.xml;
-Import mbistRepair.xml;
 Import mbistPostRepair.xml;
 Import mbistRaster.xml;
+Import mbistRepair.xml;
+Import fuseConfig.xml;
 
 Counters
 {
@@ -39,8 +39,8 @@ Test MbistVminTC SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
 	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIAHighLimit;
-	EndVoltageLimits = VminVars.VCCIAHighLimit;
+	StartVoltages = VminVars.VCCIA;
+	EndVoltageLimits = VminVars.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
@@ -85,8 +85,8 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
 	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIAHighLimit;
-	EndVoltageLimits = VminVars.VCCIAHighLimit;
+	StartVoltages = VminVars.VCCIA;
+	EndVoltageLimits = VminVars.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
@@ -113,8 +113,8 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
 	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIAHighLimit;
-	EndVoltageLimits = VminVars.VCCIAHighLimit;
+	StartVoltages = VminVars.VCCIA;
+	EndVoltageLimits = VminVars.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;

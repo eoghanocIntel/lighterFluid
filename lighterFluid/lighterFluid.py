@@ -10,7 +10,9 @@ from functions import flowFileBuilder
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionFile = "inputs\\rev0.csv";
+definitionFile = "inputs\\rev1.xlsx";
+definitionPage = "demoPage";
+findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 outputMtpl = "outputs\\module.mtpl";
 
 
@@ -20,11 +22,11 @@ outputMtpl = "outputs\\module.mtpl";
 #####################
 
 ### read in File
-dataset = pandas.read_csv(definitionFile);
+dataset = pandas.read_excel(definitionFile, sheet_name=definitionPage);
 
 importSection = importBuilder.importBuilder(dataset);
 counterSection = counterBuilder.counterBuilder(dataset);
-testSection = testBuilder.testBuilder(dataset);
+testSection = testBuilder.testBuilder(dataset,findAndReplaceFile);
 dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
 
 overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;

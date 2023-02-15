@@ -8,8 +8,14 @@ testList = [];
 ####################
 ##### FUNCTION #####
 ####################
-def testBuilder(dataset):
+def testBuilder(dataset,findAndReplaceFile):
     # This function should build the test list.
+
+    findAndReplaceDict = {};
+    with open(findAndReplaceFile, 'r') as file:
+        for line in file:
+            splitLine = line.strip().split(",");
+            findAndReplaceDict[splitLine[0]] = splitLine[1];
 
     for i in range(0,len(dataset.Template)):
         # ignore composites
@@ -29,13 +35,9 @@ def testBuilder(dataset):
         with open(fileToOpen, 'r') as file:
             currTest = file.read();
 
-        currTest = currTest.replace("###TestName###",currTestName);
-        currTest = currTest.replace("###Levels###",currLevels);
-        currTest = currTest.replace("###Timings###",currTimings);
-        currTest = currTest.replace("###Patlist###",currPlist);
-        currTest = currTest.replace("###PowerTarget###",currPwr);
-        currTest = currTest.replace("###PowerHighLimit###",currPwr+"HighLimit");
-        currTest = currTest.replace("###Module###",currModule);
+        for key,value in findAndReplaceDict.items():
+            #print(dataset[value][i])
+            currTest = currTest.replace(key,str(dataset[value][i]));
 
         testList.append(currTest);
 
