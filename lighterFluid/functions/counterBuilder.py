@@ -25,9 +25,9 @@ def counterBuilder(dataset):
 
     for i in range(0,len(dataset.TestName)):
         # ignore composites
-        if("COMPOSITE" in dataset.Template[i]):
+        if(("COMPOSITE" in dataset.Template[i]) or ("TP_BEGIN" in dataset.Template[i]) or ("TP_END" in dataset.Template[i])):
             continue;
-        
+
         currTest = dataset.TestName[i];
 
         for j in range(0,int(dataset.portCount[i])):

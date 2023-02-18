@@ -11,7 +11,7 @@ from functions import flowFileBuilder
 ##### CONFIGURATION #####
 #########################
 definitionFile = "inputs\\rev1.xlsx";
-definitionPage = "demoPage";
+definitionPage = "arr_ccf";
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 outputMtpl = "outputs\\module.mtpl";
 

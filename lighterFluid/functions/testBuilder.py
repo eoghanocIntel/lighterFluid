@@ -19,7 +19,7 @@ def testBuilder(dataset,findAndReplaceFile):
 
     for i in range(0,len(dataset.Template)):
         # ignore composites
-        if("COMPOSITE" in dataset.Template[i]):
+        if(("COMPOSITE" in dataset.Template[i]) or ("TP_BEGIN" in dataset.Template[i]) or ("TP_END" in dataset.Template[i])):
             continue;
         
         currTemplate = dataset.Template[i];

@@ -2,35 +2,174 @@
 Version 1.0;
 
 ProgramStyle = Modular;
-TestPlan ARR_CCF;Import ARR_CCF;
+TestPlan ARR_CCF;
+Import ARR_CCF.usvr;
+
+Import hvqk.xml;
 Import mbistPostRepair.xml;
+Import TP_BEGIN.xml;
+Import vminTc.xml;
 Import mbistRaster.xml;
-Import mbistRepair.xml;
 Import fuseConfig.xml;
+Import TP_END.xml;
+Import mbistRepair.xml;
 
 Counters
 {
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_0,
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_5,
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_6,
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_7,
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_8,
-	n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_9,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_0,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_2,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_3,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_4,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_5,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_6,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_7,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_8,
-	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_9,
-	n60000000_fail_ALL_CCF_FUSE_E_BEGIN_X_VCCIA_LFM_X_REPAIR_0,
-	n60000000_fail_ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR_0,
-	n60000000_fail_ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY_0
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_1,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_9,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_0,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_9,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_0,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_9,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_0,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_5,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_6,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_7,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_8,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_9,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_0,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_2,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_3,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_4,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_5,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_6,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_7,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_8,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_9,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_0,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_9,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_0,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_9,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_5,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_6,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_7,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_8,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_9,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_0,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_2,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_3,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_4,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_5,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_6,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_7,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_8,
+	n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_9,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_0,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_5,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_6,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_7,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_8,
+	n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_9,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_0,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_2,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_3,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_4,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_5,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_6,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_7,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_8,
+	n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_9,
+	n60000000_fail_ALL_CCF_FUSE_E_BEGIN_T_VCCIA_MAX_LFM_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR_0,
+	n60000000_fail_SSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_SSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_ALL_CCF_STRESS_K_STRESS_T_VCCIA_MAX_LFM_CBO_SBO_0,
+	n60000000_fail_ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA_0,
+	n60000000_fail_SSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA_0,
+	n60000000_fail_ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO_0,
+	n60000000_fail_SSA_CCF_VMAX_K_END_T_VCCIA_MIN_LFM_CBO_0,
+	n60000000_fail_SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA_0
 } # End of Test Counter Definition
 
-Test MbistVminTC SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR
 {
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	ForwardingMode = "DISABLED";
@@ -38,14 +177,14 @@ Test MbistVminTC SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIA;
-	EndVoltageLimits = VminVars.VCCIA;
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	SetPointsPreInstance = VminVars.DefaultRatios;
+	# SetPointsPreInstance = "";
 	SetPointsPlistParamName = "Patlist";
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
@@ -58,7 +197,7 @@ Test MbistVminTC SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR
 	# SliceDisable = "DISABLED";
 	# MaskIncoming = "DISABLED";
 }
-Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER
 {
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
@@ -71,12 +210,7 @@ Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER
 	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
-Test PrimePatConfigTestMethod ALL_CCF_FUSE_E_BEGIN_X_VCCIA_LFM_X_REPAIR
-{
-	ConfigurationFile = "./Modules/ARR_CCF/InputFiles/PatConfig_MbistRepair.setpoints.json";
-	SetPoint = "DF_io_from_BISR_SharedStorage";
-}
-Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR
 {
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	ForwardingMode = "DISABLED";
@@ -84,14 +218,306 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIA;
-	EndVoltageLimits = VminVars.VCCIA;
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	SetPointsPreInstance = VminVars.DefaultRatios;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test MbistVminTC LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistRasterRepairTC LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL
+{
+	CtvCapturePins = "XXTDO";
+	EnableRepair = "FALSE";
+	FailuresToCapturePerPattern = 0;
+	FailuresToCaptureTotal = 0;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MaxFailuresPerPatternToItuff = 0;
+	MaxFailuresToItuff = 0;
+	Patlist = "lnl_dummy_list";
+	RasterInputFile = "./Modules/ARR_CCF/InputFiles/MBIST_RASTER.json";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+Test PrimePatConfigTestMethod ALL_CCF_FUSE_E_BEGIN_T_VCCIA_MAX_LFM_REPAIR
+{
+	ConfigurationFile = "./Modules/ARR_CCF/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
 	SetPointsPlistParamName = "Patlist";
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
@@ -104,7 +530,7 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR
 	# SliceDisable = "DISABLED";
 	# MaskIncoming = "DISABLED";
 }
-Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR
 {
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	ForwardingMode = "DISABLED";
@@ -112,14 +538,14 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = VminVars.VCCIA;
-	StartVoltages = VminVars.VCCIA;
-	EndVoltageLimits = VminVars.VCCIA;
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	SetPointsPreInstance = VminVars.DefaultRatios;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
 	SetPointsPlistParamName = "Patlist";
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
@@ -128,6 +554,790 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY
 	MbistTestMode = "PostRepair";
 	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
 	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = ARR_CCF.DefaultRatios;
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "PostRepair";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Virtual"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ALL_CCF_STRESS_K_STRESS_T_VCCIA_MAX_LFM_CBO_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMAX_K_END_T_VCCIA_MIN_LFM_CBO
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCIA;
+	StartVoltages = ARR_CCF.VCCIA;
+	EndVoltageLimits = ARR_CCF.VCCIA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	FailCaptureCount = 99999;
+	# SliceDisable = "DISABLED";
+	# MaskIncoming = "DISABLED";
+}
+Test MbistVminTC SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA
+{
+	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
+	ForwardingMode = "DISABLED";
+	UpdateTrackingStructure = "DISABLED"; # KEEP DISABLED for first silicon, ONPASS when changed to KILL
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "lnl_dummy_list";
+	VoltageTargets = ARR_CCF.VCCSA;
+	StartVoltages = ARR_CCF.VCCSA;
+	EndVoltageLimits = ARR_CCF.VCCSA;
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	# SetPointsPreInstance = "";
+	SetPointsPlistParamName = "Patlist";
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	MappingConfig = "./Modules/ARR_CCF/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "Compressed_skippatmod"; # Compressed_skippatmod, Off
+	FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 99999;
 	# SliceDisable = "DISABLED";
 	# MaskIncoming = "DISABLED";
@@ -135,25 +1345,1145 @@ Test MbistVminTC ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY
 
 DUTFlow PRE_REPAIR
 {
-	DUTFlowItem SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR @EDC
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR @EDC
 	{
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_0;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+		}
+        Result 1
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_1;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_2;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_3;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_4;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_5;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_6;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_7;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_8;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_RASTER_9;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_2;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_3;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_4;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_5;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_6;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_7;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_8;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_RASTER_9;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_0;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_2;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_3;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_4;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_5;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_6;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_7;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_8;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO0_SAR_RASTER_9;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_0;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_5;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_6;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_7;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_8;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_9;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_2;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_3;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_4;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_5;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_6;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_7;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_8;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_9;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_2;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_3;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_4;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_5;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_6;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_7;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_8;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_RASTER_9;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_2;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_3;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_4;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_5;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_6;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_7;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_8;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_RASTER_9;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_0;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+		}
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_5;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_6;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_7;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_8;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_BISR_9;
+			GoTo SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_0;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_2;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_3;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_4;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 5
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_5;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 6
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_6;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 7
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_7;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 8
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_8;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+        Result 9
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_T_VCCSA_MAX_LFM_CBO1_SAR_RASTER_9;
+			GoTo LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+	}
+	DUTFlowItem LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_0;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
 		Result 1
@@ -179,57 +2509,57 @@ DUTFlow PRE_REPAIR
         Result 5
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_5;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_5;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 6
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_6;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_6;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 7
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_7;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_7;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 8
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_8;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_8;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 9
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_BISR_9;
-			GoTo SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_9;
+			GoTo LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
 	}
-	DUTFlowItem SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER @EDC
+	DUTFlowItem LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL @EDC
 	{
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_0;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_0;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
@@ -241,56 +2571,56 @@ DUTFlow PRE_REPAIR
         Result 2
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_2;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_2;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 3
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_3;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_3;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 4
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_4;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_4;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 5
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_5;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_5;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 6
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_6;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_6;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 7
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_7;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_7;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 8
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_8;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_8;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
         Result 9
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_RASTER_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_RASTER_9;
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_RASTER_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_9;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
@@ -298,24 +2628,24 @@ DUTFlow PRE_REPAIR
 }
 DUTFlow REPAIR
 {
-	DUTFlowItem ALL_CCF_FUSE_E_BEGIN_X_VCCIA_LFM_X_REPAIR ALL_CCF_FUSE_E_BEGIN_X_VCCIA_LFM_X_REPAIR @EDC
+	DUTFlowItem ALL_CCF_FUSE_E_BEGIN_T_VCCIA_MAX_LFM_REPAIR ALL_CCF_FUSE_E_BEGIN_T_VCCIA_MAX_LFM_REPAIR @EDC
 	{
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_FUSE_E_BEGIN_X_VCCIA_LFM_X_REPAIR_0;
+	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_FUSE_E_BEGIN_T_VCCIA_MAX_LFM_REPAIR_0;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
@@ -328,24 +2658,213 @@ DUTFlow REPAIR
 }
 DUTFlow POST_REPAIR
 {
-	DUTFlowItem ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR @EDC
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR @EDC
 	{
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_POST_REPAIR_0;
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_SAR_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_SAR_POST_REPAIR_0;
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR;
+		}
+	}
+	DUTFlowItem SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_HRY_E_BEGIN_T_VCCIA_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR_0;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
@@ -356,7 +2875,7 @@ DUTFlow POST_REPAIR
 		}
 	}
 }
-DUTFlow BEGIN
+DUTFlow ARR_CCF_BEGIN @BEGIN_SubFlow
 {
     DUTFlowItem PRE_REPAIR PRE_REPAIR
 	{
@@ -419,35 +2938,666 @@ DUTFlow BEGIN
         Result 0
         {
 	        Property PassFail = "Fail";
-			GoTo ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY;
+			Return 1;
 		}
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY;
+			Return 1;
 		}
 	}
-	DUTFlowItem ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY @EDC
+}
+DUTFlow ARR_CCF_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem SSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO SSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO @EDC
 	{
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_HRY_E_BEGIN_X_VCCIA_LFM_X_LLC_DAT_SANITY_0;
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO_0;
+			GoTo ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_PREHVQK_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_PREHVQK_T_VCCIA_MIN_LFM_SBO_0;
 			Return 1;
 	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
         }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_POSTHVQK @POSTHVQK_SubFlow
+{
+	DUTFlowItem SSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO SSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO_0;
+			GoTo ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_POSTHVQK_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_POSTHVQK_T_VCCIA_MIN_LFM_SBO_0;
+			Return 1;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_STRESS @STRESS_SubFlow
+{
+	DUTFlowItem ALL_CCF_STRESS_K_STRESS_T_VCCIA_MAX_LFM_CBO_SBO ALL_CCF_STRESS_K_STRESS_T_VCCIA_MAX_LFM_CBO_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_STRESS_K_STRESS_T_VCCIA_MAX_LFM_CBO_SBO_0;
+			GoTo ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA;
+		}
+	}
+	DUTFlowItem ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ALL_CCF_STRESS_K_STRESS_T_VCCSA_MAX_LFM_PMA_0;
+			Return 1;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow KS
+{
+	DUTFlowItem SSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO SSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_LSA_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO_0;
+			GoTo ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_END_T_VCCSA_MIN_LFM_PMA_0;
+			GoTo ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO;
+		}
+	}
+	DUTFlowItem ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_ROM_CCF_VMIN_K_END_T_VCCIA_MIN_LFM_SBO_0;
+			Return 1;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow VMAX
+{
+	DUTFlowItem SSA_CCF_VMAX_K_END_T_VCCIA_MIN_LFM_CBO SSA_CCF_VMAX_K_END_T_VCCIA_MIN_LFM_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMAX_K_END_T_VCCIA_MIN_LFM_CBO_0;
+			GoTo SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n60000000_fail_SSA_CCF_VMAX_K_END_T_VCCSA_MIN_LFM_PMA_0;
+			Return 1;
+	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_END @END_SubFlow
+{
+    DUTFlowItem KS KS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo VMAX;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAX;
+		}
+	}
+    DUTFlowItem VMAX VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
 		Result 1
 		{
 			Property PassFail = "Pass";

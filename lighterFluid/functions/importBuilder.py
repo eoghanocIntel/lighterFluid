@@ -19,8 +19,8 @@ def importBuilder(dataset):
     # Mainly it'll build the "Import" section
 
     currModule = list(set(dataset.Module.dropna()))[0];
-    testPlan = "TestPlan ARR_" + currModule + ";";
-    uservar = "Import ARR_" + currModule + ";";
+    testPlan = "TestPlan ARR_" + currModule + ";\n";
+    uservar = "Import ARR_" + currModule + ".usvr;\n";
 
     importSet = set(dataset.Template);
 

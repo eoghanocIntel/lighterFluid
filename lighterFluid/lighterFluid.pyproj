@@ -49,9 +49,12 @@
     <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="inputs\rev0.csv" />
     <Content Include="inputs\rev1.xlsx" />
+    <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="testTemplates\fuseConfig.txt" />
     <Content Include="testTemplates\mbistPostRepair.txt" />
     <Content Include="testTemplates\mbistRaster.txt" />
+    <Content Include="testTemplates\hvqk.txt" />
+    <Content Include="testTemplates\vminTc.txt" />
     <Content Include="testTemplates\mbistRepair.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
