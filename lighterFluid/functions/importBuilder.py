@@ -20,7 +20,7 @@ def importBuilder(dataset):
 
     currModule = list(set(dataset.Module.dropna()))[0];
     testPlan = "TestPlan ARR_" + currModule + ";\n";
-    uservar = "Import ARR_" + currModule + ".usvr;\n";
+    uservar = "Import ARR_" + currModule + ".usrv;\n";
 
     importSet = set(dataset.Template);
 
