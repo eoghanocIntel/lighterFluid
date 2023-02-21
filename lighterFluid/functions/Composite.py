@@ -4,4 +4,5 @@ class Composite:
         self.CompositeName = "";
         self.Contents = [];
         self.portCount = "";
+        self.passPorts = "";
         self.PortList = [];

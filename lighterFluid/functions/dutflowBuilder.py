@@ -51,9 +51,11 @@ def flowCursion(dataset, rowCount):
         currTest.TestName = dataset.TestName[i];
         currTest.passPorts = dataset.passPorts[i];
         currTest.portCount = dataset.portCount[i];
+        currTest.Module = dataset.Module[i];
         currTest.IB = dataset.IB[i];
         currTest.FB = dataset.FB[i];
-        #currTest.Counter = dataset.IB[i];
+        currTest.Counter = dataset.Counter[i];
+        currTest.KillEnabled = dataset.killEnabled[i];
 
         # This is ugly and I hate it but I'm doing it to get this done quick.
         # I'm certain a better coder will look at this and vomit.
@@ -81,8 +83,14 @@ def flowCursion(dataset, rowCount):
 ##############################
 def printASmolBoi(currTest):
 
+    currKill = currTest.KillEnabled;
+    killOrEdc = "";
+    if not currKill:
+        killOrEdc = "@EDC";
+    
+
     header = """
-	DUTFlowItem {name} {name} @EDC
+	DUTFlowItem {name} {name} {killOrEdc}
 	{{
 		Result -2
 		{{
@@ -95,9 +103,20 @@ def printASmolBoi(currTest):
 			Property PassFail = "Fail";
 			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
-		}}""".format(name = currTest.TestName);
+		}}""".format(name = currTest.TestName, killOrEdc = killOrEdc);
     footer = "\n\t}";
     body = "";
+
+
+    
+    currIb =        str(int(currTest.IB));
+    currFb =        str(int(currTest.FB));
+    currCounter =   str(int(currTest.Counter));
+    currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
+
+    sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + currTest.Module + "_" + currTest.TestName + "_SHARED_BIN"
+    if not currKill:
+        sharedBin = "##EDC## " + sharedBin;
 
     for i in range(0,int(currTest.portCount)):
         nextTest = "";
@@ -115,15 +134,16 @@ def printASmolBoi(currTest):
 			{nextTest};
 		}}""".format(portNo=i, nextTest=nextTest);
         else:
-            dummyCounter = "n60000000_fail_" + currTest.TestName + "_" + str(i);
+            dummyCounter = "n" + currPheoBin + "_fail_" + currTest.TestName + "_" + str(i);
             body = body + """
         Result {portNo}
         {{
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_CCF::{dummyCounter};
+	        {sharedBin};
 			{nextTest};
-	        # #EDC###SetBin SoftBins.b60000000_fail_ARR_MBISTREP_IO_ROM_MBIST_HRY_K_BEGIN_TAP_CFN_NOM_LFM_0;
-        }}""".format(portNo=i, dummyCounter = dummyCounter, nextTest=nextTest);
+        }}""".format(portNo=i, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
+
 
     return header + body + footer;
 

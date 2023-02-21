@@ -1,4 +1,4 @@
-Test MbistRasterRepairTC ###TestName###
+Test MbistRasterTC ###TestName###
 {
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";

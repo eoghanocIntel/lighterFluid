@@ -29,13 +29,17 @@ def counterBuilder(dataset):
             continue;
 
         currTest = dataset.TestName[i];
+        currIb = str(int(dataset.IB[i]));
+        currFb = str(int(dataset.FB[i]));
+        currCounter = str(int(dataset.Counter[i]));
+        currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
 
         for j in range(0,int(dataset.portCount[i])):
             # we need to check if the current port is in the pass port list (ignore if so)
             if str(j) in str(dataset.passPorts[i]):
                 continue;
             else:
-                counterData = dummyCounter + currTest + "_" + str(j); 
+                counterData = "\tn" + currPheoBin + "_fail_" + currTest + "_" + str(j); 
                 counterList.append(counterData);
 
     counterSection = counterBegin + ",\n".join(counterList) + counterEnd;

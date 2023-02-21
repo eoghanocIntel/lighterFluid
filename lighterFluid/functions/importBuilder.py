@@ -22,7 +22,7 @@ def importBuilder(dataset):
     testPlan = "TestPlan ARR_" + currModule + ";\n";
     uservar = "Import ARR_" + currModule + ".usrv;\n";
 
-    importSet = set(dataset.Template);
+    importSet = set(dataset.TemplateLookup);
 
     for template in importSet:
         if("COMPOSITE" in template):
