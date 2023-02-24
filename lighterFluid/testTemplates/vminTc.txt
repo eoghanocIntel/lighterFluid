@@ -7,4 +7,6 @@ Test PrimeVminSearchTestMethod ###TestName###
 	StepSize = 0.02;
 	TimingsTc = "BASE::###Timings###";
 	VoltageTargets = "0.8";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "###baseNumber###";
 }

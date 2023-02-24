@@ -1,4 +1,5 @@
 import pandas
+import math
 
 ##################
 ##### BASICS #####
@@ -23,12 +24,6 @@ def testBuilder(dataset,findAndReplaceFile):
             continue;
         
         currTemplate = dataset.Template[i];
-        currTestName = dataset.TestName[i];
-        currModule = dataset.Module[i];
-        currLevels = dataset.Levels[i];
-        currTimings = dataset.Timings[i];
-        currPlist = dataset.plist[i];
-        currPwr = dataset.PowerRail[i];
 
         fileToOpen = "testTemplates\\" + currTemplate + ".txt"
 
@@ -37,7 +32,16 @@ def testBuilder(dataset,findAndReplaceFile):
 
         for key,value in findAndReplaceDict.items():
             #print(dataset[value][i])
-            currTest = currTest.replace(key,str(dataset[value][i]));
+            if (key in ["###baseNumber###"]):
+                if math.isnan(dataset[value][i]):
+                    currValue = "";
+                else:
+                    currValue = int(dataset[value][i]);
+                    currValue = str(currValue);
+            else:
+                currValue = str(dataset[value][i]);
+
+            currTest = currTest.replace(key,currValue);
 
         testList.append(currTest);
 
