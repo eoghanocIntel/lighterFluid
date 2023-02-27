@@ -27,6 +27,9 @@ def importBuilder(dataset):
     for template in importSet:
         if("COMPOSITE" in template):
             continue;
+        if template.startswith("iC"):
+            template = template.replace("iC","OASIS_");
+            template = template.replace("Test","_tt");
         importList.append("Import " + template + ".xml;");
 
 

@@ -1,0 +1,5 @@
+Test iCUserFuncTest ###TestName###
+{
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+}

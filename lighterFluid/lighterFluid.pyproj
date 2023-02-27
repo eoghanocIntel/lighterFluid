@@ -55,6 +55,9 @@
     <Content Include="testTemplates\mbistPostRepair.txt" />
     <Content Include="testTemplates\mbistRaster.txt" />
     <Content Include="testTemplates\hvqk.txt" />
+    <Content Include="testTemplates\vfdmRun.txt" />
+    <Content Include="testTemplates\vfdmUserFunc.txt" />
+    <Content Include="testTemplates\vminTc - Copy.txt" />
     <Content Include="testTemplates\vminTc.txt" />
     <Content Include="testTemplates\mbistRepair.txt" />
   </ItemGroup>
