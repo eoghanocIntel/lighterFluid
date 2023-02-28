@@ -25,6 +25,7 @@ def flowCursion(dataset, rowCount):
     currComposite.PortList.append(dataset.Port1[i]);
     currComposite.PortList.append(dataset.Port2[i]);
     currComposite.Contents = [];
+    currComposite.Module = dataset.Module[i];
 
     i = i+1;
     
@@ -113,8 +114,9 @@ def printASmolBoi(currTest):
     currFb =        str(int(currTest.FB));
     currCounter =   str(int(currTest.Counter));
     currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
+    module = currTest.Module;
 
-    sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + currTest.Module + "_" + currTest.TestName + "_SHARED_BIN"
+    sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + module + "_" + currTest.TestName + "_SHARED_BIN"
     if not currKill:
         sharedBin = "##EDC## " + sharedBin;
 
@@ -139,10 +141,10 @@ def printASmolBoi(currTest):
         Result {portNo}
         {{
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CCF::{dummyCounter};
+	        IncrementCounters ARR_{module}::{dummyCounter};
 	        {sharedBin};
 			{nextTest};
-        }}""".format(portNo=i, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
+        }}""".format(portNo=i, module=module, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
 
 
     return header + body + footer;
@@ -221,7 +223,7 @@ def printAHugeBoi(currComp, body):
 
     currName = currComp.CompositeName;
     if currComp.CompositeName in protectedFlows:
-        currName = "ARR_" + "CCF" + "_" + currName + " @" + currName + "_SubFlow";
+        currName = "ARR_" + currComp.Module + "_" + currName + " @" + currName + "_SubFlow";
     header = """
 DUTFlow {name}
 {{""".format(name = currName);

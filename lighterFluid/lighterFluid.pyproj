@@ -52,12 +52,19 @@
     <Content Include="inputs\rev1.xlsx" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="testTemplates\fuseConfig.txt" />
+    <Content Include="testTemplates\capturePackets.txt" />
+    <Content Include="testTemplates\pbistRepair.txt" />
+    <Content Include="testTemplates\pbistRepair2Fuse.txt" />
+    <Content Include="testTemplates\pbistLsaHry.txt" />
+    <Content Include="testTemplates\pbistLsaRaster.txt" />
+    <Content Include="testTemplates\hsrPost.txt" />
+    <Content Include="testTemplates\auxiliary.txt" />
     <Content Include="testTemplates\mbistPostRepair.txt" />
     <Content Include="testTemplates\mbistRaster.txt" />
     <Content Include="testTemplates\hvqk.txt" />
     <Content Include="testTemplates\vfdmRun.txt" />
     <Content Include="testTemplates\vfdmUserFunc.txt" />
-    <Content Include="testTemplates\vminTc - Copy.txt" />
+    <Content Include="testTemplates\hsrPre.txt" />
     <Content Include="testTemplates\vminTc.txt" />
     <Content Include="testTemplates\mbistRepair.txt" />
   </ItemGroup>

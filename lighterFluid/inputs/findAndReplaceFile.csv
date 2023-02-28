@@ -9,3 +9,9 @@
 ###FB###,FB
 ###baseNumber###,baseNumber
 ###VFDM###,VFDM
+###resultToken###,resultToken
+###bypassGlobal###,bypassGlobal
+###repairTag###,repairTag
+###repairLabel###,repairLabel
+###modeOfDecoding###,modeOfDecoding
+###rasterDataLog###,rasterDataLog

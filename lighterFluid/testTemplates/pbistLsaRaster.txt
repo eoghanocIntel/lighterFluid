@@ -1,0 +1,17 @@
+Test PrimeLSARasterTestMethod ###TestName###
+{
+	LevelsTc = "BASE::###Levels###";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::###Timings###";
+	ExecutionMode = "RASTER";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
+	OutputTag = "###repairTag###";
+	Patlist = "###Patlist###";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "###rasterDataLog###";
+}

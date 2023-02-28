@@ -31,17 +31,18 @@ def testBuilder(dataset,findAndReplaceFile):
             currTest = file.read();
 
         for key,value in findAndReplaceDict.items():
-            #print(dataset[value][i])
-            if (key in ["###baseNumber###"]):
-                if math.isnan(dataset[value][i]):
-                    currValue = "";
+            if value in dataset.columns.values.tolist():
+                #print(dataset[value][i])
+                if (key in ["###baseNumber###"]):
+                    if math.isnan(dataset[value][i]):
+                        currValue = "";
+                    else:
+                        currValue = int(dataset[value][i]);
+                        currValue = str(currValue);
                 else:
-                    currValue = int(dataset[value][i]);
-                    currValue = str(currValue);
-            else:
-                currValue = str(dataset[value][i]);
+                    currValue = str(dataset[value][i]);
 
-            currTest = currTest.replace(key,currValue);
+                currTest = currTest.replace(key,currValue);
 
         testList.append(currTest);
 

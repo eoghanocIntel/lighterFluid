@@ -1,0 +1,5 @@
+Test AuxiliaryTC ###TestName###
+{
+	Expression = "1"; #USER TODO: define value
+	ResultToken = "###resultToken###";
+}
