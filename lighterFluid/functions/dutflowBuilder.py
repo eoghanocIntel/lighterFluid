@@ -96,13 +96,13 @@ def printASmolBoi(currTest):
 		Result -2
 		{{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}}		
 		Result -1
 		{{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}}""".format(name = currTest.TestName, killOrEdc = killOrEdc);
     footer = "\n\t}";

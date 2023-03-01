@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
-Import OASIS_VFDM_tt.xml;
-Import OASIS_CapturePackets_tt.xml;
-Import PrimeLSARasterTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import OASIS_Repair_tt.xml;
-Import PrimePatConfigTestMethod.xml;
+Import OASIS_CapturePackets_tt.xml;
 Import AuxiliaryTC.xml;
 Import OASIS_HSR_tt.xml;
-Import OASIS_UserFunc_tt.xml;
-Import PrimeVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import PrimeLSARasterTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import PrimeHvqkTestMethod.xml;
 
 Counters
 {
@@ -127,7 +127,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_DAT_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2DAT";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_DAT_REPAIR
@@ -164,7 +164,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_C6S_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2C6S";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_C6S_REPAIR
@@ -201,7 +201,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_TSP_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2TSP";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_NOM_LFM_L2_TSP_REPAIR
@@ -280,7 +280,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_DAT_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2DAT";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_DAT_REPAIR
@@ -317,7 +317,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_C6S_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2C6S";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_C6S_REPAIR
@@ -354,7 +354,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_TSP_CAP
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2TSP";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_VCCL2_MIN_LFM_L2_TSP_REPAIR
@@ -433,7 +433,7 @@ Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCATOM_NOM_LFM_L2_LRU_C
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2LRU";
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_VCCATOM_NOM_LFM_L2_LRU_REPAIR
@@ -512,7 +512,7 @@ Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_VCCATOM_MIN_LFM_L2_LRU_C
 	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"
-	bypass_global = "nan";
+	bypass_global = "1.0";
 	output_tag = "L2LRU";
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_VCCATOM_MIN_LFM_L2_LRU_REPAIR
@@ -994,13 +994,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1031,13 +1031,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1063,13 +1063,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1110,13 +1110,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1157,13 +1157,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1189,13 +1189,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1236,13 +1236,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1283,13 +1283,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1315,13 +1315,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1362,13 +1362,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1409,13 +1409,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1441,13 +1441,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1475,13 +1475,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1502,13 +1502,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1539,13 +1539,13 @@ DUTFlow L2_SSA_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1574,13 +1574,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1611,13 +1611,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1643,13 +1643,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1690,13 +1690,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1737,13 +1737,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1769,13 +1769,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1816,13 +1816,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1863,13 +1863,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1895,13 +1895,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1942,13 +1942,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -1989,13 +1989,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2021,13 +2021,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2055,13 +2055,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2082,13 +2082,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2119,13 +2119,13 @@ DUTFlow L2_SSA_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2154,13 +2154,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2191,13 +2191,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2223,13 +2223,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2270,13 +2270,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2317,13 +2317,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2349,13 +2349,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2383,13 +2383,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2410,13 +2410,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2447,13 +2447,13 @@ DUTFlow L2_LRU_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2482,13 +2482,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2519,13 +2519,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2551,13 +2551,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2598,13 +2598,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2645,13 +2645,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2677,13 +2677,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2711,13 +2711,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2738,13 +2738,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2775,13 +2775,13 @@ DUTFlow L2_LRU_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2810,13 +2810,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2847,13 +2847,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2879,13 +2879,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2926,13 +2926,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -2973,13 +2973,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3005,13 +3005,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3039,13 +3039,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3066,13 +3066,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3103,13 +3103,13 @@ DUTFlow RF_NOM_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3138,13 +3138,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3175,13 +3175,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3207,13 +3207,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3254,13 +3254,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3301,13 +3301,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3333,13 +3333,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3367,13 +3367,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3394,13 +3394,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3431,13 +3431,13 @@ DUTFlow RF_MIN_REP
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3466,13 +3466,13 @@ DUTFlow RF_NON_REPAIRABLE
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3503,13 +3503,13 @@ DUTFlow RF_NON_REPAIRABLE
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3737,13 +3737,13 @@ DUTFlow ARR_ATOM_PREHVQK @PREHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3764,13 +3764,13 @@ DUTFlow ARR_ATOM_PREHVQK @PREHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3791,13 +3791,13 @@ DUTFlow ARR_ATOM_PREHVQK @PREHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3818,13 +3818,13 @@ DUTFlow ARR_ATOM_PREHVQK @PREHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3848,13 +3848,13 @@ DUTFlow ARR_ATOM_STRESS @STRESS_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3887,13 +3887,13 @@ DUTFlow ARR_ATOM_STRESS @STRESS_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3929,13 +3929,13 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3956,13 +3956,13 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -3983,13 +3983,13 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4010,13 +4010,13 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4040,13 +4040,13 @@ DUTFlow KS
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4067,13 +4067,13 @@ DUTFlow KS
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4094,13 +4094,13 @@ DUTFlow KS
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4121,13 +4121,13 @@ DUTFlow KS
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4151,13 +4151,13 @@ DUTFlow VMAX
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
@@ -4178,13 +4178,13 @@ DUTFlow VMAX
 		Result -2
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90999901_fail_FAIL_DPS_ALARM;
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
 			Return -1;
 		}		
 		Result -1
 		{
 			Property PassFail = "Fail";
-			SetBin SoftBins.b90989801_fail_FAIL_SYSTEM_SOFTWARE;
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}
         Result 0
