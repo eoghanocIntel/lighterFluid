@@ -1,5 +1,6 @@
 Test PrimeMbistVminSearchTestMethod ###TestName###
 {
+	bypass_global = "###bypassGlobal###";
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::###Levels###";
 	TimingsTc = "BASE::###Timings###";

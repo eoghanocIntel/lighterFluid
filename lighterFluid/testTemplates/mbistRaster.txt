@@ -1,5 +1,6 @@
 Test MbistRasterTC ###TestName###
 {
+	bypass_global = "###bypassGlobal###";
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;

@@ -1,5 +1,6 @@
 Test AuxiliaryTC ###TestName###
 {
-	Expression = "1"; #USER TODO: define value
+	bypass_global = "###bypassGlobal###";
+	Expression = "1";
 	ResultToken = "###resultToken###";
 }
