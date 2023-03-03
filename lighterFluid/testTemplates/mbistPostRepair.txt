@@ -5,7 +5,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	LevelsTc = "BASE::###Levels###";
 	TimingsTc = "BASE::###Timings###";
 	Patlist = "###Patlist###";
-	VoltageTargets = ARR_CCF.###PowerTarget###;
+	VoltageTargets = "###Supply###";
 	StartVoltages = ARR_CCF.###PowerHighLimit###;
 	EndVoltageLimits = ARR_CCF.###PowerHighLimit###;
 	StepSize = 0.02;

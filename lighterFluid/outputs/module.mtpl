@@ -5,13 +5,13 @@ ProgramStyle = Modular;
 TestPlan ARR_CCF;
 Import ARR_CCF.usrv;
 
-Import OASIS_VFDM_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import MbistRasterTC.xml;
 Import OASIS_UserFunc_tt.xml;
+Import PrimePatConfigTestMethod.xml;
+Import PrimeHvqkTestMethod.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import MbistRasterTC.xml;
 
 Counters
 {
@@ -283,12 +283,12 @@ Counters
 
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_DAT_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -308,7 +308,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_DAT_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -322,12 +322,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_DAT_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_TAG_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -347,7 +347,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_TAG_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -361,12 +361,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_TAG_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_SAR_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -386,7 +386,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_SAR_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -400,12 +400,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_SAR_RASTER
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -425,7 +425,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LS
 }
 Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -439,12 +439,12 @@ Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LSA_ALL
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_DAT_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -464,7 +464,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_DAT_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -478,12 +478,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_DAT_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_TAG_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -503,7 +503,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_TAG_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -517,12 +517,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_TAG_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_SAR_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -542,7 +542,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_SAR_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -556,12 +556,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_SAR_RASTER
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -581,7 +581,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LS
 }
 Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -595,12 +595,12 @@ Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LSA_ALL
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_DAT_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -620,7 +620,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_DAT_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -634,12 +634,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_DAT_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_TAG_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -659,7 +659,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_TAG_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -673,12 +673,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_TAG_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_SAR_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -698,7 +698,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_SAR_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -712,12 +712,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_SAR_RASTER
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -737,7 +737,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LS
 }
 Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -751,12 +751,12 @@ Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LSA_ALL
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_DAT_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -776,7 +776,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_DAT_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -790,12 +790,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_DAT_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_TAG_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -815,7 +815,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_TAG_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -829,12 +829,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_TAG_RASTER
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_SAR_BISR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -854,7 +854,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 }
 Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_SAR_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -868,12 +868,12 @@ Test MbistRasterTC SSA_CCF_RASTER_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_SAR_RASTER
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -893,7 +893,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 }
 Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LSA_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
@@ -907,7 +907,7 @@ Test MbistRasterTC LSA_CCF_RASTER_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LSA_ALL
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO0_LLC_DAT
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL0DATR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -917,7 +917,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO0_LLC_DAT
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO0_LLC_TAG
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL0TAGR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -927,7 +927,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO0_LLC_TAG
 }
 Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO0_RF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL0RFR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -937,7 +937,7 @@ Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO0_RF
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO1_LLC_DAT
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL1DATR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -947,7 +947,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO1_LLC_DAT
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO1_LLC_TAG
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL1TAGR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -957,7 +957,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO1_LLC_TAG
 }
 Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO1_RF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL1RFR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -967,7 +967,7 @@ Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO1_RF
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO01_SAR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL0SARR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -977,7 +977,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO01_SAR
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO2_LLC_DAT
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL2DATR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -987,7 +987,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO2_LLC_DAT
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO2_LLC_TAG
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL2TAGR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -997,7 +997,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO2_LLC_TAG
 }
 Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO2_RF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL2RFR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -1007,7 +1007,7 @@ Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO2_RF
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO3_LLC_DAT
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL3DATR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -1017,7 +1017,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO3_LLC_DAT
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO3_LLC_TAG
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL3TAGR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -1027,7 +1027,7 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO3_LLC_TAG
 }
 Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO3_RF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL3RFR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -1037,7 +1037,7 @@ Test iCVFDMTest LSA_CCF_VFDM_E_BEGIN_X_CLR_X_X_CBO3_RF
 }
 Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO23_SAR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SLL1SARR.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -1047,24 +1047,24 @@ Test iCVFDMTest SSA_CCF_VFDM_E_BEGIN_X_CLRSS_X_X_CBO23_SAR
 }
 Test iCUserFuncTest ALL_CCF_UF_E_BEGIN_X_CLRSS_X_X_VFDM_UF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	function_name = "VFDM_UF!ProcessVFDMOutputs";
 	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
 }
 Test PrimePatConfigTestMethod ALL_CCF_PATMOD_E_BEGIN_TITO_X_MAX_LFM_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	ConfigurationFile = "./Modules/ARR_CCF/InputFiles/PatConfig_MbistRepair.setpoints.json";
 	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_LLC_DAT_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1081,12 +1081,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_LLC_TAG_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1103,12 +1103,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_SAR_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1125,12 +1125,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_MAX_LFM_CBO0_LSA_ALL_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -1147,12 +1147,12 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_MAX_LFM_CBO0_LS
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_LLC_DAT_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1169,12 +1169,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_LLC_TAG_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1191,12 +1191,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_SAR_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLRSS;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1213,12 +1213,12 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_MAX_LFM_CBO1_LSA_ALL_POST_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = ARR_CCF.CLR;
+	VoltageTargets = "nan";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -1313,7 +1313,7 @@ Test PrimeVminSearchTestMethod ROM_CCF_VMIN_K_PREHVQK_TITO_CLR_MIN_LFM_SBO
 }
 Test PrimeHvqkTestMethod ALL_CCF_HVQK_K_STRESS_TITO_CLRSS_MAX_LFM_CBO_SBO
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "lnl_dummy_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1323,7 +1323,7 @@ Test PrimeHvqkTestMethod ALL_CCF_HVQK_K_STRESS_TITO_CLRSS_MAX_LFM_CBO_SBO
 }
 Test PrimeHvqkTestMethod ALL_CCF_HVQK_K_STRESS_TITO_CLRSS_MAX_LFM_PMA
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "lnl_dummy_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
