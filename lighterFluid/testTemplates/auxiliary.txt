@@ -1,6 +1,6 @@
 Test AuxiliaryTC ###TestName###
 {
-	bypass_global = "###bypassGlobal###";
+	BypassPort = ###bypassGlobal###;
 	Expression = "1";
 	ResultToken = "###resultToken###";
 }

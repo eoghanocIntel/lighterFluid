@@ -33,7 +33,7 @@ def testBuilder(dataset,findAndReplaceFile):
         for key,value in findAndReplaceDict.items():
             if value in dataset.columns.values.tolist():
                 #print(dataset[value][i])
-                if (key in ["###baseNumber###"]):
+                if (key in ["###baseNumber###","###bypassGlobal###"]):
                     if math.isnan(dataset[value][i]):
                         currValue = "";
                     else:

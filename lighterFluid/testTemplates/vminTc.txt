@@ -1,6 +1,6 @@
 Test PrimeVminSearchTestMethod ###TestName###
 {
-	bypass_global = "###bypassGlobal###";
+	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::###Levels###";
 	Patlist = "###Patlist###";

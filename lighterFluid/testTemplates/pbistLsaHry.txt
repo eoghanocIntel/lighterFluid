@@ -1,6 +1,6 @@
 Test PrimeLSARasterTestMethod ###TestName###
 {
-	bypass_global = "###bypassGlobal###";
+	BypassPort = ###bypassGlobal###;
 	LevelsTc = "BASE::###Levels###";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM";
