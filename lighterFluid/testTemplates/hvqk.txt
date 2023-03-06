@@ -1,5 +1,6 @@
 Test PrimeHvqkTestMethod ###TestName###
 {
+	BypassPort = ###bypassGlobal###;
 	LevelsTc = "BASE::###Levels###";
 	Patlist = "###Patlist###";
 	TimingsTc = "BASE::###Timings###";

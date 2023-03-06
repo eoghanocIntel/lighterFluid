@@ -1,12 +1,13 @@
 Test PrimeVminSearchTestMethod ###TestName###
 {
+	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::###Levels###";
 	Patlist = "###Patlist###";
 	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::###Timings###";
-	VoltageTargets = "0.8";
+	VoltageTargets = "###Supply###";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "###baseNumber###";
 }

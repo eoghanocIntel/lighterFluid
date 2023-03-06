@@ -1,5 +1,6 @@
 Test iCRepairTest ###TestName###
 {
+	bypass_global = "###bypassGlobal###";
 	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
