@@ -11,7 +11,7 @@ from functions import flowFileBuilder
 ##### CONFIGURATION #####
 #########################
 definitionFile = "inputs\\lnlArrayMasterSheet.xlsx";
-definitionPage = "arr_core";
+definitionPage = "arr_vpu";
 #definitionPage = "arr_core";
 #definitionPage = "arr_atom";
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
