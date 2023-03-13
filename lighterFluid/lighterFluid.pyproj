@@ -51,7 +51,6 @@
     <Content Include="inputs\lnlArrayMasterSheet.xlsx" />
     <Content Include="inputs\rev0.csv" />
     <Content Include="inputs\rev1.xlsx" />
-    <Content Include="inputs\tempMasterSheetForMerge.xlsx" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="testTemplates\fuseConfig.txt" />
     <Content Include="testTemplates\capturePackets.txt" />
