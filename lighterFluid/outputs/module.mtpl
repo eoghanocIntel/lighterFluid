@@ -6,12 +6,12 @@ TestPlan ARR_CCF;
 Import ARR_CCF.usrv;
 
 Import PrimeVminSearchTestMethod.xml;
+Import PrimeHvqkTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
 Import PrimePatConfigTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
 Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
 
 Counters
 {
@@ -288,7 +288,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -327,7 +327,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -366,7 +366,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -405,7 +405,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -444,7 +444,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -483,7 +483,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -522,7 +522,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -561,7 +561,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -600,7 +600,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -639,7 +639,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -678,7 +678,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -717,7 +717,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -756,7 +756,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -795,7 +795,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -834,7 +834,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -873,7 +873,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -1064,7 +1064,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1086,7 +1086,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1108,7 +1108,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO0_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1130,7 +1130,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_MAX_LFM_CBO0_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
@@ -1152,7 +1152,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1174,7 +1174,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1196,7 +1196,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_MAX_LFM_CBO1_
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_CCF.CLRSS;
 	EndVoltageLimits = ARR_CCF.CLRSS;
 	StepSize = 0.02;
@@ -1218,7 +1218,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_MAX_LFM_CBO1_LS
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "lnl_dummy_list";
-	VoltageTargets = "nan";
+	VoltageTargets = "VCCIA_HC";
 	StartVoltages = ARR_CCF.CLR;
 	EndVoltageLimits = ARR_CCF.CLR;
 	StepSize = 0.02;
