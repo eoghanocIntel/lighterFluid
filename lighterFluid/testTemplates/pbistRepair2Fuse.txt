@@ -1,12 +1,12 @@
 Test iCRepairTest ###TestName###
 {
 	bypass_global = "###bypassGlobal###";
-	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
 	input_tag = "###repairTag###";
 	map_array = "###repairLabel###";
-	mapper_file = "./Modules/ARR_COMMON/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
 	mode_of_decoding = "###modeOfDecoding###";
 	mode_of_execution = "Manufacturing";
 	mode_of_operation = "Repair_To_Fuse";

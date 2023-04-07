@@ -18,3 +18,5 @@
 ###Supply###,Supply
 ###bypassGlobal###,bypassGlobal
 ###ifpm###,ifpm
+###BisrMode###,BisrMode
+###TestMode###,TestMode

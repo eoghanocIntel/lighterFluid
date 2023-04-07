@@ -97,7 +97,7 @@ def printASmolBoi(currTest):
 		{{
 			Property PassFail = "Fail";
 			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -1;
+			Return -2;
 		}}		
 		Result -1
 		{{

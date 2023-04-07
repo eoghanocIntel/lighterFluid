@@ -6,8 +6,8 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	TimingsTc = "BASE::###Timings###";
 	Patlist = "###Patlist###";
 	VoltageTargets = "###Supply###";
-	StartVoltages = ARR_CCF.###PowerHighLimit###;
-	EndVoltageLimits = ARR_CCF.###PowerHighLimit###;
+	StartVoltages = ARR_###Module###.###PowerHighLimit###;
+	EndVoltageLimits = ARR_###Module###.###PowerHighLimit###;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
@@ -16,7 +16,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_###Module###/InputFiles/MBIST_HRY.json";
 	MappingConfig = "./Modules/ARR_###Module###/InputFiles/SharedStortoDFFMap.json";
-	MbistTestMode = "PostRepair";
-	BisrMode = "Off"; # Compressed_skippatmod, Off
+	MbistTestMode = "###TestMode###";
+	BisrMode = "###BisrMode###"; # Compressed_skippatmod, Off
 	FailCaptureCount = 99999;
 }

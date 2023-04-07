@@ -3,7 +3,7 @@ Test PrimeLSARasterTestMethod ###TestName###
 	BypassPort = ###bypassGlobal###;
 	LevelsTc = "BASE::###Levels###";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
-	PinMappingSetName = "ATOM";
+	PinMappingSetName = "ATOM_ALL";
 	PrescreenHryFlowToken = "CORE_NOM";
 	PrescreenHryFrequencyToken = "800MHz";
 	PrescreenMapName = "LSA_CORERF_ATOM";
