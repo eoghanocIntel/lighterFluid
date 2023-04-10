@@ -11,33 +11,36 @@ from functions import flowFileBuilder
 ##### CONFIGURATION #####
 #########################
 definitionFile = "inputs\\lnlArrayMasterSheet.xlsx";
-definitionPage = "arr_vpu";
-definitionPage = "arr_core";
-definitionPage = "arr_atom";
-#definitionPage = "arr_ccf";
-#definitionPage = "arr_gfx";
-#definitionPage = "arr_soc";
+definitionList = [];
+definitionList.append("arr_vpu");
+definitionList.append("arr_core");
+definitionList.append("arr_atom");
+definitionList.append("arr_ccf");
+definitionList.append("arr_gfx");
+definitionList.append("arr_soc");
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
-outputMtpl = "outputs\\module.mtpl"; 
 
 
 
 #####################
 ##### EXECUTION #####
 #####################
+for definitionPage in definitionList:
+    ### read in File
+    overallOutput = "";
+    dataset = pandas.read_excel(definitionFile, sheet_name=definitionPage);
 
-### read in File
-dataset = pandas.read_excel(definitionFile, sheet_name=definitionPage);
+    importSection = importBuilder.importBuilder(dataset);
+    counterSection = counterBuilder.counterBuilder(dataset);
+    testSection = testBuilder.testBuilder(dataset,findAndReplaceFile);
+    dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
 
-importSection = importBuilder.importBuilder(dataset);
-counterSection = counterBuilder.counterBuilder(dataset);
-testSection = testBuilder.testBuilder(dataset,findAndReplaceFile);
-dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
-
-overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
-
-outFile = open(outputMtpl, "w");
-outFile.write(overallOutput);
-outFile.close();
+    overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
+    
+    currModule = definitionPage.upper();
+    outputMtpl = "outputs\\"+ currModule +".mtpl"; 
+    outFile = open(outputMtpl, "w");
+    outFile.write(overallOutput);
+    outFile.close();
 
 print("done");

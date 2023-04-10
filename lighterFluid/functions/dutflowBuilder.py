@@ -3,17 +3,18 @@ from . import Composite
 from . import TestInstance
 import inspect
 
-##################
-##### BASICS #####
-##################
-flowDict = {};
-flowSection = "";
+
 
 #############################
 ##### RECURSION MACHINE #####
 #############################
 def flowCursion(dataset, rowCount):
-    
+    ##################
+    ##### BASICS #####
+    ##################
+    flowDict = {};
+    flowSection = "";
+
     i = rowCount;
     contentList = [];
 

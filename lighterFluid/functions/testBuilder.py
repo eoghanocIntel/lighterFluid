@@ -1,16 +1,17 @@
 import pandas
 import math
 
-##################
-##### BASICS #####
-##################
-testList = [];
 
 ####################
 ##### FUNCTION #####
 ####################
 def testBuilder(dataset,findAndReplaceFile):
     # This function should build the test list.
+
+    ##################
+    ##### BASICS #####
+    ##################
+    testList = [];
 
     findAndReplaceDict = {};
     with open(findAndReplaceFile, 'r') as file:
