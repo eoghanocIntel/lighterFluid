@@ -15,7 +15,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_###Module###/InputFiles/MBIST_HRY.json";
-	MappingConfig = "./Modules/ARR_###Module###/InputFiles/SharedStortoDFFMap.json";
+	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "###TestMode###";
 	BisrMode = "###BisrMode###"; # Compressed_skippatmod, Off
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
