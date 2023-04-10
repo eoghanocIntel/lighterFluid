@@ -5,10 +5,10 @@ Test MbistRasterTC ###TestName###
 	EnableRepair = "FALSE";
 	FailuresToCapturePerPattern = 0;
 	FailuresToCaptureTotal = 0;
-	LevelsTc = "BASE::###Levels###";
+	LevelsTc = "###Levels###";
 	MaxFailuresPerPatternToItuff = 0;
 	MaxFailuresToItuff = 0;
 	Patlist = "###Patlist###";
 	RasterInputFile = "./Modules/ARR_###Module###/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::###Timings###";
+	TimingsTc = "###Timings###";
 }

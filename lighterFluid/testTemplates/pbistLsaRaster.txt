@@ -1,13 +1,13 @@
 Test PrimeLSARasterTestMethod ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	LevelsTc = "BASE::###Levels###";
+	LevelsTc = "###Levels###";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
 	PrescreenHryFlowToken = "CORE_NOM";
 	PrescreenHryFrequencyToken = "800MHz";
 	PrescreenMapName = "LSA_CORERF_ATOM";
-	TimingsTc = "BASE::###Timings###";
+	TimingsTc = "###Timings###";
 	ExecutionMode = "RASTER";
 	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
 	OutputTag = "###repairTag###";

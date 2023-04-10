@@ -21,3 +21,5 @@
 ###ifpm###,ifpm
 ###BisrMode###,BisrMode
 ###TestMode###,TestMode
+###SetPointsPlistMode###,SetPointsPlistMode
+###SetPointsPreInstance###,SetPointsPreInstance

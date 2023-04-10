@@ -13,9 +13,9 @@ from functions import flowFileBuilder
 definitionFile = "inputs\\lnlArrayMasterSheet.xlsx";
 definitionPage = "arr_vpu";
 definitionPage = "arr_core";
-#definitionPage = "arr_atom";
+definitionPage = "arr_atom";
 #definitionPage = "arr_ccf";
-definitionPage = "arr_gfx";
+#definitionPage = "arr_gfx";
 #definitionPage = "arr_soc";
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 outputMtpl = "outputs\\module.mtpl"; 

@@ -1,9 +1,9 @@
 Test PrimeHvqkTestMethod ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	LevelsTc = "BASE::###Levels###";
+	LevelsTc = "###Levels###";
 	Patlist = "###Patlist###";
-	TimingsTc = "BASE::###Timings###";
+	TimingsTc = "###Timings###";
 	VoltageStepConfigFile = "./Modules/ARR_###Module###/InputFiles/hvqkConfig.xml"; #USER TODO: define value
 	# PowerDownLevel = "";
 	# PowerUpLevel = "";

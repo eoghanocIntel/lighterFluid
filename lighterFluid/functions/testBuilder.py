@@ -33,12 +33,21 @@ def testBuilder(dataset,findAndReplaceFile):
         for key,value in findAndReplaceDict.items():
             if value in dataset.columns.values.tolist():
                 #print(dataset[value][i])
+                
+                # This section is for numbers
                 if (key in ["###baseNumber###","###bypassGlobal###"]):
                     if math.isnan(dataset[value][i]):
                         currValue = "";
                     else:
                         currValue = int(dataset[value][i]);
                         currValue = str(currValue);
+                # This section is for strings
+                elif (key in ["###SetPointsPreInstance###"]):
+                    try:
+                        if math.isnan(dataset[value][i]):
+                            currValue = "";
+                    except:
+                        currValue = str(dataset[value][i]);
                 else:
                     currValue = str(dataset[value][i]);
 

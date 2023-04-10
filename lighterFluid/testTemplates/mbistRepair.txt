@@ -2,8 +2,8 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
 	FeatureSwitchSettings = "recovery_mask_off,func_mode_on";
-	LevelsTc = "BASE::###Levels###";
-	TimingsTc = "BASE::###Timings###";
+	LevelsTc = "###Levels###";
+	TimingsTc = "###Timings###";
 	Patlist = "###Patlist###";
 	VoltageTargets = "###Supply###";
 	StartVoltages = ARR_###Module###.###PowerHighLimit###;
