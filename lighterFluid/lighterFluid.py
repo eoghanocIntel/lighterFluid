@@ -11,8 +11,8 @@ from functions import flowFileBuilder
 ##### CONFIGURATION #####
 #########################
 definitionFile = "inputs\\lnlArrayMasterSheet.xlsx";
-#definitionPage = "arr_vpu";
-#definitionPage = "arr_core";
+definitionPage = "arr_vpu";
+definitionPage = "arr_core";
 #definitionPage = "arr_atom";
 #definitionPage = "arr_ccf";
 definitionPage = "arr_gfx";
