@@ -21,7 +21,7 @@ def importBuilder(dataset):
     currModule = list(set(dataset.Module.dropna()))[0];
     testPlan = "TestPlan ARR_" + currModule + ";\n";
     uservar = "Import ARR_" + currModule + ".usrv;\n";
-    timing = "Import ARR_" + currModule + "_timings.tcg;\n";
+    #timing = "Import ARR_" + currModule + "_timings.tcg;\n";
 
     importSet = set(dataset.TemplateLookup);
 
@@ -34,5 +34,6 @@ def importBuilder(dataset):
         importList.append("Import " + template + ".xml;");
 
 
-    importSection = importBegin + testPlan + uservar + "\n" + timing + "\n" + "\n".join(importList);
+    #importSection = importBegin + testPlan + uservar + "\n" + timing + "\n" + "\n".join(importList);
+    importSection = importBegin + testPlan + uservar + "\n" + "\n".join(importList);
     return importSection;

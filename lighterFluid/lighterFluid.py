@@ -12,12 +12,12 @@ from functions import flowFileBuilder
 #########################
 definitionFile = "inputs\\lnlArrayMasterSheet.xlsx";
 definitionList = [];
-#definitionList.append("arr_vpu");
+definitionList.append("arr_vpu");
 definitionList.append("arr_core");
-#definitionList.append("arr_atom");
-#definitionList.append("arr_ccf");
-#definitionList.append("arr_gfx");
-#definitionList.append("arr_soc");
+definitionList.append("arr_atom");
+definitionList.append("arr_ccf");
+definitionList.append("arr_gfx");
+definitionList.append("arr_soc");
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 

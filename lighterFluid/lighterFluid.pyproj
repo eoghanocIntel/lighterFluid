@@ -67,6 +67,7 @@
     <Content Include="testTemplates\vfdmRun.txt" />
     <Content Include="testTemplates\vfdmUserFunc.txt" />
     <Content Include="testTemplates\hsrPre.txt" />
+    <Content Include="testTemplates\evgScreen.txt" />
     <Content Include="testTemplates\vminTc.txt" />
     <Content Include="testTemplates\mbistRepair.txt" />
   </ItemGroup>
