@@ -52,6 +52,7 @@
     <Content Include="inputs\rev0.csv" />
     <Content Include="inputs\rev1.xlsx" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
+    <Content Include="testTemplates\mbistRepairSOC.txt" />
     <Content Include="testTemplates\patConfig.txt" />
     <Content Include="testTemplates\fuseConfig.txt" />
     <Content Include="testTemplates\capturePackets.txt" />
@@ -69,7 +70,7 @@
     <Content Include="testTemplates\hsrPre.txt" />
     <Content Include="testTemplates\evgScreen.txt" />
     <Content Include="testTemplates\vminTc.txt" />
-    <Content Include="testTemplates\mbistRepair.txt" />
+    <Content Include="testTemplates\mbistRepairCORE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
