@@ -12,7 +12,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_###Module###/InputFiles/MBIST_HRY.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
