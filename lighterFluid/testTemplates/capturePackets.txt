@@ -2,7 +2,7 @@ Test iCCapturePacketsTest ###TestName###
 {
 	bypass_global = "###bypassGlobal###";
 	patlist = "###Patlist###";
-	data_pins = "XXTDO";
+	data_pins = "IP_CPU::XXTDO";
 	level = "###Levels###";
 	timings = "###Timings###";
 	output_tag = "###repairTag###";

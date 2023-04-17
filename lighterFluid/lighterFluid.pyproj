@@ -65,6 +65,7 @@
     <Content Include="testTemplates\mbistPostRepair.txt" />
     <Content Include="testTemplates\mbistRaster.txt" />
     <Content Include="testTemplates\hvqk.txt" />
+    <Content Include="testTemplates\primeShmoo.txt" />
     <Content Include="testTemplates\vfdmRun.txt" />
     <Content Include="testTemplates\vfdmUserFunc.txt" />
     <Content Include="testTemplates\hsrPre.txt" />
