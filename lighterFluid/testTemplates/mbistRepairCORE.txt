@@ -14,7 +14,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_###Module###/InputFiles/MBIST_HRY_CORE.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "###TestMode###";
 	BisrMode = "###BisrMode###"; # Compressed_skippatmod, Off
