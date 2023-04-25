@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_VPU;
 Import ARR_VPU.usrv;
 
+Import PrimeShmooTestMethod.xml;
 Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeShmooTestMethod.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 
 Counters
 {
@@ -437,7 +437,7 @@ Counters
 
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTRESS_BHRY_VBTR_BT3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -501,7 +501,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTRESS_RASTER_VBT
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -565,7 +565,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -629,7 +629,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -693,7 +693,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -757,7 +757,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -821,7 +821,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -885,7 +885,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -949,7 +949,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1013,7 +1013,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1077,7 +1077,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1141,7 +1141,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1205,7 +1205,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1269,7 +1269,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
@@ -1333,7 +1333,7 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_RASTER_VBTR_B
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";

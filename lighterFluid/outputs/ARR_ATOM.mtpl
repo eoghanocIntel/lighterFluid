@@ -5,17 +5,17 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
-Import OASIS_HSR_tt.xml;
+Import PrimeShmooTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import PrimeLSARasterTestMethod.xml;
+Import OASIS_Repair_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_CapturePackets_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import OASIS_Repair_tt.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeShmooTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import OASIS_HSR_tt.xml;
 Import AuxiliaryTC.xml;
-Import PrimeLSARasterTestMethod.xml;
+Import OASIS_CapturePackets_tt.xml;
 
 Counters
 {
@@ -137,7 +137,7 @@ Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_PRE_HRY
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_CAPTURE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_data_list";
 	data_pins = "IP_CPU::XXTDO";
 	level = "BASE::SBF_nom_lvl";
@@ -146,7 +146,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_CA
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -161,7 +161,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR_TO_FUSE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -176,7 +176,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR_TO_F
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_CAPTURE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_c6s_list";
 	data_pins = "IP_CPU::XXTDO";
 	level = "BASE::SBF_nom_lvl";
@@ -185,7 +185,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_CA
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -200,7 +200,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR_TO_FUSE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -215,7 +215,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR_TO_F
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_CAPTURE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_tsp_list";
 	data_pins = "IP_CPU::XXTDO";
 	level = "BASE::SBF_nom_lvl";
@@ -224,7 +224,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_CA
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -239,7 +239,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR_TO_FUSE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -276,7 +276,7 @@ Test PrimePatConfigTestMethod SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_ALL_FUSE
 }
 Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_POST_HRY
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -286,7 +286,7 @@ Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_POST_HRY
 }
 Test AuxiliaryTC SSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2_NOM
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	Expression = "1";
 	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
 }
@@ -499,7 +499,7 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_PRE_HRY
 }
 Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_CAPTURE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_lsa_l2_lru_list";
 	data_pins = "IP_CPU::XXTDO";
 	level = "BASE::SBF_nom_lvl";
@@ -508,7 +508,7 @@ Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_CAPT
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -523,7 +523,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR_TO_FUSE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -560,7 +560,7 @@ Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_LRU_FUSE
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_POST_HRY
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -570,7 +570,7 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	Expression = "1";
 	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
 }
@@ -681,7 +681,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_PRE_HRY
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
@@ -699,7 +699,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_RASTE
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -714,7 +714,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR_TO_FUSE
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -751,7 +751,7 @@ Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_RF_FUSE
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_POST_HRY
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_indirect_lsa_repairable_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -761,7 +761,7 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_RF
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	Expression = "1";
 	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
 }
@@ -889,7 +889,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_REP_
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_REP_RASTER
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";

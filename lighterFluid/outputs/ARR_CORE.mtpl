@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_CORE;
 Import ARR_CORE.usrv;
 
+Import PrimeShmooTestMethod.xml;
 Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeShmooTestMethod.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
 Import AuxiliaryTC.xml;
+Import PrimePatConfigTestMethod.xml;
 
 Counters
 {
@@ -141,30 +141,85 @@ Counters
 	n21200159_fail_LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_CORE_RF_POSTHRY_CORE3_9,
 	n21200160_fail_SSA_CORE_AUX_E_BEGIN_TITO_VCCIA_NOM_LFM_MLC_SRAM_SAMPLER_FAIL_0,
 	n21200160_fail_SSA_CORE_AUX_E_BEGIN_TITO_VCCIA_NOM_LFM_MLC_SRAM_SAMPLER_FAIL_2,
-	n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0,
-	n21210201_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_0,
-	n21210203_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_0,
-	n21210204_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_0,
-	n61210205_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0,
+	n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0,
+	n21210201_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
+	n21210202_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
+	n21210203_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_0,
+	n61210204_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_0,
+	n21210205_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0,
+	n21210206_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0,
+	n21210207_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_0,
+	n61210208_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_0,
+	n21210209_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0,
+	n21210210_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0,
+	n21210211_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_0,
+	n61210212_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_0,
+	n21210213_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0,
+	n21210214_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
+	n21210215_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
+	n61210216_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0,
 	n17610300_fail_XSA_CORE_HVQK_K_STRESS_TITO_VCCIA_NOM_LFM_MCLK_0,
 	n17610301_fail_ROM_CORE_HVQK_K_STRESS_TITO_VCCIA_NOM_LFM_SBCLK_0,
 	n17610302_fail_SSA_CORE_HVQK_K_STRESS_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_0,
-	n61210400_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0,
-	n21210401_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_0,
-	n21210402_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_0,
-	n61210403_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_0,
-	n61210404_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0,
-	n61220500_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_0,
-	n21220502_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_0,
-	n61220503_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_0,
-	n61220504_fail_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_0,
+	n61210400_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0,
+	n21210401_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
+	n21210402_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
+	n21210403_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_0,
+	n61210404_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_0,
+	n21210405_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0,
+	n21210406_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0,
+	n21210407_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_0,
+	n61210408_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_0,
+	n21210409_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0,
+	n21210410_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0,
+	n21210411_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_0,
+	n61210412_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_0,
+	n21210413_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0,
+	n21210414_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
+	n21210415_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
+	n61210416_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0,
+	n61220500_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
+	n21220501_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
+	n61220502_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_0,
+	n61220503_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0,
+	n21220504_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0,
+	n61220505_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_0,
+	n61220506_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0,
+	n21220507_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0,
+	n61220508_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_0,
+	n61220509_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0,
+	n21220510_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
+	n61220511_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
+	n61220512_fail_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_0,
 	n17610550_fail_XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK_0,
 	n17210551_fail_ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK_0,
 	n17210552_fail_SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_0,
 	n61220560_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_0,
 	n21220561_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_0,
 	n61220562_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_0,
-	n61220563_fail_SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS_0
+	n61220563_fail_SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS_0,
+	n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
+	n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_3,
+	n21220565_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
+	n21220565_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_3,
+	n61220566_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_0,
+	n61220566_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_3,
+	n61220567_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0,
+	n61220567_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_3,
+	n21220568_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0,
+	n21220568_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_3,
+	n61220569_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_0,
+	n61220569_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_3,
+	n61220570_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_3,
+	n21220571_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0,
+	n21220571_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_3,
+	n61220572_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_0,
+	n61220572_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_3,
+	n61220573_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0,
+	n21220574_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
+	n21220574_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_3,
+	n61220575_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
+	n61220575_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_3
 } # End of Test Counter Definition
 
 Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_NONREP_CORE0
@@ -660,12 +715,12 @@ Test AuxiliaryTC SSA_CORE_AUX_E_BEGIN_TITO_VCCIA_NOM_LFM_MLC_SRAM_SAMPLER_FAIL
 	Expression = "1";
 	ResultToken = "G.U.S.DEFECTREPAIR_CCF_CORE";
 }
-Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_xsa_mclk_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_xsa_mclk_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -676,12 +731,12 @@ Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_A
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_ssa_all_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_ssa_all_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -692,12 +747,12 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SR
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_lsa_all_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_lsa_all_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -708,18 +763,210 @@ Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_rom_sbclk_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_rom_sbclk_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2303";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2304";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2305";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2306";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2307";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2308";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2309";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2310";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2311";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2312";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2313";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2314";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2315";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -735,7 +982,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2304";
+	ScoreboardBaseNumber = "2316";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -770,66 +1017,258 @@ Test PrimeHvqkTestMethod SSA_CORE_HVQK_K_STRESS_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK
 	# PowerDownLevel = "";
 	# PowerUpLevel = "";
 }
-Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_xsa_mclk_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_xsa_mclk_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2305";
+	ScoreboardBaseNumber = "2317";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_ssa_all_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_ssa_all_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2306";
+	ScoreboardBaseNumber = "2318";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_lsa_all_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_lsa_all_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2307";
+	ScoreboardBaseNumber = "2319";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_core_sort_lfm_prepost_tico_rom_sbclk_list";
+	Patlist = "arria_core0_sort_lfm_prepost_tico_rom_sbclk_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2308";
+	ScoreboardBaseNumber = "2320";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2321";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2322";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2323";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core1_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2324";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2325";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2326";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2327";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core2_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2328";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_xsa_mclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2329";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_ssa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2330";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_lsa_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2331";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core3_sort_lfm_prepost_tico_rom_sbclk_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2332";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -845,55 +1284,199 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2309";
+	ScoreboardBaseNumber = "2333";
 	ExecutionMode = "Search";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM
+Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_core_ssa_ks_sort_tico_pm_list";
+	Patlist = "marr_mbist_core0_ssa_ks_sort_tito_pm_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2310";
+	ScoreboardBaseNumber = "2334";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL
+Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_core_lsa_ks_sort_tico_all_list";
+	Patlist = "marr_mbist_core0_lsa_ks_sort_tito_all_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2312";
+	ScoreboardBaseNumber = "2335";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM
+Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_core_rom_ks_sort_tico_fit_list";
+	Patlist = "marr_mbist_core0_rom_ks_sort_tito_fit_list";
 	StartVoltages = "0.5";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2313";
+	ScoreboardBaseNumber = "2336";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core1_ssa_ks_sort_tito_pm_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2337";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core1_lsa_ks_sort_tito_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2338";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core1_rom_ks_sort_tito_fit_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2339";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core2_ssa_ks_sort_tito_pm_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2340";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core2_lsa_ks_sort_tito_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2341";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core2_rom_ks_sort_tito_fit_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2342";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core3_ssa_ks_sort_tito_pm_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2343";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core3_lsa_ks_sort_tito_all_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2344";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_core3_rom_ks_sort_tito_fit_list";
+	StartVoltages = "0.5";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2345";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -909,7 +1492,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2314";
+	ScoreboardBaseNumber = "2346";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -925,7 +1508,7 @@ Test PrimeVminSearchTestMethod XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2315";
+	ScoreboardBaseNumber = "2347";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -941,7 +1524,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2316";
+	ScoreboardBaseNumber = "2348";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -957,7 +1540,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCL
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2317";
+	ScoreboardBaseNumber = "2349";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -966,7 +1549,7 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_ssa_ks_sort_tico_pm_list";
+	Patlist = "marr_mbist_core_ssa_ks_sort_tito_pm_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
@@ -979,7 +1562,7 @@ Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_lsa_ks_sort_tico_all_list";
+	Patlist = "marr_mbist_core_lsa_ks_sort_tito_all_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
@@ -992,7 +1575,7 @@ Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_rom_ks_sort_tico_fit_list";
+	Patlist = "marr_mbist_core_rom_ks_sort_tito_fit_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
@@ -1011,6 +1594,162 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core0_ssa_ks_sort_tito_pm_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core0_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core0_rom_ks_sort_tito_fit_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core1_ssa_ks_sort_tito_pm_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core1_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core1_rom_ks_sort_tito_fit_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core2_ssa_ks_sort_tito_pm_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core2_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core2_rom_ks_sort_tito_fit_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core3_ssa_ks_sort_tito_pm_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core3_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_core3_rom_ks_sort_tito_fit_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
@@ -2740,7 +3479,7 @@ DUTFlow ARR_CORE_BEGIN @BEGIN_SubFlow
 }
 DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
 {
-	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL @EDC
+	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -2757,17 +3496,17 @@ DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0;
-	        ##EDC## SetBin SoftBins.b61210200_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_SHARED_BIN;
-			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM;
+	        IncrementCounters ARR_CORE::n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61210200_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
 		}
 	}
-	DUTFlowItem SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM @EDC
+	DUTFlowItem SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -2784,17 +3523,17 @@ DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21210201_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_0;
-	        ##EDC## SetBin SoftBins.b21210201_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_SHARED_BIN;
-			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL;
+	        IncrementCounters ARR_CORE::n21210201_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210201_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
 		}
 	}
-	DUTFlowItem LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL @EDC
+	DUTFlowItem LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -2811,17 +3550,17 @@ DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21210203_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b21210203_fail_ARR_CORE_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
-			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM;
+	        IncrementCounters ARR_CORE::n21210202_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210202_fail_ARR_CORE_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0;
 		}
 	}
-	DUTFlowItem ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM @EDC
+	DUTFlowItem ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0 ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -2838,8 +3577,332 @@ DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21210204_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_0;
-	        ##EDC## SetBin SoftBins.b21210204_fail_ARR_CORE_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n21210203_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210203_fail_ARR_CORE_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1 XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210204_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61210204_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210205_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210205_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210206_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210206_fail_ARR_CORE_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1 ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210207_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210207_fail_ARR_CORE_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2 XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210208_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b61210208_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210209_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210209_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210210_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210210_fail_ARR_CORE_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2 ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210211_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210211_fail_ARR_CORE_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3 XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210212_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61210212_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210213_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210213_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210214_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210214_fail_ARR_CORE_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3 ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210215_fail_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210215_fail_ARR_CORE_ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_SHARED_BIN;
 			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS;
         }
 		Result 1
@@ -2865,8 +3928,8 @@ DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61210205_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0;
-	        ##EDC## SetBin SoftBins.b61210205_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61210216_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0;
+	        ##EDC## SetBin SoftBins.b61210216_fail_ARR_CORE_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -3007,7 +4070,7 @@ DUTFlow ARR_CORE_STRESS @STRESS_SubFlow
 }
 DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
 {
-	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL @EDC
+	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3024,17 +4087,17 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61210400_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0;
-	        ##EDC## SetBin SoftBins.b61210400_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_SHARED_BIN;
-			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM;
+	        IncrementCounters ARR_CORE::n61210400_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61210400_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
 		}
 	}
-	DUTFlowItem SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM @EDC
+	DUTFlowItem SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3051,17 +4114,17 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21210401_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_0;
-	        ##EDC## SetBin SoftBins.b21210401_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_SHARED_BIN;
-			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL;
+	        IncrementCounters ARR_CORE::n21210401_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210401_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
 		}
 	}
-	DUTFlowItem LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL @EDC
+	DUTFlowItem LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3078,17 +4141,17 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21210402_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b21210402_fail_ARR_CORE_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
-			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM;
+	        IncrementCounters ARR_CORE::n21210402_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210402_fail_ARR_CORE_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0;
 		}
 	}
-	DUTFlowItem ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM @EDC
+	DUTFlowItem ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0 ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3105,8 +4168,332 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61210403_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_0;
-	        ##EDC## SetBin SoftBins.b61210403_fail_ARR_CORE_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n21210403_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21210403_fail_ARR_CORE_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE0_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1 XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210404_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61210404_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE1_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210405_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210405_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210406_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210406_fail_ARR_CORE_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1 ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210407_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21210407_fail_ARR_CORE_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE1_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2 XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210408_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b61210408_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE2_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210409_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210409_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210410_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210410_fail_ARR_CORE_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2 ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210411_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21210411_fail_ARR_CORE_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE2_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3;
+		}
+	}
+	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3 XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210412_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61210412_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE3_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+		}
+	}
+	DUTFlowItem SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210413_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210413_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_SHARED_BIN;
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+	}
+	DUTFlowItem LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210414_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210414_fail_ARR_CORE_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_SHARED_BIN;
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+		}
+	}
+	DUTFlowItem ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3 ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21210415_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21210415_fail_ARR_CORE_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_SHARED_BIN;
 			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS;
         }
 		Result 1
@@ -3132,8 +4519,8 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61210404_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0;
-	        ##EDC## SetBin SoftBins.b61210404_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61210416_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0;
+	        ##EDC## SetBin SoftBins.b61210416_fail_ARR_CORE_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -3145,7 +4532,7 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
 }
 DUTFlow KS
 {
-	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM @EDC
+	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3162,17 +4549,17 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220500_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_0;
-	        ##EDC## SetBin SoftBins.b61220500_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_SHARED_BIN;
-			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+	        IncrementCounters ARR_CORE::n61220500_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61220500_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_SHARED_BIN;
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
 		}
 	}
-	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL @EDC
+	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3189,17 +4576,17 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21220502_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b21220502_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
-			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM;
+	        IncrementCounters ARR_CORE::n21220501_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21220501_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_SHARED_BIN;
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
 		}
 	}
-	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM @EDC
+	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0 ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0 @EDC
 	{
 		Result -2
 		{
@@ -3216,8 +4603,251 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220503_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_0;
-	        ##EDC## SetBin SoftBins.b61220503_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61220502_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61220502_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_SHARED_BIN;
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+		}
+	}
+	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220503_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61220503_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_SHARED_BIN;
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+		}
+	}
+	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220504_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21220504_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_SHARED_BIN;
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+		}
+	}
+	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1 ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220505_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61220505_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_SHARED_BIN;
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+		}
+	}
+	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220506_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b61220506_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_SHARED_BIN;
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+	}
+	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220507_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21220507_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_SHARED_BIN;
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+		}
+	}
+	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2 ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220508_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b61220508_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_SHARED_BIN;
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+		}
+	}
+	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220509_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61220509_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_SHARED_BIN;
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+	}
+	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220510_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21220510_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_SHARED_BIN;
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+		}
+	}
+	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3 ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220511_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61220511_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_SHARED_BIN;
 			GoTo SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS;
         }
 		Result 1
@@ -3243,8 +4873,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220504_fail_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_0;
-	        ##EDC## SetBin SoftBins.b61220504_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61220512_fail_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_0;
+	        ##EDC## SetBin SoftBins.b61220512_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -3470,6 +5100,468 @@ DUTFlow SHMOO
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_CORE::n61220563_fail_SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS_0;
 	        ##EDC## SetBin SoftBins.b61220563_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
+		}
+	}
+	DUTFlowItem SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61220564_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_3;
+	        ##EDC## SetBin SoftBins.b61220564_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0;
+        }
+	}
+	DUTFlowItem LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220565_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0;
+	        ##EDC## SetBin SoftBins.b21220565_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220565_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_3;
+	        ##EDC## SetBin SoftBins.b21220565_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0;
+        }
+	}
+	DUTFlowItem ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0 ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220566_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_0;
+	        ##EDC## SetBin SoftBins.b61220566_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220566_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_3;
+	        ##EDC## SetBin SoftBins.b61220566_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1;
+        }
+	}
+	DUTFlowItem SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220567_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61220567_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220567_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_3;
+	        ##EDC## SetBin SoftBins.b61220567_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1;
+        }
+	}
+	DUTFlowItem LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220568_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_0;
+	        ##EDC## SetBin SoftBins.b21220568_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220568_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_3;
+	        ##EDC## SetBin SoftBins.b21220568_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1;
+        }
+	}
+	DUTFlowItem ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1 ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220569_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_0;
+	        ##EDC## SetBin SoftBins.b61220569_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220569_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_3;
+	        ##EDC## SetBin SoftBins.b61220569_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2;
+        }
+	}
+	DUTFlowItem SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220570_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_3;
+	        ##EDC## SetBin SoftBins.b61220570_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2;
+        }
+	}
+	DUTFlowItem LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220571_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_0;
+	        ##EDC## SetBin SoftBins.b21220571_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220571_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_3;
+	        ##EDC## SetBin SoftBins.b21220571_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2;
+        }
+	}
+	DUTFlowItem ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2 ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220572_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_0;
+	        ##EDC## SetBin SoftBins.b61220572_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220572_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_3;
+	        ##EDC## SetBin SoftBins.b61220572_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2_SHARED_BIN;
+			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3;
+        }
+	}
+	DUTFlowItem SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220573_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61220573_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3;
+		}
+	}
+	DUTFlowItem LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220574_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0;
+	        ##EDC## SetBin SoftBins.b21220574_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n21220574_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_3;
+	        ##EDC## SetBin SoftBins.b21220574_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3;
+        }
+	}
+	DUTFlowItem ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3 ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220575_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_0;
+	        ##EDC## SetBin SoftBins.b61220575_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -3482,11 +5574,13 @@ DUTFlow SHMOO
 			Property PassFail = "Pass";
 			Return 1;
 		}
-		Result 3
-		{
-			Property PassFail = "Pass";
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61220575_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_3;
+	        ##EDC## SetBin SoftBins.b61220575_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_SHARED_BIN;
 			Return 1;
-		}
+        }
 	}
 }
 DUTFlow ARR_CORE_END @END_SubFlow

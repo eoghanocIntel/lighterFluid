@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_SOC;
 Import ARR_SOC.usrv;
 
+Import PrimeShmooTestMethod.xml;
 Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeShmooTestMethod.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 
 Counters
 {
@@ -1248,7 +1248,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY0
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY0_BISR_MMM_BP5
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1312,7 +1312,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY_
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY_1_2_BISR_MMM_BP6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1376,7 +1376,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY3
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY3_BISR_MMM_BP7
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1504,7 +1504,7 @@ Test PrimeMbistVminSearchTestMethod LSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY_
 }
 Test PrimeMbistVminSearchTestMethod LSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY_1_2_BISR_MMM_BP6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1632,7 +1632,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO0_MU
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO0_MUFASA0_BISR_HBO0_BP2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1696,7 +1696,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO0_MU
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO0_MUFASA1_BISR_HBO0_BP3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1824,7 +1824,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO1_MU
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO1_MUFASA0_BISR_HBO1_BP2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1888,7 +1888,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO1_MU
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_HBO1_MUFASA1_BISR_HBO1_BP3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -17461,12 +17461,12 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-			GoTo SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO0;
+			GoTo SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_SBCLK_CCSR;
 		}
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO0;
+			GoTo SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_SBCLK_CCSR;
 		}
 	}
 	DUTFlowItem SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_SBCLK_CCSR SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_SBCLK_CCSR @EDC
@@ -17706,12 +17706,12 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-			GoTo SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_GT_SBCLK;
+			GoTo LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_ALL_SAQ;
 		}
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_GT_SBCLK;
+			GoTo LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_ALL_SAQ;
 		}
 	}
 	DUTFlowItem LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_ALL_SAQ LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_ALL_SAQ @EDC

@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_GFX;
 Import ARR_GFX.usrv;
 
+Import PrimeShmooTestMethod.xml;
 Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeShmooTestMethod.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 
 Counters
 {
@@ -1903,7 +1903,7 @@ Test PrimeMbistVminSearchTestMethod LSA_GFX_HRY_E_BEGIN_TITO_SACD_MAX_LFM_DISP5_
 }
 Test PrimeMbistVminSearchTestMethod SSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU0_BHRY_BTRS_BP5
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -1967,7 +1967,7 @@ Test MbistRasterTC SSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU0_RASTER_BTRS_BP5
 }
 Test PrimeMbistVminSearchTestMethod SSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU1_BHRY_BTRS_BP6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2031,7 +2031,7 @@ Test MbistRasterTC SSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU1_RASTER_BTRS_BP6
 }
 Test PrimeMbistVminSearchTestMethod SSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU2_BHRY_BTRS_BP3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2095,7 +2095,7 @@ Test MbistRasterTC SSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU2_RASTER_BTRS_BP3
 }
 Test PrimeMbistVminSearchTestMethod LSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU_BUTTRESS_BHRY_BTRS_BP4
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2159,7 +2159,7 @@ Test MbistRasterTC LSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU_BUTTRESS_RASTER_
 }
 Test PrimeMbistVminSearchTestMethod LSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU0_BHRY_BTRS_BP5
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2223,7 +2223,7 @@ Test MbistRasterTC LSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU0_RASTER_BTRS_BP5
 }
 Test PrimeMbistVminSearchTestMethod LSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU1_BHRY_BTRS_BP6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2287,7 +2287,7 @@ Test MbistRasterTC LSA_GFX_RASTER_E_BEGIN_TITO_SAPS_NOM_LFM_IPU1_RASTER_BTRS_BP6
 }
 Test PrimeMbistVminSearchTestMethod LSA_GFX_HRY_E_BEGIN_TITO_SAPS_NOM_LFM_IPU2_BHRY_BTRS_BP3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -17641,12 +17641,12 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEBS;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU;
 		}
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEBS;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU;
 		}
 	}
 	DUTFlowItem SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU @EDC

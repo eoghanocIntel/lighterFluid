@@ -10,7 +10,7 @@ from functions import flowFileBuilder
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionFile = "C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles\lnlArrayMasterSheet.xlsx";
+definitionFile = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles\lnlArrayMasterSheet.xlsx";
 definitionList = [];
 definitionList.append("arr_atom");
 definitionList.append("arr_ccf");
