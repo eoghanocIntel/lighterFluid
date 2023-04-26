@@ -18,5 +18,6 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "###TestMode###";
 	BisrMode = "###BisrMode###"; # Compressed_skippatmod, Off
+	PrintToItuff = "###printToItuff###";
 	FailCaptureCount = 99999;
 }

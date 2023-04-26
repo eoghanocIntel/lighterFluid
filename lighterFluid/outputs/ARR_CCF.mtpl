@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_CCF;
 Import ARR_CCF.usrv;
 
+Import PrimePatConfigTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import PrimeShmooTestMethod.xml;
 Import MbistRasterTC.xml;
-Import OASIS_VFDM_tt.xml;
-Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
-Import OASIS_UserFunc_tt.xml;
-Import OASIS_Screen_tt.xml;
+Import OASIS_VFDM_tt.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
+Import OASIS_Screen_tt.xml;
 Import AuxiliaryTC.xml;
-Import PrimePatConfigTestMethod.xml;
 
 Counters
 {
@@ -396,10 +396,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -421,10 +422,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -446,10 +448,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -471,10 +474,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -496,10 +500,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -535,10 +540,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -574,10 +580,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -613,10 +620,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -652,10 +660,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -691,10 +700,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -730,10 +740,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -769,10 +780,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -808,10 +820,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -847,10 +860,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -886,10 +900,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -925,10 +940,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -964,10 +980,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -1003,10 +1020,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_SOC.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "HRY";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "hry";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?
@@ -1079,10 +1097,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_LLC_TAG_POST_REPAIR_PMA0_BP2
@@ -1101,10 +1120,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_SAR_POST_REPAIR_PMA0_BP6
@@ -1123,10 +1143,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LSA_ALL_POST_REPAIR_PMA0_BP4
@@ -1145,10 +1166,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_DAT_POST_REPAIR_PMA0_BP1
@@ -1167,10 +1189,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_LLC_TAG_POST_REPAIR_PMA0_BP3
@@ -1189,10 +1212,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LSA_ALL_POST_REPAIR_PMA0_BP5
@@ -1211,10 +1235,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_DAT_POST_REPAIR_PMA1_BP0
@@ -1233,10 +1258,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_LLC_TAG_POST_REPAIR_PMA1_BP2
@@ -1255,10 +1281,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_SAR_POST_REPAIR_PMA1_BP6
@@ -1277,10 +1304,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LSA_ALL_POST_REPAIR_PMA1_BP4
@@ -1299,10 +1327,11 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_DAT_POST_REPAIR_PMA1_BP1
@@ -1321,10 +1350,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_LLC_TAG_POST_REPAIR_PMA1_BP3
@@ -1343,10 +1373,11 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "";
 	FailCaptureCount = 99999;
 }
 Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LSA_ALL_POST_REPAIR_PMA1_BP5
@@ -1365,15 +1396,16 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 	MaxRepetitionCount = 0;
 	CtvPins = "XXTDO";
 	TestMode = "Scoreboard";
-	LookupTableConfigurationFile = "./Modules/ARR_CCF/InputFiles/MBIST_HRY.json";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "PostRepair";
 	BisrMode = "compress"; # Compressed_skippatmod, Off
+	PrintToItuff = "hry";
 	FailCaptureCount = 99999;
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLRSS_MIN_LFM_1200_CBO
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_ccf_sort_lfm_prepost_tito_ssa_cbo_list";
@@ -1389,7 +1421,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLRSS_MIN_LFM_1200_CB
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLR_MIN_LFM_1200_SBO
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_ccf_sort_lfm_prepost_tito_xsa_sbo_list";
@@ -1451,7 +1483,7 @@ Test PrimeHvqkTestMethod ALL_CCF_HVQK_K_STRESS_TITO_CLRSS_MAX_LFM_1200_PMA
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRSS_MIN_LFM_1200_CBO
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_ccf_sort_lfm_prepost_tito_ssa_cbo_list";
@@ -1467,7 +1499,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRSS_MIN_LFM_1200_C
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLR_MIN_LFM_1200_SBO
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_ccf_sort_lfm_prepost_tito_xsa_sbo_list";
@@ -1510,8 +1542,8 @@ Test PrimeVminSearchTestMethod ALL_CCF_SB_K_END_TITO_CLRSS_NOM_LFM_1200_CBO
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2020";
 	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
 }
 Test PrimeVminSearchTestMethod SSA_CCF_SB_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_FF
 {
@@ -1579,7 +1611,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_SB_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_
 }
 Test PrimeVminSearchTestMethod LSA_CCF_SB_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_list";
@@ -1611,7 +1643,7 @@ Test PrimeVminSearchTestMethod ROM_CCF_SB_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF
 }
 Test PrimeVminSearchTestMethod SSA_CCF_SB_K_END_TITO_CLRSS_NOM_LFM_1200_PMA
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pma_list";
@@ -1627,7 +1659,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_SB_K_END_TITO_CLRSS_NOM_LFM_1200_PMA
 }
 Test PrimeVminSearchTestMethod SSA_CCF_SB_E_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_PMOVI
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
@@ -1643,7 +1675,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_SB_E_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_
 }
 Test PrimeVminSearchTestMethod LSA_CCF_SB_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_pmovi_list";
@@ -1723,7 +1755,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_F1
 }
 Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_FF_F1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
@@ -1739,7 +1771,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_SS
 }
 Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF_F1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_pmovi_list";
@@ -1771,7 +1803,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_F1
 }
 Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_FF_F1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_pmovi_list";
@@ -1787,7 +1819,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_SS
 }
 Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF_F1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_pmovi_list";
@@ -1803,7 +1835,7 @@ Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_
 }
 Test PrimeVminSearchTestMethod ROM_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF_F1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_rom_ks_sort_tito_sbo_list";
@@ -1851,7 +1883,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_F6
 }
 Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_FF_F6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
@@ -1867,7 +1899,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_CBO_SS
 }
 Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF_F6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_pmovi_list";
@@ -1899,7 +1931,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_F6
 }
 Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_FF_F6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_pmovi_list";
@@ -1915,7 +1947,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_SBO_SS
 }
 Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF_F6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_pmovi_list";
@@ -1931,7 +1963,7 @@ Test PrimeVminSearchTestMethod LSA_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_
 }
 Test PrimeVminSearchTestMethod ROM_CCF_VMAX_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF_F6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_ring_rom_ks_sort_tito_sbo_list";
@@ -1963,7 +1995,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_CLRSS_NOM_LFM_1200_PMA_F6
 }
 Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_CBO
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2002,7 +2034,7 @@ Test PrimeShmooTestMethod LSA_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF
 }
 Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2015,7 +2047,7 @@ Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO
 }
 Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_FF
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2028,7 +2060,7 @@ Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_FF
 }
 Test PrimeShmooTestMethod LSA_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2041,7 +2073,7 @@ Test PrimeShmooTestMethod LSA_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF
 }
 Test PrimeShmooTestMethod ROM_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_ring_rom_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";

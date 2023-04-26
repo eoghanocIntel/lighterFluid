@@ -18,6 +18,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
 	MbistTestMode = "###TestMode###";
 	BisrMode = "###BisrMode###"; # Compressed_skippatmod, Off
+	PrintToItuff = "###printToItuff###";
 	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
 	FailCaptureCount = 1000000;
 	# DffOperation = ; # Do we need to set?

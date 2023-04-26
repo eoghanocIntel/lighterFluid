@@ -43,7 +43,7 @@ def testBuilder(dataset,findAndReplaceFile):
                         currValue = int(dataset[value][i]);
                         currValue = str(currValue);
                 # This section is for strings
-                elif (key in ["###SetPointsPreInstance###"]):
+                elif (key in ["###SetPointsPreInstance###","###printToItuff###"]):
                     try:
                         if math.isnan(dataset[value][i]):
                             currValue = "";

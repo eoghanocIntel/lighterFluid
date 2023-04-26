@@ -5,17 +5,17 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
+Import PrimePatConfigTestMethod.xml;
+Import OASIS_Repair_tt.xml;
+Import OASIS_HSR_tt.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_CapturePackets_tt.xml;
+Import OASIS_UserFunc_tt.xml;
 Import PrimeShmooTestMethod.xml;
+Import PrimeHvqkTestMethod.xml;
 Import OASIS_VFDM_tt.xml;
 Import PrimeLSARasterTestMethod.xml;
-Import OASIS_Repair_tt.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
-Import OASIS_UserFunc_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import OASIS_HSR_tt.xml;
 Import AuxiliaryTC.xml;
-Import OASIS_CapturePackets_tt.xml;
 
 Counters
 {
@@ -907,7 +907,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_R
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LSA_ROM
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
@@ -923,7 +923,7 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LS
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML2_MIN_LFM_1700_SSA
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_direct_list";
@@ -959,7 +959,7 @@ Test PrimeHvqkTestMethod SSA_ATOM_HVQK_K_STRESS_TITO_ATOML2_MAX_LFM_1700_SSA
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_1700_LSA_ROM
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
@@ -975,7 +975,7 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_1700_L
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML2_MIN_LFM_1700_L2_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_direct_list";
@@ -1023,7 +1023,7 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
@@ -1055,7 +1055,7 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM
 }
 Test PrimeVminSearchTestMethod CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
@@ -1071,7 +1071,7 @@ Test PrimeVminSearchTestMethod CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_PMOVI
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_pmovi_list";
@@ -1087,7 +1087,7 @@ Test PrimeVminSearchTestMethod SSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_PMOVI
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_pmovi_list";
@@ -1103,7 +1103,7 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_pmovi_list";
@@ -1119,7 +1119,7 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_P
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_list";
@@ -1135,7 +1135,7 @@ Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_1700_SSA
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
@@ -4262,7 +4262,7 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 }
 DUTFlow KS
 {
-	DUTFlowItem SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL @EDC
+	DUTFlowItem SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL 
 	{
 		Result -2
 		{
@@ -4280,7 +4280,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n60620500_fail_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_0;
-	        ##EDC## SetBin SoftBins.b60620500_fail_ARR_ATOM_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_SHARED_BIN;
+	        SetBin SoftBins.b60620500_fail_ARR_ATOM_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_SHARED_BIN;
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
         }
 		Result 1
@@ -4289,7 +4289,7 @@ DUTFlow KS
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
 		}
 	}
-	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU @EDC
+	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU 
 	{
 		Result -2
 		{
@@ -4307,7 +4307,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n60620501_fail_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_0;
-	        ##EDC## SetBin SoftBins.b60620501_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_SHARED_BIN;
+	        SetBin SoftBins.b60620501_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_SHARED_BIN;
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
         }
 		Result 1
@@ -4343,7 +4343,7 @@ DUTFlow KS
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM;
 		}
 	}
-	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM @EDC
+	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM 
 	{
 		Result -2
 		{
@@ -4361,7 +4361,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n20620503_fail_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_0;
-	        ##EDC## SetBin SoftBins.b20620503_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_SHARED_BIN;
+	        SetBin SoftBins.b20620503_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_SHARED_BIN;
 			GoTo CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM;
         }
 		Result 1
