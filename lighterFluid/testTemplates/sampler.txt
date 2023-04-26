@@ -1,0 +1,8 @@
+Test PrimeSampleRateTestMethod ###TestName###
+{
+   SamplingRateValue = "###SamplingRateValue###";
+   SampleOption = "WAFER_SAMPLE_RATE";
+   WaferSampleRateValue = "###WaferSampleRateValue###";
+   PrintItuffExitPort = "False";
+   #LogLevel = "PRIME_DEBUG";
+}

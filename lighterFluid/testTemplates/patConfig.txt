@@ -1,6 +1,6 @@
 Test PrimePatConfigTestMethod ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	ConfigurationFile = "./Modules/ARR_###Module###/InputFiles/###jsonPatConfig###";
+	ConfigurationFile = "###jsonPatConfig###";
 	SetPoint = "###jsonSetPoint###";
 }

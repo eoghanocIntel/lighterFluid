@@ -10,14 +10,10 @@ from functions import flowFileBuilder
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionFile = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles\lnlArrayMasterSheet.xlsx";
+definitionFile = r"C:\Users\cmichel1\source\repos\lighterFluid\lighterFluid\inputs\Func_Sheet.xlsx";
 definitionList = [];
-definitionList.append("arr_atom");
-definitionList.append("arr_ccf");
-definitionList.append("arr_core");
-definitionList.append("arr_gfx");
-definitionList.append("arr_soc");
-definitionList.append("arr_vpu");
+definitionList.append("rst_dfx");
+definitionList.append("rst_reset");
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 
@@ -30,10 +26,12 @@ for definitionPage in definitionList:
     overallOutput = "";
     dataset = pandas.read_excel(definitionFile, sheet_name=definitionPage);
 
-    importSection = importBuilder.importBuilder(dataset);
+    moduleName = str(definitionPage).upper()
+
+    importSection = importBuilder.importBuilder(dataset, moduleName);
     counterSection = counterBuilder.counterBuilder(dataset);
     testSection = testBuilder.testBuilder(dataset,findAndReplaceFile);
-    dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
+    dutFlowSection = dutflowBuilder.dutflowBuilder(dataset, moduleName);
 
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
     

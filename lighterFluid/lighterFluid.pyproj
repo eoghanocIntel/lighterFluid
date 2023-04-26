@@ -47,11 +47,10 @@
     <Content Include="functions\__pycache__\importBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\testBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\TestInstance.cpython-39.pyc" />
+    <Content Include="inputs\demoSheet.xlsx" />
     <Content Include="inputs\findAndReplaceFile.csv" />
-    <Content Include="inputs\lnlArrayMasterSheet.xlsx" />
-    <Content Include="inputs\rev0.csv" />
-    <Content Include="inputs\rev1.xlsx" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
+    <Content Include="testTemplates\funcTest.txt" />
     <Content Include="testTemplates\mbistRepairSOC.txt" />
     <Content Include="testTemplates\patConfig.txt" />
     <Content Include="testTemplates\fuseConfig.txt" />
@@ -66,6 +65,7 @@
     <Content Include="testTemplates\mbistRaster.txt" />
     <Content Include="testTemplates\hvqk.txt" />
     <Content Include="testTemplates\primeShmoo.txt" />
+    <Content Include="testTemplates\sampler.txt" />
     <Content Include="testTemplates\vfdmRun.txt" />
     <Content Include="testTemplates\vfdmUserFunc.txt" />
     <Content Include="testTemplates\hsrPre.txt" />

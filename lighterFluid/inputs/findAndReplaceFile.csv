@@ -26,3 +26,9 @@
 ###ScreenTestSet###,ScreenTestSet
 ###ScreenTestFile###,ScreenTestFile
 ###Voltage_Param###,YAxisParam
+###PatternNameMap###,PatternNameMap
+###LogLevel###,LogLevel
+###SamplingRateValue###,SamplingRateValue
+###WaferSampleRateValue###,WaferSampleRateValue
+###jsonPatConfig###,jsonPatConfig
+###jsonSetPoint###,jsonSetPoint
