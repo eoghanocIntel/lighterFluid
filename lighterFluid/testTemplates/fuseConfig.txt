@@ -1,6 +1,7 @@
 Test PrimePatConfigTestMethod ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	ConfigurationFile = "./Modules/ARR_###Module###/InputFiles/PatConfig_MbistRepair.setpoints.json";
-	SetPoint = "DF_io_from_BISR_SharedStorage";
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "###RegEx###";
 }
