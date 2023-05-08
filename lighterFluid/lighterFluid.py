@@ -1,4 +1,5 @@
 import pandas
+import os
 from functions import importBuilder
 from functions import counterBuilder
 from functions import testBuilder
@@ -38,7 +39,11 @@ for definitionPage in definitionList:
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
     
     currModule = definitionPage.upper();
-    outputMtpl = "outputs\\"+ currModule +".mtpl"; 
+
+    moduleDir = "outputs\\" + currModule + "\\"; 
+    if not os.path.exists(moduleDir):
+        os.makedirs(moduleDir);
+    outputMtpl = "outputs\\" + currModule + "\\" + currModule + ".mtpl"; 
     outFile = open(outputMtpl, "w");
     outFile.write(overallOutput);
     outFile.close();
