@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.mtpl
+/lighterFluid/outputs/RST_DFX.mtpl
+/lighterFluid/outputs/RST_RESET.mtpl
