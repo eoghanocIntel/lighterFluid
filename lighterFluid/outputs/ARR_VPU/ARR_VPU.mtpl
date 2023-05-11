@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_VPU;
 Import ARR_VPU.usrv;
 
+Import OASIS_UserFunc_tt.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimePatConfigTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import MbistRasterTC.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_VFDM_tt.xml;
-Import OASIS_UserFunc_tt.xml;
-Import MbistRasterTC.xml;
 
 Counters
 {
@@ -400,39 +400,41 @@ Counters
 	n21210328_fail_LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_3_0,
 	n21210329_fail_LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_4_0,
 	n21210330_fail_LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5_0,
-	n61320000_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0,
-	n61320001_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE_0,
-	n21320008_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0,
-	n21320009_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_0,
-	n61320002_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
-	n61320003_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
-	n61320004_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
-	n61320005_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
-	n61320006_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
-	n61320007_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
-	n21320010_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
-	n21320011_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
-	n21320012_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
-	n21320013_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
-	n21320014_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
-	n21320015_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
-	n17610016_fail_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_0,
-	n61320020_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0,
-	n61320021_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE_0,
-	n21320022_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0,
-	n21320023_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_0,
-	n61320024_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
-	n61320025_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
-	n61320026_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
-	n61320027_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
-	n61320028_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
-	n61320029_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
-	n21320030_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
-	n21320031_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
-	n21320032_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
-	n21320033_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
-	n21320034_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
-	n21320035_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0
+	n61320000_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_0,
+	n61320001_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_0,
+	n61320002_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0,
+	n61320003_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
+	n61320004_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
+	n61320005_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
+	n61320006_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
+	n61320007_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
+	n61320008_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
+	n21320009_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0,
+	n21320010_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_0,
+	n21320011_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
+	n21320012_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
+	n21320013_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
+	n21320014_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
+	n21320015_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
+	n21320016_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
+	n17610017_fail_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_0,
+	n61320020_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_0,
+	n61320021_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_0,
+	n21320022_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0,
+	n21320023_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
+	n61320024_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
+	n61320025_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
+	n61320026_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
+	n61320027_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
+	n61320028_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0,
+	n61320029_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0,
+	n21320030_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_0,
+	n21320031_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0,
+	n21320032_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0,
+	n21320033_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0,
+	n21320034_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0,
+	n21320035_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0,
+	n21320036_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0
 } # End of Test Counter Definition
 
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTRESS_BHRY_VBTR_BT3
@@ -440,7 +442,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTR
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -466,7 +468,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTR
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -499,14 +501,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTRESS_RASTER_VBT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -532,7 +534,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -565,14 +567,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -598,7 +600,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -631,14 +633,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -664,7 +666,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -697,14 +699,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -730,7 +732,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -763,14 +765,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -796,7 +798,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -829,14 +831,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -862,7 +864,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -895,14 +897,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -928,7 +930,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -961,14 +963,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -994,7 +996,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1027,14 +1029,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1060,7 +1062,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1093,14 +1095,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1126,7 +1128,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1159,14 +1161,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1192,7 +1194,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1225,14 +1227,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1258,7 +1260,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1291,14 +1293,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1324,7 +1326,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1357,14 +1359,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1390,7 +1392,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1423,7 +1425,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test iCScreenTest ALL_VPU_SCREEN_E_BEGIN_TITO_VCCSA_NOM_LFM_JOIN_BISR
 {
@@ -1462,7 +1464,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1485,7 +1487,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1508,7 +1510,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1531,7 +1533,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1554,7 +1556,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1577,7 +1579,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1600,7 +1602,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1623,7 +1625,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1646,7 +1648,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1669,7 +1671,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1692,7 +1694,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1715,7 +1717,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1738,7 +1740,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1761,7 +1763,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1784,7 +1786,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1810,13 +1812,13 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_ALL
 	Patlist = "arr_vpu_sort_lfm_prepost_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2200";
 	ExecutionMode = "Search";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
 }
 Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VCPU
 {
@@ -1826,7 +1828,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2201";
@@ -1842,7 +1844,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2208";
@@ -1858,7 +1860,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VBTR
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vbtr_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2209";
@@ -1874,7 +1876,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2202";
@@ -1890,7 +1892,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2203";
@@ -1906,7 +1908,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2204";
@@ -1922,7 +1924,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2205";
@@ -1938,7 +1940,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2206";
@@ -1954,7 +1956,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2207";
@@ -1970,7 +1972,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2210";
@@ -1986,7 +1988,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2211";
@@ -2002,7 +2004,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2212";
@@ -2018,7 +2020,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2213";
@@ -2034,7 +2036,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2214";
@@ -2050,7 +2052,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2215";
@@ -2063,7 +2065,7 @@ Test PrimeHvqkTestMethod XSA_VPU_HVQK_E_STRESS_TITO_VCCSA_NOM_LFM_VPU_ALL
 	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageStepConfigFile = "./Modules/ARR_VPU/InputFiles/hvqkConfig.xml"; #USER TODO: define value
 	# PowerDownLevel = "";
 	# PowerUpLevel = "";
@@ -2076,7 +2078,7 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_ALL
 	Patlist = "arr_vpu_sort_lfm_prepost_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2216";
@@ -2092,7 +2094,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2217";
@@ -2108,7 +2110,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2224";
@@ -2124,7 +2126,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VBTR
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vbtr_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2225";
@@ -2140,7 +2142,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2218";
@@ -2156,7 +2158,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2219";
@@ -2172,7 +2174,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2220";
@@ -2188,7 +2190,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2221";
@@ -2204,7 +2206,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2222";
@@ -2220,7 +2222,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2223";
@@ -2236,7 +2238,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2226";
@@ -2252,7 +2254,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2227";
@@ -2268,7 +2270,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2228";
@@ -2284,7 +2286,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2229";
@@ -2300,7 +2302,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2230";
@@ -2316,7 +2318,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2231";
@@ -2324,95 +2326,63 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2232";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2233";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2232";
+	ScoreboardBaseNumber = "2234";
 	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
-}
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE
-{
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
-	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_notile_list";
-	StartVoltages = "0.7";
-	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	VoltageTargets = "VCCSA_HC";
-	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2233";
-	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
-}
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
-{
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
-	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
-	StartVoltages = "0.7";
-	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	VoltageTargets = "VCCSA_HC";
-	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2240";
-	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
-}
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR
-{
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
-	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
-	StartVoltages = "0.7";
-	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	VoltageTargets = "VCCSA_HC";
-	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2241";
-	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	VoltageTargets = "VCCSA_HC";
-	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2234";
-	ExecutionMode = "SearchWithScoreboard";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
-}
-Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
-{
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
-	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile1_list";
-	StartVoltages = "0.7";
-	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2235";
@@ -2420,15 +2390,15 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile2_list";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2236";
@@ -2436,15 +2406,15 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile3_list";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2237";
@@ -2452,15 +2422,15 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile4_list";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2238";
@@ -2468,15 +2438,15 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile5_list";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2239";
@@ -2484,15 +2454,47 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
+Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile0_list";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2240";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2241";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2242";
@@ -2500,15 +2502,15 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile1_list";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2243";
@@ -2516,15 +2518,15 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile2_list";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2244";
@@ -2532,15 +2534,15 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile3_list";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2245";
@@ -2548,15 +2550,15 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile4_list";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2246";
@@ -2564,18 +2566,34 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
+Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile4_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2247";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2247";
+	ScoreboardBaseNumber = "2248";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
@@ -2588,64 +2606,51 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL
 	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
-	ScoreboardBaseNumber = "2248";
+	ScoreboardBaseNumber = "2249";
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
+}
+Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_vcpu_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE
-{
-	BypassPort = 1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_notile_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU
-{
-	BypassPort = 1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR
-{
-	BypassPort = 1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
@@ -2653,12 +2658,12 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile0_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
@@ -2666,12 +2671,12 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile1_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
@@ -2679,12 +2684,12 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile2_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
@@ -2692,12 +2697,12 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile3_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
@@ -2705,12 +2710,12 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile4_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
@@ -2718,12 +2723,38 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile5_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
@@ -2731,12 +2762,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile0_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
@@ -2744,12 +2775,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile1_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
@@ -2757,12 +2788,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile2_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
@@ -2770,12 +2801,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile3_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
@@ -2783,12 +2814,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile4_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
@@ -2796,12 +2827,12 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile5_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
 
@@ -8223,6 +8254,60 @@ DUTFlow ARR_VPU_POSTHVQK @POSTHVQK_SubFlow
 }
 DUTFlow KS
 {
+	DUTFlowItem SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320000_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61320000_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_SHARED_BIN;
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL;
+		}
+	}
+	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320001_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61320001_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_ALL_SHARED_BIN;
+			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+	}
 	DUTFlowItem SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
 	{
 		Result -2
@@ -8240,89 +8325,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320000_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0;
-	        ##EDC## SetBin SoftBins.b61320000_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE;
-		}
-	}
-	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320001_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE_0;
-	        ##EDC## SetBin SoftBins.b61320001_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE_SHARED_BIN;
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
-		}
-	}
-	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320008_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0;
-	        ##EDC## SetBin SoftBins.b21320008_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR;
-		}
-	}
-	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320009_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_0;
-	        ##EDC## SetBin SoftBins.b21320009_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320002_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0;
+	        ##EDC## SetBin SoftBins.b61320002_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0;
         }
 		Result 1
@@ -8348,8 +8352,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320002_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
-	        ##EDC## SetBin SoftBins.b61320002_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320003_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
+	        ##EDC## SetBin SoftBins.b61320003_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1;
         }
 		Result 1
@@ -8375,8 +8379,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320003_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
-	        ##EDC## SetBin SoftBins.b61320003_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320004_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
+	        ##EDC## SetBin SoftBins.b61320004_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2;
         }
 		Result 1
@@ -8402,8 +8406,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320004_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
-	        ##EDC## SetBin SoftBins.b61320004_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320005_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
+	        ##EDC## SetBin SoftBins.b61320005_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3;
         }
 		Result 1
@@ -8429,8 +8433,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320005_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
-	        ##EDC## SetBin SoftBins.b61320005_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320006_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
+	        ##EDC## SetBin SoftBins.b61320006_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4;
         }
 		Result 1
@@ -8456,8 +8460,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320006_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
-	        ##EDC## SetBin SoftBins.b61320006_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320007_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
+	        ##EDC## SetBin SoftBins.b61320007_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
 			GoTo SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5;
         }
 		Result 1
@@ -8483,8 +8487,62 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320007_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
-	        ##EDC## SetBin SoftBins.b61320007_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320008_fail_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
+	        ##EDC## SetBin SoftBins.b61320008_fail_ARR_VPU_SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+	}
+	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n21320009_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_0;
+	        ##EDC## SetBin SoftBins.b21320009_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR;
+		}
+	}
+	DUTFlowItem LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n21320010_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_0;
+	        ##EDC## SetBin SoftBins.b21320010_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0;
         }
 		Result 1
@@ -8510,8 +8568,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320010_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
-	        ##EDC## SetBin SoftBins.b21320010_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320011_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
+	        ##EDC## SetBin SoftBins.b21320011_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1;
         }
 		Result 1
@@ -8537,8 +8595,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320011_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
-	        ##EDC## SetBin SoftBins.b21320011_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320012_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
+	        ##EDC## SetBin SoftBins.b21320012_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2;
         }
 		Result 1
@@ -8564,8 +8622,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320012_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
-	        ##EDC## SetBin SoftBins.b21320012_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320013_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
+	        ##EDC## SetBin SoftBins.b21320013_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3;
         }
 		Result 1
@@ -8591,8 +8649,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320013_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
-	        ##EDC## SetBin SoftBins.b21320013_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320014_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
+	        ##EDC## SetBin SoftBins.b21320014_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4;
         }
 		Result 1
@@ -8618,8 +8676,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320014_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
-	        ##EDC## SetBin SoftBins.b21320014_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320015_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
+	        ##EDC## SetBin SoftBins.b21320015_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
 			GoTo LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5;
         }
 		Result 1
@@ -8645,8 +8703,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320015_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
-	        ##EDC## SetBin SoftBins.b21320015_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320016_fail_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
+	        ##EDC## SetBin SoftBins.b21320016_fail_ARR_VPU_LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -8675,8 +8733,8 @@ DUTFlow VMAX
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n17610016_fail_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_0;
-	        ##EDC## SetBin SoftBins.b17610016_fail_ARR_VPU_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n17610017_fail_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610017_fail_ARR_VPU_XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -8703,6 +8761,80 @@ DUTFlow VMAX
 }
 DUTFlow SHMOO
 {
+	DUTFlowItem SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320020_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61320020_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_SHARED_BIN;
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL;
+		}
+	}
+	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320021_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61320021_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_ALL_SHARED_BIN;
+			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+	}
 	DUTFlowItem SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
 	{
 		Result -2
@@ -8720,119 +8852,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320020_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0;
-	        ##EDC## SetBin SoftBins.b61320020_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE;
-		}
-	}
-	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320021_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE_0;
-	        ##EDC## SetBin SoftBins.b61320021_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE_SHARED_BIN;
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
-		}
-	}
-	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320022_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0;
-	        ##EDC## SetBin SoftBins.b21320022_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
-		}
-	}
-	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320023_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_0;
-	        ##EDC## SetBin SoftBins.b21320023_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320022_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0;
+	        ##EDC## SetBin SoftBins.b21320022_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0;
         }
 		Result 1
@@ -8868,8 +8889,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320024_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
-	        ##EDC## SetBin SoftBins.b61320024_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320023_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
+	        ##EDC## SetBin SoftBins.b21320023_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1;
         }
 		Result 1
@@ -8905,8 +8926,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320025_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
-	        ##EDC## SetBin SoftBins.b61320025_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320024_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
+	        ##EDC## SetBin SoftBins.b61320024_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2;
         }
 		Result 1
@@ -8942,8 +8963,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320026_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
-	        ##EDC## SetBin SoftBins.b61320026_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320025_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
+	        ##EDC## SetBin SoftBins.b61320025_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3;
         }
 		Result 1
@@ -8979,8 +9000,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320027_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
-	        ##EDC## SetBin SoftBins.b61320027_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320026_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
+	        ##EDC## SetBin SoftBins.b61320026_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4;
         }
 		Result 1
@@ -9016,8 +9037,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320028_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
-	        ##EDC## SetBin SoftBins.b61320028_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320027_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
+	        ##EDC## SetBin SoftBins.b61320027_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
 			GoTo SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5;
         }
 		Result 1
@@ -9053,8 +9074,82 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n61320029_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
-	        ##EDC## SetBin SoftBins.b61320029_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n61320028_fail_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
+	        ##EDC## SetBin SoftBins.b61320028_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU;
+		}
+	}
+	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320029_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_0;
+	        ##EDC## SetBin SoftBins.b61320029_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU_SHARED_BIN;
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR;
+		}
+	}
+	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n21320030_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_0;
+	        ##EDC## SetBin SoftBins.b21320030_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0;
         }
 		Result 1
@@ -9090,8 +9185,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320030_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
-	        ##EDC## SetBin SoftBins.b21320030_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320031_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_0;
+	        ##EDC## SetBin SoftBins.b21320031_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1;
         }
 		Result 1
@@ -9127,8 +9222,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320031_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
-	        ##EDC## SetBin SoftBins.b21320031_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320032_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_0;
+	        ##EDC## SetBin SoftBins.b21320032_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2;
         }
 		Result 1
@@ -9164,8 +9259,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320032_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
-	        ##EDC## SetBin SoftBins.b21320032_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320033_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_0;
+	        ##EDC## SetBin SoftBins.b21320033_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3;
         }
 		Result 1
@@ -9201,8 +9296,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320033_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
-	        ##EDC## SetBin SoftBins.b21320033_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320034_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_0;
+	        ##EDC## SetBin SoftBins.b21320034_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4;
         }
 		Result 1
@@ -9238,8 +9333,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320034_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
-	        ##EDC## SetBin SoftBins.b21320034_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320035_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_0;
+	        ##EDC## SetBin SoftBins.b21320035_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4_SHARED_BIN;
 			GoTo LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5;
         }
 		Result 1
@@ -9275,8 +9370,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_VPU::n21320035_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
-	        ##EDC## SetBin SoftBins.b21320035_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
+	        IncrementCounters ARR_VPU::n21320036_fail_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_0;
+	        ##EDC## SetBin SoftBins.b21320036_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5_SHARED_BIN;
 			Return 1;
         }
 		Result 1
