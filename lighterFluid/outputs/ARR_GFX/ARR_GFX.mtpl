@@ -5,14 +5,14 @@ ProgramStyle = Modular;
 TestPlan ARR_GFX;
 Import ARR_GFX.usrv;
 
-Import OASIS_UserFunc_tt.xml;
+Import PrimeShmooTestMethod.xml;
+Import MbistRasterTC.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import MbistRasterTC.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeShmooTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import OASIS_VFDM_tt.xml;
 
 Counters
@@ -5014,7 +5014,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_ALL_DE
 	Patlist = "marr_mbist_de_ssa_ks_sort_tito_x_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5027,7 +5027,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEP1
 	Patlist = "marr_mbist_de_ssa_ks_sort_tito_dep1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5040,7 +5040,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DE00
 	Patlist = "marr_mbist_de_ssa_ks_sort_tito_de00_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5053,7 +5053,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DE01
 	Patlist = "marr_mbist_de_ssa_ks_sort_tito_de01_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5066,7 +5066,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEW1
 	Patlist = "marr_mbist_de_ssa_ks_sort_tito_dew1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5079,7 +5079,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_ALL_DE
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_x_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5092,7 +5092,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEBS
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_debs_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5105,7 +5105,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEP1
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_dep1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5118,7 +5118,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DE00
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_de00_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5131,7 +5131,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DE01
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_de01_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5144,7 +5144,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEW1
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_dew1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5157,7 +5157,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_DEW2
 	Patlist = "marr_mbist_de_lsa_ks_sort_tito_dew2_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5170,7 +5170,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU
 	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_is_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5183,7 +5183,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_ALL_IPU
 	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_is_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5196,7 +5196,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_ALL_IPU
 	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_ps_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5209,7 +5209,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_ALL_IPU
 	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_ps_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5222,7 +5222,7 @@ Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_ALL_MEDIA
 	Patlist = "marr_mbist_media_ssa_ks_sort_tito_x_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5235,7 +5235,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_ALL_MEDIA
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_x_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5248,7 +5248,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDSX
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdsx_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5261,7 +5261,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDC1
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdc1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5274,7 +5274,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDH4
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdh4_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5287,7 +5287,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDI1
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdi1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5300,7 +5300,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDGT
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdgt_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5313,7 +5313,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDSY
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdsy_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5326,7 +5326,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDTP
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdtp_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5339,7 +5339,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDE2
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mde2_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5352,7 +5352,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDD3
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdd3_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5365,7 +5365,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDD2
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdd2_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5378,7 +5378,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDV2
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdv2_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5391,7 +5391,7 @@ Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_MDV4
 	Patlist = "marr_mbist_media_lsa_ks_sort_tito_mdv4_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5404,7 +5404,7 @@ Test PrimeShmooTestMethod ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_ROM
 	Patlist = "marr_mbist_media_rom_ks_sort_tito_x_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -7987,7 +7987,7 @@ DUTFlow REPAIR_DE
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_GFX_UF_K_BEGIN_X_SACD_X_X_DISP_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_GFX_UF_K_BEGIN_X_SACD_X_X_DISP_VFDM_UF ALL_GFX_UF_K_BEGIN_X_SACD_X_X_DISP_VFDM_UF 
@@ -10580,7 +10580,7 @@ DUTFlow REPAIR_IPU
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_GFX_UF_K_BEGIN_X_SAPS_X_X_IPU_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_GFX_UF_K_BEGIN_X_SAPS_X_X_IPU_VFDM_UF ALL_GFX_UF_K_BEGIN_X_SAPS_X_X_IPU_VFDM_UF 
@@ -12549,7 +12549,7 @@ DUTFlow REPAIR_MEDIA
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_GFX_UF_K_BEGIN_X_SAME_X_X_MEDIA_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_GFX_UF_K_BEGIN_X_SAME_X_X_MEDIA_VFDM_UF ALL_GFX_UF_K_BEGIN_X_SAME_X_X_MEDIA_VFDM_UF 

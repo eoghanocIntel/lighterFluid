@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_CORE;
 Import ARR_CORE.usrv;
 
-Import OASIS_UserFunc_tt.xml;
-Import AuxiliaryTC.xml;
+Import PrimeShmooTestMethod.xml;
+Import MbistRasterTC.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import MbistRasterTC.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeShmooTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import AuxiliaryTC.xml;
+Import OASIS_UserFunc_tt.xml;
 Import OASIS_VFDM_tt.xml;
 
 Counters
@@ -178,9 +178,9 @@ Counters
 	n21210414_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
 	n21210415_fail_ROM_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
 	n61210416_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS_0,
-	n61220513_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL_0,
-	n21220514_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_0,
-	n61220515_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL_0,
+	n61220513_fail_SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL_0,
+	n21220514_fail_LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL_0,
+	n61220515_fail_ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL_0,
 	n61220500_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
 	n21220501_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
 	n61220502_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0_0,
@@ -194,12 +194,12 @@ Counters
 	n21220510_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3_0,
 	n61220511_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3_0,
 	n61220512_fail_SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS_0,
-	n17610550_fail_XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK_0,
-	n17210551_fail_ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK_0,
-	n17210552_fail_SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_0,
-	n61220560_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_0,
-	n21220561_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_0,
-	n61220562_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_0,
+	n17610550_fail_XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK_0,
+	n17210551_fail_ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK_0,
+	n17210552_fail_SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK_0,
+	n61220560_fail_SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_0,
+	n21220561_fail_LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL_0,
+	n61220562_fail_ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM_0,
 	n61220563_fail_SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS_0,
 	n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
 	n61220564_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_3,
@@ -595,7 +595,7 @@ Test MbistRasterTC LSA_CORE_RASTER_E_BEGIN_TITO_VCCIA_NOM_LFM_RASTER_BP_7
 }
 Test iCScreenTest ALL_CORE_SCREEN_E_BEGIN_TITO_VCCSA_NOM_LFM_JOIN_BISR
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt";
 	screen_custom_setpoint = "DUMMY";
 	screen_test_set = "CombineGSDScore";
@@ -604,7 +604,7 @@ Test iCScreenTest ALL_CORE_SCREEN_E_BEGIN_TITO_VCCSA_NOM_LFM_JOIN_BISR
 
 Test iCVFDMTest ALL_CORE_VFDM_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_ALL
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	fuse_module = "ALL";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCORE0R_CORE0.vfdm.xml";
 	descriptor_operation = "REFRESH";
@@ -614,26 +614,26 @@ Test iCVFDMTest ALL_CORE_VFDM_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_ALL
 }
 Test iCUserFuncTest ALL_CORE_UF_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_UF
 {
-	bypass_global = "-1";
+	bypass_global = "1";
 	function_name = "VFDM_UF!ProcessVFDMOutputs";
 	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
 }
 Test PrimePatConfigTestMethod ALL_CORE_FUSECONFIG_E_BEGIN_TITO_VCCIA_NOM_LFM_REPAIR
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
 	SetPoint = "VFDM_SORT";
 	RegEx = "LNL_pre.*_Marr_.*";
 }
 Test AuxiliaryTC SSA_CORE_AUX_E_BEGIN_TITO_VCCIA_NOM_LFM_MLC_SRAM_SAMPLER_FAIL
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	Expression = "1";
 	ResultToken = "G.U.S.DEFECTREPAIR_CCF_CORE";
 }
 Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -659,7 +659,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POST
 }
 Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_4_5
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -685,7 +685,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POST
 }
 Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_6
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -711,7 +711,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POST
 }
 Test PrimeMbistVminSearchTestMethod LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_7
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -1309,7 +1309,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL
+Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL
 {
 	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
@@ -1325,7 +1325,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL
 	SetPointsPlistMode = "Global";
 	SetPointsPreInstance = "ARR_CORE:core_ratio:1.5GHz,ARR_CORE:core_subrutine:1.5GHz";
 }
-Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL
+Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL
 {
 	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
@@ -1341,7 +1341,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL
+Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL
 {
 	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
@@ -1359,13 +1359,13 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_ssa_ks_sort_tito_pm_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2334";
@@ -1375,13 +1375,13 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_lsa_ks_sort_tito_all_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2335";
@@ -1391,13 +1391,13 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_rom_ks_sort_tito_fit_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2336";
@@ -1407,13 +1407,13 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_ssa_ks_sort_tito_pm_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2337";
@@ -1423,13 +1423,13 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_lsa_ks_sort_tito_all_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2338";
@@ -1439,13 +1439,13 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_rom_ks_sort_tito_fit_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2339";
@@ -1455,13 +1455,13 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_ssa_ks_sort_tito_pm_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2340";
@@ -1471,13 +1471,13 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_lsa_ks_sort_tito_all_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2341";
@@ -1487,13 +1487,13 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_rom_ks_sort_tito_fit_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2342";
@@ -1503,13 +1503,13 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_ssa_ks_sort_tito_pm_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2343";
@@ -1519,13 +1519,13 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_lsa_ks_sort_tito_all_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2344";
@@ -1535,13 +1535,13 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_rom_ks_sort_tito_fit_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2345";
@@ -1551,13 +1551,13 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pmucs_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2346";
@@ -1565,7 +1565,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK
+Test PrimeVminSearchTestMethod XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
@@ -1581,7 +1581,7 @@ Test PrimeVminSearchTestMethod XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK
+Test PrimeVminSearchTestMethod ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
@@ -1597,7 +1597,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeVminSearchTestMethod SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK
+Test PrimeVminSearchTestMethod SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
@@ -1613,40 +1613,40 @@ Test PrimeVminSearchTestMethod SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCL
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
 }
-Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM
+Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_ssa_ks_sort_tito_pm_list";
+	Patlist = "marr_mbist_core_ssa_ks_sort_tico_pm_list";
 	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
-Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL
+Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_lsa_ks_sort_tito_all_list";
+	Patlist = "marr_mbist_core_lsa_ks_sort_tico_all_list";
 	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
 	YAxisParamType = "LevelsTestCondition";
 }
-Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM
+Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "marr_mbist_core_rom_ks_sort_tito_fit_list";
+	Patlist = "marr_mbist_core_rom_ks_sort_tico_fit_list";
 	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1657,9 +1657,9 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pmucs_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1670,9 +1670,9 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core0_ssa_ks_sort_tito_pm_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1683,9 +1683,9 @@ Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core0_lsa_ks_sort_tito_all_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1696,9 +1696,9 @@ Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core0_rom_ks_sort_tito_fit_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1709,9 +1709,9 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core1_ssa_ks_sort_tito_pm_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1722,9 +1722,9 @@ Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core1_lsa_ks_sort_tito_all_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1735,9 +1735,9 @@ Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core1_rom_ks_sort_tito_fit_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1748,9 +1748,9 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core2_ssa_ks_sort_tito_pm_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1761,9 +1761,9 @@ Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core2_lsa_ks_sort_tito_all_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1774,9 +1774,9 @@ Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core2_rom_ks_sort_tito_fit_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1787,9 +1787,9 @@ Test PrimeShmooTestMethod SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core3_ssa_ks_sort_tito_pm_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1800,9 +1800,9 @@ Test PrimeShmooTestMethod LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core3_lsa_ks_sort_tito_all_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1813,9 +1813,9 @@ Test PrimeShmooTestMethod ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_core3_rom_ks_sort_tito_fit_list";
-	TimingsTc = "ARR_CORE::cpu_ctf_timing_tclk100_cclk200_bclk400_12p5ns_core";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -3037,7 +3037,7 @@ DUTFlow VFDM
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_CORE_UF_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_CORE_UF_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_UF ALL_CORE_UF_E_BEGIN_TITO_VCCIA_NOM_LFM_VFDM_UF @EDC
@@ -4600,7 +4600,7 @@ DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
 }
 DUTFlow KS
 {
-	DUTFlowItem SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL @EDC
+	DUTFlowItem SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL @EDC
 	{
 		Result -2
 		{
@@ -4617,17 +4617,17 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220513_fail_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL_0;
-	        ##EDC## SetBin SoftBins.b61220513_fail_ARR_CORE_SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_ALL_SHARED_BIN;
-			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+	        IncrementCounters ARR_CORE::n61220513_fail_SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61220513_fail_ARR_CORE_SSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_ALL_SHARED_BIN;
+			GoTo LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL;
 		}
 	}
-	DUTFlowItem LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL @EDC
+	DUTFlowItem LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL @EDC
 	{
 		Result -2
 		{
@@ -4644,17 +4644,17 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21220514_fail_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b21220514_fail_ARR_CORE_LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
-			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL;
+	        IncrementCounters ARR_CORE::n21220514_fail_LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL_0;
+	        ##EDC## SetBin SoftBins.b21220514_fail_ARR_CORE_LSA_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
+			GoTo ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL;
+			GoTo ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL;
 		}
 	}
-	DUTFlowItem ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL @EDC
+	DUTFlowItem ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL @EDC
 	{
 		Result -2
 		{
@@ -4671,8 +4671,8 @@ DUTFlow KS
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220515_fail_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL_0;
-	        ##EDC## SetBin SoftBins.b61220515_fail_ARR_CORE_ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_ALL_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61220515_fail_ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL_0;
+	        ##EDC## SetBin SoftBins.b61220515_fail_ARR_CORE_ROM_CORE_KS_K_END_TICO_VCCIA_NOM_LFM_ROM_ALL_SHARED_BIN;
 			GoTo SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0;
         }
 		Result 1
@@ -5035,7 +5035,7 @@ DUTFlow KS
 }
 DUTFlow VMAX
 {
-	DUTFlowItem XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK @EDC
+	DUTFlowItem XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK @EDC
 	{
 		Result -2
 		{
@@ -5052,17 +5052,17 @@ DUTFlow VMAX
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n17610550_fail_XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK_0;
-	        ##EDC## SetBin SoftBins.b17610550_fail_ARR_CORE_XSA_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_MCLK_SHARED_BIN;
-			GoTo ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK;
+	        IncrementCounters ARR_CORE::n17610550_fail_XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK_0;
+	        ##EDC## SetBin SoftBins.b17610550_fail_ARR_CORE_XSA_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_MCLK_SHARED_BIN;
+			GoTo ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK;
+			GoTo ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK;
 		}
 	}
-	DUTFlowItem ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK @EDC
+	DUTFlowItem ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK @EDC
 	{
 		Result -2
 		{
@@ -5079,17 +5079,17 @@ DUTFlow VMAX
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n17210551_fail_ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK_0;
-	        ##EDC## SetBin SoftBins.b17210551_fail_ARR_CORE_ROM_CORE_HVQK_K_END_TITO_VCCIA_NOM_LFM_SBCLK_SHARED_BIN;
-			GoTo SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK;
+	        IncrementCounters ARR_CORE::n17210551_fail_ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK_0;
+	        ##EDC## SetBin SoftBins.b17210551_fail_ARR_CORE_ROM_CORE_HVQK_K_END_TICO_VCCIA_NOM_LFM_SBCLK_SHARED_BIN;
+			GoTo SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK;
+			GoTo SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK;
 		}
 	}
-	DUTFlowItem SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK @EDC
+	DUTFlowItem SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK @EDC
 	{
 		Result -2
 		{
@@ -5106,8 +5106,8 @@ DUTFlow VMAX
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n17210552_fail_SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_0;
-	        ##EDC## SetBin SoftBins.b17210552_fail_ARR_CORE_SSA_CORE_HVQK_K_END_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n17210552_fail_SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK_0;
+	        ##EDC## SetBin SoftBins.b17210552_fail_ARR_CORE_SSA_CORE_HVQK_K_END_TICO_VCCSA_NOM_LFM_PMUCS_SBCLK_SHARED_BIN;
 			Return 1;
         }
 		Result 1
@@ -5119,7 +5119,7 @@ DUTFlow VMAX
 }
 DUTFlow SHMOO
 {
-	DUTFlowItem SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM @EDC
+	DUTFlowItem SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM @EDC
 	{
 		Result -2
 		{
@@ -5136,27 +5136,27 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220560_fail_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_0;
-	        ##EDC## SetBin SoftBins.b61220560_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_SHARED_BIN;
-			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+	        IncrementCounters ARR_CORE::n61220560_fail_SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_0;
+	        ##EDC## SetBin SoftBins.b61220560_fail_ARR_CORE_SSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_MLC_SRAM_SHARED_BIN;
+			GoTo LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL;
 		}
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL;
 		}
 		Result 3
 		{
 			Property PassFail = "Pass";
-			GoTo LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL;
+			GoTo LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL;
 		}
 	}
-	DUTFlowItem LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL @EDC
+	DUTFlowItem LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL @EDC
 	{
 		Result -2
 		{
@@ -5173,27 +5173,27 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n21220561_fail_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b21220561_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
-			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM;
+	        IncrementCounters ARR_CORE::n21220561_fail_LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL_0;
+	        ##EDC## SetBin SoftBins.b21220561_fail_ARR_CORE_LSA_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_RF_ALL_SHARED_BIN;
+			GoTo ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM;
         }
 		Result 1
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM;
 		}
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM;
 		}
 		Result 3
 		{
 			Property PassFail = "Pass";
-			GoTo ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM;
+			GoTo ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM;
 		}
 	}
-	DUTFlowItem ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM @EDC
+	DUTFlowItem ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM @EDC
 	{
 		Result -2
 		{
@@ -5210,8 +5210,8 @@ DUTFlow SHMOO
         Result 0
         {
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_CORE::n61220562_fail_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_0;
-	        ##EDC## SetBin SoftBins.b61220562_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TITO_VCCIA_NOM_LFM_ROM_SHARED_BIN;
+	        IncrementCounters ARR_CORE::n61220562_fail_ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM_0;
+	        ##EDC## SetBin SoftBins.b61220562_fail_ARR_CORE_ROM_CORE_SHMOO_E_END_TICO_VCCIA_NOM_LFM_ROM_SHARED_BIN;
 			GoTo SSA_CORE_SHMOO_E_END_TITO_VCCSA_NOM_LFM_PMUCS;
         }
 		Result 1

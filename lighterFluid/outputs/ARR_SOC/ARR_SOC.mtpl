@@ -5,14 +5,14 @@ ProgramStyle = Modular;
 TestPlan ARR_SOC;
 Import ARR_SOC.usrv;
 
-Import OASIS_UserFunc_tt.xml;
+Import PrimeShmooTestMethod.xml;
+Import MbistRasterTC.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import MbistRasterTC.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeShmooTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import OASIS_VFDM_tt.xml;
 
 Counters
@@ -1235,7 +1235,7 @@ Test MbistRasterTC LSA_SOC_RASTER_E_BEGIN_TITO_SAQ_NOM_LFM_MEMSS3_RASTER_MMM_BP4
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY0_BHRY_MMM_BP5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1261,7 +1261,7 @@ Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY0
 }
 Test PrimeMbistVminSearchTestMethod SSA_SOC_HRY_E_BEGIN_TITO_SAQ_NOM_LFM_DDRPHY0_BISR_MMM_BP5
 {
-	BypassPort = -1;
+	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -5011,7 +5011,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_hbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5024,7 +5024,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO0
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_hbo0_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5037,7 +5037,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO1
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_hbo1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5050,7 +5050,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_SBCLK_CCSR
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_ccsr_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5063,7 +5063,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_DDXR
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_ddxr_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5076,7 +5076,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_DDHY
 	Patlist = "marr_mbist_saq_ssa_ks_sort_tito_ddhy_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5089,7 +5089,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_PUNIT
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_punit_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5102,7 +5102,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_ARU_EDC
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_aru_edc_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5115,7 +5115,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_SBCLK
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_sbclk_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5128,7 +5128,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_GT_SBCLK
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_gt_sbclk_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5141,7 +5141,7 @@ Test PrimeShmooTestMethod SSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_ARU_SBCLK
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_aru_sbclk_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5154,7 +5154,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_ALL_SAQ
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5167,7 +5167,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_CCE0
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_cce0_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5180,7 +5180,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_CCE1
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_cce1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5193,7 +5193,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO0
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_hbo0_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5206,7 +5206,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_HBO1
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_hbo1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5219,7 +5219,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_BEC0
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_bec0_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5232,7 +5232,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_BEC1
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_bec1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5245,7 +5245,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_MC00
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_mc00_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5258,7 +5258,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_MC01
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_mc01_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5271,7 +5271,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_MC10
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_mc10_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5284,7 +5284,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_MC11
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_mc11_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5297,7 +5297,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_MMM
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_mmm_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5310,7 +5310,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_FUSE
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_fuse_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccvnnaon_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5323,7 +5323,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_DDXR
 	Patlist = "marr_mbist_saq_lsa_ks_sort_tito_ddxr_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5336,7 +5336,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_ALL_SAN
 	Patlist = "marr_mbist_san_lsa_ks_sort_tito_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5349,7 +5349,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_IAX
 	Patlist = "marr_mbist_san_lsa_ks_sort_tito_iax_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5362,7 +5362,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_VTU
 	Patlist = "marr_mbist_san_lsa_ks_sort_tito_vtu_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5375,7 +5375,7 @@ Test PrimeShmooTestMethod LSA_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_ONDD
 	Patlist = "marr_mbist_san_lsa_ks_sort_tito_ondd_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5388,7 +5388,7 @@ Test PrimeShmooTestMethod ROM_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_CCSR
 	Patlist = "marr_mbist_saq_rom_ks_sort_tito_ccsr_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5401,7 +5401,7 @@ Test PrimeShmooTestMethod ROM_SOC_SHMOO_E_END_TITO_SAQ_NOM_LFM_DDHY
 	Patlist = "marr_mbist_saq_rom_ks_sort_tito_ddhy_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5414,7 +5414,7 @@ Test PrimeShmooTestMethod ROM_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_ALL_SAN
 	Patlist = "marr_mbist_san_rom_ks_sort_tito_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5427,7 +5427,7 @@ Test PrimeShmooTestMethod ROM_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_CEN1
 	Patlist = "marr_mbist_san_rom_ks_sort_tito_cen1_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -5440,7 +5440,7 @@ Test PrimeShmooTestMethod ROM_SOC_SHMOO_E_END_TITO_SAN_NOM_LFM_GT
 	Patlist = "marr_mbist_san_rom_ks_sort_tito_gt_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -10870,7 +10870,7 @@ DUTFlow REPAIR
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_SOC_UF_K_BEGIN_X_X_X_X_DISP_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_SOC_UF_K_BEGIN_X_X_X_X_DISP_VFDM_UF ALL_SOC_UF_K_BEGIN_X_X_X_X_DISP_VFDM_UF 

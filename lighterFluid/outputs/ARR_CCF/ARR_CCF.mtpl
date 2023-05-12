@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_CCF;
 Import ARR_CCF.usrv;
 
-Import OASIS_UserFunc_tt.xml;
-Import AuxiliaryTC.xml;
+Import PrimeShmooTestMethod.xml;
+Import MbistRasterTC.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
 Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import MbistRasterTC.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeShmooTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import AuxiliaryTC.xml;
+Import OASIS_UserFunc_tt.xml;
 Import OASIS_VFDM_tt.xml;
 
 Counters
@@ -2001,7 +2001,7 @@ Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_CBO
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2014,7 +2014,7 @@ Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_CBO_SSA_FF
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2027,7 +2027,7 @@ Test PrimeShmooTestMethod LSA_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2040,7 +2040,7 @@ Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2053,7 +2053,7 @@ Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_SBO_SSA_FF
 	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2066,7 +2066,7 @@ Test PrimeShmooTestMethod LSA_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF
 	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2079,7 +2079,7 @@ Test PrimeShmooTestMethod ROM_CCF_SHMOO_E_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF
 	Patlist = "marr_mbist_ring_rom_ks_sort_tito_sbo_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccia_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -2092,7 +2092,7 @@ Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_PMA
 	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccsa_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -4326,7 +4326,7 @@ DUTFlow REPAIR
 		Result 2
 		{
 			Property PassFail = "Pass";
-			GoTo ALL_CCF_UF_K_BEGIN_X_CLRSS_X_X_VFDM_UF;
+			Return 1;
 		}
 	}
 	DUTFlowItem ALL_CCF_UF_K_BEGIN_X_CLRSS_X_X_VFDM_UF ALL_CCF_UF_K_BEGIN_X_CLRSS_X_X_VFDM_UF 

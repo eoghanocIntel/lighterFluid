@@ -5,17 +5,17 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
-Import OASIS_UserFunc_tt.xml;
-Import AuxiliaryTC.xml;
-Import PrimePatConfigTestMethod.xml;
 Import OASIS_HSR_tt.xml;
-Import PrimeHvqkTestMethod.xml;
-Import OASIS_CapturePackets_tt.xml;
-Import PrimeLSARasterTestMethod.xml;
-Import PrimeVminSearchTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
+Import OASIS_CapturePackets_tt.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import PrimeLSARasterTestMethod.xml;
+Import PrimeHvqkTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 Import OASIS_Repair_tt.xml;
+Import OASIS_UserFunc_tt.xml;
+Import OASIS_VFDM_tt.xml;
+Import AuxiliaryTC.xml;
 
 Counters
 {
@@ -1194,7 +1194,7 @@ Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccl2_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1207,7 +1207,7 @@ Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccatom_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1220,7 +1220,7 @@ Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccatom_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1233,7 +1233,7 @@ Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_rom_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccatom_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
@@ -1246,7 +1246,7 @@ Test PrimeShmooTestMethod CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	XAxisParam = "p_mtd_per";
-	XAxisRange = "9nS:0.5nS:8"; # Start: Resolution: NumberOfPoints
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
 	YAxisParam = "p_vccatom_spec";
 	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
