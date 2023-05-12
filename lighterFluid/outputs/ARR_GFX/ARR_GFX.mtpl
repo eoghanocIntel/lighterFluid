@@ -5,14 +5,14 @@ ProgramStyle = Modular;
 TestPlan ARR_GFX;
 Import ARR_GFX.usrv;
 
-Import PrimeHvqkTestMethod.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
 Import OASIS_UserFunc_tt.xml;
+Import PrimeHvqkTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
 Import MbistRasterTC.xml;
 
 Counters

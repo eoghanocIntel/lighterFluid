@@ -5,15 +5,15 @@ ProgramStyle = Modular;
 TestPlan ARR_CORE;
 Import ARR_CORE.usrv;
 
-Import PrimeHvqkTestMethod.xml;
-Import AuxiliaryTC.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
 Import OASIS_UserFunc_tt.xml;
+Import PrimeHvqkTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import AuxiliaryTC.xml;
 Import MbistRasterTC.xml;
 
 Counters
@@ -620,7 +620,7 @@ Test PrimePatConfigTestMethod ALL_CORE_FUSECONFIG_E_BEGIN_TITO_VCCIA_NOM_LFM_REP
 	BypassPort = -1;
 	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
 	SetPoint = "VFDM_SORT";
-	RegEx = "LNL_pre*_Marr_*";
+	RegEx = "LNL_pre.*_Marr_.*";
 }
 Test AuxiliaryTC SSA_CORE_AUX_E_BEGIN_TITO_VCCIA_NOM_LFM_MLC_SRAM_SAMPLER_FAIL
 {
@@ -1308,7 +1308,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_ssa_ks_sort_tito_pm_list";
@@ -1324,7 +1324,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_lsa_ks_sort_tito_all_list";
@@ -1340,7 +1340,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core0_rom_ks_sort_tito_fit_list";
@@ -1356,7 +1356,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE0
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_ssa_ks_sort_tito_pm_list";
@@ -1372,7 +1372,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_lsa_ks_sort_tito_all_list";
@@ -1388,7 +1388,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE1
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core1_rom_ks_sort_tito_fit_list";
@@ -1404,7 +1404,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE1
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_ssa_ks_sort_tito_pm_list";
@@ -1420,7 +1420,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_lsa_ks_sort_tito_all_list";
@@ -1436,7 +1436,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE2
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core2_rom_ks_sort_tito_fit_list";
@@ -1452,7 +1452,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE2
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_ssa_ks_sort_tito_pm_list";
@@ -1468,7 +1468,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_MLC_SRAM_COR
 }
 Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_lsa_ks_sort_tito_all_list";
@@ -1484,7 +1484,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_RF_ALL_CORE3
 }
 Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_core3_rom_ks_sort_tito_fit_list";
@@ -1500,7 +1500,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_KS_K_END_TITO_VCCIA_NOM_LFM_ROM_CORE3
 }
 Test PrimeVminSearchTestMethod SSA_CORE_KS_K_END_TITO_VCCSA_NOM_LFM_PMUCS
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pmucs_list";

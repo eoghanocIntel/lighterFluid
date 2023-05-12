@@ -5,17 +5,17 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
-Import PrimeHvqkTestMethod.xml;
-Import AuxiliaryTC.xml;
 Import OASIS_Repair_tt.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import OASIS_CapturePackets_tt.xml;
-Import PrimeShmooTestMethod.xml;
 Import PrimePatConfigTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
+Import PrimeVminSearchTestMethod.xml;
 Import PrimeLSARasterTestMethod.xml;
 Import OASIS_HSR_tt.xml;
+Import PrimeShmooTestMethod.xml;
 Import OASIS_UserFunc_tt.xml;
+Import PrimeHvqkTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import AuxiliaryTC.xml;
+Import OASIS_CapturePackets_tt.xml;
 
 Counters
 {

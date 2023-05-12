@@ -5,14 +5,14 @@ ProgramStyle = Modular;
 TestPlan ARR_VPU;
 Import ARR_VPU.usrv;
 
-Import PrimeHvqkTestMethod.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
 Import OASIS_Screen_tt.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
 Import OASIS_UserFunc_tt.xml;
+Import PrimeHvqkTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
 Import MbistRasterTC.xml;
 
 Counters
@@ -440,7 +440,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTR
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -466,7 +466,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTR
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -499,14 +499,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_BUTTRESS_RASTER_VBT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -532,7 +532,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -565,14 +565,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_BHRY_VBTR_BT4
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -598,7 +598,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -631,14 +631,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_VCPU_RASTER_VBTR_BT
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -664,7 +664,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -697,14 +697,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_BHRY_VBTR_BT5
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -730,7 +730,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -763,14 +763,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE0_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -796,7 +796,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -829,14 +829,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_BHRY_VBTR_BT6
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -862,7 +862,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -895,14 +895,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE1_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -928,7 +928,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -961,14 +961,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_BHRY_VBTR_BT7
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -994,7 +994,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1027,14 +1027,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE2_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1060,7 +1060,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1093,14 +1093,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_BHRY_VBTR_BT8
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1126,7 +1126,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1159,14 +1159,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE3_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1192,7 +1192,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1225,14 +1225,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_BHRY_VBTR_BT9
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1258,7 +1258,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1291,14 +1291,14 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE4_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1324,7 +1324,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1357,14 +1357,14 @@ Test MbistRasterTC SSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_BHRY_VBTR_BT10
 {
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1390,7 +1390,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bira_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1423,7 +1423,7 @@ Test MbistRasterTC LSA_VPU_RASTER_E_BEGIN_TITO_VCCSA_NOM_LFM_TILE5_RASTER_VBTR_B
 	MaxFailuresToItuff = 0;
 	Patlist = "rast";
 	RasterInputFile = "./Modules/ARR_VPU/InputFiles/MBIST_RASTER.json";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 }
 Test iCScreenTest ALL_VPU_SCREEN_E_BEGIN_TITO_VCCSA_NOM_LFM_JOIN_BISR
 {
@@ -1462,7 +1462,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp3_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1485,7 +1485,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1508,7 +1508,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp4_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1531,7 +1531,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1554,7 +1554,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp5_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1577,7 +1577,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1600,7 +1600,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp6_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1623,7 +1623,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1646,7 +1646,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp7_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1669,7 +1669,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1692,7 +1692,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp8_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1715,7 +1715,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1738,7 +1738,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp9_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1761,7 +1761,7 @@ Test PrimeMbistVminSearchTestMethod SSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_ssa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1784,7 +1784,7 @@ Test PrimeMbistVminSearchTestMethod LSA_VPU_HRY_E_BEGIN_TITO_VCCSA_NOM_LFM_POSTH
 	BypassPort = 1;
 	FeatureSwitchSettings = "";
 	LevelsTc = "BASE::SBF_nom_lvl";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	Patlist = "array_mbist_soc_begin_tito_vbtr_bp10_lsa_bhry_list";
 	VoltageTargets = "VCCSA_HC";
 	StartVoltages = ARR_VPU.VCCSA;
@@ -1810,7 +1810,7 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_ALL
 	Patlist = "arr_vpu_sort_lfm_prepost_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2200";
@@ -1826,7 +1826,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2201";
@@ -1842,7 +1842,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2208";
@@ -1858,7 +1858,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_VBTR
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vbtr_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2209";
@@ -1874,7 +1874,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2202";
@@ -1890,7 +1890,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2203";
@@ -1906,7 +1906,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2204";
@@ -1922,7 +1922,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2205";
@@ -1938,7 +1938,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2206";
@@ -1954,7 +1954,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2207";
@@ -1970,7 +1970,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2210";
@@ -1986,7 +1986,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2211";
@@ -2002,7 +2002,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2212";
@@ -2018,7 +2018,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2213";
@@ -2034,7 +2034,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2214";
@@ -2050,7 +2050,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2215";
@@ -2063,7 +2063,7 @@ Test PrimeHvqkTestMethod XSA_VPU_HVQK_E_STRESS_TITO_VCCSA_NOM_LFM_VPU_ALL
 	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageStepConfigFile = "./Modules/ARR_VPU/InputFiles/hvqkConfig.xml"; #USER TODO: define value
 	# PowerDownLevel = "";
 	# PowerUpLevel = "";
@@ -2076,7 +2076,7 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_ALL
 	Patlist = "arr_vpu_sort_lfm_prepost_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2216";
@@ -2092,7 +2092,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2217";
@@ -2108,7 +2108,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VCPU
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2224";
@@ -2124,7 +2124,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_VBTR
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_vbtr_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2225";
@@ -2140,7 +2140,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2218";
@@ -2156,7 +2156,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2219";
@@ -2172,7 +2172,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2220";
@@ -2188,7 +2188,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2221";
@@ -2204,7 +2204,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2222";
@@ -2220,7 +2220,7 @@ Test PrimeVminSearchTestMethod SSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_ssa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2223";
@@ -2236,7 +2236,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_0
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2226";
@@ -2252,7 +2252,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_1
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2227";
@@ -2268,7 +2268,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_2
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2228";
@@ -2284,7 +2284,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_3
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2229";
@@ -2300,7 +2300,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_4
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2230";
@@ -2316,7 +2316,7 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 	Patlist = "arr_vpu_sort_lfm_prepost_lsa_til5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2231";
@@ -2326,13 +2326,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_TILE_5
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2232";
@@ -2342,13 +2342,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_notile_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2233";
@@ -2358,13 +2358,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_NOTILE
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2240";
@@ -2374,13 +2374,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VCPU
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2241";
@@ -2390,13 +2390,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_VBTR
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2234";
@@ -2406,13 +2406,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2235";
@@ -2422,13 +2422,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2236";
@@ -2438,13 +2438,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2237";
@@ -2454,13 +2454,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2238";
@@ -2470,13 +2470,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 }
 Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2239";
@@ -2486,13 +2486,13 @@ Test PrimeVminSearchTestMethod SSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile0_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2242";
@@ -2502,13 +2502,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_0
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile1_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2243";
@@ -2518,13 +2518,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_1
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile2_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2244";
@@ -2534,13 +2534,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_2
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile3_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2245";
@@ -2550,13 +2550,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_3
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile4_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2246";
@@ -2566,13 +2566,13 @@ Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_4
 }
 Test PrimeVminSearchTestMethod LSA_VPU_KS_K_END_TITO_VCCSA_NOM_LFM_TILE_5
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile5_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2247";
@@ -2588,7 +2588,7 @@ Test PrimeVminSearchTestMethod XSA_VPU_VMAX_K_END_TITO_VCCSA_NOM_LFM_VPU_ALL
 	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2248";
@@ -2601,7 +2601,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_vcpu_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2614,7 +2614,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_NOTILE
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_notile_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2627,7 +2627,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VCPU
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vcpu_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2640,7 +2640,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_VBTR
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_vbtr_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2653,7 +2653,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile0_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2666,7 +2666,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile1_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2679,7 +2679,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile2_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2692,7 +2692,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile3_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2705,7 +2705,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile4_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2718,7 +2718,7 @@ Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_tile5_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2731,7 +2731,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_0
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile0_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2744,7 +2744,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_1
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile1_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2757,7 +2757,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_2
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile2_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2770,7 +2770,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_3
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile3_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2783,7 +2783,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_4
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile4_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
@@ -2796,7 +2796,7 @@ Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VCCSA_NOM_LFM_TILE_5
 	BypassPort = 1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
 	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_tile5_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk50_cclk100_bclk400";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
