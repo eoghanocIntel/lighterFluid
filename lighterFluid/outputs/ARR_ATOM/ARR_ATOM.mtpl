@@ -5,17 +5,17 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
-Import OASIS_HSR_tt.xml;
-Import PrimeShmooTestMethod.xml;
-Import OASIS_CapturePackets_tt.xml;
-Import PrimeVminSearchTestMethod.xml;
-Import PrimeLSARasterTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
 Import OASIS_Repair_tt.xml;
-Import OASIS_UserFunc_tt.xml;
+Import PrimeShmooTestMethod.xml;
+Import OASIS_HSR_tt.xml;
+Import OASIS_CapturePackets_tt.xml;
 Import OASIS_VFDM_tt.xml;
+Import PrimeLSARasterTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
+Import PrimePatConfigTestMethod.xml;
 Import AuxiliaryTC.xml;
+Import PrimeHvqkTestMethod.xml;
 
 Counters
 {
@@ -913,11 +913,11 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_R
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LSA_ROM
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
-	StartVoltages = "0.7";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -929,11 +929,11 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LS
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML2_MIN_LFM_1700_SSA
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "array_pbist_prepost_tito_atom_direct_list";
-	StartVoltages = "0.7";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -968,7 +968,7 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_1700_L
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -984,7 +984,7 @@ Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML2_MIN_LFM_1700
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "array_pbist_prepost_tito_atom_direct_list";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";

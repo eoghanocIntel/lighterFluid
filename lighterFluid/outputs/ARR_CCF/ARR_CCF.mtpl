@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_CCF;
 Import ARR_CCF.usrv;
 
+Import AuxiliaryTC.xml;
 Import PrimeShmooTestMethod.xml;
-Import MbistRasterTC.xml;
+Import OASIS_VFDM_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_Screen_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import PrimePatConfigTestMethod.xml;
-Import AuxiliaryTC.xml;
 Import OASIS_UserFunc_tt.xml;
-Import OASIS_VFDM_tt.xml;
+Import PrimePatConfigTestMethod.xml;
+Import MbistRasterTC.xml;
+Import PrimeHvqkTestMethod.xml;
 
 Counters
 {
@@ -1096,7 +1096,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1119,7 +1119,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1142,7 +1142,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO0_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1165,7 +1165,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO0_LS
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1188,7 +1188,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1211,7 +1211,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO1_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1234,7 +1234,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO1_LS
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1257,7 +1257,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1280,7 +1280,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1303,7 +1303,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO2_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1326,7 +1326,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO2_LS
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1349,7 +1349,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1372,7 +1372,7 @@ Test PrimeMbistVminSearchTestMethod SSA_CCF_HRY_E_BEGIN_TITO_CLRSS_NOM_LFM_CBO3_
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1395,7 +1395,7 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
-	CtvPins = "XXTDO";
+	CtvPins = "IP_CPU::XXTDO";
 	TestMode = "Scoreboard";
 	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
 	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
@@ -1406,27 +1406,27 @@ Test PrimeMbistVminSearchTestMethod LSA_CCF_HRY_E_BEGIN_TITO_CLR_NOM_LFM_CBO3_LS
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLRSS_MIN_LFM_1200_CBO
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_ccf_sort_lfm_prepost_tito_ssa_cbo_list";
-	StartVoltages = "0.7";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCIA_HC";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "2000";
 	ExecutionMode = "Search";
-	SetPointsPlistMode = "Local";
-	SetPointsPreInstance = "";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
 }
 Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLR_MIN_LFM_1200_SBO
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_ccf_sort_lfm_prepost_tito_xsa_sbo_list";
-	StartVoltages = "0.7";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_sbo_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	VoltageTargets = "VCCSA_HC";
@@ -1438,11 +1438,11 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLR_MIN_LFM_1200_SBO
 }
 Test PrimeVminSearchTestMethod SSA_CCF_VMIN_K_PREHVQK_TITO_CLRSS_MIN_LFM_1200_PMA
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
-	StartVoltages = "0.7";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
@@ -1487,7 +1487,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRSS_MIN_LFM_1200_C
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_ccf_sort_lfm_prepost_tito_ssa_cbo_list";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1503,7 +1503,7 @@ Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLR_MIN_LFM_1200_SBO
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arria_ccf_sort_lfm_prepost_tito_xsa_sbo_list";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_sbo_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
@@ -1519,7 +1519,7 @@ Test PrimeVminSearchTestMethod SSA_CCF_VMIN_K_POSTHVQK_TITO_CLRSS_MIN_LFM_1200_P
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -2089,8 +2089,8 @@ Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_CLRSS_NOM_LFM_1200_PMA
 {
 	BypassPort = -1;
 	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pma_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
 	XAxisParam = "p_mtd_per";
 	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
 	XAxisParamType = "TimingTestCondition";
