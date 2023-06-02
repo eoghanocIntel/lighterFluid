@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_CORE;
 Import ARR_CORE.usrv;
 
-Import PrimeVminSearchTestMethod.xml;
+Import AuxiliaryTC.xml;
+Import PrimeShmooTestMethod.xml;
+Import OASIS_VFDM_tt.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
 Import OASIS_Screen_tt.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import PrimePatConfigTestMethod.xml;
 Import MbistRasterTC.xml;
-Import AuxiliaryTC.xml;
 Import PrimeHvqkTestMethod.xml;
-Import PrimeShmooTestMethod.xml;
-Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
-Import OASIS_UserFunc_tt.xml;
 
 Counters
 {
@@ -141,6 +141,7 @@ Counters
 	n21200159_fail_LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_7_7,
 	n21200159_fail_LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_7_8,
 	n21200159_fail_LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POSTHRY_BP_7_9,
+	n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0,
 	n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0,
 	n21210201_fail_SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
 	n21210202_fail_LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
@@ -161,6 +162,7 @@ Counters
 	n17610300_fail_XSA_CORE_HVQK_K_STRESS_TITO_VCCIA_NOM_LFM_MCLK_0,
 	n17610301_fail_ROM_CORE_HVQK_K_STRESS_TITO_VCCIA_NOM_LFM_SBCLK_0,
 	n17610302_fail_SSA_CORE_HVQK_K_STRESS_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK_0,
+	n61210399_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0,
 	n61210400_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0_0,
 	n21210401_fail_SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_MLC_SRAM_CORE0_0,
 	n21210402_fail_LSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_RF_ALL_CORE0_0,
@@ -735,13 +737,29 @@ Test PrimeMbistVminSearchTestMethod LSA_CORE_HRY_E_BEGIN_TITO_VCCIA_NOM_LFM_POST
 	# DffOperation = ; # Do we need to set?
 	# VFDMconfig = ; # Do we need to set?
 }
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core_sort_lfm_hvqk_tico_xsa_mclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2300";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CORE:core_ratio:1.5GHz,ARR_CORE:core_subrutine:1.5GHz";
+}
 Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0
 {
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core0_sort_lfm_prepost_tito_xsa_mclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -757,7 +775,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SR
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core0_sort_lfm_prepost_tito_ssa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -773,7 +791,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core0_sort_lfm_prepost_tito_lsa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -789,7 +807,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CO
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core0_sort_lfm_prepost_tito_rom_sbclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -805,7 +823,7 @@ Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_A
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core1_sort_lfm_prepost_tito_xsa_mclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -821,7 +839,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SR
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core1_sort_lfm_prepost_tito_ssa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -837,7 +855,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core1_sort_lfm_prepost_tito_lsa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -853,7 +871,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CO
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core1_sort_lfm_prepost_tito_rom_sbclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -869,7 +887,7 @@ Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_A
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core2_sort_lfm_prepost_tito_xsa_mclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -885,7 +903,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SR
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core2_sort_lfm_prepost_tito_ssa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -901,7 +919,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core2_sort_lfm_prepost_tito_lsa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -917,7 +935,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CO
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core2_sort_lfm_prepost_tito_rom_sbclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -933,7 +951,7 @@ Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_A
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core3_sort_lfm_prepost_tito_xsa_mclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -949,7 +967,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_MLC_SR
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core3_sort_lfm_prepost_tito_ssa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -965,7 +983,7 @@ Test PrimeVminSearchTestMethod LSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_RF_ALL
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core3_sort_lfm_prepost_tito_lsa_all_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -981,7 +999,7 @@ Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CO
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "arria_core3_sort_lfm_prepost_tito_rom_sbclk_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCIA_HC";
@@ -993,11 +1011,11 @@ Test PrimeVminSearchTestMethod ROM_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_ROM_CO
 }
 Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arr_san_sort_lfm_prepost_ssa_pm_list";
-	StartVoltages = "0.7";
+	Patlist = "arr_pmucs_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCSA_HC";
@@ -1031,11 +1049,27 @@ Test PrimeHvqkTestMethod SSA_CORE_HVQK_K_STRESS_TITO_VCCSA_NOM_LFM_PMUCS_SBCLK
 {
 	BypassPort = 1;
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arr_san_sort_lfm_hvqk_ssa_pm_list";
+	Patlist = "arr_pmucs_sort_lfm_hvqk_list";
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageStepConfigFile = "./Modules/ARR_CORE/InputFiles/hvqkConfig.xml"; #USER TODO: define value
 	# PowerDownLevel = "";
 	# PowerUpLevel = "";
+}
+Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_core_sort_lfm_hvqk_tico_xsa_mclk_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2334";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
 }
 Test PrimeVminSearchTestMethod XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0
 {
@@ -1298,7 +1332,7 @@ Test PrimeVminSearchTestMethod SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS
 	BypassPort = 1;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
-	Patlist = "arr_san_sort_lfm_prepost_ssa_pm_list";
+	Patlist = "arr_pmucs_sort_lfm_hvqk_list";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -3547,6 +3581,33 @@ DUTFlow ARR_CORE_BEGIN @BEGIN_SubFlow
 }
 DUTFlow ARR_CORE_PREHVQK @PREHVQK_SubFlow
 {
+	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210200_fail_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0;
+	        ##EDC## SetBin SoftBins.b61210200_fail_ARR_CORE_XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_SHARED_BIN;
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_PREHVQK_TITO_VCCSA_NOM_LFM_PMUCS;
+		}
+	}
 	DUTFlowItem XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 XSA_CORE_VMIN_K_PREHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 @EDC
 	{
 		Result -2
@@ -4138,6 +4199,33 @@ DUTFlow ARR_CORE_STRESS @STRESS_SubFlow
 }
 DUTFlow ARR_CORE_POSTHVQK @POSTHVQK_SubFlow
 {
+	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CORE::n61210399_fail_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_0;
+	        ##EDC## SetBin SoftBins.b61210399_fail_ARR_CORE_XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_SHARED_BIN;
+			GoTo XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CORE_VMIN_K_POSTHVQK_TITO_VCCSA_NOM_LFM_PMUCS;
+		}
+	}
 	DUTFlowItem XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 XSA_CORE_VMIN_K_POSTHVQK_TITO_VCCIA_NOM_LFM_CORE_ALL_CORE0 @EDC
 	{
 		Result -2
