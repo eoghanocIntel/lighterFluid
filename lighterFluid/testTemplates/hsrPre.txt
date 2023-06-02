@@ -2,9 +2,9 @@ Test iCHSRTest ###TestName###
 {
 	bypass_global = "###bypassGlobal###";
 	level = "###Levels###";
-	patlist = "###Patlist###";
+	patlist = "###plist###";
 	timings = "###Timings###";
-	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/###Patlist###.xml";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/###plist###.xml";
 	hry_execution_mode = "PRE";
 	mode = "HRY";
 }

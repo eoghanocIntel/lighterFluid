@@ -4,10 +4,10 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	FeatureSwitchSettings = "";
 	LevelsTc = "###Levels###";
 	TimingsTc = "###Timings###";
-	Patlist = "###Patlist###";
+	Patlist = "###plist###";
 	VoltageTargets = "###Supply###";
-	StartVoltages = ARR_###Module###.###PowerHighLimit###;
-	EndVoltageLimits = ARR_###Module###.###PowerHighLimit###;
+	StartVoltages = ARR_###Module###.###PowerRail###;
+	EndVoltageLimits = ARR_###Module###.###PowerRail###;
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;

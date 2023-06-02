@@ -9,9 +9,9 @@ Test PrimeLSARasterTestMethod ###TestName###
 	PrescreenMapName = "LSA_CORERF_ATOM";
 	TimingsTc = "###Timings###";
 	ExecutionMode = "PRESCREEN";
-	HryMapPath = "./Modules/ARR_ATOM/InputFiles/###Patlist###.xml";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/###plist###.xml";
 	OutputTag = "###repairTag###";
-	Patlist = "###Patlist###";
+	Patlist = "###plist###";
 	PrescreenPrintMode = "CTVMODE";
 	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
 	TfileRasterPrint = "###rasterDataLog###";

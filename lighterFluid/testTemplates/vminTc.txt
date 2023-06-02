@@ -3,7 +3,7 @@ Test PrimeVminSearchTestMethod ###TestName###
 	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "###Levels###";
-	Patlist = "###Patlist###";
+	Patlist = "###plist###";
 	StartVoltages = "0.7";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";

@@ -5,16 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_CORE;
 Import ARR_CORE.usrv;
 
-Import PrimeVminSearchTestMethod.xml;
-Import OASIS_Screen_tt.xml;
-Import PrimePatConfigTestMethod.xml;
-Import MbistRasterTC.xml;
-Import AuxiliaryTC.xml;
-Import PrimeHvqkTestMethod.xml;
 Import PrimeShmooTestMethod.xml;
+Import MbistRasterTC.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import PrimeHvqkTestMethod.xml;
 Import PrimeMbistVminSearchTestMethod.xml;
-Import OASIS_VFDM_tt.xml;
+Import PrimePatConfigTestMethod.xml;
+Import AuxiliaryTC.xml;
 Import OASIS_UserFunc_tt.xml;
+Import OASIS_VFDM_tt.xml;
 
 Counters
 {

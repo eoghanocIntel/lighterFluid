@@ -1,7 +1,7 @@
 ###TestName###,TestName
 ###Levels###,Levels
 ###Timings###,Timings
-###Patlist###,plist
+###plist###,plist
 ###PowerTarget###,PowerRail
 ###PowerHighLimit###,PowerRail
 ###Module###,Module

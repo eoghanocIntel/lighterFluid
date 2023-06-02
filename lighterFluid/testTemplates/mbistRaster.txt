@@ -8,7 +8,7 @@ Test MbistRasterTC ###TestName###
 	LevelsTc = "###Levels###";
 	MaxFailuresPerPatternToItuff = 0;
 	MaxFailuresToItuff = 0;
-	Patlist = "###Patlist###";
+	Patlist = "###plist###";
 	RasterInputFile = "./Modules/ARR_###Module###/InputFiles/MBIST_RASTER.json";
 	TimingsTc = "###Timings###";
 }

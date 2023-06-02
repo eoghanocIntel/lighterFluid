@@ -11,7 +11,7 @@ Test PrimeLSARasterTestMethod ###TestName###
 	ExecutionMode = "RASTER";
 	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
 	OutputTag = "###repairTag###";
-	Patlist = "###Patlist###";
+	Patlist = "###plist###";
 	PrescreenPrintMode = "CTVMODE";
 	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
 	TfileRasterPrint = "###rasterDataLog###";

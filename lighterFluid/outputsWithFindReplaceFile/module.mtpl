@@ -5,17 +5,16 @@ ProgramStyle = Modular;
 TestPlan ARR_ATOM;
 Import ARR_ATOM.usrv;
 
+Import OASIS_Repair_tt.xml;
+Import OASIS_HSR_tt.xml;
+Import PrimeHvqkTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
 Import PrimeVminSearchTestMethod.xml;
 Import OASIS_VFDM_tt.xml;
 Import PrimePatConfigTestMethod.xml;
 Import AuxiliaryTC.xml;
-Import PrimeShmooTestMethod.xml;
-Import PrimeHvqkTestMethod.xml;
 Import PrimeLSARasterTestMethod.xml;
 Import OASIS_CapturePackets_tt.xml;
-Import OASIS_UserFunc_tt.xml;
-Import OASIS_HSR_tt.xml;
-Import OASIS_Repair_tt.xml;
 
 Counters
 {
@@ -117,12 +116,7 @@ Counters
 	n17200600_fail_ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM_0,
 	n17600601_fail_SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_1700_SSA_0,
 	n17200602_fail_ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_3900_LSA_ROM_0,
-	n17600603_fail_SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_3900_SSA_0,
-	n60620650_fail_SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_0,
-	n60620651_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_0,
-	n20620652_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0,
-	n20620653_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM_0,
-	n20620654_fail_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM_0
+	n17600603_fail_SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_3900_SSA_0
 } # End of Test Counter Definition
 
 Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_PRE_HRY
@@ -137,16 +131,16 @@ Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_PRE_HRY
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_CAPTURE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_data_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2DAT";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -161,7 +155,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -176,16 +170,16 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_DAT_REPAIR_TO_F
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_CAPTURE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_c6s_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2C6S";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -200,7 +194,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -215,16 +209,16 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_C6S_REPAIR_TO_F
 }
 Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_CAPTURE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_tsp_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2TSP";
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -239,7 +233,7 @@ Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR
 }
 Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_TSP_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -271,13 +265,12 @@ Test iCUserFuncTest SSA_ATOM_UF_E_BEGIN_X_X_X_X_L2_ALL_VFDM_APPLY
 Test PrimePatConfigTestMethod SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_ALL_FUSE
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_POST_HRY
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -287,17 +280,17 @@ Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_NOM_LFM_L2_ALL_POST_HRY
 }
 Test AuxiliaryTC SSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2_NOM
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
+	ResultToken = "nan";
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_E_BEGIN_TITO_ATOM_MIN_LFM_L2_PRE_REPAIR_SEARCH
 {
 	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -321,7 +314,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_MIN_LFM_L2_DAT_CA
 {
 	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_data_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2DAT";
@@ -360,7 +353,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_MIN_LFM_L2_C6S_CA
 {
 	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_c6s_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2C6S";
@@ -399,7 +392,7 @@ Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML2_MIN_LFM_L2_TSP_CA
 {
 	bypass_global = "1";
 	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_tsp_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2TSP";
@@ -453,9 +446,8 @@ Test iCUserFuncTest SSA_ATOM_UF_E_BEGIN_X_X_X_X_L2_ALL_VFDM_APPLY_MIN
 Test PrimePatConfigTestMethod SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_ALL_FUSE_MIN
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML2_MIN_LFM_L2_ALL_POST_HRY
 {
@@ -471,15 +463,15 @@ Test AuxiliaryTC SSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2_MIN
 {
 	BypassPort = 1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM_VMIN";
+	ResultToken = "nan";
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_E_BEGIN_TITO_ATOM_MIN_LFM_L2_POST_REPAIR_SEARCH
 {
 	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -501,16 +493,16 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_PRE_HRY
 }
 Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_CAPTURE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	patlist = "array_pbist_raster_tito_atom_direct_lsa_l2_lru_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2LRU";
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -525,7 +517,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -557,13 +549,12 @@ Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_L2_LRU_VFDM_APPLY
 Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_LRU_FUSE
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_POST_HRY
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -573,13 +564,13 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_L2_LRU_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
+	ResultToken = "nan";
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_PRE_HRY
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -589,16 +580,16 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_PRE_HRY
 }
 Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_CAPTURE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	patlist = "array_pbist_raster_tito_atom_direct_lsa_l2_lru_list";
-	data_pins = "IP_CPU::XXTDO";
+	data_pins = "XXTDO";
 	level = "BASE::SBF_nom_lvl";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	output_tag = "L2LRU";
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -613,7 +604,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -645,13 +636,12 @@ Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_L2_LRU_VFDM_APPLY_MIN
 Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_L2_LRU_FUSE_MIN
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_POST_HRY
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -661,9 +651,9 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_L2_LRU_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_L2_MIN
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM_VMIN";
+	ResultToken = "nan";
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_PRE_HRY
 {
@@ -685,7 +675,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_PRE_HRY
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_RASTER
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
@@ -703,7 +693,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_RASTE
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -718,7 +708,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_RF_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -750,13 +740,12 @@ Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_RF_VFDM_APPLY
 Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_RF_FUSE
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_POST_HRY
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	level = "BASE::SBF_nom_lvl";
 	patlist = "array_pbist_hry_tito_atom_indirect_lsa_repairable_list";
 	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
@@ -766,13 +755,13 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_RF
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM";
+	ResultToken = "nan";
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_RF_PRE_HRY
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
@@ -790,7 +779,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_RF_PRE_HRY
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_MIN_LFM_RF_RASTER
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
@@ -808,7 +797,7 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_MIN_LFM_RF_RASTE
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_RF_REPAIR
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -823,7 +812,7 @@ Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_RF_REPAIR
 }
 Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_MIN_LFM_RF_REPAIR_TO_FUSE
 {
-	bypass_global = "1";
+	bypass_global = "-1";
 	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
 	fuse_removal = "Outgoing_Only";
 	hry_data_log = "OFF";
@@ -855,9 +844,8 @@ Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_RF_VFDM_APPLY_MIN
 Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_RF_FUSE_MIN
 {
 	BypassPort = 1;
-	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
-	SetPoint = "VFDM_SORT";
-	RegEx = "###RegEx###";
+	ConfigurationFile = "./Modules/ARR_ATOM/InputFiles/PatConfig_MbistRepair.setpoints.json";
+	SetPoint = "DF_io_from_BISR_SharedStorage";
 }
 Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_RF_POST_HRY
 {
@@ -871,9 +859,9 @@ Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_MIN_LFM_RF_POST_HRY
 }
 Test AuxiliaryTC LSA_ATOM_AUX_E_BEGIN_X_X_X_X_REP_FLAG_RF_MIN
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	Expression = "1";
-	ResultToken = "G.U.S.DEFECTREPAIR_ATOM_VMIN";
+	ResultToken = "nan";
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_REP_HRY
 {
@@ -887,15 +875,15 @@ Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_REP_
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	ExecutionMode = "PRESCREEN";
 	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_indirect_lsa_non_repairable_list.xml";
-	OutputTag = "ATOMNONREP";
+	OutputTag = "nan";
 	Patlist = "array_pbist_hry_tito_atom_indirect_lsa_non_repairable_list";
 	PrescreenPrintMode = "CTVMODE";
 	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
-	TfileRasterPrint = "None";
+	TfileRasterPrint = "nan";
 }
 Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_REP_RASTER
 {
-	BypassPort = 1;
+	BypassPort = -1;
 	LevelsTc = "BASE::SBF_nom_lvl";
 	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
 	PinMappingSetName = "ATOM_ALL";
@@ -905,19 +893,19 @@ Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_RF_NON_R
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	ExecutionMode = "RASTER";
 	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
-	OutputTag = "ATOMNONREP";
+	OutputTag = "nan";
 	Patlist = "array_pbist_raster_tito_atom_indirect_lsa_list";
 	PrescreenPrintMode = "CTVMODE";
 	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
-	TfileRasterPrint = "None";
+	TfileRasterPrint = "nan";
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LSA_ROM
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -929,11 +917,11 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_1700_LS
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML2_MIN_LFM_1700_SSA
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_direct_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -965,11 +953,11 @@ Test PrimeHvqkTestMethod SSA_ATOM_HVQK_K_STRESS_TITO_ATOML2_MAX_LFM_1700_SSA
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_1700_LSA_ROM
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_indirect_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -981,11 +969,11 @@ Test PrimeVminSearchTestMethod ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_1700_L
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML2_MIN_LFM_1700_L2_ALL
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_prepost_tito_atom_direct_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -998,10 +986,10 @@ Test PrimeVminSearchTestMethod SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML2_MIN_LFM_1700
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
 {
 	BypassPort = -1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -1014,10 +1002,10 @@ Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 {
 	BypassPort = -1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1029,11 +1017,11 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1046,10 +1034,10 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM
 {
 	BypassPort = -1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_rom_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1061,11 +1049,11 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM
 }
 Test PrimeVminSearchTestMethod CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1077,11 +1065,11 @@ Test PrimeVminSearchTestMethod CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_PMOVI
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_pmovi_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -1093,11 +1081,11 @@ Test PrimeVminSearchTestMethod SSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_PMOVI
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_pmovi_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1109,11 +1097,11 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
 }
 Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_pmovi_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1125,11 +1113,11 @@ Test PrimeVminSearchTestMethod LSA_ATOM_SB_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_P
 }
 Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1141,11 +1129,11 @@ Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM
 }
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_1700_SSA
 {
-	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	BypassPort = -1;
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -1158,10 +1146,10 @@ Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_1700_SSA
 Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_3900_LSA_ROM
 {
 	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCATOM_HC";
@@ -1174,10 +1162,10 @@ Test PrimeVminSearchTestMethod ALL_ATOM_SB_K_END_TITO_ATOM_MAX_LFM_3900_LSA_ROM
 Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_3900_SSA
 {
 	BypassPort = 1;
-	EndVoltageLimits = "0.85"; 
+	EndVoltageLimits = "1.0"; 
 	LevelsTc = "BASE::SBF_nom_lvl";
 	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
-	StartVoltages = "0.7";
+	StartVoltages = "0.4";
 	StepSize = 0.02;
 	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
 	VoltageTargets = "VCCL2_HV";
@@ -1186,71 +1174,6 @@ Test PrimeVminSearchTestMethod SSA_ATOM_SB_K_END_TITO_ATOML2_MAX_LFM_3900_SSA
 	ExecutionMode = "SearchWithScoreboard";
 	SetPointsPlistMode = "Local";
 	SetPointsPreInstance = "";
-}
-Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL
-{
-	BypassPort = -1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccl2_spec";
-	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU
-{
-	BypassPort = -1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccatom_spec";
-	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
-{
-	BypassPort = -1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccatom_spec";
-	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM
-{
-	BypassPort = -1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_rom_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccatom_spec";
-	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
-}
-Test PrimeShmooTestMethod CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM
-{
-	BypassPort = -1;
-	LevelsTc = "BASE::SHMOO_nom_lvl";
-	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
-	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
-	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "p_vccatom_spec";
-	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
-	YAxisParamType = "LevelsTestCondition";
 }
 
 DUTFlow L2_SSA_NOM_REP
@@ -4268,7 +4191,7 @@ DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
 }
 DUTFlow KS
 {
-	DUTFlowItem SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL 
+	DUTFlowItem SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL @EDC
 	{
 		Result -2
 		{
@@ -4286,7 +4209,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n60620500_fail_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_0;
-	        SetBin SoftBins.b60620500_fail_ARR_ATOM_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_SHARED_BIN;
+	        ##EDC## SetBin SoftBins.b60620500_fail_ARR_ATOM_SSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_SHARED_BIN;
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
         }
 		Result 1
@@ -4295,7 +4218,7 @@ DUTFlow KS
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
 		}
 	}
-	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU 
+	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU @EDC
 	{
 		Result -2
 		{
@@ -4313,7 +4236,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n60620501_fail_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_0;
-	        SetBin SoftBins.b60620501_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_SHARED_BIN;
+	        ##EDC## SetBin SoftBins.b60620501_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_SHARED_BIN;
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
         }
 		Result 1
@@ -4349,7 +4272,7 @@ DUTFlow KS
 			GoTo LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM;
 		}
 	}
-	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM 
+	DUTFlowItem LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM @EDC
 	{
 		Result -2
 		{
@@ -4367,7 +4290,7 @@ DUTFlow KS
         {
 	        Property PassFail = "Fail";
 	        IncrementCounters ARR_ATOM::n20620503_fail_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_0;
-	        SetBin SoftBins.b20620503_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_SHARED_BIN;
+	        ##EDC## SetBin SoftBins.b20620503_fail_ARR_ATOM_LSA_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_ROM_SHARED_BIN;
 			GoTo CAM_ATOM_SB_K_END_TITO_ATOM_NOM_LFM_1700_CAM;
         }
 		Result 1
@@ -4599,194 +4522,6 @@ DUTFlow VMAX
 		}
 	}
 }
-DUTFlow SHMOO
-{
-	DUTFlowItem SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_ATOM::n60620650_fail_SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_0;
-	        ##EDC## SetBin SoftBins.b60620650_fail_ARR_ATOM_SSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_ALL_SHARED_BIN;
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU;
-		}
-	}
-	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_ATOM::n60620651_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_0;
-	        ##EDC## SetBin SoftBins.b60620651_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOML2_NOM_LFM_1700_L2_LRU_SHARED_BIN;
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
-		}
-	}
-	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_ATOM::n20620652_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0;
-	        ##EDC## SetBin SoftBins.b20620652_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_SHARED_BIN;
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
-		}
-	}
-	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_ATOM::n20620653_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM_0;
-	        ##EDC## SetBin SoftBins.b20620653_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM_SHARED_BIN;
-			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
-		}
-	}
-	DUTFlowItem CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM @EDC
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-	        IncrementCounters ARR_ATOM::n20620654_fail_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM_0;
-	        ##EDC## SetBin SoftBins.b20620654_fail_ARR_ATOM_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM_SHARED_BIN;
-			Return 1;
-        }
-		Result 1
-		{
-			Property PassFail = "Pass";
-			Return 1;
-		}
-		Result 2
-		{
-			Property PassFail = "Pass";
-			Return 1;
-		}
-		Result 3
-		{
-			Property PassFail = "Pass";
-			Return 1;
-		}
-	}
-}
 DUTFlow ARR_ATOM_END @END_SubFlow
 {
     DUTFlowItem KS KS
@@ -4836,29 +4571,6 @@ DUTFlow ARR_ATOM_END @END_SubFlow
 		}
 	}
     DUTFlowItem VMAX VMAX
-	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			Return -1;
-		}
-        Result 0
-        {
-	        Property PassFail = "Fail";
-			Return 1;
-		}
-		Result 1
-		{
-			Property PassFail = "Pass";
-			Return 1;
-		}
-	}
-    DUTFlowItem SHMOO SHMOO
 	{
 		Result -2
 		{

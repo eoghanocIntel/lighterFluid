@@ -34,7 +34,7 @@ for definitionPage in definitionList:
 
     importSection = importBuilder.importBuilder(dataset);
     counterSection = counterBuilder.counterBuilder(dataset);
-    testSection = testBuilder.testBuilder(dataset,findAndReplaceFile);
+    testSection = testBuilder.testBuilder(dataset);
     dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
 
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
