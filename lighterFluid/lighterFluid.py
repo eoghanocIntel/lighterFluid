@@ -13,8 +13,12 @@ import shutil
 ##### CONFIGURATION #####
 #########################
 #definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "adambyrn";
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "lsuareza";
 definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "eoghanoc";
+
 file = "lnlArrayMasterSheet.xlsx";
 
 definitionList = [];
@@ -34,9 +38,9 @@ currDay =   str(datetime.now().day).zfill(2);
 currMonth = str(datetime.now().month).zfill(2);
 currYear =  str(datetime.now().year).zfill(4);
 
-folderName = "_".join([currYear, currMonth, currDay, currHour, currMinute, currSecond]);
+timeStamp = "_".join([userName, currYear, currMonth, currDay, currHour, currMinute, currSecond]);
 
-outDir = "outputs\\" + folderName + "\\";
+outDir = "outputs\\" + timeStamp + "\\";
 fileToUse = outDir + "\\" + file;
 if not os.path.exists(outDir):
     os.makedirs(outDir);
@@ -53,13 +57,7 @@ for definitionPage in definitionList:
     
     dataset = pandas.read_excel(fileToUse, sheet_name=definitionPage);
     
-    moduleDir = outDir + currModule + "\\"; 
-    if not os.path.exists(moduleDir):
-        os.makedirs(moduleDir);
-    outputMtpl = outDir + currModule + "\\" + currModule + ".mtpl"; 
-
-
-    importSection = importBuilder.importBuilder(dataset);
+    importSection = importBuilder.importBuilder(dataset, timeStamp);
     counterSection = counterBuilder.counterBuilder(dataset);
     testSection = testBuilder.testBuilder(dataset);
     dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
@@ -67,11 +65,11 @@ for definitionPage in definitionList:
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
     
     currModule = definitionPage.upper();
-
-    moduleDir = "outputs\\" + currModule + "\\";
+    
+    moduleDir = outDir + currModule + "\\"; 
     if not os.path.exists(moduleDir):
         os.makedirs(moduleDir);
-    outputMtpl = "outputs\\" + currModule + "\\" + currModule + ".mtpl"; 
+    outputMtpl = moduleDir + currModule + ".mtpl"; 
     outFile = open(outputMtpl, "w");
     outFile.write(overallOutput);
     outFile.close();
