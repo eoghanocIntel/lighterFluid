@@ -5,7 +5,7 @@ import math
 ####################
 ##### FUNCTION #####
 ####################
-def testBuilder(dataset,findAndReplaceFile):
+def testBuilder(dataset,findAndReplaceFile, product):
     # This function should build the test list.
 
     ##################
@@ -26,7 +26,7 @@ def testBuilder(dataset,findAndReplaceFile):
         
         currTemplate = dataset.Template[i];
 
-        fileToOpen = "testTemplates\\" + currTemplate + ".txt"
+        fileToOpen = "testTemplates\\" + product + "\\" + currTemplate + ".txt"
 
         with open(fileToOpen, 'r') as file:
             currTest = file.read();
@@ -59,7 +59,7 @@ def testBuilder(dataset,findAndReplaceFile):
     testListSection = "\r\n".join(testList);
     return testListSection;
 
-def testBuilder(dataset):
+def testBuilder(dataset, product):
     # This function should build the test list.
 
     ##################
@@ -74,7 +74,7 @@ def testBuilder(dataset):
         
         currTemplate = dataset.Template[i];
 
-        fileToOpen = "testTemplates\\" + currTemplate + ".txt"
+        fileToOpen = "testTemplates\\" + product + "\\" + currTemplate + ".txt"
 
         with open(fileToOpen, 'r') as file:
             currTest = file.read();

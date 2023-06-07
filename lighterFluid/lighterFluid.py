@@ -14,12 +14,13 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "adambyrn";
-definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "lsuareza";
-#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "eoghanoc";
+#definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "lsuareza";
+definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "eoghanoc";
 
 file = "lnlArrayMasterSheet.xlsx";
+product = "lnl442";
 
 definitionList = [];
 definitionList.append("arr_atom");
@@ -59,7 +60,7 @@ for definitionPage in definitionList:
     
     importSection = importBuilder.importBuilder(dataset, timeStamp);
     counterSection = counterBuilder.counterBuilder(dataset);
-    testSection = testBuilder.testBuilder(dataset);
+    testSection = testBuilder.testBuilder(dataset,product);
     dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
 
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;

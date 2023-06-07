@@ -38,6 +38,7 @@
     <Folder Include="inputs\" />
     <Folder Include="outputs\" />
     <Folder Include="testTemplates\" />
+    <Folder Include="testTemplates\lnl442\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="functions\__pycache__\Composite.cpython-39.pyc" />
@@ -50,28 +51,28 @@
     <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="outputs\.gitignore" />
-    <Content Include="testTemplates\mbistRepairSOC.txt" />
-    <Content Include="testTemplates\patConfig.txt" />
-    <Content Include="testTemplates\fuseConfig.txt" />
-    <Content Include="testTemplates\capturePackets.txt" />
-    <Content Include="testTemplates\pbistRepair.txt" />
-    <Content Include="testTemplates\pbistRepair2Fuse.txt" />
-    <Content Include="testTemplates\pbistLsaHry.txt" />
-    <Content Include="testTemplates\pbistLsaRaster.txt" />
-    <Content Include="testTemplates\hsrPost.txt" />
-    <Content Include="testTemplates\auxiliary.txt" />
-    <Content Include="testTemplates\mbistPostRepair.txt" />
-    <Content Include="testTemplates\mbistRaster.txt" />
-    <Content Include="testTemplates\hvqk.txt" />
-    <Content Include="testTemplates\primeShmoo_Stress.txt" />
-    <Content Include="testTemplates\primeShmoo.txt" />
-    <Content Include="testTemplates\vfdmRun.txt" />
-    <Content Include="testTemplates\vfdmUserFunc.txt" />
-    <Content Include="testTemplates\hsrPre.txt" />
-    <Content Include="testTemplates\evgScreen.txt" />
-    <Content Include="testTemplates\vminTc_Prepost.txt" />
-    <Content Include="testTemplates\vminTc.txt" />
-    <Content Include="testTemplates\mbistRepairCORE.txt" />
+    <Content Include="testTemplates\lnl442\mbistRepairSOC.txt" />
+    <Content Include="testTemplates\lnl442\patConfig.txt" />
+    <Content Include="testTemplates\lnl442\fuseConfig.txt" />
+    <Content Include="testTemplates\lnl442\capturePackets.txt" />
+    <Content Include="testTemplates\lnl442\pbistRepair.txt" />
+    <Content Include="testTemplates\lnl442\pbistRepair2Fuse.txt" />
+    <Content Include="testTemplates\lnl442\pbistLsaHry.txt" />
+    <Content Include="testTemplates\lnl442\pbistLsaRaster.txt" />
+    <Content Include="testTemplates\lnl442\hsrPost.txt" />
+    <Content Include="testTemplates\lnl442\auxiliary.txt" />
+    <Content Include="testTemplates\lnl442\mbistPostRepair.txt" />
+    <Content Include="testTemplates\lnl442\mbistRaster.txt" />
+    <Content Include="testTemplates\lnl442\hvqk.txt" />
+    <Content Include="testTemplates\lnl442\primeShmoo_Stress.txt" />
+    <Content Include="testTemplates\lnl442\primeShmoo.txt" />
+    <Content Include="testTemplates\lnl442\vfdmRun.txt" />
+    <Content Include="testTemplates\lnl442\vfdmUserFunc.txt" />
+    <Content Include="testTemplates\lnl442\hsrPre.txt" />
+    <Content Include="testTemplates\lnl442\evgScreen.txt" />
+    <Content Include="testTemplates\lnl442\vminTc_Prepost.txt" />
+    <Content Include="testTemplates\lnl442\vminTc.txt" />
+    <Content Include="testTemplates\lnl442\mbistRepairCORE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
