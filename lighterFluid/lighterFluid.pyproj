@@ -51,6 +51,7 @@
     <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="outputs\.gitignore" />
+    <Content Include="testTemplates\lnl442\hvqkEvg.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairSOC.txt" />
     <Content Include="testTemplates\lnl442\patConfig.txt" />
     <Content Include="testTemplates\lnl442\fuseConfig.txt" />
@@ -70,6 +71,7 @@
     <Content Include="testTemplates\lnl442\vfdmUserFunc.txt" />
     <Content Include="testTemplates\lnl442\hsrPre.txt" />
     <Content Include="testTemplates\lnl442\evgScreen.txt" />
+    <Content Include="testTemplates\lnl442\vminTc_1P6.txt" />
     <Content Include="testTemplates\lnl442\vminTc_Prepost.txt" />
     <Content Include="testTemplates\lnl442\vminTc.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairCORE.txt" />
