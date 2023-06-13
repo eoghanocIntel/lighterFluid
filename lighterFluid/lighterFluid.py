@@ -1,5 +1,6 @@
 import pandas
 import os
+import subprocess
 from functions import importBuilder
 from functions import counterBuilder
 from functions import testBuilder
@@ -22,6 +23,8 @@ userName = "eoghanoc";
 file = "lnlArrayMasterSheet.xlsx";
 product = "lnl442";
 
+powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
+
 definitionList = [];
 definitionList.append("arr_atom");
 definitionList.append("arr_ccf");
@@ -42,11 +45,15 @@ currYear =  str(datetime.now().year).zfill(4);
 timeStamp = "_".join([userName, currYear, currMonth, currDay, currHour, currMinute, currSecond]);
 
 outDir = "outputs\\" + timeStamp + "\\";
-fileToUse = outDir + "\\" + file;
+fileToUse = outDir + file;
 if not os.path.exists(outDir):
     os.makedirs(outDir);
 
-shutil.copyfile(definitionDir + "\\" + file, fileToUse)
+#shutil.copyfile(definitionDir + "\\" + file, fileToUse)
+inFile = definitionDir + "\\" + file;
+#subprocess.call(["dir"], shell=True);
+pwrShlCmd = powerShellPath + " cp '" + inFile + "' '" + fileToUse + "'";
+subprocess.call(pwrShlCmd, shell=True);
 
 #####################
 ##### EXECUTION #####
