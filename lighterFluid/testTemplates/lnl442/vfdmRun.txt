@@ -1,7 +1,7 @@
 Test iCVFDMTest ###TestName###
 {
 	bypass_global = "###bypassGlobal###";
-	fuse_module = "###VFDM###";
+	fuse_module = "###VFDMToken###";
 	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/###VFDM###.vfdm.xml";
 	descriptor_operation = "REFRESH";
 	descriptor_console = "LOCAL";

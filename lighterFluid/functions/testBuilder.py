@@ -43,7 +43,7 @@ def testBuilder(dataset,findAndReplaceFile, product):
                         currValue = int(dataset[value][i]);
                         currValue = str(currValue);
                 # This section is for strings
-                elif (key in ["###SetPointsPreInstance###","###printToItuff###"]):
+                elif (key in ["###SetPointsPreInstance###","###printToItuff###","###preinstance###","###postinstance###"]):
                     try:
                         if math.isnan(dataset[value][i]):
                             currValue = "";
@@ -92,7 +92,7 @@ def testBuilder(dataset, product):
                     currValue = int(dataset[value][i]);
                     currValue = str(currValue);
             # This section is for strings
-            elif (value in ["SetPointsPreInstance","printToItuff"]):
+            elif (value in ["SetPointsPreInstance","printToItuff","preinstance","postinstance"]):
                 try:
                     if math.isnan(dataset[value][i]):
                         currValue = "";
