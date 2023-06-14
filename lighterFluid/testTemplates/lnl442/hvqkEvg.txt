@@ -10,4 +10,6 @@ Test iCHVQKTest ###TestName###
 	power_down_level = "BASE::Power_Up_TC_force_0V";
 	preinstance = "###preinstance###";
 	postinstance = "###postinstance###";
+	ifpm_input_file = "###ifpmFile###";
+	ifpm_modifygroups = "###ifpmMod###";
 }

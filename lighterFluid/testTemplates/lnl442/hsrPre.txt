@@ -7,4 +7,6 @@ Test iCHSRTest ###TestName###
 	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/###plist###.xml";
 	hry_execution_mode = "PRE";
 	mode = "HRY";
+	ifpm_input_file = "###ifpmFile###";
+	ifpm_modifygroups = "###ifpmMod###";
 }

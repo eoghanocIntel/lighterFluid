@@ -36,7 +36,17 @@
     <Folder Include="functions\" />
     <Folder Include="functions\__pycache__\" />
     <Folder Include="inputs\" />
+    <Folder Include="releasedModules\" />
     <Folder Include="outputs\" />
+    <Folder Include="releasedModules\LNL\" />
+    <Folder Include="releasedModules\LNL\30G\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_ATOM\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_CCF\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_CORE\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_GFX\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_SOC\" />
+    <Folder Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_VPU\" />
     <Folder Include="testTemplates\" />
     <Folder Include="testTemplates\lnl442\" />
   </ItemGroup>
@@ -51,6 +61,13 @@
     <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="outputs\.gitignore" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_ATOM\ARR_ATOM.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_CCF\ARR_CCF.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_CORE\ARR_CORE.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_GFX\ARR_GFX.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_SOC\ARR_SOC.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_VPU\ARR_VPU.mtpl" />
+    <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\lnlArrayMasterSheet.xlsx" />
     <Content Include="testTemplates\lnl442\hvqkEvg.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairSOC.txt" />
     <Content Include="testTemplates\lnl442\patConfig.txt" />
