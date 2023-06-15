@@ -364,3 +364,4 @@ FodyWeavers.xsd
 *.mtpl
 /lighterFluid/outputs/RST_DFX.mtpl
 /lighterFluid/outputs/RST_RESET.mtpl
+/lighterFluid/outputs
