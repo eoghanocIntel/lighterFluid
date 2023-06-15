@@ -19,7 +19,7 @@ def importBuilder(dataset, moduleName):
     importList = [];
 
     testPlan = "TestPlan " + moduleName + ";\n";
-    uservar = "#Import " + moduleName + ".usrv;\n";
+    uservar = "Import " + moduleName + ".usrv;\n";
     timing = "#Import " + moduleName + "_timings.tcg;\n";
 
     importSet = set(dataset.TemplateLookup);

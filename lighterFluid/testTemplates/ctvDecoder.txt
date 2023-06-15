@@ -1,0 +1,9 @@
+Test CtvDecoderSpm ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	LevelsTc = "###Levels###";
+	TimingsTc = "###Timings###";
+	Patlist = "###Patlist###";
+	ConfigurationFile = "###ConfigFile###";
+	CtvCapturePins = "###CapturePins###";
+}

@@ -113,14 +113,15 @@ def printASmolBoi(currTest, ModuleName):
     
     currIb =        str(int(currTest.IB));
     currFb =        str(int(currTest.FB));
-    currCounter =   str(int(currTest.Counter));
-    currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
-
-    sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + ModuleName + "_" + currTest.TestName + "_SHARED_BIN"
-    if not currKill:
-        sharedBin = "##EDC## " + sharedBin;
 
     for i in range(0,int(currTest.portCount)):
+        currCounter =   str(int(currTest.Counter) + i);
+        currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
+
+        sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + ModuleName + "_" + currTest.TestName + "_SHARED_BIN"
+        if not currKill:
+            sharedBin = "##EDC## " + sharedBin;
+
         nextTest = "";
         try:
             float(currTest.PortList[i]);
@@ -223,7 +224,11 @@ def printAHugeBoi(currComp, body, moduleName):
 
     currName = currComp.CompositeName;
     if currComp.CompositeName in protectedFlows:
-        currName = moduleName + "_" + currName + " @" + currName + "_SubFlow";
+        if currComp.CompositeName == "INIT":
+            currName = moduleName + "_" + currName + " @" + currName;
+        else:
+            currName = moduleName + "_" + currName + " @" + currName + "_SubFlow";
+        
     header = """
 DUTFlow {name}
 {{""".format(name = currName);

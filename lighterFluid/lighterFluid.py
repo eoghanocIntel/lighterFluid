@@ -10,10 +10,12 @@ from functions import flowFileBuilder
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionFile = r"C:\Users\cmichel1\source\repos\lighterFluid\lighterFluid\inputs\Func_Sheet.xlsx";
+definitionFile = r"C:\Users\cmichel1\TorchTPs\gnrdio_base\Modules\FUN_NAC\InputFiles\Func_Sheet.xlsx";
 definitionList = [];
 definitionList.append("rst_dfx");
 definitionList.append("rst_reset");
+definitionList.append("fun_uncore");
+definitionList.append("fun_nac");
 findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 

@@ -36,7 +36,7 @@ def testBuilder(dataset,findAndReplaceFile):
                 #print(dataset[value][i])
                 
                 # This section is for numbers
-                if (key in ["###baseNumber###","###bypassGlobal###"]):
+                if (key in ["###baseNumber###","###bypassGlobal###", "###SamplingRateValue###", "###WaferSampleRateValue###"]):
                     if math.isnan(dataset[value][i]):
                         currValue = "";
                     else:

@@ -4,10 +4,12 @@ Test PrimeShmooTestMethod ###TestName###
 	LevelsTc = "###Levels###";
 	Patlist = "###Patlist###";
 	TimingsTc = "###Timings###";
-	XAxisParam = "p_mtd_per";
-	XAxisRange = "8e-9:0.8e-9:5"; # Start: Resolution: NumberOfPoints
+	XAxisParam = "###XaxisParam###";
+	XAxisRange = ###XaxisRange###;
 	XAxisParamType = "TimingTestCondition";
-	YAxisParam = "###Voltage_Param###";
-	YAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	YAxisParam = "###YaxisParam###";
+	YAxisRange = ###YaxisRange###;
 	YAxisParamType = "LevelsTestCondition";
+	PrintFormat = ###PrintFormat###;
+
 }

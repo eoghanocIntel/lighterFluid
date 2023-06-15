@@ -50,6 +50,7 @@
     <Content Include="inputs\demoSheet.xlsx" />
     <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
+    <Content Include="testTemplates\CtvDecoder.txt" />
     <Content Include="testTemplates\funcTest.txt" />
     <Content Include="testTemplates\mbistRepairSOC.txt" />
     <Content Include="testTemplates\patConfig.txt" />
@@ -70,6 +71,7 @@
     <Content Include="testTemplates\vfdmUserFunc.txt" />
     <Content Include="testTemplates\hsrPre.txt" />
     <Content Include="testTemplates\evgScreen.txt" />
+    <Content Include="testTemplates\VminSearchServer.txt" />
     <Content Include="testTemplates\vminTc.txt" />
     <Content Include="testTemplates\mbistRepairCORE.txt" />
   </ItemGroup>

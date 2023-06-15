@@ -1,0 +1,23 @@
+Test VminSearchServer ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	LevelsTc = "###Levels###";
+	TimingsTc = "###Timings###";
+	Patlist = "###Patlist###";
+	LogLevel ="###LogLevel###";
+	VoltageTargets = ###SearchPIN###; #Example: VminVars.VCFN
+	StartVoltages = "###SearchStartV###"; #Example:  VminVars.VCFNLowLimit;
+	EndVoltageLimits = "###SearchStopV###"; #Example:  VminVars.VCFNHighLimit;
+	StepSize = 0.02;
+	ScoreboardBaseNumber = "###baseNumber###";
+	PatternNameMap = "###PatternNameMap###";
+	#SetPointsPlistParamName = "Patlist";
+	#SetPointsPreInstance = VminVars.DefaultRatios;
+	MaskIncoming = "DISABLED";
+	SliceDisable = "DISABLED";
+	UpdateTrackingStructure = "DISABLED";
+	FeatureSwitchSettings = "func_mode_on";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	ForwardingMode = "DISABLED";
+}
