@@ -113,14 +113,12 @@ def printASmolBoi(currTest):
     
     currIb =        str(int(currTest.IB));
     currFb =        str(int(currTest.FB));
-    currCounter =   str(int(currTest.Counter));
-    currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
+    currCounter =   int(currTest.Counter)*10;
+    
+    #currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
     module = currTest.Module;
-
-    sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + module + "_" + currTest.TestName + "_SHARED_BIN"
-    if not currKill:
-        sharedBin = "##EDC## " + sharedBin;
-
+    
+    
     for i in range(0,int(currTest.portCount)):
         nextTest = "";
         try:
@@ -137,6 +135,11 @@ def printASmolBoi(currTest):
 			{nextTest};
 		}}""".format(portNo=i, nextTest=nextTest);
         else:
+            currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + module + "_" + currTest.TestName
+            if not currKill:
+                sharedBin = "##EDC## " + sharedBin;
+
             dummyCounter = "n" + currPheoBin + "_fail_" + currTest.TestName + "_" + str(i);
             body = body + """
         Result {portNo}
