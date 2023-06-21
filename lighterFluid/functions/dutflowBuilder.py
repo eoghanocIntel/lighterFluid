@@ -212,6 +212,8 @@ def printAHugeBoi(currComp, body):
                       "STRESS",
                       "POSTHVQK",
                       "END",
+                      "ENDXFM",
+                      "ENDTFM",
                       "FINAL",
                       "SDTSTART",
                       "SDTBEGIN",

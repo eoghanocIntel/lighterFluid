@@ -99,6 +99,8 @@ def testBuilder(dataset, product):
             # This section is for strings
             elif (value in ["SetPointsPreInstance",
                             "printToItuff",
+                            "SetPointsPostInstance",
+                            "ifpmFile",
                             "ifpmFile",
                             "ifpmMod",
                             "preinstance",

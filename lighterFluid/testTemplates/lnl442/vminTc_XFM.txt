@@ -4,7 +4,7 @@ Test PrimeVminSearchTestMethod ###TestName###
 	EndVoltageLimits = "1.2"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
-	StartVoltages = "0.7";
+	StartVoltages = "0.45";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";

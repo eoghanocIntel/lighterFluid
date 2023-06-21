@@ -93,6 +93,7 @@
     <Content Include="testTemplates\lnl442\vminTc_Prepost.txt" />
     <Content Include="testTemplates\lnl442\vminTc.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairCORE.txt" />
+    <Content Include="testTemplates\lnl442\vminTc_XFM.txt" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda38-64" />
