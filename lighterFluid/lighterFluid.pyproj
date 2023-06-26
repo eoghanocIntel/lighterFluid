@@ -13,7 +13,6 @@
     <Name>lighterFluid</Name>
     <RootNamespace>csvToTorchBuilder</RootNamespace>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
-    <InterpreterId>Global|ContinuumAnalytics|Anaconda38-64</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -94,9 +93,6 @@
     <Content Include="testTemplates\lnl442\vminTc.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairCORE.txt" />
     <Content Include="testTemplates\lnl442\vminTc_XFM.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda38-64" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -15,12 +15,12 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "adambyrn";
-#definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "lsuareza";
+definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "lsuareza";
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "eoghanoc";
-definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "rbilei";
+#definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "rbilei";
 
 file = "lnlArrayMasterSheet.xlsx";
 product = "lnl442";
