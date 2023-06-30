@@ -52,6 +52,7 @@
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="testTemplates\CtvDecoder.txt" />
     <Content Include="testTemplates\funcTest.txt" />
+    <Content Include="testTemplates\iCAuxiliary.txt" />
     <Content Include="testTemplates\mbistRepairSOC.txt" />
     <Content Include="testTemplates\patConfig.txt" />
     <Content Include="testTemplates\fuseConfig.txt" />

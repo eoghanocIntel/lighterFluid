@@ -10,14 +10,12 @@
 ###baseNumber###,baseNumber
 ###SearchMode###,SearchMode
 ###VFDM###,VFDM
-###resultToken###,resultToken
 ###bypassGlobal###,bypassGlobal
 ###repairTag###,repairTag
 ###repairLabel###,repairLabel
 ###modeOfDecoding###,modeOfDecoding
 ###rasterDataLog###,rasterDataLog
 ###Supply###,Supply
-###bypassGlobal###,bypassGlobal
 ###ifpm###,ifpm
 ###BisrMode###,BisrMode
 ###TestMode###,TestMode
@@ -39,5 +37,10 @@
 ###SearchPIN###,SearchPIN
 ###SearchStartV###,SearchStartV
 ###SearchStopV###,SearchStopV
+###SearchStartVRetry###,SearchStartVRetry
 ###ConfigFile###,ConfigFile
 ###CapturePins###,CapturePins
+###DataType###,DataType
+###AuxExpression###,AuxExpression
+###resultToken###,resultToken
+###resultPort###,resultPort

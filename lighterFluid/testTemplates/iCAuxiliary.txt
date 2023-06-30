@@ -1,0 +1,8 @@
+Test iCAuxiliaryTest ###TestName###
+{
+	bypass_global = "###bypassGlobal###";
+	data_type = "###DataType###";
+	expression = "###AuxExpression###";
+	result_var = "###resultToken###";
+	result_port = "###resultPort###";
+}

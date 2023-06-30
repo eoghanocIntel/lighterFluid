@@ -1,4 +1,22 @@
-import pandas
+import subprocess
+
+try:
+    import pandas
+except :
+    print("need to import pandas using pip");
+    subprocess.call('python -m pip install --upgrade pip --proxy="http://proxy-chain.intel.com:911"')
+    subprocess.call('python -m pip install pandas --proxy="http://proxy-chain.intel.com:911"');
+    import pandas
+
+try:
+    import openpyxl
+except :
+    print("need to import openpyxl using pip");
+    subprocess.call('python -m pip install --upgrade pip --proxy="http://proxy-chain.intel.com:911"')
+    subprocess.call('python -m pip install openpyxl --proxy="http://proxy-chain.intel.com:911"');
+    import openpyxl
+
+
 from functions import importBuilder
 from functions import counterBuilder
 from functions import testBuilder
@@ -10,7 +28,7 @@ from functions import flowFileBuilder
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionFile = r"C:\Users\cmichel1\TorchTPs\gnrdio_base\Modules\FUN_NAC\InputFiles\Func_Sheet.xlsx";
+definitionFile = r"C:\Users\cmichel1\TorchTPs\gnrdio_sort\Modules\FUN_NAC\InputFiles\Func_Sheet.xlsx";
 definitionList = [];
 definitionList.append("rst_dfx");
 definitionList.append("rst_reset");

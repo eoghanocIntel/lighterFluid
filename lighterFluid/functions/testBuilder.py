@@ -37,13 +37,16 @@ def testBuilder(dataset,findAndReplaceFile):
                 
                 # This section is for numbers
                 if (key in ["###baseNumber###","###bypassGlobal###", "###SamplingRateValue###", "###WaferSampleRateValue###"]):
-                    if math.isnan(dataset[value][i]):
-                        currValue = "";
-                    else:
-                        currValue = int(dataset[value][i]);
-                        currValue = str(currValue);
+                    try:
+                        if math.isnan(dataset[value][i]):
+                            currValue = "";
+                        else:
+                            currValue = int(dataset[value][i]);
+                            currValue = str(currValue);
+                    except:
+                        currValue = str(dataset[value][i]);
                 # This section is for strings
-                elif (key in ["###SetPointsPreInstance###"]):
+                elif (key in ["###SetPointsPreInstance###","###resultToken###","###resultPort###", "###DataType###"]):
                     try:
                         if math.isnan(dataset[value][i]):
                             currValue = "";
