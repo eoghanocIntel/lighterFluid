@@ -13,5 +13,5 @@ Test PrimeVminSearchTestMethod ###TestName###
 	ExecutionMode = "###SearchMode###";
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
-	DtsConfigName = "###DtsConfigName###"
+	DtsConfigName = "###DtsConfigName###";
 }
