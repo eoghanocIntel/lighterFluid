@@ -1,4 +1,4 @@
-Test PrimeVminSearchTestMethod ###TestName###
+Test LNLVminSearch ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "1.2"; 
