@@ -45,6 +45,7 @@ def testBuilder(dataset,findAndReplaceFile, product):
                 # This section is for strings
                 elif (key in ["###SetPointsPreInstance###",
                               "###printToItuff###",
+                              "###DtsConfigName###",
                               "###ifpmFile###",
                               "###ifpmMod###",
                               "###preinstance###",
@@ -99,6 +100,7 @@ def testBuilder(dataset, product):
             # This section is for strings
             elif (value in ["SetPointsPreInstance",
                             "printToItuff",
+                            "DtsConfigName",
                             "SetPointsPostInstance",
                             "ifpmFile",
                             "ifpmFile",
