@@ -1,0 +1,16 @@
+Test CtvTM ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	TimingsTc = "###Timings###";
+	LevelsTc = "###Levels###";
+	PinName = "XXTDO";
+	Patlist = "###plist###";
+	FieldTypesOrder = "VALIDx1,DATAx9TEMP,DATAx9TEMP,VALIDx1";
+	SensorsLists = "LNLSensorsGEN1,LNLSensorsGEN2";
+	FieldLists = "LnlDtsCodeTempGen1,LnlDtsTempGen2";
+	LowLimits = ",1,,1";
+	UniquePorts = "0,2,0,2";
+	SharedStoragePrefix = ",DTS_HOTTEMP,DTS_HOTTEMP,";
+	StatisticMethods = "Avg,Avg,Avg,Avg";
+	ItuffTokenNames = "GEN1_VALID,GEN1_TEM,GEN2_TEMP,GEN2_VALID";
+}
