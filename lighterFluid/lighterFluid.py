@@ -19,6 +19,10 @@ import shutil
 #userName = "lsuareza";
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "eoghanoc";
+#definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "brownm1";
+#definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "dgiardin";
 definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 userName = "rbilei";
 
