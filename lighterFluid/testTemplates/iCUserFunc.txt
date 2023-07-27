@@ -1,0 +1,6 @@
+Test iCUserFuncTest ###TestName###
+{
+	bypass_global = "###bypassGlobal###";
+    function_name = "###functionName###";
+    function_parameter = "###functionParam###";
+} 

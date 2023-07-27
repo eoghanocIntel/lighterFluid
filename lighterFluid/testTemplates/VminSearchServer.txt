@@ -4,7 +4,6 @@ Test VminSearchServer ###TestName###
 	LevelsTc = "###Levels###";
 	TimingsTc = "###Timings###";
 	Patlist = "###Patlist###";
-	FeatureSwitchSettings = "func_mode_on";
 	LogLevel ="###LogLevel###";
 	VoltageTargets = ###SearchPIN###;
 	StartVoltages = ###SearchStartV###;
@@ -15,9 +14,16 @@ Test VminSearchServer ###TestName###
 	PatternNameMap = "###PatternNameMap###";
 	SetPointsPreInstance = VminVars.DefaultRatios;
 	SetPointsPlistParamName = VminVars.DefaultSetPointsPlistParamName;
+
 	MaskIncoming = "DISABLED";
 	SliceDisable = "DISABLED";
-	UpdateTrackingStructure = "DISABLED";
+    DecoderConfiguration = "###DecoderConfiguration###";
+    MaskBuilderSettings = "###MaskBuilderSettings###";
+    FinalStructureCheckRule = "###FinalStructureCheckRule###";
+    UpdateTrackingStructure = "###UpdateTrackingStructure###";
+    PreInstance = "###PreInstance###";
+    FeatureSwitchSettings = "###FeatureSwitchSettings###";
+
 	ScoreboardEdgeTicks = 0;
 	MaxRepetitionCount = 0;
 	ForwardingMode = "DISABLED";

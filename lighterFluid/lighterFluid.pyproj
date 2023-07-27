@@ -53,6 +53,8 @@
     <Content Include="testTemplates\CtvDecoder.txt" />
     <Content Include="testTemplates\funcTest.txt" />
     <Content Include="testTemplates\iCAuxiliary.txt" />
+    <Content Include="testTemplates\iCCmemDecode.txt" />
+    <Content Include="testTemplates\iCUserFunc.txt" />
     <Content Include="testTemplates\mbistRepairSOC.txt" />
     <Content Include="testTemplates\patConfig.txt" />
     <Content Include="testTemplates\fuseConfig.txt" />

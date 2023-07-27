@@ -1,0 +1,10 @@
+Test iCCmemDecodeTest ###TestName###
+{
+	bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###Patlist###";
+    config_file = "###ConfigFile###";
+    config_set = "###ConfigSet###";
+    postinstance = "###PostInstance###";
+} 
