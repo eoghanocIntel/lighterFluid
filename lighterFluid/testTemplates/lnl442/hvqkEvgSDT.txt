@@ -8,6 +8,7 @@ Test iCHVQKTest ###TestName###
 	voltage_step_config_file = "./Modules/ARR_###Module###/InputFiles/###VoltageConfig###.hvqk.config.xml";
 	power_up_level = "BASE::SBF_nom_lvl";
 	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
 	preinstance = "###preinstance###";
 	postinstance = "###postinstance###";
 	ifpm_input_file = "###ifpmFile###";
