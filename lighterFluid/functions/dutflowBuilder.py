@@ -217,7 +217,7 @@ def printAHugeBoi(currComp, body):
                       "FINAL",
                       "SDTSTART",
                       "SDTBEGIN",
-                      "SDTSTRESS",
+                      "HOTSTRESS",
                       "SDTEND",
                       "DEDC",
                       "SDTDEDC",
