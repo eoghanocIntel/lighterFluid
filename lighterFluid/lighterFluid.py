@@ -26,7 +26,7 @@ userName = "eoghanoc";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
 
-file = "lnlArrayMasterSheet.xlsx";
+file = "lnlArrayMasterSheet.xlsm";
 product = "lnl442";
 
 
