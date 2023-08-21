@@ -29,6 +29,11 @@ userName = "eoghanoc";
 file = "lnlArrayMasterSheet.xlsx";
 product = "lnl442";
 
+
+#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
+#userName = "eoghanoc";
+#file = "lnlArrayCommon.xlsx";
+
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 definitionList = [];
@@ -38,6 +43,7 @@ definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
 definitionList.append("arr_vpu");
+definitionList.append("arr_common");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 currSecond = str(datetime.now().second).zfill(2);
@@ -57,6 +63,9 @@ if not os.path.exists(outDir):
 
 #shutil.copyfile(definitionDir + "\\" + file, fileToUse)
 inFile = definitionDir + "\\" + file;
+
+
+
 #subprocess.call(["dir"], shell=True);
 pwrShlCmd = powerShellPath + " cp '" + inFile + "' '" + fileToUse + "'";
 subprocess.call(pwrShlCmd, shell=True);

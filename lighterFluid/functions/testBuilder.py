@@ -45,6 +45,7 @@ def testBuilder(dataset, product):
                             "ifpmFile",
                             "ifpmFile",
                             "ifpmMod",
+                            "iTuffExt",
                             "preinstance",
                             "postinstance"]):
                 try:

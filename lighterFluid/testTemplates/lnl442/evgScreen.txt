@@ -4,5 +4,5 @@ Test iCScreenTest ###TestName###
 	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt";
 	screen_custom_setpoint = "DUMMY";
 	screen_test_set = "###ScreenTestSet###";
-	screen_tests_file = "./Modules/ARR_###Module###/InputFiles/###ScreenTestFile###";
+	screen_tests_file = "###ScreenTestFile###";
 }

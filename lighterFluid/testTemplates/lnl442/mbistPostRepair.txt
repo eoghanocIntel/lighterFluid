@@ -6,8 +6,8 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	TimingsTc = "###Timings###";
 	Patlist = "###plist###";
 	VoltageTargets = "###Supply###";
-	StartVoltages = ARR_###Module###.###PowerRail###;
-	EndVoltageLimits = ARR_###Module###.###PowerRail###;
+	StartVoltages = "###StartVoltage###";
+	EndVoltageLimits = "###EndVoltage###";
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardEdgeTicks = 0;

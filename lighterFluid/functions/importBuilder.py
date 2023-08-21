@@ -19,8 +19,12 @@ def importBuilder(dataset, timeStamp):
     importList = [];
 
     importTimeStamp = "# " + timeStamp + "\n";
+    
+    #currModule = list(set(dataset.Module.dropna()))[0];
+    currModule = dataset.Module[0];
 
-    currModule = list(set(dataset.Module.dropna()))[0];
+    #if len(currModule) > 0:
+    #    currModule = "COMMON";
     testPlan = "TestPlan ARR_" + currModule + ";\n";
     uservar = "Import ARR_" + currModule + ".usrv;\n";
     
@@ -37,7 +41,7 @@ def importBuilder(dataset, timeStamp):
         if level.startswith("BASE"):
             continue
         else:
-            importSection = importSection + "Import ARR_" + currModule + "_timings.tcg;\n";
+            importSection = importSection + "Import ARR_" + currModule + "_levels.tcg;\n";
             break
 
     importSet = set(dataset.TemplateLookup);

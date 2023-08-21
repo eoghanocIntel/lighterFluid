@@ -83,7 +83,7 @@ def flowCursion(dataset, rowCount):
 ##############################
 ##### INSTANCE PRINT OUT #####
 ##############################
-def printASmolBoi(currTest):
+def printASmolBoi(currTest, parentModule):
 
     currKill = currTest.KillEnabled;
     killOrEdc = "";
@@ -116,9 +116,6 @@ def printASmolBoi(currTest):
     currCounter =   int(currTest.Counter)*10;
     
     #currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
-    module = currTest.Module;
-    
-    
     for i in range(0,int(currTest.portCount)):
         nextTest = "";
         try:
@@ -136,7 +133,7 @@ def printASmolBoi(currTest):
 		}}""".format(portNo=i, nextTest=nextTest);
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + module + "_" + currTest.TestName
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + parentModule + "_" + currTest.TestName
             if not currKill:
                 sharedBin = "##EDC## " + sharedBin;
 
@@ -145,10 +142,10 @@ def printASmolBoi(currTest):
         Result {portNo}
         {{
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_{module}::{dummyCounter};
+	        IncrementCounters ARR_{parentModule}::{dummyCounter};
 	        {sharedBin};
 			{nextTest};
-        }}""".format(portNo=i, module=module, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
+        }}""".format(portNo=i, parentModule=parentModule, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
 
 
     return header + body + footer;
@@ -248,7 +245,7 @@ def printMeBaby(flowComposite, superString):
         if (isinstance(flowItem, type(Composite.Composite()))):
             compositeContents = compositeContents + printABigBoi(flowItem);
         if (isinstance(flowItem, type(TestInstance.TestInstance()))):
-            compositeContents = compositeContents + printASmolBoi(flowItem);  
+            compositeContents = compositeContents + printASmolBoi(flowItem, flowComposite.Module);  
     fullComposite = printAHugeBoi(flowComposite, compositeContents);
     
     for flowItem in flowComposite.Contents:

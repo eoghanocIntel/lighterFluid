@@ -4,7 +4,6 @@ Test iCHVQKTest ###TestName###
 	level = "###Levels###";
 	patlist = "###plist###";
 	timings = "###Timings###";
-	meta_data_file = "./Modules/TPI_HVQK/InputFiles/LNL442MB_SDT.hvqk.metadata.txt";
 	voltage_step_config_file = "./Modules/ARR_###Module###/InputFiles/###VoltageConfig###.hvqk.config.xml";
 	power_up_level = "BASE::SBF_nom_lvl";
 	power_down_level = "BASE::Power_Up_TC_force_0V";
