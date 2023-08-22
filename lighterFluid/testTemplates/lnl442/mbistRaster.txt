@@ -3,11 +3,11 @@ Test MbistRasterTC ###TestName###
 	BypassPort = ###bypassGlobal###;
 	CtvCapturePins = "XXTDO";
 	EnableRepair = "FALSE";
-	FailuresToCapturePerPattern = 0;
-	FailuresToCaptureTotal = 0;
+	FailuresToCapturePerPattern = 100;
+	FailuresToCaptureTotal = 1000;
 	LevelsTc = "###Levels###";
-	MaxFailuresPerPatternToItuff = 0;
-	MaxFailuresToItuff = 0;
+	MaxFailuresPerPatternToItuff = 100;
+	MaxFailuresToItuff = 1000;
 	Patlist = "###plist###";
 	RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER.json";
 	TimingsTc = "###Timings###";
