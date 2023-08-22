@@ -1,0 +1,5 @@
+Test RecoveryUpdate ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	RecoveryOption = ###VPU_IP###;
+}
