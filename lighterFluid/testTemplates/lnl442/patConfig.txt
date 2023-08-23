@@ -5,4 +5,5 @@ Test PrimePatConfigTestMethod ###TestName###
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPoint = "###jsonSetPoint###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
+	RegEx = "###Regex###";
 }
