@@ -1,7 +1,7 @@
 Test AuxiliaryTC ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	Expression = "[G.U.S.VPU_SLC_TRK] == '000001'";
+	Expression = "[G.U.S.VPU_SLC_TRK] == ###RecString###";
 	ResultPort = "[R]?2:1";
 	PreInstance = "ReadTrackerValue(VPU)";
 }
