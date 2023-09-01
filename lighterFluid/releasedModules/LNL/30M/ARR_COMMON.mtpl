@@ -1,0 +1,1577 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+
+TestPlan ARR_COMMON;
+
+Import ARR_COMMON.usrv;
+Import OASIS_VFDM_tt.xml;
+Import OASIS_Repair_tt.xml;
+Import MbistRasterTC.xml;
+Import PrimeMbistVminSearchTestMethod.xml;
+Import OASIS_UserFunc_tt.xml;
+Import PrimePatConfigTestMethod.xml;
+Import AuxiliaryTC.xml;
+Import PrimeVirtualFuseResetTestMethod.xml;
+Import OASIS_Screen_tt.xml;
+Import PrimeSetDffTestMethod.xml;
+Import ScreenTC.xml;
+
+
+Counters
+{
+	n61700003_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM_0,
+	n61710000_fail_XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL_0,
+	n61710001_fail_XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK_0,
+	n61710002_fail_XSA_COMMON_FUSECONFIG_E_BEGIN_TITO_X_X_X_REPAIR_RESET_0,
+	n61710003_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG_0,
+	n61710004_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS_0,
+	n61710005_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1_0,
+	n61710006_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1_0,
+	n61710007_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS_0,
+	n61710008_fail_XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR_0,
+	n61760000_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_0,
+	n61760001_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS_0,
+	n61760002_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS_2,
+	n61760003_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF_0,
+	n61760004_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF_2,
+	n61760005_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_5,
+	n61760006_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_6,
+	n61760007_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_7,
+	n61760008_fail_XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS_0,
+	n61760009_fail_XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS_2,
+	n61760010_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_8,
+	n61760011_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_9,
+	n61710009_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST_0,
+	n61710010_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST_0,
+	n61710011_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST_0,
+	n61710014_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2_0,
+	n61710015_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2_0
+} # End of Test Counter Definition
+
+Test iCRepairTest XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "none";
+	map_array = "none";
+	mapper_file = "none";
+	mode_of_decoding = "none";
+	mode_of_operation = "Repair_To_Fuse";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	data_direction = "WRITE";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+
+Test iCUserFuncTest XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK
+{
+	bypass_global = "";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+}
+
+Test PrimePatConfigTestMethod XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR
+{
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "(LNL_pre.*Marr.*)|(LNL_pre.*MAarr.*)|(LNL_pre.*Mgt.*)|(LNL_pre.*fun.*)"; # #regex for premable patmod
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG
+{
+	BypassPort = 1;
+	Expression = "1";
+	ResultToken = "nan";
+	# BypassPort = ;
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS
+{
+	Expression = "Bin2Hex([G.U.S.FUSE_EMB_VFDM_HCS_BINARY])";
+	Storage = "DFF";
+	DataType = "String";
+	ResultToken = "SVHCS";
+	BypassPort = -1;
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1
+{
+	BypassPort = 1;
+	Expression = "Substring(Bin2Hex([G.U.S.FUSE_EMB_VFDM_FDS_BINARY]),0,3332)";
+	Storage = "DFF";
+	DataType = "String";
+	ResultToken = "SVFDS1";
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS
+{
+	BypassPort = 1;
+	Expression = "Bin2Hex([G.U.S.FUSE_EMB_VFDM_HCS_BINARY])";
+	Storage = "DFF";
+	DataType = "String";
+	ResultToken = "SVHCS";
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1
+{
+	Expression = "Substring(Bin2Hex([G.U.S.FUSE_EMB_VFDM_FDS_BINARY]),0,3332)";
+	Storage = "DFF";
+	ResultToken = "SVFDS1";
+	DataType = "String";
+	BypassPort = -1;
+}
+
+Test PrimeMbistVminSearchTestMethod XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET
+{
+	BypassPort = -1;
+    ClearVariables = "all,initialize";
+	FeatureSwitchSettings = "";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	Patlist = "array_mbist_soc_begin_tito_hbo0_bp2_ssa_bhry_list";
+	VoltageTargets = "VCCIA_HC";
+	StartVoltages = "0.85";
+	EndVoltageLimits = "0.85";
+	StepSize = 0.02;
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardEdgeTicks = 0;
+	MaxRepetitionCount = 0;
+	CtvPins = "XXTDO";
+	TestMode = "Scoreboard";
+	LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
+	MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
+	MbistTestMode = "HRY";
+	BisrMode = "uncompress"; # Compressed_skippatmod, Off
+	FailCaptureCount = 1000000;
+	# FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled
+	# DffOperation = ; # Do we need to set?
+	# VFDMconfig = ; # Do we need to set?
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SSKTR
+{
+	fuse_module = "SSKTR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE0R
+{
+	fuse_module = "SCORE0R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCORE0R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE1R
+{
+	fuse_module = "SCORE1R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCORE1R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE2R
+{
+	fuse_module = "SCORE2R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCORE2R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE3R
+{
+	fuse_module = "SCORE3R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCORE3R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEMSSR
+{
+	fuse_module = "SMEMSSR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SMEMSSR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDFXR
+{
+	fuse_module = "SDFXR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SDFXR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDISPR
+{
+	fuse_module = "SDISPR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SDISPR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SGTR
+{
+	fuse_module = "SGTR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SGTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIAXR
+{
+	fuse_module = "SIAXR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SIAXR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIPUR
+{
+	fuse_module = "SIPUR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SIPUR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO0R
+{
+	fuse_module = "SCBO0R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCBO0R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO1R
+{
+	fuse_module = "SCBO1R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SCBO1R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEDIAR
+{
+	fuse_module = "SMEDIAR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SMEDIAR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO0R
+{
+	fuse_module = "SHBO0R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SHBO0R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO1R
+{
+	fuse_module = "SHBO1R";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SHBO1R_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCVFDMTest CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SVPUR
+{
+	fuse_module = "SVPUR";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SVPUR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "DISABLE";
+	descriptor_results = "ENABLE";
+	# bypass_global = "1";
+}
+
+Test iCScreenTest XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt"; # USER TODO: define value
+	screen_custom_setpoint = "DUMMY"; # USER TODO: define value
+	screen_test_set = "ResetRepairDFF"; # USER TODO: define value
+	screen_tests_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFTest.txt"; # USER TODO: define value
+}
+
+Test iCScreenTest XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt"; # USER TODO: define value
+	screen_custom_setpoint = "DUMMY"; # USER TODO: define value
+	screen_test_set = "ResetRepairGSDS"; # USER TODO: define value
+	screen_tests_file = "./Modules/ARR_COMMON/InputFiles/ResetGSDSTest.txt"; # USER TODO: define value
+}
+
+Test iCScreenTest XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS
+{
+	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt"; # USER TODO: define value
+	screen_custom_setpoint = "DUMMY"; # USER TODO: define value
+	screen_test_set = "ResetRepairGSDS"; # USER TODO: define value
+	screen_tests_file = "./Modules/ARR_COMMON/InputFiles/ResetGSDSTest.txt"; # USER TODO: define value
+}
+
+Test PrimeSetDffTestMethod ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST
+{
+	BypassPort = 1;
+	TokenName = "SC0RF1R,SC0RF0R,SC0MLC0R,SC0MLC1R,SC0PMUCR,SC1RF1R,SC1RF0R,SC1MLC0R,SC1MLC1R,SC1PMUCR,SC2RF1R,SC2RF0R,SC2MLC0R,SC2MLC1R,SC2PMUCR,SC3RF1R,SC3RF0R,SC3MLC0R,SC3MLC1R,SC3PMUCR";
+	TokenValue = "Storage.SC0RF1R_FUSE,Storage.SC0RF1R_FUSE,Storage.SC0MLC0R_FUSE,Storage.SC0MLC1R_FUSE,Storage.SC0PMUCR_FUSE,Storage.SC1RF1R_FUSE,Storage.SC1RF1R_FUSE,Storage.SC1MLC0R_FUSE,Storage.SC1MLC1R_FUSE,Storage.SC1PMUCR_FUSE,Storage.SC2RF1R_FUSE,Storage.SC2RF1R_FUSE,Storage.SC2MLC0R_FUSE,Storage.SC2MLC1R_FUSE,Storage.SC2PMUCR_FUSE,Storage.SC3RF1R_FUSE,Storage.SC3RF1R_FUSE,Storage.SC3MLC0R_FUSE,Storage.SC3MLC1R_FUSE,Storage.SC3PMUCR_FUSE";
+}
+
+Test PrimeSetDffTestMethod ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST
+{
+	BypassPort = 1;
+	TokenName = "SSKTR";
+	TokenValue = "Storage.VFDM_SSKTR";
+}
+
+Test PrimeSetDffTestMethod ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST
+{
+	BypassPort = -1;
+	TokenName = "SGTR"; # #is the token name correct? check mtl file
+	TokenValue = "Storage.VFDM_SGTR";
+}
+
+Test PrimePatConfigTestMethod XSA_COMMON_FUSECONFIG_E_BEGIN_TITO_X_X_X_REPAIR_RESET
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_RESET";
+	RegEx = "(LNL_pre.*Marr.*)|(LNL_pre.*MAarr.*)|(LNL_pre.*Mgt.*)|(LNL_pre.*fun.*)"; # #regex for premable patmod
+
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2
+{
+	BypassPort = 1;
+	Expression = "Substring(Bin2Hex([G.U.S.FUSE_EMB_VFDM_FDS_BINARY]),3332,3332)";
+	Storage = "DFF";
+	DataType = "String";
+	ResultToken = "SVFDS2";
+}
+
+Test AuxiliaryTC XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2
+{
+	BypassPort = -1;
+	Expression = "Substring(Bin2Hex([G.U.S.FUSE_EMB_VFDM_FDS_BINARY]),3332,3332)";
+	Storage = "DFF";
+	DataType = "String";
+	ResultToken = "SVFDS2";
+}
+
+DUTFlow ARR_COMMON_INIT @INIT
+{
+	DUTFlowItem XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760008_fail_XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS_0;
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SSKTR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760009_fail_XSA_X_SCREEN_E_INIT_X_X_X_X_RESET_REPAIR_GSDS_2;
+			Return 0;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SSKTR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SSKTR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE0R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE0R;
+		}		
+	}
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE0R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE0R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE1R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE1R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE1R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE1R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE2R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE2R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE2R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE2R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE3R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE3R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE3R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCORE3R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEMSSR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEMSSR;
+		}		
+	}
+
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEMSSR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEMSSR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDFXR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDFXR;
+		}		
+	}
+
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDFXR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDFXR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDISPR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDISPR;
+		}		
+	}
+
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDISPR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SDISPR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SGTR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SGTR;
+		}		
+	}
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SGTR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SGTR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIAXR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIAXR;
+		}		
+	}
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIAXR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIAXR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIPUR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIPUR;
+		}		
+	}
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIPUR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SIPUR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO0R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO0R;
+		}		
+	}
+
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO0R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO0R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO1R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO1R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO1R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SCBO1R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEDIAR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEDIAR;
+		}		
+	}
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEDIAR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SMEDIAR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO0R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO0R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO0R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO0R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO1R;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO1R;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO1R CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SHBO1R @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SVPUR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SVPUR;
+		}		
+	}
+	
+	DUTFlowItem CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SVPUR CTRL_X_VFDM_E_INIT_X_X_X_X_VFDM_SVPUR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+
+}
+
+DUTFlow ARR_COMMON_BEGIN @BEGIN_SubFlow
+{
+	DUTFlowItem XSA_COMMON_FUSECONFIG_E_BEGIN_TITO_X_X_X_REPAIR_RESET XSA_COMMON_FUSECONFIG_E_BEGIN_TITO_X_X_X_REPAIR_RESET @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710002_fail_XSA_COMMON_FUSECONFIG_E_BEGIN_TITO_X_X_X_REPAIR_RESET_0;
+			##EDC## SetBin SoftBins.b61710002_fail_ARR_COMMON_XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR_SHARED_BIN;
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS;
+		}		
+	}
+	
+	DUTFlowItem XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760001_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS_0;
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760002_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_GSDS_2;
+			GoTo XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF;
+		}		
+	}
+	
+	DUTFlowItem XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760003_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF_0;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760004_fail_XSA_X_SCREEN_K_BEGIN_X_X_X_X_RESET_REPAIR_DFF_2;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760000_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_0;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760005_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_5;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 6
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760006_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_6;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 7
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760007_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_7;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 8
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760010_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_8;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+		Result 9
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61760011_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_9;
+			GoTo XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61700003_fail_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM_0;
+			##EDC## SetBin SoftBins.b61700003_fail_ARR_COMMON_XSA_COMMON_REPAIR_E_BEGIN_TITO_X_X_X_RESET_ATOM_SHARED_BIN;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		Result 5
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}
+
+DUTFlow ARR_COMMON_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710000_fail_XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL_0;
+			##EDC## SetBin SoftBins.b61710000_fail_ARR_COMMON_XSA_COMMON_VFDM_E_PREHVQK_TITO_X_X_X_WRITEALL_SHARED_BIN;
+			GoTo XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710001_fail_XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK_0;
+			##EDC## SetBin SoftBins.b61710001_fail_ARR_COMMON_XSA_COMMON_UF_E_PREHVQK_TITO_X_X_X_OVERFLOW_CHECK_SHARED_BIN;
+			GoTo XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710008_fail_XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR_0;
+			##EDC## SetBin SoftBins.b61710002_fail_ARR_COMMON_XSA_COMMON_FUSECONFIG_E_PREHVQK_TITO_X_X_X_REPAIR_SHARED_BIN;
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710003_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_REPAIRBITSSET_FLAG_0;
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710004_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS_0;
+			##EDC## SetBin SoftBins.b61710004_fail_ARR_COMMON_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS_SHARED_BIN;
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1 XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710005_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1_0;
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2 XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710015_fail_XSA_COMMON_AUX_E_PREHVQK_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}
+
+DUTFlow ARR_COMMON_END @END_SubFlow
+{
+	DUTFlowItem XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710007_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_HCS_0;
+			GoTo XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1 XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710006_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS1_0;
+			GoTo XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2;
+		}		
+	}
+	
+	DUTFlowItem ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710009_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST_0;
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST;
+		}		
+	}
+	
+	DUTFlowItem ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710010_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_PBIST_0;
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST;
+		}		
+	}
+	
+	DUTFlowItem ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710011_fail_ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_GTBIST_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2 XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters ARR_COMMON::n61710014_fail_XSA_COMMON_AUX_E_END_TITO_X_X_X_COMBINE_UF_REPAIRDFF_FDS2_0;
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_X_UF_K_END_X_X_X_X_DFFSET_REPAIR_MBIST;
+		}		
+	}
+}

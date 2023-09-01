@@ -1,0 +1,951 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+# eoghanoc_2023_08_18_15_05_15
+TestPlan ARR_VPU;
+Import ARR_VPU.usrv;
+
+Import LNLVminSearch.xml;
+Import PrimeShmooTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_HVQK_tt.xml;
+
+Counters
+{
+	n61310000_fail_XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n61310010_fail_XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n17610300_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_0,
+	n17610303_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_3,
+	n17610304_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_4,
+	n17610310_fail_XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n26610330_fail_XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n61320000_fail_SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n21320010_fail_LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n17610500_fail_XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL_0,
+	n61320200_fail_SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n21320210_fail_LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n61330700_fail_XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL_0,
+	n61340710_fail_XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL_0,
+	n17610320_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_0,
+	n17610323_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_3,
+	n17610324_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_4,
+	n61370800_fail_XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL_0,
+	n17610810_fail_XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL_0
+} # End of Test Counter Definition
+
+Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2200";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeShmooTestMethod XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test iCHVQKTest XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_GT_HVQK";
+	patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_VPU/InputFiles/vpu_cache_all_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test PrimeShmooTestMethod XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2216";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2232";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2233";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2249";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeShmooTestMethod SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_ssa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_vpu_lsa_ks_sort_tito_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2250";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:3100MHz,ARR_VPU:vpu_ws:3100MHz";
+	SetPointsPostInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test PrimeVminSearchTestMethod XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2251";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_VPU:vpu_clk:3700MHz,ARR_VPU:vpu_ws:3700MHz";
+	SetPointsPostInstance = "ARR_VPU:vpu_clk:1900MHz,ARR_VPU:vpu_ws:1900MHz";
+}
+Test iCHVQKTest XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_SA_HVQK";
+	patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_VPU/InputFiles/vpu_cache_all_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test LNLVminSearch XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2260";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "";
+	DtsConfigName = "ALL";
+	StartIndex = 0;
+}
+Test PrimeShmooTestMethod XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_vpu_sort_lfm_hvqk_xsa_all_parallperstep_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+
+DUTFlow SHMOO_PRE
+{
+	DUTFlowItem XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61310010_fail_XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        ##EDC## SetBin SoftBins.b61310010_fail_ARR_VPU_XSA_VPU_SHMOO_E_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61310000_fail_XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        SetBin SoftBins.b61310000_fail_ARR_VPU_XSA_VPU_VMIN_K_PREHVQK_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO_PRE SHMOO_PRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO_STRESS
+{
+	DUTFlowItem XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610310_fail_XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610310_fail_ARR_VPU_XSA_VPU_SHMOO_E_STRESS_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_STRESS @STRESS_SubFlow
+{
+	DUTFlowItem XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610300_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610300_fail_ARR_VPU_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610303_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_3;
+	        ##EDC## SetBin SoftBins.b17610303_fail_ARR_VPU_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610304_fail_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_4;
+	        ##EDC## SetBin SoftBins.b17610304_fail_ARR_VPU_XSA_VPU_HVQK_E_STRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+	}
+    DUTFlowItem SHMOO_STRESS SHMOO_STRESS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_POSTHVQK @POSTHVQK_SubFlow
+{
+	DUTFlowItem XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n26610330_fail_XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        SetBin SoftBins.b26610330_fail_ARR_VPU_XSA_VPU_VMIN_K_POSTHVQK_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow KS
+{
+	DUTFlowItem SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320000_fail_SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        SetBin SoftBins.b61320000_fail_ARR_VPU_SSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL;
+			GoTo LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL;
+		}
+	}
+	DUTFlowItem LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n21320010_fail_LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        SetBin SoftBins.b21320010_fail_ARR_VPU_LSA_VPU_VCHK_K_END_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow VMAX
+{
+	DUTFlowItem XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610500_fail_XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610500_fail_ARR_VPU_XSA_VPU_VMAX_K_END_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO
+{
+	DUTFlowItem SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61320200_fail_SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        ##EDC## SetBin SoftBins.b61320200_fail_ARR_VPU_SSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+		}
+	}
+	DUTFlowItem LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n21320210_fail_LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        ##EDC## SetBin SoftBins.b21320210_fail_ARR_VPU_LSA_VPU_SHMOO_E_END_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_END @END_SubFlow
+{
+    DUTFlowItem KS KS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo VMAX;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAX;
+		}
+	}
+    DUTFlowItem VMAX VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_ENDXFM @ENDXFM_SubFlow
+{
+	DUTFlowItem XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61330700_fail_XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL_0;
+	        ##EDC## SetBin SoftBins.b61330700_fail_ARR_VPU_XSA_VPU_VMIN_K_ENDXFM_TITO_VPU_NOM_HFM_3100_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_ENDTFM @ENDTFM_SubFlow
+{
+	DUTFlowItem XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61340710_fail_XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL_0;
+	        SetBin SoftBins.b61340710_fail_ARR_VPU_XSA_VPU_VMIN_K_ENDTFM_TITO_VPU_NOM_TFM_3700_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_HOTSTRESS @HOTSTRESS_SubFlow
+{
+	DUTFlowItem XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610320_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610320_fail_ARR_VPU_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610323_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_3;
+	        ##EDC## SetBin SoftBins.b17610323_fail_ARR_VPU_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610324_fail_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL_4;
+	        ##EDC## SetBin SoftBins.b17610324_fail_ARR_VPU_XSA_VPU_HVQK_E_HOTSTRESS_TITO_VPU_NOM_LFM_1900_VPU_ALL;
+			Return 1;
+        }
+	}
+}
+DUTFlow SDTEND_SHMOO
+{
+	DUTFlowItem XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n17610810_fail_XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        ##EDC## SetBin SoftBins.b17610810_fail_ARR_VPU_XSA_VPU_SHMOO_E_SDTEND_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_VPU_SDTEND @SDTEND_SubFlow
+{
+	DUTFlowItem XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_VPU::n61370800_fail_XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL_0;
+	        SetBin SoftBins.b61370800_fail_ARR_VPU_XSA_VPU_VMIN_K_SDTEND_TITO_VPU_NOM_LFM_1900_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SDTEND_SHMOO SDTEND_SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}

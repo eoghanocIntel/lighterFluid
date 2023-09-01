@@ -1,0 +1,2366 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+# rbilei_2023_08_28_13_00_19
+TestPlan ARR_CCF;
+Import ARR_CCF.usrv;
+
+Import LNLVminSearch.xml;
+Import PrimeShmooTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_HVQK_tt.xml;
+
+Counters
+{
+	n61112000_fail_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO_0,
+	n61112010_fail_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO_0,
+	n61112020_fail_SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA_0,
+	n17611000_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_0,
+	n17611003_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_3,
+	n17611004_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_4,
+	n17611010_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_0,
+	n17611013_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_3,
+	n17611014_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_4,
+	n17611020_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_0,
+	n17611023_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_3,
+	n17611024_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_4,
+	n17611030_fail_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_0,
+	n17611040_fail_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_0,
+	n17611050_fail_SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA_0,
+	n26611500_fail_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO_0,
+	n26211510_fail_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO_0,
+	n26611520_fail_SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA_0,
+	n61125000_fail_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_0,
+	n61125010_fail_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF_0,
+	n21125020_fail_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF_0,
+	n61125030_fail_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_0,
+	n61125040_fail_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF_0,
+	n21125050_fail_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF_0,
+	n21125060_fail_ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF_0,
+	n61125070_fail_SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA_0,
+	n61125100_fail_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI_0,
+	n21125110_fail_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI_0,
+	n61125120_fail_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI_0,
+	n21125130_fail_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI_0,
+	n61125140_fail_SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI_0,
+	n17611100_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1_0,
+	n17611110_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1_0,
+	n17611120_fail_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1_0,
+	n17611130_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6_0,
+	n17611140_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6_0,
+	n17611150_fail_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6_0,
+	n61125400_fail_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO_0,
+	n61125430_fail_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO_0,
+	n61125470_fail_SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA_0,
+	n61136010_fail_ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO_0,
+	n61146030_fail_ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO_0,
+	n17618000_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_0,
+	n17618003_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_3,
+	n17618004_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_4,
+	n17618010_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_0,
+	n17618013_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_3,
+	n17618014_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_4,
+	n17618020_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_0,
+	n17618023_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_3,
+	n17618024_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_4,
+	n61177000_fail_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO_0,
+	n61177010_fail_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO_0,
+	n61177020_fail_SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA_0,
+	n17617040_fail_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO_0,
+	n17617050_fail_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO_0,
+	n17617060_fail_SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA_0
+} # End of Test Counter Definition
+
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2000";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_sbo_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2001";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2002";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test iCHVQKTest ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_CCF_HVQK";
+	patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_cbo_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_CCF_HVQK";
+	patlist = "arr_sbo_sort_lfm_hvqk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_sbo_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_CCF_HVQK";
+	patlist = "arr_pma_sort_lfm_hvqk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_pma_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_sbo_sort_lfm_hvqk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2010";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_sbo_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2011";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2012";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2020";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2021";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
+}
+Test PrimeVminSearchTestMethod LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2022";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2023";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_san_ssa_ks_sort_tito_sbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2024";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_san_lsa_ks_sort_tito_ondd_sbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2025";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_rom_ks_sort_tito_sbo_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2026";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pma_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2027";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2040";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_cbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2041";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2042";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_lsa_ks_sort_tito_sbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2043";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2044";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2060";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2063";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2067";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2068";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_pmovi_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2071";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_san_sort_lfm_prepost_ssa_pma_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2075";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_cbo_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ring_ssa_ks_sort_tito_sbo_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_san_ssa_ks_sort_tito_pma_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2080";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:2.7GHz,ARR_CCF:ring_subrutine:2.7GHz";
+	SetPointsPostInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2082";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:4.0GHz,ARR_CCF:ring_subrutine:4.0GHz";
+	SetPointsPostInstance = "";
+}
+Test iCHVQKTest ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_CCF_HVQK";
+	patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_cbo_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_CCF_HVQK";
+	patlist = "arr_sbo_sort_lfm_hvqk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_sbo_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_CCF_HVQK";
+	patlist = "arr_pma_sort_lfm_hvqk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	voltage_step_config_file = "./Modules/ARR_CCF/InputFiles/ccf_cache_pma_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test LNLVminSearch ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2083";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "ARR_CCF:ring_ratio:1.2GHz,ARR_CCF:ring_subrutine:1.2GHz";
+	DtsConfigName = "ALL";
+	StartIndex = 0;
+}
+Test LNLVminSearch ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_sbo_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2084";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	DtsConfigName = "ALL";
+	StartIndex = 0;
+}
+Test LNLVminSearch SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2085";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	DtsConfigName = "ALL";
+	StartIndex = 0;
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arria_ccf_sort_lfm_hvqk_tito_xsa_cbo_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccia_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_sbo_sort_lfm_hvqk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arr_pma_sort_lfm_hvqk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+
+DUTFlow ARR_CCF_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61112000_fail_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO_0;
+	        SetBin SoftBins.b61112000_fail_ARR_CCF_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_CBO;
+			GoTo ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61112010_fail_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO_0;
+	        SetBin SoftBins.b61112010_fail_ARR_CCF_ALL_CCF_VMIN_K_PREHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+			GoTo SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61112020_fail_SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA_0;
+	        SetBin SoftBins.b61112020_fail_ARR_CCF_SSA_CCF_VMIN_K_PREHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO_STRESS
+{
+	DUTFlowItem ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611030_fail_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b17611030_fail_ARR_CCF_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611040_fail_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b17611040_fail_ARR_CCF_ALL_CCF_SHMOO_E_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611050_fail_SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA_0;
+	        ##EDC## SetBin SoftBins.b17611050_fail_ARR_CCF_SSA_CCF_SHMOO_E_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_STRESS @STRESS_SubFlow
+{
+	DUTFlowItem ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611000_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b17611000_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611003_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_3;
+	        ##EDC## SetBin SoftBins.b17611003_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611004_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO_4;
+	        ##EDC## SetBin SoftBins.b17611004_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+	}
+	DUTFlowItem ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611010_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b17611010_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611013_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_3;
+	        ##EDC## SetBin SoftBins.b17611013_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611014_fail_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO_4;
+	        ##EDC## SetBin SoftBins.b17611014_fail_ARR_CCF_ALL_CCF_HVQK_K_STRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+	}
+	DUTFlowItem SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611020_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_0;
+	        ##EDC## SetBin SoftBins.b17611020_fail_ARR_CCF_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611023_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_3;
+	        ##EDC## SetBin SoftBins.b17611023_fail_ARR_CCF_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611024_fail_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA_4;
+	        ##EDC## SetBin SoftBins.b17611024_fail_ARR_CCF_SSA_CCF_HVQK_K_STRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+	}
+    DUTFlowItem SHMOO_STRESS SHMOO_STRESS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_POSTHVQK @POSTHVQK_SubFlow
+{
+	DUTFlowItem ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n26611500_fail_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO_0;
+	        SetBin SoftBins.b26611500_fail_ARR_CCF_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_CBO;
+			GoTo ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n26211510_fail_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO_0;
+	        SetBin SoftBins.b26211510_fail_ARR_CCF_ALL_CCF_VMIN_K_POSTHVQK_TITO_CLRS_MIN_LFM_1200_SBO;
+			GoTo SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n26611520_fail_SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA_0;
+	        SetBin SoftBins.b26611520_fail_ARR_CCF_SSA_CCF_VMIN_K_POSTHVQK_TITO_SAN_MIN_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow KS
+{
+	DUTFlowItem ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125000_fail_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b61125000_fail_ARR_CCF_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO;
+			GoTo SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF;
+		}
+	}
+	DUTFlowItem SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125010_fail_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF_0;
+	        SetBin SoftBins.b61125010_fail_ARR_CCF_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_FF;
+			GoTo LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF;
+		}
+	}
+	DUTFlowItem LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n21125020_fail_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF_0;
+	        SetBin SoftBins.b21125020_fail_ARR_CCF_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_FF;
+			GoTo ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125030_fail_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b61125030_fail_ARR_CCF_ALL_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO;
+			GoTo SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF;
+		}
+	}
+	DUTFlowItem SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125040_fail_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF_0;
+	        SetBin SoftBins.b61125040_fail_ARR_CCF_SSA_CCF_VCHK_K_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_FF;
+			GoTo LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF;
+		}
+	}
+	DUTFlowItem LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n21125050_fail_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF_0;
+	        SetBin SoftBins.b21125050_fail_ARR_CCF_LSA_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_FF;
+			GoTo ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF;
+		}
+	}
+	DUTFlowItem ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n21125060_fail_ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF_0;
+	        ##EDC## SetBin SoftBins.b21125060_fail_ARR_CCF_ROM_CCF_VCHK_K_END_TITO_CLR_NOM_LFM_1200_SBO_ROM_FF;
+			GoTo SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125070_fail_SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA_0;
+	        SetBin SoftBins.b61125070_fail_ARR_CCF_SSA_CCF_VCHK_K_END_TITO_SAN_NOM_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI
+{
+	DUTFlowItem SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125100_fail_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b61125100_fail_ARR_CCF_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_CBO_SSA_PMOVI;
+			GoTo LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI;
+		}
+	}
+	DUTFlowItem LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n21125110_fail_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b21125110_fail_ARR_CCF_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_CBO_LSA_PMOVI;
+			GoTo SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI;
+		}
+	}
+	DUTFlowItem SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125120_fail_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b61125120_fail_ARR_CCF_SSA_CCF_VCHK_E_END_TITO_CLRS_NOM_LFM_1200_SBO_SSA_PMOVI;
+			GoTo LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI;
+		}
+	}
+	DUTFlowItem LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n21125130_fail_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b21125130_fail_ARR_CCF_LSA_CCF_VCHK_E_END_TITO_CLR_NOM_LFM_1200_SBO_LSA_PMOVI;
+			GoTo SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI;
+		}
+	}
+	DUTFlowItem SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125140_fail_SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b61125140_fail_ARR_CCF_SSA_CCF_VCHK_E_END_TITO_SAN_NOM_LFM_1200_PMA_PMOVI;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow VMAX
+{
+	DUTFlowItem ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1 ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611100_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1_0;
+	        ##EDC## SetBin SoftBins.b17611100_fail_ARR_CCF_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F1;
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1 ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611110_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1_0;
+	        ##EDC## SetBin SoftBins.b17611110_fail_ARR_CCF_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F1;
+			GoTo SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1 SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611120_fail_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1_0;
+	        ##EDC## SetBin SoftBins.b17611120_fail_ARR_CCF_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F1;
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6 ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611130_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6_0;
+	        ##EDC## SetBin SoftBins.b17611130_fail_ARR_CCF_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_CBO_F6;
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6 ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611140_fail_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6_0;
+	        ##EDC## SetBin SoftBins.b17611140_fail_ARR_CCF_ALL_CCF_VMAX_K_END_TITO_CLRS_NOM_LFM_1200_SBO_F6;
+			GoTo SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6 SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6 @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17611150_fail_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6_0;
+	        ##EDC## SetBin SoftBins.b17611150_fail_ARR_CCF_SSA_CCF_VMAX_K_END_TITO_SAN_NOM_LFM_1200_PMA_F6;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO
+{
+	DUTFlowItem ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125400_fail_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b61125400_fail_ARR_CCF_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_CBO;
+			GoTo ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125430_fail_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b61125430_fail_ARR_CCF_ALL_CCF_SHMOO_E_END_TITO_CLRS_NOM_LFM_1200_SBO;
+			GoTo SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61125470_fail_SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA_0;
+	        ##EDC## SetBin SoftBins.b61125470_fail_ARR_CCF_SSA_CCF_SHMOO_E_END_TITO_SAN_NOM_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_END @END_SubFlow
+{
+    DUTFlowItem KS KS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo PMOVI;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PMOVI;
+		}
+	}
+    DUTFlowItem PMOVI PMOVI
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo VMAX;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAX;
+		}
+	}
+    DUTFlowItem VMAX VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_ENDXFM @ENDXFM_SubFlow
+{
+	DUTFlowItem ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61136010_fail_ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO_0;
+	        ##EDC## SetBin SoftBins.b61136010_fail_ARR_CCF_ALL_CCF_VMIN_K_ENDXFM_TITO_CLRS_MIN_HFM_2700_CBO;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_ENDTFM @ENDTFM_SubFlow
+{
+	DUTFlowItem ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61146030_fail_ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO_0;
+	        SetBin SoftBins.b61146030_fail_ARR_CCF_ALL_CCF_VMIN_K_ENDTFM_TITO_CLRS_MIN_TFM_4000_CBO;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_HOTSTRESS @HOTSTRESS_SubFlow
+{
+	DUTFlowItem ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618000_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b17618000_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618003_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_3;
+	        ##EDC## SetBin SoftBins.b17618003_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618004_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO_4;
+	        ##EDC## SetBin SoftBins.b17618004_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+	}
+	DUTFlowItem ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618010_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b17618010_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618013_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_3;
+	        ##EDC## SetBin SoftBins.b17618013_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618014_fail_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO_4;
+	        ##EDC## SetBin SoftBins.b17618014_fail_ARR_CCF_ALL_CCF_HVQK_K_HOTSTRESS_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+	}
+	DUTFlowItem SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618020_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_0;
+	        ##EDC## SetBin SoftBins.b17618020_fail_ARR_CCF_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618023_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_3;
+	        ##EDC## SetBin SoftBins.b17618023_fail_ARR_CCF_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17618024_fail_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA_4;
+	        ##EDC## SetBin SoftBins.b17618024_fail_ARR_CCF_SSA_CCF_HVQK_K_HOTSTRESS_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+	}
+}
+DUTFlow SDTEND_SHMOO
+{
+	DUTFlowItem ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17617040_fail_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO_0;
+	        ##EDC## SetBin SoftBins.b17617040_fail_ARR_CCF_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_CBO;
+			GoTo ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17617050_fail_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO_0;
+	        ##EDC## SetBin SoftBins.b17617050_fail_ARR_CCF_ALL_CCF_SHMOO_E_SDTEND_TITO_CLRS_MAX_LFM_1200_SBO;
+			GoTo SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n17617060_fail_SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA_0;
+	        ##EDC## SetBin SoftBins.b17617060_fail_ARR_CCF_SSA_CCF_SHMOO_E_SDTEND_TITO_SAN_MAX_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_CCF_SDTEND @SDTEND_SubFlow
+{
+	DUTFlowItem ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61177000_fail_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO_0;
+	        SetBin SoftBins.b61177000_fail_ARR_CCF_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_CBO;
+			GoTo ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO;
+		}
+	}
+	DUTFlowItem ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61177010_fail_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO_0;
+	        SetBin SoftBins.b61177010_fail_ARR_CCF_ALL_CCF_VMIN_K_SDTEND_TITO_CLRS_MIN_LFM_1200_SBO;
+			GoTo SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA;
+		}
+	}
+	DUTFlowItem SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_CCF::n61177020_fail_SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA_0;
+	        SetBin SoftBins.b61177020_fail_ARR_CCF_SSA_CCF_VMIN_K_SDTEND_TITO_SAN_MIN_LFM_1200_PMA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SDTEND_SHMOO SDTEND_SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
