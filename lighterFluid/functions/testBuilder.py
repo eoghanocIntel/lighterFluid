@@ -49,7 +49,8 @@ def testBuilder(dataset, product):
                             "ifpmMod",
                             "iTuffExt",
                             "preinstance",
-                            "postinstance"]):
+                            "postinstance",
+                            "RecString"]):
                 try:
                     if math.isnan(dataset[value][i]):
                         currValue = "";
@@ -59,7 +60,8 @@ def testBuilder(dataset, product):
                 currValue = str(dataset[value][i]);
 
                 
-
+            if value == "RecString":
+                currValue = currValue.replace('"', '')
             currTest = currTest.replace(replaceStr,currValue);
 
         testList.append(currTest);
