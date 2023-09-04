@@ -39,7 +39,7 @@ def testBuilder(dataset, product):
                     currValue = str(currValue);
             # This section is for strings
             elif (value in ["SetPointsPreInstance",
-                            "Regex",
+                            "RegEx",
                             "printToItuff",
                             "DtsConfigName",
                             "SetPointsPostInstance",
