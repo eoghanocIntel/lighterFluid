@@ -1,0 +1,3575 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+# rbilei_2023_09_22_08_35_36
+TestPlan ARR_GFX;
+Import ARR_GFX.usrv;
+
+Import LNLVminSearch.xml;
+Import PrimeShmooTestMethod.xml;
+Import PrimeVminSearchTestMethod.xml;
+Import OASIS_HVQK_tt.xml;
+
+Counters
+{
+	n61414500_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE_0,
+	n61414610_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS_0,
+	n61414710_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS_0,
+	n61414720_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA_0,
+	n61429000_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE_0,
+	n61429120_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS_0,
+	n61429240_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS_0,
+	n61429250_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA_0,
+	n17615000_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_0,
+	n17615003_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_3,
+	n17615004_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_4,
+	n17615030_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_0,
+	n17615033_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_3,
+	n17615034_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_4,
+	n17615040_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_0,
+	n17615043_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_3,
+	n17615044_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_4,
+	n17615050_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_0,
+	n17615053_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_3,
+	n17615054_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_4,
+	n17615070_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE_0,
+	n17615080_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS_0,
+	n17615090_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS_0,
+	n17615100_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA_0,
+	n26615500_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE_0,
+	n26615530_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS_0,
+	n26615540_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS_0,
+	n26615550_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA_0,
+	n61426000_fail_SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0,
+	n21426050_fail_LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0,
+	n61426120_fail_SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0,
+	n21426130_fail_LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0,
+	n61426140_fail_SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0,
+	n21426150_fail_LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0,
+	n61426160_fail_SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0,
+	n21426170_fail_LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0,
+	n21426300_fail_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM_0,
+	n17615200_fail_ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE_0,
+	n17615210_fail_ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS_0,
+	n17615220_fail_ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS_0,
+	n17615230_fail_ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA_0,
+	n21426700_fail_ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE_0,
+	n21426810_fail_ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS_0,
+	n21426910_fail_ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS_0,
+	n21426920_fail_ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_0,
+	n21427060_fail_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM_0,
+	n61428000_fail_SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0,
+	n21428050_fail_LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0,
+	n61428120_fail_SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0,
+	n21428130_fail_LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0,
+	n61428140_fail_SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0,
+	n21428150_fail_LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0,
+	n61428160_fail_SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0,
+	n21428170_fail_LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0,
+	n21428300_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_0,
+	n21428302_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_2,
+	n21428303_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_3,
+	n61438400_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE_0,
+	n61438410_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS_0,
+	n61438420_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS_0,
+	n61438430_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA_0,
+	n61448440_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE_0,
+	n61448450_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS_0,
+	n61448460_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS_0,
+	n61448470_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA_0,
+	n17619010_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_0,
+	n17619013_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_3,
+	n17619014_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_4,
+	n17619020_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_0,
+	n17619023_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_3,
+	n17619024_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_4,
+	n17619030_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_0,
+	n17619033_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_3,
+	n17619034_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_4,
+	n17619040_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_0,
+	n17619043_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_3,
+	n17619044_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_4,
+	n61478480_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE_0,
+	n61478490_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS_0,
+	n61478500_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS_0,
+	n61478510_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA_0,
+	n17618560_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE_0,
+	n17618570_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS_0,
+	n17618580_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS_0,
+	n17618590_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA_0
+} # End of Test Counter Definition
+
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2400";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2411";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:ps_clk:200MHz,IPU:ratio_modify:0.2GHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2421";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:is_clk:200MHz,IPU:ratio_modify:0.2GHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2422";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_GT_HVQK";
+	patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_de_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_GT_HVQK";
+	patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_ipu_ps_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_GT_HVQK";
+	patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_ipu_is_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_ARR_GT_HVQK";
+	patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_media_stress.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preinstance = "";
+	postinstance = "";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2445";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2446";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2447";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2448";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_de_ssa_ks_sort_tito_x_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2452";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_de_lsa_ks_sort_tito_x_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2457";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_is_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2464";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_is_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2465";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_ps_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2466";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_ps_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2467";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_media_ssa_ks_sort_tito_x_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2468";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_media_lsa_ks_sort_tito_x_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2469";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "marr_mbist_media_rom_ks_sort_tito_x_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2482";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2485";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2486";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2487";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2488";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_prepost_tito_xsa_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "8000";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_prepost_tito_x_xsa_psclk_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "8013";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_prepost_tito_x_xsa_isclk_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "8023";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_prepost_tito_x_xsa_all_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "8026";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeVminSearchTestMethod ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_prepost_tito_x_rom_list";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "8040";
+	ExecutionMode = "SearchWithScoreboard";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+}
+Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_de_ssa_ks_sort_tito_x_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_de_lsa_ks_sort_tito_x_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_is_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_is_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ipu_ssa_ks_sort_tito_ps_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_ipu_lsa_ks_sort_tito_ps_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_media_ssa_ks_sort_tito_x_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_media_lsa_ks_sort_tito_x_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "marr_mbist_media_rom_ks_sort_tito_x_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2490";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "DE:display_clk:480MHz";
+	SetPointsPostInstance = "DE:display_clk:312MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2491";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:ps_clk:425MHz";
+	SetPointsPostInstance = "IPU:ps_clk:200MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2492";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:is_clk:400MHz";
+	SetPointsPostInstance = "IPU:is_clk:200MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2493";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "MEDIA:media_clk:1000MHz";
+	SetPointsPostInstance = "MEDIA:media_clk:400MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2494";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "DE:display_clk:660MHz";
+	SetPointsPostInstance = "DE:display_clk:312MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2495";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:ps_clk:700MHz";
+	SetPointsPostInstance = "IPU:ps_clk:200MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2496";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:is_clk:475MHz";
+	SetPointsPostInstance = "IPU:is_clk:200MHz";
+}
+Test PrimeVminSearchTestMethod ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2497";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "MEDIA:media_clk:1200MHz";
+	SetPointsPostInstance = "MEDIA:media_clk:400MHz";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_SA_HVQK";
+	patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_de_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData 56724";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_SA_HVQK";
+	patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_ipu_ps_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData 30561";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_SA_HVQK";
+	patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_ipu_is_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData 3492";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCHVQKTest ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_SA_HVQK";
+	patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_GFX/InputFiles/gfx_cache_media_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData 89442";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test LNLVminSearch ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2498";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "DE:display_clk:312MHz";
+	DtsConfigName = "ALL";
+	StartIndex = 56724;
+}
+Test LNLVminSearch ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2499";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:ps_clk:200MHz,IPU:ratio_modify:0.2GHz";
+	DtsConfigName = "ALL";
+	StartIndex = 30561;
+}
+Test LNLVminSearch ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2500";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "IPU:is_clk:200MHz,IPU:ratio_modify:0.2GHz";
+	DtsConfigName = "ALL";
+	StartIndex = 3492;
+}
+Test LNLVminSearch ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "1.2"; 
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	StartVoltages = "0.45";
+	StepSize = 0.02;
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	VoltageTargets = "VCCSA_HC";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "2501";
+	ExecutionMode = "Search";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "MEDIA:media_clk:400MHz";
+	DtsConfigName = "ALL";
+	StartIndex = 89442;
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_de_sort_lfm_hvqk_tito_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_psclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_ipu_sort_lfm_hvqk_tito_x_xsa_isclk_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "arrsa_media_sort_lfm_hvqk_tito_x_xsa_all_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+
+DUTFlow SHMOO_PRE
+{
+	DUTFlowItem ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61429000_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b61429000_fail_ARR_GFX_ALL_GFX_SHMOO_K_PREHVQK_TITO_SACD_NOM_LFM_0320_DE;
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61429120_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b61429120_fail_ARR_GFX_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61429240_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b61429240_fail_ARR_GFX_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61429250_fail_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b61429250_fail_ARR_GFX_ALL_GFX_SHMOO_K_PREHVQK_TITO_SAME_NOM_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61414500_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE_0;
+	        SetBin SoftBins.b61414500_fail_ARR_GFX_ALL_GFX_VMIN_K_PREHVQK_TITO_SACD_MIN_LFM_0320_DE;
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61414610_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS_0;
+	        SetBin SoftBins.b61414610_fail_ARR_GFX_ALL_GFX_VMIN_K_PREHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61414710_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS_0;
+	        SetBin SoftBins.b61414710_fail_ARR_GFX_ALL_GFX_VMIN_K_PREHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61414720_fail_ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA_0;
+	        SetBin SoftBins.b61414720_fail_ARR_GFX_ALL_GFX_VMIN_K_PREHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO_PRE SHMOO_PRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO_STRESS
+{
+	DUTFlowItem ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615070_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b17615070_fail_ARR_GFX_ALL_GFX_SHMOO_E_STRESS_TITO_SACD_NOM_LFM_0320_DE;
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615080_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b17615080_fail_ARR_GFX_ALL_GFX_SHMOO_E_STRESS_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615090_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b17615090_fail_ARR_GFX_ALL_GFX_SHMOO_E_STRESS_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615100_fail_ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b17615100_fail_ARR_GFX_ALL_GFX_SHMOO_E_STRESS_TITO_SAME_NOM_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_STRESS @STRESS_SubFlow
+{
+	DUTFlowItem ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615000_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b17615000_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615003_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_3;
+	        ##EDC## SetBin SoftBins.b17615003_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615004_fail_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE_4;
+	        ##EDC## SetBin SoftBins.b17615004_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615030_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b17615030_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615033_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_3;
+	        ##EDC## SetBin SoftBins.b17615033_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615034_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_4;
+	        ##EDC## SetBin SoftBins.b17615034_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615040_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b17615040_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615043_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_3;
+	        ##EDC## SetBin SoftBins.b17615043_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615044_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_4;
+	        ##EDC## SetBin SoftBins.b17615044_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615050_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b17615050_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615053_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_3;
+	        ##EDC## SetBin SoftBins.b17615053_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615054_fail_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA_4;
+	        ##EDC## SetBin SoftBins.b17615054_fail_ARR_GFX_ALL_GFX_HVQK_K_STRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+	}
+    DUTFlowItem SHMOO_STRESS SHMOO_STRESS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_POSTHVQK @POSTHVQK_SubFlow
+{
+	DUTFlowItem ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n26615500_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE_0;
+	        SetBin SoftBins.b26615500_fail_ARR_GFX_ALL_GFX_VMIN_K_POSTHVQK_TITO_SACD_MIN_LFM_0320_DE;
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n26615530_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS_0;
+	        SetBin SoftBins.b26615530_fail_ARR_GFX_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n26615540_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS_0;
+	        SetBin SoftBins.b26615540_fail_ARR_GFX_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n26615550_fail_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA_0;
+	        SetBin SoftBins.b26615550_fail_ARR_GFX_ALL_GFX_VMIN_K_POSTHVQK_TITO_SAME_MIN_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow KS
+{
+	DUTFlowItem SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61426000_fail_SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0;
+	        SetBin SoftBins.b61426000_fail_ARR_GFX_SSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+			GoTo LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+		}
+	}
+	DUTFlowItem LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426050_fail_LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0;
+	        SetBin SoftBins.b21426050_fail_ARR_GFX_LSA_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61426120_fail_SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0;
+	        SetBin SoftBins.b61426120_fail_ARR_GFX_SSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426130_fail_LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0;
+	        SetBin SoftBins.b21426130_fail_ARR_GFX_LSA_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61426140_fail_SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0;
+	        SetBin SoftBins.b61426140_fail_ARR_GFX_SSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426150_fail_LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0;
+	        SetBin SoftBins.b21426150_fail_ARR_GFX_LSA_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+	}
+	DUTFlowItem SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61426160_fail_SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0;
+	        SetBin SoftBins.b61426160_fail_ARR_GFX_SSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+	}
+	DUTFlowItem LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426170_fail_LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0;
+	        SetBin SoftBins.b21426170_fail_ARR_GFX_LSA_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+			GoTo ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM;
+		}
+	}
+	DUTFlowItem ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426300_fail_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM_0;
+	        SetBin SoftBins.b21426300_fail_ARR_GFX_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_ROM;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow VMAX
+{
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615200_fail_ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b17615200_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615210_fail_ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b17615210_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615220_fail_ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b17615220_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17615230_fail_ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b17615230_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI_DE
+{
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426700_fail_ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE_0;
+	        ##EDC## SetBin SoftBins.b21426700_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SACD_NOM_LFM_0320_PMOVI_DE;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI_IPU
+{
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426810_fail_ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b21426810_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAPS_NOM_LFM_0200_PMOVI_IPU_PS;
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426910_fail_ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b21426910_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAIS_NOM_LFM_0200_PMOVI_IPU_IS;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI_MEDIA
+{
+	DUTFlowItem ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21426920_fail_ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b21426920_fail_ARR_GFX_ALL_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA;
+			GoTo ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM;
+		}
+	}
+	DUTFlowItem ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21427060_fail_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM_0;
+	        ##EDC## SetBin SoftBins.b21427060_fail_ARR_GFX_ROM_GFX_VCHK_K_END_TITO_SAME_NOM_LFM_0400_PMOVI_MEDIA_ROM;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI
+{
+    DUTFlowItem PMOVI_DE PMOVI_DE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo PMOVI_IPU;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PMOVI_IPU;
+		}
+	}
+    DUTFlowItem PMOVI_IPU PMOVI_IPU
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo PMOVI_MEDIA;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PMOVI_MEDIA;
+		}
+	}
+    DUTFlowItem PMOVI_MEDIA PMOVI_MEDIA
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO
+{
+	DUTFlowItem SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61428000_fail_SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0;
+	        ##EDC## SetBin SoftBins.b61428000_fail_ARR_GFX_SSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+		}
+	}
+	DUTFlowItem LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428050_fail_LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE_0;
+	        ##EDC## SetBin SoftBins.b21428050_fail_ARR_GFX_LSA_GFX_SHMOO_E_END_TITO_SACD_NOM_LFM_0320_ALL_DE;
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61428120_fail_SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0;
+	        ##EDC## SetBin SoftBins.b61428120_fail_ARR_GFX_SSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428130_fail_LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU_0;
+	        ##EDC## SetBin SoftBins.b21428130_fail_ARR_GFX_LSA_GFX_SHMOO_E_END_TITO_SAIS_NOM_LFM_0200_ALL_IPU;
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61428140_fail_SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0;
+	        ##EDC## SetBin SoftBins.b61428140_fail_ARR_GFX_SSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+		}
+	}
+	DUTFlowItem LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428150_fail_LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU_0;
+	        ##EDC## SetBin SoftBins.b21428150_fail_ARR_GFX_LSA_GFX_SHMOO_E_END_TITO_SAPS_NOM_LFM_0200_ALL_IPU;
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+	}
+	DUTFlowItem SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61428160_fail_SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b61428160_fail_ARR_GFX_SSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+		}
+	}
+	DUTFlowItem LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428170_fail_LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b21428170_fail_ARR_GFX_LSA_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ALL_MEDIA;
+			GoTo ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+		}
+	}
+	DUTFlowItem ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428300_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_0;
+	        ##EDC## SetBin SoftBins.b21428300_fail_ARR_GFX_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428302_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_2;
+	        ##EDC## SetBin SoftBins.b21428302_fail_ARR_GFX_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+			Return 1;
+        }
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n21428303_fail_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM_3;
+	        ##EDC## SetBin SoftBins.b21428303_fail_ARR_GFX_ROM_GFX_SHMOO_E_END_TITO_SAME_NOM_LFM_0400_ROM;
+			Return 1;
+        }
+	}
+}
+DUTFlow ARR_GFX_END @END_SubFlow
+{
+    DUTFlowItem KS KS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo VMAX;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAX;
+		}
+	}
+    DUTFlowItem VMAX VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo PMOVI;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PMOVI;
+		}
+	}
+    DUTFlowItem PMOVI PMOVI
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_ENDXFM @ENDXFM_SubFlow
+{
+	DUTFlowItem ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61438400_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE_0;
+	        ##EDC## SetBin SoftBins.b61438400_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDXFM_TITO_SACD_MIN_HFM_0480_DE;
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61438410_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b61438410_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDXFM_TITO_SAPS_MIN_HFM_0425_IPU_PS;
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61438420_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b61438420_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDXFM_TITO_SAIS_MIN_HFM_0400_IPU_IS;
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61438430_fail_ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b61438430_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDXFM_TITO_SAME_MIN_HFM_1000_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_ENDTFM @ENDTFM_SubFlow
+{
+	DUTFlowItem ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61448440_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE_0;
+	        SetBin SoftBins.b61448440_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDTFM_TITO_SACD_MIN_TFM_0660_DE;
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61448450_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS_0;
+	        SetBin SoftBins.b61448450_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDTFM_TITO_SAPS_MIN_TFM_0700_IPU_PS;
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61448460_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b61448460_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDTFM_TITO_SAIS_MIN_TFM_0475_IPU_IS;
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61448470_fail_ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA_0;
+	        SetBin SoftBins.b61448470_fail_ARR_GFX_ALL_GFX_VMIN_K_ENDTFM_TITO_SAME_MIN_TFM_1200_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_HOTSTRESS @HOTSTRESS_SubFlow
+{
+	DUTFlowItem ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619010_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b17619010_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619013_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_3;
+	        ##EDC## SetBin SoftBins.b17619013_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619014_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE_4;
+	        ##EDC## SetBin SoftBins.b17619014_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SACD_MAX_LFM_0320_DE;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619020_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b17619020_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619023_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_3;
+	        ##EDC## SetBin SoftBins.b17619023_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619024_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS_4;
+	        ##EDC## SetBin SoftBins.b17619024_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAPS_MAX_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619030_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b17619030_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619033_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_3;
+	        ##EDC## SetBin SoftBins.b17619033_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619034_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS_4;
+	        ##EDC## SetBin SoftBins.b17619034_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAIS_MAX_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+        }
+	}
+	DUTFlowItem ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619040_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b17619040_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619043_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_3;
+	        ##EDC## SetBin SoftBins.b17619043_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17619044_fail_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA_4;
+	        ##EDC## SetBin SoftBins.b17619044_fail_ARR_GFX_ALL_GFX_HVQK_K_HOTSTRESS_TITO_SAME_MAX_LFM_0400_MEDIA;
+			Return 1;
+        }
+	}
+}
+DUTFlow SDTEND_SHMOO
+{
+	DUTFlowItem ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17618560_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE_0;
+	        ##EDC## SetBin SoftBins.b17618560_fail_ARR_GFX_ALL_GFX_SHMOO_E_SDTEND_TITO_SACD_NOM_LFM_0320_DE;
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17618570_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS_0;
+	        ##EDC## SetBin SoftBins.b17618570_fail_ARR_GFX_ALL_GFX_SHMOO_E_SDTEND_TITO_SAPS_NOM_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17618580_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS_0;
+	        ##EDC## SetBin SoftBins.b17618580_fail_ARR_GFX_ALL_GFX_SHMOO_E_SDTEND_TITO_SAIS_NOM_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n17618590_fail_ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA_0;
+	        ##EDC## SetBin SoftBins.b17618590_fail_ARR_GFX_ALL_GFX_SHMOO_E_SDTEND_TITO_SAME_NOM_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_GFX_SDTEND @SDTEND_SubFlow
+{
+	DUTFlowItem ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61478480_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE_0;
+	        SetBin SoftBins.b61478480_fail_ARR_GFX_ALL_GFX_VMIN_K_SDTEND_TITO_SACD_MIN_LFM_0320_DE;
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61478490_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS_0;
+	        SetBin SoftBins.b61478490_fail_ARR_GFX_ALL_GFX_VMIN_K_SDTEND_TITO_SAPS_MIN_LFM_0200_IPU_PS;
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61478500_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS_0;
+	        SetBin SoftBins.b61478500_fail_ARR_GFX_ALL_GFX_VMIN_K_SDTEND_TITO_SAIS_MIN_LFM_0200_IPU_IS;
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA;
+		}
+	}
+	DUTFlowItem ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_GFX::n61478510_fail_ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA_0;
+	        SetBin SoftBins.b61478510_fail_ARR_GFX_ALL_GFX_VMIN_K_SDTEND_TITO_SAME_MIN_LFM_0400_MEDIA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SDTEND_SHMOO SDTEND_SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
