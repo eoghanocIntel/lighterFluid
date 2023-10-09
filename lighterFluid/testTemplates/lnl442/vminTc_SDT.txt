@@ -15,5 +15,5 @@ Test LNLVminSearch ###TestName###
 	SetPointsPreInstance = "###SetPointsPreInstance###";
 	DtsConfigName = "###DtsConfigName###";
 	StartIndex = ###StartIndex###;
-	CTVContent = ###CTVContent###;
+	CTVContent = 1;
 }
