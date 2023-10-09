@@ -31,7 +31,7 @@ def testBuilder(dataset, product):
             currValue = "";
             
             # This section is for numbers
-            if (value in ["baseNumber","bypassGlobal","StartIndex"]):
+            if (value in ["baseNumber","bypassGlobal","StartIndex","CTVContent"]):
                 if math.isnan(dataset[value][i]):
                     currValue = "";
                 else:

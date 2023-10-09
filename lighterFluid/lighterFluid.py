@@ -13,18 +13,16 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
-#definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "adambyrn";
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "eoghanoc";
-definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "brownm1";
+#definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "brownm1";
 #definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "dgiardin";
-#definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "rbilei";
+definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "rbilei";
 
 file = "lnlArrayMasterSheet.xlsm";
 product = "lnl442";
@@ -37,13 +35,14 @@ product = "lnl442";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 definitionList = [];
-definitionList.append("arr_atom");
-definitionList.append("arr_ccf");
-definitionList.append("arr_core");
+#definitionList.append("arr_atom");
+#definitionList.append("arr_ccf");
+#definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
-definitionList.append("arr_vpu");
-definitionList.append("arr_common");
+#definitionList.append("arr_vpu");
+#definitionList.append("arr_common");
+#definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 currSecond = str(datetime.now().second).zfill(2);
