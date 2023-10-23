@@ -13,8 +13,6 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
-#definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "adambyrn";
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
 definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
@@ -44,6 +42,7 @@ definitionList.append("arr_ccf");
 #definitionList.append("arr_soc");
 #definitionList.append("arr_vpu");
 definitionList.append("arr_common");
+#definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 

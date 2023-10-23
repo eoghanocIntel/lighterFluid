@@ -1,4 +1,4 @@
-Test LNLVminSearch ###TestName###
+Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "1.2"; 
@@ -15,5 +15,11 @@ Test LNLVminSearch ###TestName###
 	SetPointsPreInstance = "###SetPointsPreInstance###";
 	DtsConfigName = "###DtsConfigName###";
 	StartIndex = ###StartIndex###;
-	CTVContent = ###CTVContent###;
+	PinMap = "###pinMap###";
+	RecoveryRule = "###recoveryRule###";
+	TrackingStructure = "###trackingStructure###";
+	VminResultKey = "###vminResultKey###";
+	MaxRepetitionCount = ###maxRepCount###;
+	IncomingPinMask = "###pinMask###";
+	MaxFails = ###maxFails###;
 }
