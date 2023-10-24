@@ -10,6 +10,6 @@ Test iCRepairTest ###TestName###
 	mode_of_decoding = "###modeOfDecoding###";
 	mode_of_execution = "Manufacturing";
 	mode_of_operation = "Repair_To_Fuse";
-	raster_data_log = "###rasterDataLog###";
+	raster_data_log = "None";
 	redundancy_fuse_active = "ON";
 }
