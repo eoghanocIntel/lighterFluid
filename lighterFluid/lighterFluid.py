@@ -84,7 +84,7 @@ for definitionPage in definitionList:
     overallOutput = "";
     currModule = definitionPage.upper();
     
-    dataset = pandas.read_excel(fileToUse, sheet_name=definitionPage);
+    dataset = pandas.read_excel(fileToUse, sheet_name=definitionPage, keep_default_na=False);
     
     importSection = importBuilder.importBuilder(dataset, timeStamp);
     counterSection = counterBuilder.counterBuilder(dataset);
