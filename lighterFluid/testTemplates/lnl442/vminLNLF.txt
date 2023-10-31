@@ -1,10 +1,10 @@
 Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	EndVoltageLimits = "1.2"; 
+	EndVoltageLimits = "###EndVoltageLimits###"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
-	StartVoltages = "0.45";
+	StartVoltages = "###StartVoltages###";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";
@@ -14,7 +14,6 @@ Test LNLVminSearchF ###TestName###
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
 	DtsConfigName = "###DtsConfigName###";
-	StartIndex = ###StartIndex###;
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";
 	TrackingStructure = "###trackingStructure###";

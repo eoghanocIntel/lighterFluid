@@ -30,36 +30,34 @@ def testBuilder(dataset, product):
             replaceStr = "###" + value + "###";
             currValue = "";
             
-            currValue = str(dataset[value][i]);
-
             # This section is for numbers
-            # if (value in ["baseNumber","bypassGlobal","StartIndex","CTVContent"]):
-                # if math.isnan(dataset[value][i]):
-                #     currValue = "";
-                # else:
-                # currValue = int(dataset[value][i]);
-                # currValue = str(dataset[value][i]);
+            if (value in ["baseNumber","bypassGlobal","StartIndex","CTVContent"]):
+                if math.isnan(dataset[value][i]):
+                    currValue = "";
+                else:
+                    currValue = int(dataset[value][i]);
+                    currValue = str(currValue);
             # This section is for strings
-            # elif (value in ["SetPointsPreInstance",
-            #                 "RegEx",
-            #                 "printToItuff",
-            #                 "DtsConfigName",
-            #                 "SetPointsPostInstance",
-            #                 "SetPointsPlistMode",
-            #                 "ifpmFile",
-            #                 "ifpmFile",
-            #                 "ifpmMod",
-            #                 "iTuffExt",
-            #                 "preinstance",
-            #                 "postinstance",
-            #                 "RecString"]):
-            #     try:
-            #         if math.isnan(dataset[value][i]):
-            #             currValue = "";
-            #     except:
-            #         currValue = str(dataset[value][i]);
-            # else:
-            #     currValue = str(dataset[value][i]);
+            elif (value in ["SetPointsPreInstance",
+                            "RegEx",
+                            "printToItuff",
+                            "DtsConfigName",
+                            "SetPointsPostInstance",
+                            "SetPointsPlistMode",
+                            "ifpmFile",
+                            "ifpmFile",
+                            "ifpmMod",
+                            "iTuffExt",
+                            "preinstance",
+                            "postinstance",
+                            "RecString"]):
+                try:
+                    if math.isnan(dataset[value][i]):
+                        currValue = "";
+                except:
+                    currValue = str(dataset[value][i]);
+            else:
+                currValue = str(dataset[value][i]);
 
                 
             if value == "RecString":

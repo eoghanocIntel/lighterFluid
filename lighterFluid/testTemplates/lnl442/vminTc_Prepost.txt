@@ -1,10 +1,10 @@
-Test PrimeVminSearchTestMethod ###TestName###
+Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "0.85"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
-	StartVoltages = "0.45";
+	StartVoltages = "###StartVoltages###";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";
@@ -13,4 +13,5 @@ Test PrimeVminSearchTestMethod ###TestName###
 	ExecutionMode = "###SearchMode###";
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
+	VminResultKey = "###vminResultKey###";
 }
