@@ -5,6 +5,7 @@ from functions import importBuilder
 from functions import counterBuilder
 from functions import testBuilder
 from functions import dutflowBuilder
+from functions import flowFileBuilder
 from datetime import datetime
 import shutil
 
@@ -15,16 +16,17 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
-#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "eoghanoc";
+definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "eoghanoc";
 #definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "brownm1";
-definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "dgiardin";
+# definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+# userName = "dgiardin";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
 
 file = "lnlArrayMasterSheet.xlsm";
+file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
 
 
@@ -35,15 +37,13 @@ product = "lnl442";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 definitionList = [];
-# definitionList.append("arr_atom");
+definitionList.append("arr_atom");
 definitionList.append("arr_ccf");
-# definitionList.append("arr_core");
-# definitionList.append("arr_gfx");
-# definitionList.append("arr_soc");
-# definitionList.append("arr_vpu");
-# definitionList.append("arr_common");
-definitionList.append("arr_common_shmoo");
-definitionList.append("arr_atom_shmoo");
+definitionList.append("arr_core");
+definitionList.append("arr_gfx");
+definitionList.append("arr_soc");
+definitionList.append("arr_vpu");
+definitionList.append("arr_common");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
@@ -90,6 +90,7 @@ for definitionPage in definitionList:
     counterSection = counterBuilder.counterBuilder(dataset);
     testSection = testBuilder.testBuilder(dataset,product);
     dutFlowSection = dutflowBuilder.dutflowBuilder(dataset);
+    flowFileSection = flowFileBuilder.flowFileBuilder(dataset);
 
     overallOutput = importSection + "\n" + counterSection + "\n" + testSection + "\n" + dutFlowSection;
     
@@ -101,6 +102,11 @@ for definitionPage in definitionList:
     outputMtpl = moduleDir + currModule + ".mtpl"; 
     outFile = open(outputMtpl, "w");
     outFile.write(overallOutput);
+    outFile.close();
+    
+    outputMtpl = moduleDir + currModule + ".flw"; 
+    outFile = open(outputMtpl, "w");
+    outFile.write(flowFileSection);
     outFile.close();
 
 print("done");

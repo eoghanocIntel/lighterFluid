@@ -1,6 +1,6 @@
 Test RecoveryUpdate ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	RecoveryOption = ###RecoveryOption###
-	TrackerName = ###TrackerName###;
+	RecoveryOption = "###RecoveryOption###";
+	TrackerName = "###TrackerName###";
 }

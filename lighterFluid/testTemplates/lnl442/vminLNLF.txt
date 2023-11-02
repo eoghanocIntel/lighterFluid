@@ -13,6 +13,7 @@ Test LNLVminSearchF ###TestName###
 	ExecutionMode = "###SearchMode###";
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
+	SetPointsPostInstance = "###SetPointsPostInstance###";
 	DtsConfigName = "###DtsConfigName###";
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";
