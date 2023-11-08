@@ -14,6 +14,8 @@ Test LNLVminSearchF ###TestName###
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
 	SetPointsPostInstance = "###SetPointsPostInstance###";
+	ResetSeparationMode = "###ResetSeparationMode###";
+	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
 	DtsConfigName = "###DtsConfigName###";
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";
@@ -22,4 +24,5 @@ Test LNLVminSearchF ###TestName###
 	MaxRepetitionCount = ###maxRepCount###;
 	IncomingPinMask = "###pinMask###";
 	MaxFails = ###maxFails###;
+
 }
