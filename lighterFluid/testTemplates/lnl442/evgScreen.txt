@@ -1,7 +1,7 @@
 Test iCScreenTest ###TestName###
 {
 	bypass_global = "###bypassGlobal###";
-	screen_custom_file = "./Modules/ARR_COMMON/InputFiles/ResetDFFCustom.txt";
+	screen_custom_file = "###ScreenCustomFile###";
 	screen_custom_setpoint = "DUMMY";
 	screen_test_set = "###ScreenTestSet###";
 	screen_tests_file = "###ScreenTestFile###";
