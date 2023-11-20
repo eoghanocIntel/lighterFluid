@@ -6,7 +6,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
 	TimingsTc = "###Timings###";
 	Patlist = "###plist###";
 	VoltageTargets = "###Supply###";
-	StartVoltages = "###StartVoltage###";
+	StartVoltages = "###StartVoltages###";
 	EndVoltageLimits = "###EndVoltage###";
 	StepSize = 0.02;
 	PatternNameMap = "9,10,11,12,13,14,15";
