@@ -5,7 +5,7 @@
     <ProjectGuid>c52a9915-a242-444f-90a2-d5787081bf03</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>lighterFluid.py</StartupFile>
+    <StartupFile>heavierFluid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,20 +25,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="functions\BackConvertComposite.py" />
+    <Compile Include="functions\BackConvertTestInstance.py" />
     <Compile Include="functions\FlowComposite.py" />
     <Compile Include="functions\Composite.py" />
     <Compile Include="functions\counterBuilder.py" />
     <Compile Include="functions\dutflowBuilder.py" />
     <Compile Include="functions\flowFileBuilder.py" />
     <Compile Include="functions\importBuilder.py" />
+    <Compile Include="functions\parseMtpl.py" />
     <Compile Include="functions\testBuilder.py" />
     <Compile Include="functions\FlowTestInstance.py" />
     <Compile Include="functions\TestInstance.py" />
+    <Compile Include="heavierFluid.py" />
     <Compile Include="lighterFluid.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="functions\" />
     <Folder Include="functions\__pycache__\" />
+    <Folder Include="heavierFluidOutputs\" />
+    <Folder Include="heavierFluidTemplates\" />
     <Folder Include="inputs\" />
     <Folder Include="releasedModules\" />
     <Folder Include="outputs\" />

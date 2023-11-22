@@ -44,4 +44,4 @@ class BackConvertTestInstance:
         self.PortList = [];
 
         # Finally, the bonus params :D
-        bonusCols = {};
+        self.bonusCols = {};

@@ -60,14 +60,14 @@ compositeDict = {};
 #####################
 
 # First we want to read all the test templates, flows, counters etc.
-for module in moduleList:
+for currModule in moduleList:
     # doTheThing
-    currMtpl = definitionDir + "\\" + module.toUpper() + "\\" + module.toUpper() + ".mtpl";
+    currMtpl = definitionDir + "\\" + currModule .upper() + "\\" + currModule .upper() + ".mtpl";
     
-    currTestInstanceDict, currCompositeDict = parseMtpl(currMtpl, module);
+    currTestInstanceDict, currCompositeDict = parseMtpl.parseMtpl(currMtpl, currModule );
 
-    testInstanceDict[module] = currTestInstanceDict;
-    compositeDict[module] = currCompositeDict;
+    testInstanceDict[currModule] = currTestInstanceDict;
+    compositeDict[currModule] = currCompositeDict;
 
 
 

@@ -7,7 +7,7 @@ import re
 ##### FUNCTIONS #####
 #####################
 def parseTestInstanceItem(name, template, block_lines):
-    testInstance = BackConvertTestInstance();
+    testInstance = BackConvertTestInstance.BackConvertTestInstance();
     
     testInstance.Template = template;
     testInstance.TestName = name;
@@ -27,7 +27,13 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.NameEnding = "_".join(nameComponents[10:]);
     
     for line in block_lines:
-        key, value = line.strip().rstrip(";").split(' = ');
+        flowItems = line.strip().rstrip(";").split(' = ');
+        if len(flowItems) == 2:
+            key = flowItems[0];
+            value = flowItems[1];
+        else:
+            # The first item should be "Test BLABLABLA", which doesn't split).
+            continue
         
         if (key in ["LevelsTc","level"]):
             testInstance.Levels = value;
@@ -42,14 +48,24 @@ def parseTestInstanceItem(name, template, block_lines):
 
     return testInstance;
 
-def parseFlowItem(name, module):
-    block_struct = BackConvertComposite()
-    for line in block_lines:
-        key, value = line.strip().split(' = ')
-        setattr(block_struct, key, value.strip('"'))
-    return block_struct
+def parseSubFlowItem(flow, module):
+    composite = BackConvertComposite.BackConvertComposite();
+        
+    composite.Flow = flow;
+    composite.Template = "COMPOSITE";
+    composite.TestName = flow;
+    composite.Module = module;
     
+    return composite
 
+def parseFlowItem(name, module):
+    composite = BackConvertComposite.BackConvertComposite();
+    
+    composite.Template = "COMPOSITE";
+    composite.TestName = name;
+    composite.Module = module;
+    
+    return composite
 
 def parseMtpl(inputFile, module):
     # This function should open the mtpl and parse it line by line.
@@ -72,6 +88,9 @@ def parseMtpl(inputFile, module):
     setFlowItemSection = 0;
     setFlowSection = 0;
     setResultSection = 0;
+    isTest = 0;
+    isComposite = 0;
+
     currPort = "";
     
     for line in text.split('\n'):
@@ -83,7 +102,7 @@ def parseMtpl(inputFile, module):
         # 2. A Flow Item (This is really the rest of our test instance info, like porting and bins)
         # 3. A Flow (Either a composite or a full on flow like PREHVQK)
         # 4. A Result (This is the actual porting and bin info from our test - I have it split out because it's easier to distinguish section enders that way)
-        if line.startswith('Test'):
+        if (line.startswith('Test') and not line.startswith("TestPlan")):
             setTestSection = 1;
             _, value1, value2 = line.strip().split(' ')
 
@@ -104,26 +123,39 @@ def parseMtpl(inputFile, module):
                 continue;
         
         # Now we move on to our flows! 
-        if line.startswith('DUTFlow'):
+        if (line.startswith('DUTFlow') and not line.startswith("DUTFlowItem")):
             setFlowSection = 1;
             flowItems = line.strip().split(' ');
             currComp = flowItems[1];
+            if (len(flowItems) == 3 and flowItems[2].endswith("_SubFlow")):
+                currSubFlow = flowItems[2].lstrip("@").rstrip("_SubFlow");
+                compositeDict[currComp] = parseSubFlowItem(currSubFlow, module);
+            else:
+                compositeDict[currComp] = parseFlowItem(currComp, module);
+            
         
         elif line.startswith('DUTFlowItem'):
             setFlowItemSection = 1;
             flowItems = line.strip().split(' ');
             
+            compositeDict[currComp].Contents.append(flowItems[1]);
+            # compositeDict[currComp].Flow = currSubFlow;
+
             # This is how we know it's a test, otherwise it's another composite!
             if(flowItems[1] in testInstanceDict.keys()):
                 isTest = 1;
                 currTest = flowItems[1];
-                if len(flowItems == 3 and flowItems[3] == "@EDC"):
-                    testInstanceDict[currTest].killEnabled == "FALSE";
+                if (len(flowItems) == 3):
+                    if (flowItems[2] == "@EDC"):
+                        testInstanceDict[currTest].killEnabled == "FALSE";
+                    else:
+                        testInstanceDict[currTest].killEnabled == "TRUE";
                 else:
                     testInstanceDict[currTest].killEnabled == "TRUE";
             else:
                 isComposite = 1;
-                currSubComp = flowItems[1];
+                currTest = flowItems[1];
+                compositeDict[currTest] = parseFlowItem(currTest, module);
             
         elif line.startswith('Result'):
             setResultSection = 1;
@@ -164,7 +196,7 @@ def parseMtpl(inputFile, module):
                 setResultSection = 0;
                 continue;
             if line.startswith("Property"):
-                tempLine = line.split(" = ").strip(";").strip("\"");
+                tempLine = line.split(" = ")[1].rstrip(";").rstrip("\"").lstrip("\"");
                 
                 if tempLine == "Pass":
                     passPort = True;
@@ -179,13 +211,13 @@ def parseMtpl(inputFile, module):
             
             if line.startswith("IncrementCounters"):
                 binDeetz = re.search(binsplitterRegex,line);
-                testInstanceDict[currTest].IB = binDeetz.group[1];
-                testInstanceDict[currTest].FB = binDeetz.group[2];
-                testInstanceDict[currTest].Counter = binDeetz.group[3];
+                testInstanceDict[currTest].IB = binDeetz.group(1);
+                testInstanceDict[currTest].FB = binDeetz.group(2);
+                testInstanceDict[currTest].Counter = binDeetz.group(3);
     
             if (line.startswith("GoTo") or line.startswith("Return")):
-                tempLine = line.split(" ").strip(";");
-                tempGoTo = tempLine[1];
+                tempLine = line.split(" ")[1].strip(";");
+                tempGoTo = tempLine;
                 
                 if isTest:
                     testInstanceDict[currTest].PortList.append(tempGoTo);
