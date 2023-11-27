@@ -1,0 +1,7 @@
+Test PrimePatConfigTestMethod ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "###SetPoint###";
+	RegEx = "###RegEx###";
+}

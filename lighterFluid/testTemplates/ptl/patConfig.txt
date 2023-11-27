@@ -1,0 +1,9 @@
+Test PrimePatConfigTestMethod ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	ConfigurationFile = "./Modules/###jsonPatConfig###";
+	SetPointsPlistMode = "###SetPointsPlistMode###";
+	SetPoint = "###jsonSetPoint###";
+	SetPointsPreInstance = "###SetPointsPreInstance###";
+	RegEx = "###RegEx###";
+}

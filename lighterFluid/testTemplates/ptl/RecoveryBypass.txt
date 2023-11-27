@@ -1,0 +1,5 @@
+Test RecoveryBypass ###TestName###
+{
+	SetName = "###SetName###";
+	IP = "VPU";
+}
