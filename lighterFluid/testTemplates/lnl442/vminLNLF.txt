@@ -16,6 +16,7 @@ Test LNLVminSearchF ###TestName###
 	SetPointsPostInstance = "###SetPointsPostInstance###";
 	ResetSeparationMode = "###ResetSeparationMode###";
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
 	DtsConfigName = "###DtsConfigName###";
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";

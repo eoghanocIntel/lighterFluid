@@ -16,5 +16,6 @@ Test LNLVminSearchF ###TestName###
 	DtsConfigName = "###DtsConfigName###";
 	ResetSeparationMode = "###ResetSeparationMode###";
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
 	CTVContent = ###CTVContent###;
 }

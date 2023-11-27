@@ -14,6 +14,7 @@ Test LNLVminSearchF ###TestName###
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
 	ResetSeparationMode = "###ResetSeparationMode###";
-	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";	
+	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
 	VminResultKey = "###vminResultKey###";
 }
