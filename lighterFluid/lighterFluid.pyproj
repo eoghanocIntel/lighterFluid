@@ -69,6 +69,7 @@
     <Folder Include="releasedModules\LNL\30K\rbilei_2023_08_01_11_43_05\ARR_VPU\" />
     <Folder Include="testTemplates\" />
     <Folder Include="testTemplates\lnl442\" />
+    <Folder Include="testTemplates\ptl\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="functions\__pycache__\Composite.cpython-39.pyc" />
@@ -145,6 +146,51 @@
     <Content Include="testTemplates\lnl442\vminTc_VPU_REC.txt" />
     <Content Include="testTemplates\lnl442\vminTc_VPU_REC_FLAG.txt" />
     <Content Include="testTemplates\lnl442\vminTc_XFM.txt" />
+    <Content Include="testTemplates\ptl\auxExpression.txt" />
+    <Content Include="testTemplates\ptl\auxiliary.txt" />
+    <Content Include="testTemplates\ptl\aux_recovery.txt" />
+    <Content Include="testTemplates\ptl\capturePackets.txt" />
+    <Content Include="testTemplates\ptl\DTS_Reads.txt" />
+    <Content Include="testTemplates\ptl\evgScreen.txt" />
+    <Content Include="testTemplates\ptl\FUNC.txt" />
+    <Content Include="testTemplates\ptl\fuseConfig.txt" />
+    <Content Include="testTemplates\ptl\hsrPost.txt" />
+    <Content Include="testTemplates\ptl\hsrPre.txt" />
+    <Content Include="testTemplates\ptl\hvqk.txt" />
+    <Content Include="testTemplates\ptl\hvqkEvg.txt" />
+    <Content Include="testTemplates\ptl\hvqkEvgCore.txt" />
+    <Content Include="testTemplates\ptl\hvqkEvgCoreSDT.txt" />
+    <Content Include="testTemplates\ptl\hvqkEvgSDT.txt" />
+    <Content Include="testTemplates\ptl\icLYA.txt" />
+    <Content Include="testTemplates\ptl\mbistPostRepair.txt" />
+    <Content Include="testTemplates\ptl\mbistRaster.txt" />
+    <Content Include="testTemplates\ptl\mbistRepairCORE.txt" />
+    <Content Include="testTemplates\ptl\mbistRepairSetup.txt" />
+    <Content Include="testTemplates\ptl\mbistRepairSOC.txt" />
+    <Content Include="testTemplates\ptl\patConfig.txt" />
+    <Content Include="testTemplates\ptl\pbistLsaHry.txt" />
+    <Content Include="testTemplates\ptl\pbistLsaRaster.txt" />
+    <Content Include="testTemplates\ptl\pbistRepair.txt" />
+    <Content Include="testTemplates\ptl\pbistRepair2Fuse.txt" />
+    <Content Include="testTemplates\ptl\pbistRepairSetup.txt" />
+    <Content Include="testTemplates\ptl\prime1dShmoo.txt" />
+    <Content Include="testTemplates\ptl\primeShmoo.txt" />
+    <Content Include="testTemplates\ptl\primeShmoo_Stress.txt" />
+    <Content Include="testTemplates\ptl\RecoveryBypass.txt" />
+    <Content Include="testTemplates\ptl\RecoveryUpdate.txt" />
+    <Content Include="testTemplates\ptl\setDff.txt" />
+    <Content Include="testTemplates\ptl\vfdmRun.txt" />
+    <Content Include="testTemplates\ptl\vfdmSetup.txt" />
+    <Content Include="testTemplates\ptl\vfdmUserFunc.txt" />
+    <Content Include="testTemplates\ptl\vminLNLF.txt" />
+    <Content Include="testTemplates\ptl\vminTc.txt" />
+    <Content Include="testTemplates\ptl\vminTc_1P6.txt" />
+    <Content Include="testTemplates\ptl\vminTc_DDG.txt" />
+    <Content Include="testTemplates\ptl\vminTc_Prepost.txt" />
+    <Content Include="testTemplates\ptl\vminTc_SDT.txt" />
+    <Content Include="testTemplates\ptl\vminTc_VPU_REC.txt" />
+    <Content Include="testTemplates\ptl\vminTc_VPU_REC_FLAG.txt" />
+    <Content Include="testTemplates\ptl\vminTc_XFM.txt" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />

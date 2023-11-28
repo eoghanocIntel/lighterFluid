@@ -33,7 +33,7 @@
 ###FeatureSwitchSettings###,FeatureSwitchSettings
 ###ForwardingMode###,ForwardingMode
 ###PinMap###,PinMap
-###ARR_MBIST_C816_Specs.RecModeOptionsVmin###,RecoveryMode
+###RecoveryMode###,RecoveryMode
 ###RecoveryOptions###,RecoveryOptions
 ###RecoveryTrackingIncoming###,RecoveryTrackingIncoming
 ###RecoveryTrackingOutgoing###,RecoveryTrackingOutgoing
@@ -41,3 +41,5 @@
 ###ScoreboardMaxFails###,ScoreboardMaxFails
 ###StartVoltagesForRetry###,StartVoltagesForRetry
 ###TestMode###,TestMode
+###LYA_Tag###,LYA_Tag
+###LYA_execution_mode###,LYA_execution_mode

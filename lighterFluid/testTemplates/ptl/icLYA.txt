@@ -6,7 +6,7 @@ Test iCLYATest ###TestName###
 	bypass_global = ###bypassGlobal###;
 	config_file = "./Modules/ARR_CCFRR/InputFiles/MTL_C0.lya.xml";
 	debug_mode = "DISABLED";
-	execution_mode = "###LYA_execution_mode##";
+	execution_mode = "###LYA_execution_mode###";
 	input_string_tag = "###LYA_Tag###";
 	level = "###Levels###";
 	mapper_file = "./Modules/ARR_COMMON_CXX/InputFiles/MTL_ArrayMap.XML";

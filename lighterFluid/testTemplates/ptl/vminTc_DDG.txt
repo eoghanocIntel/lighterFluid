@@ -10,7 +10,7 @@ Test VminTC ###TestName###
 	Patlist = "###plist###";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	PinMap = "###PinMap###";
-	RecoveryMode = "###ARR_MBIST_C816_Specs.RecModeOptionsVmin###";
+	RecoveryMode = "###RecoveryMode###";
 	RecoveryOptions = "###RecoveryOptions###";
 	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
 	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
