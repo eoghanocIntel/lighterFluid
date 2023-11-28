@@ -1,0 +1,11 @@
+Test iCScreenTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    screen_custom_file = ###screen_custom_file###;
+    screen_custom_setpoint = "DUMMY";
+    preinstance = "";
+    screen_test_set = ###screen_test_set###;
+    screen_tests_file = ###screen_tests_file###;
+}

@@ -1,0 +1,11 @@
+Test PrimePatConfigTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    ConfigurationFile = ###ConfigurationFile###;
+    SetPointsPlistMode = "Global";
+    SetPoint = ###SetPoint###;
+    SetPointsPreInstance = "DE:display_clk:312MHz,IPU:ps_clk:200MHz,IPU:is_clk:200MHz,IPU:ratio_modify:0.2GHz,MEDIA:media_clk:400MHz";
+    RegEx = ###RegEx###;
+}

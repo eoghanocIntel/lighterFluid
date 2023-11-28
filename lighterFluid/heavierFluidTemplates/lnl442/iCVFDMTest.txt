@@ -1,0 +1,12 @@
+Test iCVFDMTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    fuse_module = ###fuse_module###;
+    xml_config_file_path = ###xml_config_file_path###;
+    descriptor_operation = "REFRESH";
+    descriptor_console = "LOCAL";
+    descriptor_ituff = "ENABLE";
+    descriptor_results = "ENABLE";
+}

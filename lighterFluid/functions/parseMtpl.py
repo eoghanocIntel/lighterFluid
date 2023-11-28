@@ -17,8 +17,8 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.IP = nameComponents[0];
     testInstance.Module = nameComponents[1];
     testInstance.TestType = nameComponents[2];
-    testInstance.Flow = nameComponents[3];
-    testInstance.EdcKill = nameComponents[4];
+    testInstance.EdcKill  = nameComponents[3];
+    testInstance.Flow = nameComponents[4];
     testInstance.DFT = nameComponents[5];
     testInstance.PowerRail = nameComponents[6];
     testInstance.VoltageCorner = nameComponents[7];
@@ -51,6 +51,7 @@ def parseTestInstanceItem(name, template, block_lines):
 def parseSubFlowItem(flow, module):
     composite = BackConvertComposite.BackConvertComposite();
         
+    flow = flow.lstrip(module.upper() + "_");
     composite.Flow = flow;
     composite.Template = "COMPOSITE";
     composite.TestName = flow;
@@ -102,7 +103,7 @@ def parseMtpl(inputFile, module):
         # 2. A Flow Item (This is really the rest of our test instance info, like porting and bins)
         # 3. A Flow (Either a composite or a full on flow like PREHVQK)
         # 4. A Result (This is the actual porting and bin info from our test - I have it split out because it's easier to distinguish section enders that way)
-        if (line.startswith('Test') and not line.startswith("TestPlan")):
+        if (line.startswith('Test') and not line.startswith("TestPlan") and not line.startswith("TestMode")):
             setTestSection = 1;
             _, value1, value2 = line.strip().split(' ')
 
@@ -126,11 +127,11 @@ def parseMtpl(inputFile, module):
         if (line.startswith('DUTFlow') and not line.startswith("DUTFlowItem")):
             setFlowSection = 1;
             flowItems = line.strip().split(' ');
-            currComp = flowItems[1];
             if (len(flowItems) == 3 and flowItems[2].endswith("_SubFlow")):
-                currSubFlow = flowItems[2].lstrip("@").rstrip("_SubFlow");
-                compositeDict[currComp] = parseSubFlowItem(currSubFlow, module);
+                currComp = flowItems[2].lstrip("@")[:-8];
+                compositeDict[currComp] = parseSubFlowItem(currComp, module);
             else:
+                currComp = flowItems[1];
                 compositeDict[currComp] = parseFlowItem(currComp, module);
             
         
@@ -155,7 +156,7 @@ def parseMtpl(inputFile, module):
             else:
                 isComposite = 1;
                 currTest = flowItems[1];
-                compositeDict[currTest] = parseFlowItem(currTest, module);
+                # compositeDict[currTest] = parseFlowItem(currTest, module);
             
         elif line.startswith('Result'):
             setResultSection = 1;

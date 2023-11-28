@@ -1,13 +1,16 @@
 
-import pandas
+from pickle import BUILD
+import pandas as pd
 import os
 import subprocess
 from functions import parseMtpl
 from functions import BackConvertTestInstance
 from functions import BackConvertComposite
+from functions import BuildTestList
+from functions import BuildTemplates
+from functions import ExcelWriter
 from datetime import datetime
 import shutil
-
 
 
 #########################
@@ -45,43 +48,72 @@ currYear =  str(datetime.now().year).zfill(4);
 
 timeStamp = "_".join([userName, currYear, currMonth, currDay, currHour, currMinute, currSecond]);
 
+moduleFlowList = ["TESTPLANSTARTFLOW",
+                  "TESTPLANENDFLOW",
+                  "DUTCHANGEFLOW",
+                  "LOTSTARTFLOW",
+                  "LOTENDFLOW",
+                  "INIT",
+                  "START",
+                  "BEGIN",
+                  "PREHVQK",
+                  "STRESS",
+                  "SDTSTART",
+                  "SDTBEGIN",
+                  "HOTSTRESS",
+                  "SDTEND",
+                  "SDTFINAL",
+                  "RETURN",
+                  "POSTHVQK",
+                  "END",
+                  "ENDTFM",
+                  "ENDXFM",
+                  "FINAL",
+                  "ALARM",
+                  "STARTFAILFLOW",
+                  ];
+
 # outDir = "heavierFluidOutputs\\" + timeStamp + "\\";
 outDir = "heavierFluidOutputs\\";
+templateDir = "heavierFluidTemplates\\" + product + "\\";
 
 fileToUse = outDir + file;
 if not os.path.exists(outDir):
     os.makedirs(outDir);
 
+if not os.path.exists(templateDir):
+    os.makedirs(templateDir);
+
 testInstanceDict = {}
 compositeDict = {};
+flowList = {};
 
 #####################
 ##### EXECUTION #####
 #####################
 
 # First we want to read all the test templates, flows, counters etc.
-for currModule in moduleList:
+for module in moduleList:
     # doTheThing
-    currMtpl = definitionDir + "\\" + currModule .upper() + "\\" + currModule .upper() + ".mtpl";
+    currMtpl = definitionDir + "\\" + module.upper() + "\\" + module.upper() + ".mtpl";
     
-    currTestInstanceDict, currCompositeDict = parseMtpl.parseMtpl(currMtpl, currModule );
+    currTestInstanceDict, currCompositeDict = parseMtpl.parseMtpl(currMtpl, module );
 
-    testInstanceDict[currModule] = currTestInstanceDict;
-    compositeDict[currModule] = currCompositeDict;
-
-
+    testInstanceDict[module] = currTestInstanceDict;
+    compositeDict[module] = currCompositeDict;
 
 
 # Next we want to create the templates we will use - with the unique vals
+addedColsList = BuildTemplates.BuildTemplates(testInstanceDict,templateDir);
 
+# Next we want to create the templates we will use - with the unique vals
+for module in moduleList:
+    flowList[module] = BuildTestList.BuildTestList(module, testInstanceDict, compositeDict, moduleFlowList);
 
 # Finally we want to create the actual Excel
 
-outFile = outDir + "heavierExcel.xlsm";
-for module in moduleList:
-    # doTheThing
-
-    i=0;
+outFile = outDir + "heavierExcel.xlsx";
+ExcelWriter.WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstanceDict, flowList);
 
 
 print("done");

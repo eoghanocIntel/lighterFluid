@@ -1,0 +1,9 @@
+Test iCUserFuncTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    function_name = "VFDM_UF!ProcessVFDMOutputs";
+    function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+    postinstance = "GSDS_UF!SetGSDS G.U.S.VMINREPAIR=1";
+}

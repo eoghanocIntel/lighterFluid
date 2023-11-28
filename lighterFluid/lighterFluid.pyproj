@@ -27,6 +27,9 @@
   <ItemGroup>
     <Compile Include="functions\BackConvertComposite.py" />
     <Compile Include="functions\BackConvertTestInstance.py" />
+    <Compile Include="functions\BuildTemplates.py" />
+    <Compile Include="functions\BuildTestList.py" />
+    <Compile Include="functions\ExcelWriter.py" />
     <Compile Include="functions\FlowComposite.py" />
     <Compile Include="functions\Composite.py" />
     <Compile Include="functions\counterBuilder.py" />
