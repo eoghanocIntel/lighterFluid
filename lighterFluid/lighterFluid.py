@@ -16,18 +16,21 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
-definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "eoghanoc";
+#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "eoghanoc";
 #definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "brownm1";
 # definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 # userName = "dgiardin";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
+definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Documents\Product\PTL\lighterFluidFiles";
+userName = "adambyrn";
 
-file = "lnlArrayMasterSheet.xlsm";
+file = "ptlArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
-product = "lnl442";
+#product = "lnl442";
+product = "ptl";
 
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
@@ -43,7 +46,7 @@ definitionList = [];
 # definitionList.append("arr_gfx");
 # definitionList.append("arr_soc");
 # definitionList.append("arr_vpu");
-definitionList.append("arr_common");
+definitionList.append("arr_atom");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 

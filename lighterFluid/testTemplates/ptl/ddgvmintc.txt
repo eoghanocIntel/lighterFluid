@@ -27,6 +27,6 @@ Test VminTC ###TestName###
 	TimingsTc = "###Timings###";
 	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
 	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
-	VminResult = "###vminResultKey###";;
+	VminResult = "###vminResultKey###";
 	VoltageTargets = "###Supply###";
 }

@@ -14,7 +14,7 @@
     <RootNamespace>csvToTorchBuilder</RootNamespace>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,6 +150,7 @@
     <Content Include="testTemplates\ptl\auxiliary.txt" />
     <Content Include="testTemplates\ptl\aux_recovery.txt" />
     <Content Include="testTemplates\ptl\capturePackets.txt" />
+    <Content Include="testTemplates\ptl\ddgvmintc.txt" />
     <Content Include="testTemplates\ptl\DTS_Reads.txt" />
     <Content Include="testTemplates\ptl\evgScreen.txt" />
     <Content Include="testTemplates\ptl\FUNC.txt" />
@@ -162,6 +163,7 @@
     <Content Include="testTemplates\ptl\hvqkEvgCoreSDT.txt" />
     <Content Include="testTemplates\ptl\hvqkEvgSDT.txt" />
     <Content Include="testTemplates\ptl\icLYA.txt" />
+    <Content Include="testTemplates\ptl\lya.txt" />
     <Content Include="testTemplates\ptl\mbistPostRepair.txt" />
     <Content Include="testTemplates\ptl\mbistRaster.txt" />
     <Content Include="testTemplates\ptl\mbistRepairCORE.txt" />
@@ -193,6 +195,7 @@
     <Content Include="testTemplates\ptl\vminTc_XFM.txt" />
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.11" />
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
