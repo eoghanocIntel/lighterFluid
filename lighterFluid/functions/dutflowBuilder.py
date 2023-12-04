@@ -206,7 +206,7 @@ def printAHugeBoi(currComp, body):
                       "START",
                       "BEGIN",
                       "PREHVQK",
-                      "STRESS",
+                      #"STRESS",
                       "POSTHVQK",
                       "END",
                       "ENDXFM",

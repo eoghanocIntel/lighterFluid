@@ -24,10 +24,10 @@ import shutil
 # userName = "dgiardin";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
-definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Documents\Product\PTL\lighterFluidFiles";
+definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
 userName = "adambyrn";
 
-file = "ptlArrayMasterSheet.xlsm";
+file = "PTLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 #product = "lnl442";
 product = "ptl";
@@ -40,9 +40,9 @@ product = "ptl";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 definitionList = [];
-# definitionList.append("arr_atom");
-# definitionList.append("arr_ccf");
-# definitionList.append("arr_core");
+definitionList.append("arr_common");
+#definitionList.append("arr_ccf");
+definitionList.append("arr_core");
 # definitionList.append("arr_gfx");
 # definitionList.append("arr_soc");
 # definitionList.append("arr_vpu");
