@@ -1,7 +1,7 @@
 Test AuxiliaryTC ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	Expression = "1";
+	Expression = "###expression###";
 	ResultToken = "###resultToken###";
 	DataType = "Integer";
 }
