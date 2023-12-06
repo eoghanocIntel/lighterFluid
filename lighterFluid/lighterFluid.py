@@ -43,8 +43,7 @@ definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
 #definitionList.append("arr_vpu");
-#definitionList.append("arr_common");
-#definitionList.append("arr_doe");
+definitionList.append("arr_common");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
 

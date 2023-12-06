@@ -1,7 +1,6 @@
-Test AuxiliaryTC ###TestName###
+Test iCAuxiliaryTest ###TestName###
 {
-	BypassPort = ###bypassGlobal###;
-	Expression = "###expression###";
-	ResultToken = "###resultToken###";
-	DataType = "Integer";
+	expression = "###expression###";
+	result_var = "###resultToken###";
+	result_port = "###ResultPort###";
 }
