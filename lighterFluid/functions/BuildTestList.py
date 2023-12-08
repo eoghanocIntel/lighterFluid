@@ -23,6 +23,6 @@ def BuildTestList(module, testInstanceDict, compositeDict, moduleFlowList):
             testList.append(flow);
             testList = testList + compositeContents(currDict, currDict[flow].Contents);
             testList.append("endSubflow_" + flow);
-    testList = ["TP_END"];
+    testList.append("TP_END");
     
     return testList

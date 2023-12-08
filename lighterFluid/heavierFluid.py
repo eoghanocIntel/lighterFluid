@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import subprocess
 from functions import parseMtpl
+from functions import parseFlw
 from functions import BackConvertTestInstance
 from functions import BackConvertComposite
 from functions import BuildTestList
@@ -96,8 +97,10 @@ flowList = {};
 for module in moduleList:
     # doTheThing
     currMtpl = definitionDir + "\\" + module.upper() + "\\" + module.upper() + ".mtpl";
+    currFlw = definitionDir + "\\" + module.upper() + "\\" + module.upper() + ".flw";
     
-    currTestInstanceDict, currCompositeDict = parseMtpl.parseMtpl(currMtpl, module );
+    currTestInstanceDict, currCompositeDict = parseMtpl.parseMtpl(currMtpl, module, moduleFlowList);
+    currTestInstanceDict, currCompositeDict = parseFlw.parseFlw(currFlw, currTestInstanceDict, currCompositeDict);
 
     testInstanceDict[module] = currTestInstanceDict;
     compositeDict[module] = currCompositeDict;
@@ -106,7 +109,7 @@ for module in moduleList:
 # Next we want to create the templates we will use - with the unique vals
 addedColsList = BuildTemplates.BuildTemplates(testInstanceDict,templateDir);
 
-# Next we want to create the templates we will use - with the unique vals
+# Next we want to create the order of how we'll write down the tests/composites in Excel
 for module in moduleList:
     flowList[module] = BuildTestList.BuildTestList(module, testInstanceDict, compositeDict, moduleFlowList);
 

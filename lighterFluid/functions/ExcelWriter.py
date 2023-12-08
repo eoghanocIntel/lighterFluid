@@ -18,11 +18,39 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             # df.to_excel(outFile, index=False)
 
             # Build the basic table
-            for test in testPrintOutList:
+            for test in testPrintOutList[module]:
                 newRow = {};
                 
-                if test in compositeDict[module].keys():
-                    i=0
+                if test.startswith("endComp"):
+                    newRow["Template"] = "COMPOSITE_END";
+                    actualCompName = test[8:];
+                    newRow["Flow"] = compositeDict[module][actualCompName].Flow;
+                    newRow["TestName"] = test;
+                    tempModule = module.split('_')[1].upper();
+                    newRow["Module"] = tempModule;
+                
+                elif test.startswith("endSubflow"):
+                    newRow["Template"] = "COMPOSITE_END";
+                    actualCompName = test[11:];
+                    newRow["Flow"] = compositeDict[module][actualCompName].Flow;
+                    newRow["TestName"] = test;
+                    tempModule = module.split('_')[1].upper();
+                    newRow["Module"] = tempModule;
+                
+                elif test in compositeDict[module].keys():
+                    for col in addedColsList:
+                        try:
+                            newRow[col] = getattr(compositeDict[module][test],col);
+                        except:
+                            continue;   
+                        if col in ["passPorts"]:
+                            newRow[col] = ",".join(compositeDict[module][test].passPorts)            
+
+                    # Overwrite COMPOSITE_BEGIN, clean up ports
+                    newRow["Template"] = ["COMPOSITE_BEGIN"];
+                    for i, port in enumerate(compositeDict[module][test].PortList):
+                        newRow["Port" + str(i)] = port;         
+                
                 elif test in testInstanceDict[module].keys():
                     for col in addedColsList:
                         if col in testInstanceDict[module][test].bonusCols.keys():
@@ -32,7 +60,20 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                                 newRow[col] = getattr(testInstanceDict[module][test],col);
                             except:
                                 continue;
-                    df = df.append(pd.DataFrame(newRow), ignore_index = True);
+                            if col in ["passPorts"]:
+                                newRow[col] = ",".join(testInstanceDict[module][test].passPorts)  
+                    for i, port in enumerate(testInstanceDict[module][test].PortList):
+                        newRow["Port" + str(i)] = port;
+
+                elif test in ["TP_BEGIN","TP_END"]:
+                    newRow["Flow"] = "TP";
+                    newRow["Template"] = test;
+                    newRow["TestName"] = "TP";
+                    tempModule = module.split('_')[1].upper();
+                    newRow["Module"] = tempModule;
+                
+                df = pd.concat([df,pd.DataFrame(newRow, index = [0])], ignore_index = True);
+                    
         
             # add some formulas to make life easier :)
             # df['Template'] = df.apply(testNameReplace, axis=1)
@@ -42,7 +83,19 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             worksheet = writer.sheets[module];
 
             rows = df.shape[0]
-            for i, (testName, flow) in enumerate(zip(df['TestName'], df['Flow']), start=1):
-                if flow not in ["TP_BEGIN","COMPOSITE_BEGIN","COMPOSITE_END","TP_END"]:
+            for i, (testName, template) in enumerate(zip(df['TestName'], df['Template']), start=1):
+                if template not in ["TP_BEGIN","COMPOSITE_BEGIN","COMPOSITE_END","TP_END"]:
                     formula_to_write = 'D{0}&"_"&E{0}&"_"&F{0}&"_"&A{0}&"_"&G{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(i+1) 
                     worksheet.write_formula(i, df.columns.get_loc('TestName'), formula_to_write);
+                    
+            for i, (passPort) in enumerate(df['passPorts'], start=1):
+                formula_to_write = 'COUNTA(Z{0}:AI{0})'.format(i+1) 
+                worksheet.write_formula(i, df.columns.get_loc('portCount'), formula_to_write);
+            
+            for i in range(0,10):
+                for j, (port) in enumerate(df['Port' + str(i)], start=1):
+                    if port in testPrintOutList[module]:
+                        rowLookup = testPrintOutList[module].index(port);
+                        # adding 2, 1 for 0 index (excel isn't), 1 for the row header
+                        formula_to_write = '$C{0}'.format(rowLookup+2) 
+                        worksheet.write_formula(j, df.columns.get_loc('Port' + str(i)), formula_to_write);

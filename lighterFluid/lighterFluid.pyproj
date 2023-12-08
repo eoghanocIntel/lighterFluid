@@ -36,6 +36,7 @@
     <Compile Include="functions\dutflowBuilder.py" />
     <Compile Include="functions\flowFileBuilder.py" />
     <Compile Include="functions\importBuilder.py" />
+    <Compile Include="functions\parseFlw.py" />
     <Compile Include="functions\parseMtpl.py" />
     <Compile Include="functions\testBuilder.py" />
     <Compile Include="functions\FlowTestInstance.py" />

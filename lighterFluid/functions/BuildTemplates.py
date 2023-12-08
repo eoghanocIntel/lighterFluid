@@ -30,7 +30,22 @@ def BuildTemplates(testInstanceDict, templateDir):
                      "FB",
                      "Counter",
                      "bypassGlobal",
-                     "killEnabled"];
+                     "killEnabled",
+                     "flowX",
+                     "flowY",
+                     "portCount",
+                     "passPorts",
+                     "Port0",
+                     "Port1",
+                     "Port2",
+                     "Port3",
+                     "Port4",
+                     "Port5",
+                     "Port6",
+                     "Port7",
+                     "Port8",
+                     "Port9",
+                     ];
     combinedTestList = {};
     templateSet = set();
     templateDict = {}
@@ -132,19 +147,4 @@ def BuildTemplates(testInstanceDict, templateDir):
         with open(outFile, 'w') as file:
             file.write(finalTest + "\n");       
         
-    columnList.append("flowX");
-    columnList.append("flowY");
-    columnList.append("portCount");
-    columnList.append("passPorts");
-    columnList.append("Port0");
-    columnList.append("Port1");
-    columnList.append("Port2");
-    columnList.append("Port3");
-    columnList.append("Port4");
-    columnList.append("Port5");
-    columnList.append("Port6");
-    columnList.append("Port7");
-    columnList.append("Port8");
-    columnList.append("Port9");
-
     return columnList

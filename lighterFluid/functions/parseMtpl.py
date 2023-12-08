@@ -30,7 +30,7 @@ def parseTestInstanceItem(name, template, block_lines):
         flowItems = line.strip().rstrip(";").split(' = ');
         if len(flowItems) == 2:
             key = flowItems[0];
-            value = flowItems[1];
+            value = str(flowItems[1].strip("\""));
         else:
             # The first item should be "Test BLABLABLA", which doesn't split).
             continue
@@ -55,6 +55,8 @@ def parseSubFlowItem(flow, module):
     composite.Flow = flow;
     composite.Template = "COMPOSITE";
     composite.TestName = flow;
+    tempModule = module.split('_');
+    module = tempModule[1].upper();
     composite.Module = module;
     
     return composite
@@ -64,11 +66,24 @@ def parseFlowItem(name, module):
     
     composite.Template = "COMPOSITE";
     composite.TestName = name;
+    tempModule = module.split('_');
+    module = tempModule[1].upper();
     composite.Module = module;
     
     return composite
 
-def parseMtpl(inputFile, module):
+def CompositeFlowFixer(compositeDict, subcomp, currFlow):
+    
+    for instance in subcomp.Contents:
+        if instance in compositeDict.keys():
+            compositeDict[instance].Flow = currFlow;
+            compositeDict = CompositeFlowFixer(compositeDict, compositeDict[instance], currFlow);
+
+    
+
+    return compositeDict;
+
+def parseMtpl(inputFile, module, moduleFlowList):
     # This function should open the mtpl and parse it line by line.
     # We should be able to ignore the top sections (version, imports, counters) - they can be generated from later info.
     # The 2x sections we care about are;
@@ -89,6 +104,7 @@ def parseMtpl(inputFile, module):
     setFlowItemSection = 0;
     setFlowSection = 0;
     setResultSection = 0;
+    setAlarmPort = 0;
     isTest = 0;
     isComposite = 0;
 
@@ -162,7 +178,10 @@ def parseMtpl(inputFile, module):
             setResultSection = 1;
             _, currPort = line.strip().rstrip(";").split(' ')
             if(currPort in ["-2", "-1"]):
-                continue
+                setAlarmPort = 1;
+                continue;
+            else:
+                setAlarmPort = 0;
         
         
         # I'm structuring the code so it uses "}" as a key trigger. 
@@ -220,11 +239,15 @@ def parseMtpl(inputFile, module):
                 tempLine = line.split(" ")[1].strip(";");
                 tempGoTo = tempLine;
                 
-                if isTest:
-                    testInstanceDict[currTest].PortList.append(tempGoTo);
+                if not setAlarmPort:
+                    if isTest:
+                        testInstanceDict[currTest].PortList.append(tempGoTo);
                     
-                if isComposite:
-                    compositeDict[currTest].PortList.append(tempGoTo);
+                    if isComposite:
+                        compositeDict[currTest].PortList.append(tempGoTo);
 
-
+    for subComp in compositeDict:
+        if subComp in moduleFlowList:
+            compositeDict = CompositeFlowFixer(compositeDict, compositeDict[subComp], subComp);
+    
     return testInstanceDict, compositeDict;
