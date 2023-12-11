@@ -25,8 +25,8 @@ userName = "eoghanoc";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
 
-file = "lnlArrayMasterSheet.xlsm";
-# file = "flowFileHackyWhackyAdventure.xlsm";
+file2 = "lnlArrayMasterSheet.xlsm";
+file = "heavierExcel.xlsx";
 product = "lnl442";
 
 
@@ -40,10 +40,10 @@ definitionList = [];
 # definitionList.append("arr_atom");
 # definitionList.append("arr_ccf");
 # definitionList.append("arr_core");
-# definitionList.append("arr_gfx");
+definitionList.append("arr_gfx");
 # definitionList.append("arr_soc");
 # definitionList.append("arr_vpu");
-definitionList.append("arr_common");
+# definitionList.append("arr_common");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
@@ -68,8 +68,8 @@ if not os.path.exists(outDir):
     os.makedirs(outDir);
 
 #shutil.copyfile(definitionDir + "\\" + file, fileToUse)
-inFile = definitionDir + "\\" + file;
-
+inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
+# inFile = definitionDir + "\\" + file;
 
 
 #subprocess.call(["dir"], shell=True);

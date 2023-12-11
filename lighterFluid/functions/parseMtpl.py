@@ -30,7 +30,7 @@ def parseTestInstanceItem(name, template, block_lines):
         flowItems = line.strip().rstrip(";").split(' = ');
         if len(flowItems) == 2:
             key = flowItems[0];
-            value = str(flowItems[1].strip("\""));
+            value = str(flowItems[1]);
         else:
             # The first item should be "Test BLABLABLA", which doesn't split).
             continue
@@ -162,13 +162,13 @@ def parseMtpl(inputFile, module, moduleFlowList):
             if(flowItems[1] in testInstanceDict.keys()):
                 isTest = 1;
                 currTest = flowItems[1];
-                if (len(flowItems) == 3):
-                    if (flowItems[2] == "@EDC"):
-                        testInstanceDict[currTest].killEnabled == "FALSE";
+                if (len(flowItems) == 4):
+                    if (flowItems[3] == "@EDC"):
+                        testInstanceDict[currTest].killEnabled = "FALSE";
                     else:
-                        testInstanceDict[currTest].killEnabled == "TRUE";
+                        testInstanceDict[currTest].killEnabled = "TRUE";
                 else:
-                    testInstanceDict[currTest].killEnabled == "TRUE";
+                    testInstanceDict[currTest].killEnabled = "TRUE";
             else:
                 isComposite = 1;
                 currTest = flowItems[1];

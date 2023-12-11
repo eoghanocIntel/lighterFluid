@@ -1,4 +1,6 @@
 import pandas as pd
+import win32com.client
+
 
 
 def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstanceDict, testPrintOutList):
@@ -18,7 +20,7 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             # df.to_excel(outFile, index=False)
 
             # Build the basic table
-            for test in testPrintOutList[module]:
+            for lineNo, test in enumerate(testPrintOutList[module]):
                 newRow = {};
                 
                 if test.startswith("endComp"):
@@ -40,30 +42,31 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                 elif test in compositeDict[module].keys():
                     for col in addedColsList:
                         try:
-                            newRow[col] = getattr(compositeDict[module][test],col);
+                            newRow[col] = getattr(compositeDict[module][test],col).strip("\"");
                         except:
                             continue;   
                         if col in ["passPorts"]:
-                            newRow[col] = ",".join(compositeDict[module][test].passPorts)            
+                            newRow[col] = ",".join(compositeDict[module][test].passPorts).strip("\"")
 
                     # Overwrite COMPOSITE_BEGIN, clean up ports
                     newRow["Template"] = ["COMPOSITE_BEGIN"];
                     for i, port in enumerate(compositeDict[module][test].PortList):
-                        newRow["Port" + str(i)] = port;         
+                        newRow["Port" + str(i)] = port;
                 
                 elif test in testInstanceDict[module].keys():
                     for col in addedColsList:
                         if col in testInstanceDict[module][test].bonusCols.keys():
-                            newRow[col] = testInstanceDict[module][test].bonusCols[col];
+                            newRow[col] = testInstanceDict[module][test].bonusCols[col].strip("\"");
                         else:
                             try:
-                                newRow[col] = getattr(testInstanceDict[module][test],col);
+                                newRow[col] = getattr(testInstanceDict[module][test],col).strip("\"");
                             except:
                                 continue;
                             if col in ["passPorts"]:
-                                newRow[col] = ",".join(testInstanceDict[module][test].passPorts)  
+                                newRow[col] = ",".join(testInstanceDict[module][test].passPorts).strip("\"");  
                     for i, port in enumerate(testInstanceDict[module][test].PortList):
                         newRow["Port" + str(i)] = port;
+                    newRow["TestName"] = '=D{0}&"_"&E{0}&"_"&F{0}&"_"&G{0}&"_"&A{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(lineNo+2);
 
                 elif test in ["TP_BEGIN","TP_END"]:
                     newRow["Flow"] = "TP";
@@ -83,10 +86,10 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             worksheet = writer.sheets[module];
 
             rows = df.shape[0]
-            for i, (testName, template) in enumerate(zip(df['TestName'], df['Template']), start=1):
-                if template not in ["TP_BEGIN","COMPOSITE_BEGIN","COMPOSITE_END","TP_END"]:
-                    formula_to_write = 'D{0}&"_"&E{0}&"_"&F{0}&"_"&A{0}&"_"&G{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(i+1) 
-                    worksheet.write_formula(i, df.columns.get_loc('TestName'), formula_to_write);
+            # for i, (testName, template) in enumerate(zip(df['TestName'], df['Template']), start=1):
+            #     if template not in ["TP_BEGIN","COMPOSITE_BEGIN","COMPOSITE_END","TP_END"]:
+            #         formula_to_write = 'D{0}&"_"&E{0}&"_"&F{0}&"_"&A{0}&"_"&G{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(i+1) 
+            #         worksheet.write_formula(i, df.columns.get_loc('TestName'), formula_to_write);
                     
             for i, (passPort) in enumerate(df['passPorts'], start=1):
                 formula_to_write = 'COUNTA(Z{0}:AI{0})'.format(i+1) 
@@ -99,3 +102,9 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                         # adding 2, 1 for 0 index (excel isn't), 1 for the row header
                         formula_to_write = '$C{0}'.format(rowLookup+2) 
                         worksheet.write_formula(j, df.columns.get_loc('Port' + str(i)), formula_to_write);
+
+    # After all is said and done we need to do something painful... Open the Excel and Close it again - so that the formulas save properly...
+    excel = win32com.client.Dispatch("Excel.Application")
+    workbook = excel.Workbooks.open("C:\\Users\\eoghanoc\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel.xlsx")
+    workbook.Save()
+    excel.Quit()

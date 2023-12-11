@@ -5,7 +5,7 @@
     <ProjectGuid>c52a9915-a242-444f-90a2-d5787081bf03</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>heavierFluid.py</StartupFile>
+    <StartupFile>lighterFluid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

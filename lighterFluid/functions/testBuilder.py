@@ -20,7 +20,7 @@ def testBuilder(dataset, product):
         
         currTemplate = dataset.Template[i];
 
-        fileToOpen = "testTemplates\\" + product + "\\" + currTemplate + ".txt"
+        fileToOpen = "heavierFluidTemplates\\" + product + "\\" + currTemplate + ".txt"
 
         with open(fileToOpen, 'r') as file:
             currTest = file.read();

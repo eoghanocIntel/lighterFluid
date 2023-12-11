@@ -98,12 +98,18 @@ def BuildTemplates(testInstanceDict, templateDir):
         if templateDict[template]["code"] in ["evg"]:
             paramList.append("bypass_global = \"###bypassGlobal###\";");
             
-            if (len(templateDict[template]["Levels"]) == 1 and 
-                templateDict[template]["Levels"] not in ["x"]):
+            if (len(templateDict[template]["Levels"]) == 1):
+                [element] = templateDict[template]["Levels"];
+                if element != "x":
+                    paramList.append("level = \"###Levels###\";");
+            else:
                 paramList.append("level = \"###Levels###\";");
             
-            if (len(templateDict[template]["Timings"]) == 1 and 
-                templateDict[template]["Timings"] not in ["x"]):
+            if (len(templateDict[template]["Timings"]) == 1):
+                [element] = templateDict[template]["Timings"];
+                if element != "x":
+                    paramList.append("timings = \"###Timings###\";");
+            else:
                 paramList.append("timings = \"###Timings###\";");
             
             if (len(templateDict[template]["plist"]) == 1):
@@ -115,12 +121,18 @@ def BuildTemplates(testInstanceDict, templateDir):
         else:
             paramList.append("BypassPort = ###bypassGlobal###;");
             
-            if (len(templateDict[template]["Levels"]) == 1 and 
-                templateDict[template]["Levels"] not in ["x"]):
+            if (len(templateDict[template]["Levels"]) == 1):
+                [element] = templateDict[template]["Levels"];
+                if element != "x":
+                   paramList.append("LevelsTc = \"###Levels###\";");
+            else:
                 paramList.append("LevelsTc = \"###Levels###\";");
-            
-            if (len(templateDict[template]["Timings"]) == 1 and 
-                templateDict[template]["Timings"] not in ["x"]):
+
+            if (len(templateDict[template]["Timings"]) == 1):
+                [element] = templateDict[template]["Timings"];
+                if element != "x":
+                    paramList.append("TimingsTc = \"###Timings###\";");
+            else:
                 paramList.append("TimingsTc = \"###Timings###\";");
             
             if (len(templateDict[template]["plist"]) == 1):

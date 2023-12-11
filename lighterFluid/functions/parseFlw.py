@@ -105,11 +105,11 @@ def parseFlw(inputFile, testInstanceDict, compositeDict):
             tempY = round(currY/250);
 
             if (currTest in testInstanceDict):
-                testInstanceDict[currTest].flowX = tempX;
-                testInstanceDict[currTest].flowY = tempY;
+                testInstanceDict[currTest].flowX = str(tempX);
+                testInstanceDict[currTest].flowY = str(tempY);
             elif (currTest in compositeDict):
-                compositeDict[currTest].flowX = tempX;
-                compositeDict[currTest].flowY = tempY;
+                compositeDict[currTest].flowX = str(tempX);
+                compositeDict[currTest].flowY = str(tempY);
             else:
                 print("Almost certainly a bug - this test isnt in Test/Comp list " + currTest);
     
