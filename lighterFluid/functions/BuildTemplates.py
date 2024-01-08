@@ -145,7 +145,7 @@ def BuildTemplates(testInstanceDict, templateDir):
         for param in templateDict[template]["bonusCols"]:
             
             if (len(templateDict[template]["bonusCols"][param]) > 1):
-                paramList.append("{0} = ###{0}###;".format(param));
+                paramList.append("{0} = \"###{0}###\";".format(param));
                 if param not in columnList:
                     columnList.append(param);
             else:

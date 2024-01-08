@@ -8,6 +8,6 @@ Test PrimeShmooTestMethod ###TestName###
     XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints;
     XAxisParamType = "TimingTestCondition";
     YAxisParam = "p_vccsa_spec";
-    YAxisRange = ###YAxisRange###;
+    YAxisRange = "###YAxisRange###";
     YAxisParamType = "LevelsTestCondition";
 }

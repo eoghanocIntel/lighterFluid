@@ -34,14 +34,14 @@ def importBuilder(dataset, timeStamp):
     levelsList = list(filter(None, dataset.Levels.dropna()))
 
     for timing in timingsList:
-        if timing.startswith("BASE"):
+        if (timing.startswith("BASE") or timing == "x"):
             continue
         else:
             importSection = importSection + "Import ARR_" + currModule + "_timings.tcg;\n";
             break
         
     for level in levelsList:
-        if level.startswith("BASE"):
+        if (level.startswith("BASE") or level == "x"):
             continue
         else:
             importSection = importSection + "Import ARR_" + currModule + "_levels.tcg;\n";

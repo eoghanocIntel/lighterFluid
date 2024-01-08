@@ -41,12 +41,13 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                 
                 elif test in compositeDict[module].keys():
                     for col in addedColsList:
+                        if col in ["passPorts"]:
+                            newRow[col] = ",".join(compositeDict[module][test].passPorts).strip("\"")
+                            continue;
                         try:
                             newRow[col] = getattr(compositeDict[module][test],col).strip("\"");
                         except:
                             continue;   
-                        if col in ["passPorts"]:
-                            newRow[col] = ",".join(compositeDict[module][test].passPorts).strip("\"")
 
                     # Overwrite COMPOSITE_BEGIN, clean up ports
                     newRow["Template"] = ["COMPOSITE_BEGIN"];
@@ -58,12 +59,13 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                         if col in testInstanceDict[module][test].bonusCols.keys():
                             newRow[col] = testInstanceDict[module][test].bonusCols[col].strip("\"");
                         else:
+                            if col in ["passPorts"]:
+                                newRow[col] = ",".join(testInstanceDict[module][test].passPorts).strip("\"");  
+                                continue;
                             try:
                                 newRow[col] = getattr(testInstanceDict[module][test],col).strip("\"");
                             except:
                                 continue;
-                            if col in ["passPorts"]:
-                                newRow[col] = ",".join(testInstanceDict[module][test].passPorts).strip("\"");  
                     for i, port in enumerate(testInstanceDict[module][test].PortList):
                         newRow["Port" + str(i)] = port;
                     newRow["TestName"] = '=D{0}&"_"&E{0}&"_"&F{0}&"_"&G{0}&"_"&A{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(lineNo+2);
