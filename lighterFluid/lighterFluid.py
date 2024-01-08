@@ -16,23 +16,23 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
-#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "eoghanoc";
+definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "eoghanoc";
 #definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "brownm1";
 #definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "dgiardin";
-definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "rbilei";
+# definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+# userName = "rbilei";
 
-file = "lnlArrayMasterSheet.xlsm";
+# file = "uriPoC.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
 
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
 #userName = "eoghanoc";
-#file = "lnlArrayCommon.xlsx";
+file = "lnlArrayCommon.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
