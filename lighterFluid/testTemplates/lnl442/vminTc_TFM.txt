@@ -1,4 +1,4 @@
-Test PrimeVminSearchTestMethod ###TestName###
+Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
 	EndVoltageLimits = "###EndVoltage###"; 
@@ -13,4 +13,9 @@ Test PrimeVminSearchTestMethod ###TestName###
 	ExecutionMode = "###SearchMode###";
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
+	SetPointsPostInstance = "###SetPointsPostInstance###";
+	ResetSeparationMode = "###ResetSeparationMode###";
+	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
+	VminResultKey = "###vminResultKey###";
 }

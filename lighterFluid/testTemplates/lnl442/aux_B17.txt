@@ -1,0 +1,6 @@
+Test iCAuxiliaryTest ###TestName###
+{
+	expression = "###expression###";
+	result_var = "###resultToken###";
+	result_port = "###ResultPort###";
+}
