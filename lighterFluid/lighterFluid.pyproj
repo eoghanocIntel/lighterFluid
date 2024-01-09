@@ -162,7 +162,6 @@
     <Content Include="testTemplates\ptl\hvqkEvgCore.txt" />
     <Content Include="testTemplates\ptl\hvqkEvgCoreSDT.txt" />
     <Content Include="testTemplates\ptl\hvqkEvgSDT.txt" />
-    <Content Include="testTemplates\ptl\icLYA.txt" />
     <Content Include="testTemplates\ptl\lya.txt" />
     <Content Include="testTemplates\ptl\mbistPostRepair.txt" />
     <Content Include="testTemplates\ptl\mbistRaster.txt" />
