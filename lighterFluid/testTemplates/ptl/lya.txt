@@ -1,0 +1,21 @@
+Test iCLYATest ###TestName###
+{
+	basenumber = "###baseNumber###";
+	bitline_barpin = "XX_CORE_VIEW_LYA_1";
+	bitline_pin = "XX_CORE_VIEW_LYA_0";
+	bypass_global = ###bypassGlobal###;
+	config_file = "./Modules/ARR_CCFRR/InputFiles/MTL_C0.lya.xml";
+	debug_mode = "DISABLED";
+	execution_mode = "###LYA_execution_mode###";
+	input_string_tag = "###LYA_Tag###";
+	level = "###Levels###";
+	mapper_file = "./Modules/ARR_COMMON_CXX/InputFiles/MTL_ArrayMap.XML";
+	max_lya_count = 40;
+	postinstance = "NHM_UF!SmartTcSetToEnable";
+	pre_pause = 0.0;
+	preinstance = "NHM_UF!SmartTcSetToDisable";
+	target_array = "L2_DAT";
+	timings = "###Timings###";
+	vcc_maxlevel = 1.0;
+	vcc_pin = "###Supply###";
+}

@@ -29,3 +29,17 @@
 ###printToItuff###,printToItuff
 ###RegEx###,RegEx
 ###VPU_IP###,VPU_IP
+###FailCaptureCount###,FailCaptureCount
+###FeatureSwitchSettings###,FeatureSwitchSettings
+###ForwardingMode###,ForwardingMode
+###PinMap###,PinMap
+###RecoveryMode###,RecoveryMode
+###RecoveryOptions###,RecoveryOptions
+###RecoveryTrackingIncoming###,RecoveryTrackingIncoming
+###RecoveryTrackingOutgoing###,RecoveryTrackingOutgoing
+###ScoreboardEdgeTicks###,ScoreboardEdgeTicks
+###ScoreboardMaxFails###,ScoreboardMaxFails
+###StartVoltagesForRetry###,StartVoltagesForRetry
+###TestMode###,TestMode
+###LYA_Tag###,LYA_Tag
+###LYA_execution_mode###,LYA_execution_mode
