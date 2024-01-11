@@ -1,0 +1,32 @@
+Test VminTC ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    EndVoltageLimits = "0.85";
+    ExecutionMode = "###ExecutionMode###";
+    FailCaptureCount = "###FailCaptureCount###";
+    FeatureSwitchSettings = "###FeatureSwitchSettings###";
+    ForwardingMode = "###ForwardingMode###";
+    PatternNameMap = "9,10,11,12,13,14,15";
+    PinMap = "###PinMap###";
+    RecoveryMode = "###RecoveryMode###";
+    RecoveryOptions = "###RecoveryOptions###";
+    RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+    RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+    ScoreboardBaseNumber = "###ScoreboardBaseNumber###";
+    ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+    ScoreboardMaxFails = "###ScoreboardMaxFails###";
+    SetPointsPlistParamName = "Patlist";
+    SetPointsPlistMode = "###SetPointsPlistMode###";
+    SetPointsPreInstance = "###SetPointsPreInstance###";
+    StartVoltages = "###StartVoltages###";
+    StartVoltagesForRetry = "###StartVoltagesForRetry###";
+    StepSize = 0.02;
+    TestMode = "###TestMode###";
+    #TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+    #TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+    VminResult = "###VminResult###";
+    VoltageTargets = "###VoltageTargets###";
+}

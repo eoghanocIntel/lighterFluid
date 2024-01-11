@@ -17,7 +17,7 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\releasedModules\PTL\A0 TP";
+definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\releasedModules\PTL\A0";
 userName = "adambyrn";
 
 file = "lnlBackConvert.xlsm";
@@ -26,13 +26,13 @@ product = "ptl";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
-moduleList.append("arr_gfx");
-moduleList.append("arr_atom");
-moduleList.append("arr_ccf");
-moduleList.append("arr_core");
-moduleList.append("arr_soc");
-moduleList.append("arr_vpu");
-moduleList.append("arr_common");
+definitionList.append("arr_common");
+definitionList.append("arr_ccf");
+definitionList.append("arr_core");
+definitionList.append("arr_gfx");
+definitionList.append("arr_soc");
+definitionList.append("arr_vpu");
+definitionList.append("arr_atom");
 #moduleList.append("arr_doe");
 
 #########################

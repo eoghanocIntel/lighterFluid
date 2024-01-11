@@ -1,0 +1,28 @@
+Test PrimeMbistVminSearchTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    FeatureSwitchSettings = "";
+    VoltageTargets = "###VoltageTargets###";
+    StartVoltages = "###StartVoltages###";
+    EndVoltageLimits = "###EndVoltageLimits###";
+    StepSize = 0.02;
+    PatternNameMap = "9,10,11,12,13,14,15";
+    ScoreboardEdgeTicks = 0;
+    MaxRepetitionCount = 0;
+    CtvPins = "XXTDO";
+    TestMode = "Scoreboard";
+    LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
+    MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
+    MbistTestMode = "###MbistTestMode###";
+    BisrMode = "###BisrMode###";
+    ItuffNameExtenstion = "###ItuffNameExtenstion###";
+    PrintToItuff = "###PrintToItuff###";
+    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
+    FailCaptureCount = "###FailCaptureCount###";
+    # DffOperation = ; # Do we need to set?;
+    # VFDMconfig = ; # Do we need to set?;
+    ClearVariables = "all,initialize";
+}

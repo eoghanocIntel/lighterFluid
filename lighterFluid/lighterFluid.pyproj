@@ -49,7 +49,6 @@
     <Folder Include="functions\__pycache__\" />
     <Folder Include="heavierFluidOutputs\" />
     <Folder Include="heavierFluidTemplates\" />
-    <Folder Include="inputs\" />
     <Folder Include="releasedModules\" />
     <Folder Include="outputs\" />
     <Folder Include="releasedModules\LNL\" />
@@ -91,7 +90,6 @@
     <Content Include="functions\__pycache__\importBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\testBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\TestInstance.cpython-39.pyc" />
-    <Content Include="inputs\findAndReplaceFile.csv" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="outputs\.gitignore" />
     <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_ATOM\ARR_ATOM.mtpl" />
