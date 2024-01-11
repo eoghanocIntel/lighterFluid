@@ -1,0 +1,9 @@
+Test iCCapturePacketsTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    data_pins = "XXTDO";
+    output_tag = ###output_tag###;
+}

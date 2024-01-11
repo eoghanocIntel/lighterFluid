@@ -1,0 +1,6 @@
+Test PrimeSetDffTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    TokenName = ###TokenName###;
+    TokenValue = ###TokenValue###;
+}

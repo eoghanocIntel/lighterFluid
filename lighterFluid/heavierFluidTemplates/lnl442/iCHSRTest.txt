@@ -1,0 +1,12 @@
+Test iCHSRTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    xml_config_file_path = ###xml_config_file_path###;
+    hry_execution_mode = ###hry_execution_mode###;
+    mode = "HRY";
+    ifpm_input_file = ###ifpm_input_file###;
+    ifpm_modifygroups = ###ifpm_modifygroups###;
+}

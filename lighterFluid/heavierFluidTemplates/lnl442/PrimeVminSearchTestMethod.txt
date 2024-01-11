@@ -1,0 +1,16 @@
+Test PrimeVminSearchTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    EndVoltageLimits = "###EndVoltageLimits###";
+    StartVoltages = "###StartVoltages###";
+    StepSize = 0.02;
+    VoltageTargets = "VCCSA_HC";
+    PatternNameMap = "9,10,11,12,13,14,15";
+    ScoreboardBaseNumber = "###ScoreboardBaseNumber###";
+    ExecutionMode = "###ExecutionMode###";
+    SetPointsPlistMode = "Local";
+    SetPointsPreInstance = "";
+}

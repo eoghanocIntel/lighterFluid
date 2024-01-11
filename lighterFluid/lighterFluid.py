@@ -27,10 +27,9 @@ import shutil
 definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
 userName = "adambyrn";
 
-file = "PTLArrayMasterSheet.xlsm";
-# file = "flowFileHackyWhackyAdventure.xlsm";
-#product = "lnl442";
-product = "ptl";
+file2 = "lnlArrayMasterSheet.xlsm";
+file = "heavierExcel.xlsx";
+product = "lnl442";
 
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
@@ -71,8 +70,8 @@ if not os.path.exists(outDir):
     os.makedirs(outDir);
 
 #shutil.copyfile(definitionDir + "\\" + file, fileToUse)
-inFile = definitionDir + "\\" + file;
-
+inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
+# inFile = definitionDir + "\\" + file;
 
 
 #subprocess.call(["dir"], shell=True);

@@ -87,7 +87,7 @@ def printASmolBoi(currTest, parentModule):
 
     currKill = currTest.KillEnabled;
     killOrEdc = "";
-    if not currKill:
+    if (not currKill or currKill == "FALSE"):
         killOrEdc = "@EDC";
     
 
@@ -134,7 +134,7 @@ def printASmolBoi(currTest, parentModule):
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
             sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + parentModule + "_" + currTest.TestName
-            if not currKill:
+            if (not currKill or currKill == "FALSE"):
                 sharedBin = "##EDC## " + sharedBin;
 
             dummyCounter = "n" + currPheoBin + "_fail_" + currTest.TestName + "_" + str(i);
