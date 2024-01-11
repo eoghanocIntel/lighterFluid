@@ -17,23 +17,23 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
-definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
-userName = "eoghanoc";
+definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\releasedModules\PTL\A0 TP";
+userName = "adambyrn";
 
 file = "lnlBackConvert.xlsm";
-product = "lnl442";
+product = "ptl";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
 moduleList.append("arr_gfx");
-# moduleList.append("arr_atom");
-# moduleList.append("arr_ccf");
-# moduleList.append("arr_core");
-# moduleList.append("arr_soc");
-# moduleList.append("arr_vpu");
-# moduleList.append("arr_common");
-# moduleList.append("arr_doe");
+moduleList.append("arr_atom");
+moduleList.append("arr_ccf");
+moduleList.append("arr_core");
+moduleList.append("arr_soc");
+moduleList.append("arr_vpu");
+moduleList.append("arr_common");
+#moduleList.append("arr_doe");
 
 #########################
 ########## SETUP ########
@@ -69,6 +69,7 @@ moduleFlowList = ["TESTPLANSTARTFLOW",
                   "END",
                   "ENDTFM",
                   "ENDXFM",
+                  "EXVF",
                   "FINAL",
                   "ALARM",
                   "STARTFAILFLOW",

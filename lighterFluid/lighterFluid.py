@@ -27,9 +27,9 @@ import shutil
 definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
 userName = "adambyrn";
 
-file2 = "lnlArrayMasterSheet.xlsm";
+file2 = "PTLArrayMasterSheet.xlsm";
 file = "heavierExcel.xlsx";
-product = "lnl442";
+product = "ptl";
 
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
