@@ -8,8 +8,8 @@ Test iCRepairTest ###TestName###
     map_array = "###map_array###";
     mapper_file = "###mapper_file###";
     mode_of_decoding = "###mode_of_decoding###";
-    mode_of_execution = "Manufacturing";
     mode_of_operation = "###mode_of_operation###";
+    mode_of_execution = "Manufacturing";
     raster_data_log = "###raster_data_log###";
     redundancy_fuse_active = "ON";
 }

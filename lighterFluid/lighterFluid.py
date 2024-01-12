@@ -24,10 +24,11 @@ import shutil
 # userName = "dgiardin";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
-definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
+#definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
+definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\heavierFluidOutputs";
 userName = "adambyrn";
 
-file2 = "PTLArrayMasterSheet.xlsm";
+#file = "PTLArrayMasterSheet.xlsm";
 file = "heavierExcel.xlsx";
 product = "ptl";
 
@@ -69,9 +70,9 @@ fileToUse = outDir + file;
 if not os.path.exists(outDir):
     os.makedirs(outDir);
 
-#shutil.copyfile(definitionDir + "\\" + file, fileToUse)
-inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
-# inFile = definitionDir + "\\" + file;
+shutil.copyfile(definitionDir + "\\" + file, fileToUse)
+#inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
+inFile = definitionDir + "\\" + file;
 
 
 #subprocess.call(["dir"], shell=True);

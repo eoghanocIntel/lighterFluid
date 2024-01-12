@@ -4,6 +4,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
+    ClearVariables = "all,initialize";
     FeatureSwitchSettings = "";
     VoltageTargets = "###VoltageTargets###";
     StartVoltages = "###StartVoltages###";
@@ -18,11 +19,10 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
     BisrMode = "###BisrMode###";
-    ItuffNameExtenstion = "###ItuffNameExtenstion###";
-    PrintToItuff = "###PrintToItuff###";
-    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
     FailCaptureCount = "###FailCaptureCount###";
+    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
     # DffOperation = ; # Do we need to set?;
     # VFDMconfig = ; # Do we need to set?;
-    ClearVariables = "all,initialize";
+    ItuffNameExtenstion = "###ItuffNameExtenstion###";
+    PrintToItuff = "###PrintToItuff###";
 }
