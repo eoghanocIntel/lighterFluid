@@ -7,9 +7,10 @@ Test iCHVQKTest ###TestName###
     voltage_step_config_file = "###voltage_step_config_file###";
     power_up_level = "BASE::SBF_nom_lvl";
     power_down_level = "BASE::Power_Up_TC_force_0V";
-    preinstance = "";
+    preinstance = "###preinstance###";
     postinstance = "###postinstance###";
-    ifpm_input_file = "";
-    ifpm_modifygroups = "";
-    preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+    ifpm_input_file = "###ifpm_input_file###";
+    ifpm_modifygroups = "###ifpm_modifygroups###";
+    preplist = "###preplist###";
+    mask_pins = "###mask_pins###";
 }

@@ -9,10 +9,10 @@ Test PrimeLSARasterTestMethod ###TestName###
     PrescreenHryFlowToken = "CORE_NOM";
     PrescreenHryFrequencyToken = "800MHz";
     PrescreenMapName = "LSA_CORERF_ATOM";
-    ExecutionMode = ###ExecutionMode###;
-    HryMapPath = ###HryMapPath###;
-    OutputTag = ###OutputTag###;
+    ExecutionMode = "###ExecutionMode###";
+    HryMapPath = "###HryMapPath###";
+    OutputTag = "###OutputTag###";
     PrescreenPrintMode = "CTVMODE";
     RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
-    TfileRasterPrint = ###TfileRasterPrint###;
+    TfileRasterPrint = "###TfileRasterPrint###";
 }

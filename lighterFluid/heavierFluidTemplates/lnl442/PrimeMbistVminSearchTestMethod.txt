@@ -5,7 +5,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
     FeatureSwitchSettings = "";
-    VoltageTargets = "VCCSA_HC";
+    VoltageTargets = "###VoltageTargets###";
     StartVoltages = "###StartVoltages###";
     EndVoltageLimits = "###EndVoltageLimits###";
     StepSize = 0.02;
@@ -17,11 +17,13 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
-    BisrMode = "uncompress"; # Compressed_skippatmod, Off;
-    ItuffNameExtenstion = "";
-    PrintToItuff = "";
-    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
-    FailCaptureCount = 1000000;
-    DffOperation = "";
-    # VFDMconfig = ; # Do we need to set?;
+    BisrMode = "###BisrMode###";
+    ItuffNameExtenstion = "###ItuffNameExtenstion###";
+    PrintToItuff = "###PrintToItuff###";
+    # FuseOutputMode = "#### FuseOutputMode###";
+    FailCaptureCount = "###FailCaptureCount###";
+    DffOperation = "###DffOperation###";
+    # VFDMconfig = "#### VFDMconfig###";
+    # DffOperation = "#### DffOperation###";
+    ClearVariables = "###ClearVariables###";
 }

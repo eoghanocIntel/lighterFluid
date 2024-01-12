@@ -7,6 +7,18 @@
 ##### FUNCTION #####
 ####################
 
+def checkParamExistsInAllTestsOfTheSameTemplate(testInstances, template, param):
+    instanceDict = {};
+    for module in testInstances:
+        for instance_name, testInstance in testInstances[module].items():
+            currTemplate = testInstance.Template
+            if currTemplate == template:
+                instanceDict[testInstance.TestName] = testInstances[module][instance_name];
+        
+    for testInstanceName, testInstance in instanceDict.items():
+        if param not in testInstance.bonusCols:
+            return False
+    return True
 
 def BuildTemplates(testInstanceDict, templateDir):
     # This function should build the test templates and .
@@ -150,7 +162,16 @@ def BuildTemplates(testInstanceDict, templateDir):
                     columnList.append(param);
             else:
                 [element] = templateDict[template]["bonusCols"][param]
-                paramList.append("{0} = {1};".format(param,element));
+
+                isCommon = checkParamExistsInAllTestsOfTheSameTemplate(testInstanceDict, template, param)                
+
+                if isCommon:
+                    paramList.append("{0} = {1};".format(param,element));
+                else:
+                    paramList.append("{0} = \"###{0}###\";".format(param));
+                    if param not in columnList:
+                        columnList.append(param);
+                    
 
         testMiddle = "\n    ".join(paramList);
         finalTest = testStart + testMiddle + testEnd;

@@ -10,5 +10,5 @@ Test MbistRasterTC ###TestName###
     FailuresToCaptureTotal = 1000;
     MaxFailuresPerPatternToItuff = 100;
     MaxFailuresToItuff = 1000;
-    RasterInputFile = ###RasterInputFile###;
+    RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER.json";
 }

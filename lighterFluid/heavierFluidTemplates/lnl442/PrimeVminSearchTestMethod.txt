@@ -7,10 +7,10 @@ Test PrimeVminSearchTestMethod ###TestName###
     EndVoltageLimits = "###EndVoltageLimits###";
     StartVoltages = "###StartVoltages###";
     StepSize = 0.02;
-    VoltageTargets = "VCCSA_HC";
+    VoltageTargets = "###VoltageTargets###";
     PatternNameMap = "9,10,11,12,13,14,15";
     ScoreboardBaseNumber = "###ScoreboardBaseNumber###";
     ExecutionMode = "###ExecutionMode###";
-    SetPointsPlistMode = "Local";
-    SetPointsPreInstance = "";
+    SetPointsPlistMode = "###SetPointsPlistMode###";
+    SetPointsPreInstance = "###SetPointsPreInstance###";
 }

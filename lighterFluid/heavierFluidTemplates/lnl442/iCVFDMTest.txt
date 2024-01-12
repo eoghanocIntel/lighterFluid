@@ -5,6 +5,6 @@ Test iCVFDMTest ###TestName###
     xml_config_file_path = "###xml_config_file_path###";
     descriptor_operation = "REFRESH";
     descriptor_console = "LOCAL";
-    descriptor_ituff = "ENABLE";
+    descriptor_ituff = "###descriptor_ituff###";
     descriptor_results = "ENABLE";
 }
