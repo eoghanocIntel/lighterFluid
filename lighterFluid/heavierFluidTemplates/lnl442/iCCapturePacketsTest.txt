@@ -5,5 +5,5 @@ Test iCCapturePacketsTest ###TestName###
     timings = "###Timings###";
     patlist = "###plist###";
     data_pins = "XXTDO";
-    output_tag = ###output_tag###;
+    output_tag = "###output_tag###";
 }

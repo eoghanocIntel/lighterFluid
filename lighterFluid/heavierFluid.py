@@ -18,21 +18,23 @@ import shutil
 ##### CONFIGURATION #####
 #########################
 definitionDir = r"C:\Users\adambyrn\source\repos\applications.manufacturing.ate-test.torch.client.ptl.sort.ptl-cdie484\Modules";
+#definitionDir = r"C:\Users\adambyrn\source\repos\LNL_CPU_SORT\Modules";
 userName = "adambyrn";
 
 file = "lnlBackConvert.xlsm";
 product = "ptl";
+#product = "lnl442";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
 moduleList.append("arr_common");
+moduleList.append("arr_atom");
 moduleList.append("arr_ccf");
 moduleList.append("arr_core");
 moduleList.append("arr_gfx");
 moduleList.append("arr_soc");
 moduleList.append("arr_vpu");
-moduleList.append("arr_atom");
 #moduleList.append("arr_doe");
 
 #########################
@@ -116,7 +118,8 @@ for module in moduleList:
 
 # Finally we want to create the actual Excel
 
-outFile = outDir + "heavierExcel.xlsx";
+outFile = outDir + "heavierExcel_PTL.xlsx";
+#outFile = outDir + "heavierExcel_LNL.xlsx";
 ExcelWriter.WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstanceDict, flowList);
 
 

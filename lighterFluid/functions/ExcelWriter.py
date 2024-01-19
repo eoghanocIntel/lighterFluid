@@ -107,6 +107,7 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
 
     # After all is said and done we need to do something painful... Open the Excel and Close it again - so that the formulas save properly...
     excel = win32com.client.Dispatch("Excel.Application")
-    workbook = excel.Workbooks.open("C:\\Users\\adambyrn\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel.xlsx")
+   # workbook = excel.Workbooks.open("C:\\Users\\adambyrn\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel_LNL.xlsx")
+    workbook = excel.Workbooks.open("C:\\Users\\adambyrn\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel_PTL.xlsx")
     workbook.Save()
     excel.Quit()

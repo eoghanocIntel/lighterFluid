@@ -2,8 +2,8 @@ Test PrimePatConfigTestMethod ###TestName###
 {
     BypassPort = ###bypassGlobal###;
     ConfigurationFile = "###ConfigurationFile###";
-    SetPointsPlistMode = "###SetPointsPlistMode###";
+    #SetPointsPlistMode = "####SetPointsPlistMode###";
     SetPoint = "###SetPoint###";
-    SetPointsPreInstance = "###SetPointsPreInstance###";
+    #SetPointsPreInstance = "####SetPointsPreInstance###";
     RegEx = "###RegEx###";
 }

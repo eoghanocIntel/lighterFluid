@@ -29,7 +29,7 @@ definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\heavi
 userName = "adambyrn";
 
 #file = "PTLArrayMasterSheet.xlsm";
-file = "heavierExcel.xlsx";
+file = "heavierExcel_PTL.xlsx";
 product = "ptl";
 
 

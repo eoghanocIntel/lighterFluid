@@ -1,6 +1,6 @@
 Test RecoveryBypass ###TestName###
 {
     BypassPort = ###bypassGlobal###;
-    SetName = ###SetName###;
+    SetName = "###SetName###";
     IP = "VPU";
 }

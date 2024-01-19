@@ -1,0 +1,5 @@
+Test PrimeSampleRateTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    SamplingRateValue = "10";
+}
