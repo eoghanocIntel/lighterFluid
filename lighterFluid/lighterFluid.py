@@ -24,19 +24,20 @@ userName = "eoghanoc";
 #userName = "dgiardin";
 # definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 # userName = "rbilei";
-definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
-userName = "adambyrn";
+# definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
+# userName = "adambyrn";
 
 # file = "uriPoC.xlsm";
 # file = "PTLArrayMasterSheet.xlsm";
+file = "LNLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
-#product = "lnl442";
-product = "ptl";
+product = "lnl442";
+# product = "ptl";
 
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
 #userName = "eoghanoc";
-file = "lnlArrayCommon.xlsx";
+# file = "lnlArrayCommon.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
