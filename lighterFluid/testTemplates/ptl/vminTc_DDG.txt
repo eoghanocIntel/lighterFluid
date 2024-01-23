@@ -1,0 +1,31 @@
+Test VminTC ###TestName###
+{
+	BypassPort = ###bypassGlobal###;
+	EndVoltageLimits = "0.85"; 
+	LevelsTc = "###Levels###";
+	Patlist = "###plist###";
+	StartVoltages = "0.7";
+	StepSize = 0.02;
+	TimingsTc = "###Timings###";
+	VoltageTargets = "###Supply###";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	ScoreboardBaseNumber = "###baseNumber###";
+	ExecutionMode = "###SearchMode###";
+	SetPointsPlistMode = "###SetPointsPlistMode###";
+	SetPointsPreInstance = "###SetPointsPreInstance###";
+	FailCaptureCount = toInteger(ARR_MBIST_C816_Specs.ScoreBoardPerPatFailure) * toInteger(ARR_MBIST_C816_Specs.MaxFailCapture);
+	FeatureSwitchSettings = "###FeatureSwitchSettings###";
+	ScoreboardPerPatternFails = toInteger(ARR_MBIST_C816_Specs.ScoreBoardPerPatFailure);
+	ForwardingMode = "###ForwardingMode###";
+	MaxRepetitionCount = 8;
+	PatternNameMap = ARR_MBIST_C816_Specs.Pattern_name_map;
+	PinMap = "ARR_BIG_CORE";
+	RecoveryMode = "###RecoveryMode###";
+	RecoveryOptions = "###RecoveryOptions###";
+	RecoveryTrackingIncoming = ARR_MBIST_C816_Specs.CoreTracker_M;
+	RecoveryTrackingOutgoing = ARR_MBIST_C816_Specs.CoreTracker;
+	ScoreboardEdgeTicks = toInteger(ARR_MBIST_C816_Specs.EdgeTick);
+	ScoreboardMaxFails = toInteger(ARR_MBIST_C816_Specs.MaxFailCapture);
+	SetPointsPlistParamName = "Patlist";
+	TestMode = "Scoreboard";
+}
