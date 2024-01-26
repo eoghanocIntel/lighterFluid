@@ -48,6 +48,26 @@ def parseTestInstanceItem(name, template, block_lines):
 
     return testInstance;
 
+#Via Chip Chat
+def parseSubFlowItem(flow, module):
+    composite = BackConvertComposite.BackConvertComposite()
+    module_upper = module.upper()
+    if flow.startswith(module_upper + "_"):
+        flow = flow[len(module_upper) + 1:]  # remove the module name and underscore
+    
+    composite.Flow = flow
+    composite.Template = "COMPOSITE"
+    composite.TestName = flow
+    tempModule = module.split('_')
+    if len(tempModule) > 1:
+        module = tempModule[1].upper()  # This assumes the format always has two parts
+    else:
+        module = tempModule[0].upper()
+    composite.Module = module
+
+    return composite
+
+"""
 def parseSubFlowItem(flow, module):
     composite = BackConvertComposite.BackConvertComposite();
         
@@ -60,6 +80,7 @@ def parseSubFlowItem(flow, module):
     composite.Module = module;
     
     return composite
+"""        
 
 def parseFlowItem(name, module):
     composite = BackConvertComposite.BackConvertComposite();

@@ -27,9 +27,9 @@ Test VminTC ###TestName###
     TestMode = "MultiVmin";
     VminResult = "###VminResult###";
     VoltageTargets = "###VoltageTargets###";
+    MaxRepetitionCount = 1;
     # TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
     # TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
     #TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
     #TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
-    MaxRepetitionCount = 1;
 }
