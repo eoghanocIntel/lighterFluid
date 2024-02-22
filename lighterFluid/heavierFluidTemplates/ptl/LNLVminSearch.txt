@@ -1,0 +1,18 @@
+Test LNLVminSearch ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    EndVoltageLimits = "1.2";
+    StartVoltages = "0.45";
+    StepSize = 0.02;
+    VoltageTargets = ###VoltageTargets###;
+    PatternNameMap = "9,10,11,12,13,14,15";
+    ScoreboardBaseNumber = ###ScoreboardBaseNumber###;
+    ExecutionMode = "Search";
+    SetPointsPlistMode = ###SetPointsPlistMode###;
+    SetPointsPreInstance = ###SetPointsPreInstance###;
+    DtsConfigName = "ALL";
+    StartIndex = 0;
+}

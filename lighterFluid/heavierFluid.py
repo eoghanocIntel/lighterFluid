@@ -34,7 +34,7 @@ moduleList.append("arr_ccf");
 moduleList.append("arr_core");
 moduleList.append("arr_gfx");
 moduleList.append("arr_soc");
-moduleList.append("arr_vpu");
+moduleList.append("arr_npu");
 #moduleList.append("arr_doe");
 
 #########################
@@ -69,8 +69,8 @@ moduleFlowList = ["TESTPLANSTARTFLOW",
                   "RETURN",
                   "POSTHVQK",
                   "END",
-                  #"ENDTFM",
-                  #"ENDXFM",
+                  "ENDTFM",
+                  "ENDXFM",
                   "EXVF",
                   "FINAL",
                   "ALARM",

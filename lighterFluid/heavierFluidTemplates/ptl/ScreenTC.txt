@@ -1,0 +1,6 @@
+Test ScreenTC ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    ScreenTestSet = "###ScreenTestSet###";
+    ScreenTestsFile = "###ScreenTestsFile###";
+}

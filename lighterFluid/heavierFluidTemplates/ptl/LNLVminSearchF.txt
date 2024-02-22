@@ -13,17 +13,17 @@ Test LNLVminSearchF ###TestName###
     ExecutionMode = "###ExecutionMode###";
     SetPointsPlistMode = "###SetPointsPlistMode###";
     SetPointsPreInstance = "###SetPointsPreInstance###";
-    ResetSeparationMode = "###ResetSeparationMode###";
-    PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
-    TriggerMapName = "###TriggerMapName###";
     VminResultKey = "###VminResultKey###";
-    SetPointsPostInstance = "###SetPointsPostInstance###";
-    DtsConfigName = "###DtsConfigName###";
-    CTVContent = "###CTVContent###";
     PinMap = "CORE";
     RecoveryRule = "###RecoveryRule###";
     TrackingStructure = "CORE";
-    MaxRepetitionCount = "1";
+    MaxRepetitionCount = 1;
     IncomingPinMask = "ENABLED";
     MaxFails = 1;
+    # ResetSeparationMode = "###ResetSeparationMode###";
+    # PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+    # TriggerMapName = "###TriggerMapName###";
+    # SetPointsPostInstance = "###SetPointsPostInstance###";
+    # DtsConfigName = "###DtsConfigName###";
+    # CTVContent = "###CTVContent###";
 }
