@@ -18,6 +18,7 @@ import shutil
 ##### CONFIGURATION #####
 #########################
 definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
+definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid";
 userName = "eoghanoc";
 
 file = "lnlBackConvert.xlsm";
@@ -26,12 +27,12 @@ product = "lnl442";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
-moduleList.append("arr_gfx");
-moduleList.append("arr_atom");
-moduleList.append("arr_ccf");
-moduleList.append("arr_core");
-moduleList.append("arr_soc");
-moduleList.append("arr_vpu");
+# moduleList.append("arr_gfx");
+# moduleList.append("arr_atom");
+# moduleList.append("arr_ccf");
+# moduleList.append("arr_core");
+# moduleList.append("arr_soc");
+# moduleList.append("arr_vpu");
 moduleList.append("arr_common");
 # moduleList.append("arr_doe");
 

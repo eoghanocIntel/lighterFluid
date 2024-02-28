@@ -1,15 +1,12 @@
 Test iCRepairTest ###TestName###
 {
     bypass_global = "###bypassGlobal###";
-    configuration = "###configuration###";
+    configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
     fuse_removal = "Outgoing_Only";
     hry_data_log = "OFF";
-    input_tag = "###input_tag###";
-    map_array = "###map_array###";
-    mapper_file = "###mapper_file###";
-    mode_of_decoding = "###mode_of_decoding###";
-    mode_of_execution = "###mode_of_execution###";
-    mode_of_operation = "###mode_of_operation###";
-    raster_data_log = "###raster_data_log###";
-    redundancy_fuse_active = "###redundancy_fuse_active###";
+    input_tag = "none";
+    map_array = "none";
+    mapper_file = "none";
+    mode_of_decoding = "none";
+    mode_of_operation = "Repair_To_Fuse";
 }
