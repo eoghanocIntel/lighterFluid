@@ -27,9 +27,9 @@ userName = "eoghanoc";
 # definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
 # userName = "adambyrn";
 
-# file = "uriPoC.xlsm";
+file = "uriPoC.xlsm";
 # file = "PTLArrayMasterSheet.xlsm";
-file = "LNLArrayMasterSheet.xlsm";
+# file = "LNLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
 # product = "ptl";
@@ -44,11 +44,11 @@ powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe
 definitionList = [];
 definitionList.append("arr_common");
 definitionList.append("arr_ccf");
-definitionList.append("arr_core");
+# definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
 definitionList.append("arr_vpu");
-definitionList.append("arr_atom");
+# definitionList.append("arr_atom");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
