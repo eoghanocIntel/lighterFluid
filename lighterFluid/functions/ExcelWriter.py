@@ -1,5 +1,6 @@
 import pandas as pd
 import win32com.client
+import os
 
 
 
@@ -146,7 +147,10 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             # Write the column headers with the defined format.
             for col_num, value in enumerate(df.columns.values):
                 worksheet.write(0, col_num, value, header_format)
-                worksheet.autofit()
+                
+                # Only works if XLSXWRITER version is greater than or equal to 3.0.6
+                # Mine is 3.0.3 ;(
+                # worksheet.autofit()
 
             ###END_STYLE                
 
@@ -196,7 +200,7 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                     worksheet.set_row(row_num+1, cell_format=flow_end_format)      
                  
             for i, (passPort) in enumerate(df['passPorts'], start=1):
-                formula_to_write = 'COUNTA(Z{0}:AI{0})'.format(i+1) 
+                formula_to_write = 'COUNTA(AA{0}:AJ{0})'.format(i+1) 
                 worksheet.write_formula(i, df.columns.get_loc('portCount'), formula_to_write);
             
             for i in range(0,10):
@@ -209,7 +213,9 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
 
     # After all is said and done we need to do something painful... Open the Excel and Close it again - so that the formulas save properly...
     excel = win32com.client.Dispatch("Excel.Application")
-   # workbook = excel.Workbooks.open("C:\\Users\\adambyrn\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel_LNL.xlsx")
-    workbook = excel.Workbooks.open("C:\\Users\\adambyrn\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\heavierExcel_PTL.xlsx")
+    # tempOutFile = "C:\\Users\\eoghanoc\\source\\repos\\lighterFluid\\lighterFluid\\heavierFluidOutputs\\lnlBackConvert.xlsx"
+    # workbook = excel.Workbooks.open(tempOutFile)
+    cwd = os.getcwd()
+    workbook = excel.Workbooks.open(cwd + "\\" + outFile)
     workbook.Save()
     excel.Quit()

@@ -119,7 +119,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
     
     block_lines = [];
 
-    binsplitterRegex = ".*::n(\d\d)(\d\d)(\d\d\d)\d_.*";   
+    binsplitterRegex = ".*::([np])(\d\d)(\d\d)(\d\d\d)\d_.*";   
 
     setTestSection = 0;
     setFlowItemSection = 0;
@@ -251,10 +251,14 @@ def parseMtpl(inputFile, module, moduleFlowList):
                     compositeDict[currTest].passPorts.append(currPort);
             
             if line.startswith("IncrementCounters"):
+                if (currTest in ["ALL_CCF_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ","ALL_CORE_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ"]):
+                    blablabla = 1;
                 binDeetz = re.search(binsplitterRegex,line);
-                testInstanceDict[currTest].IB = binDeetz.group(1);
-                testInstanceDict[currTest].FB = binDeetz.group(2);
-                testInstanceDict[currTest].Counter = binDeetz.group(3);
+                if (binDeetz.group(1) == "p"):
+                    testInstanceDict[currTest].WritePassCounter = "TRUE";
+                testInstanceDict[currTest].IB = binDeetz.group(2);
+                testInstanceDict[currTest].FB = binDeetz.group(3);
+                testInstanceDict[currTest].Counter = binDeetz.group(4);
     
             if (line.startswith("GoTo") or line.startswith("Return")):
                 tempLine = line.split(" ")[1].strip(";");

@@ -99,19 +99,18 @@ def flowFileCursion(dataset, rowCount, parent):
 ##############################
 ##### INSTANCE PRINT OUT #####
 ##############################
-def printASmolBoiFlow(currTest, parentModule):
+def printASmolBoiFlow(currTest, currModule):
     
-    module = parentModule;
     parentComposite = currTest.parentComposite;
     testInstance = currTest.TestName;
     x = str(int(float(currTest.flowX) * 150));
     y = str(int(float(currTest.flowY) * 250));
     
     if(parentComposite in protectedFlows):
-        parentComposite = "ARR_" + module + "_" + parentComposite;
+        parentComposite = currModule + "_" + parentComposite;
     
-    flowPrint = "  <FlowItem name=\"ARR_{module}::{parentComposite}.{testInstance}\" X=\"{x}\" Y=\"{y}\" />\n".format(
-        module=module,
+    flowPrint = "  <FlowItem name=\"{currModule}::{parentComposite}.{testInstance}\" X=\"{x}\" Y=\"{y}\" />\n".format(
+        currModule=currModule,
         parentComposite=parentComposite,
         testInstance=testInstance,
         x=x,
@@ -122,19 +121,18 @@ def printASmolBoiFlow(currTest, parentModule):
 #############################
 ##### COMPOSITE WRAPPER #####
 #############################
-def printABigBoiFlow(currComp):
+def printABigBoiFlow(currComp, currModule):
     
-    module = currComp.Module;
     parentComposite = currComp.Parent;
     testInstance = currComp.CompositeName;
     x = str(int(float(currComp.flowX) * 150));
     y = str(int(float(currComp.flowY) * 250));
     
     if(parentComposite in protectedFlows):
-        parentComposite = "ARR_" + module + "_" + parentComposite;
+        parentComposite = currModule + "_" + parentComposite;
 
-    flowPrint = "  <FlowItem name=\"ARR_{module}::{parentComposite}.{testInstance}\" X=\"{x}\" Y=\"{y}\" />\n".format(
-        module=module,
+    flowPrint = "  <FlowItem name=\"{currModule}::{parentComposite}.{testInstance}\" X=\"{x}\" Y=\"{y}\" />\n".format(
+        currModule=currModule,
         parentComposite=parentComposite,
         testInstance=testInstance,
         x=x,
@@ -145,15 +143,15 @@ def printABigBoiFlow(currComp):
 #############################
 ##### PRINT OUT MACHINE #####
 #############################
-def printMeBaby(flowComposite, superString):
+def printMeBaby(flowComposite, superString, currModule):
     
     compositeContents = "";
     for flowItem in flowComposite.Contents:
         
         if (isinstance(flowItem, type(FlowComposite.FlowComposite()))):
-            compositeContents = compositeContents + printABigBoiFlow(flowItem);
+            compositeContents = compositeContents + printABigBoiFlow(flowItem,currModule);
         if (isinstance(flowItem, type(FlowTestInstance.FlowTestInstance()))):
-            compositeContents = compositeContents + printASmolBoiFlow(flowItem, flowComposite.Module);  
+            compositeContents = compositeContents + printASmolBoiFlow(flowItem, currModule);  
     fullComposite = superString + compositeContents;
 
     for flowItem in flowComposite.Contents:
@@ -163,7 +161,7 @@ def printMeBaby(flowComposite, superString):
             # subCompositeString = printMeBaby(flowItem, "");
             # superString = superString + subCompositeString;
     
-            fullComposite = printMeBaby(flowItem, fullComposite);
+            fullComposite = printMeBaby(flowItem, fullComposite, currModule);
             
 
     # superString = superString + fullComposite;
@@ -173,7 +171,7 @@ def printMeBaby(flowComposite, superString):
 ####################
 ##### FUNCTION #####
 ####################
-def flowFileBuilder(dataset):
+def flowFileBuilder(dataset, currModule):
     # This function should build the flow file
     # Input file expectation is that each test will have an associated flowX/flowY.
     
@@ -181,7 +179,7 @@ def flowFileBuilder(dataset):
     outstring = flowBegin;
     
     for flow in flowComposite.Contents:
-        outstring = outstring + printMeBaby(flow, "");
+        outstring = outstring + printMeBaby(flow, "", currModule);
     
     outstring = outstring + flowEnd;
     return outstring;

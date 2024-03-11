@@ -12,7 +12,7 @@ ProgramStyle = Modular;
 ####################
 ##### FUNCTION #####
 ####################
-def importBuilder(dataset, timeStamp):
+def importBuilder(dataset, timeStamp, currModule):
     # This function should build the top section of the mtpl.
     # Mainly it'll build the "Import" section
     
@@ -21,12 +21,12 @@ def importBuilder(dataset, timeStamp):
     importTimeStamp = "# " + timeStamp + "\n";
     
     #currModule = list(set(dataset.Module.dropna()))[0];
-    currModule = dataset.Module[0];
+    # currModule = dataset.Module[0];
 
     #if len(currModule) > 0:
     #    currModule = "COMMON";
-    testPlan = "TestPlan ARR_" + currModule + ";\n";
-    uservar = "Import ARR_" + currModule + ".usrv;\n";
+    testPlan = "TestPlan " + currModule + ";\n";
+    uservar = "Import " + currModule + ".usrv;\n";
     
     importSection = importBegin + importTimeStamp + testPlan + uservar + "\n";
     
@@ -37,14 +37,14 @@ def importBuilder(dataset, timeStamp):
         if (timing.startswith("BASE") or timing == "x"):
             continue
         else:
-            importSection = importSection + "Import ARR_" + currModule + "_timings.tcg;\n";
+            importSection = importSection + "Import " + currModule + "_timings.tcg;\n";
             break
         
     for level in levelsList:
         if (level.startswith("BASE") or level == "x"):
             continue
         else:
-            importSection = importSection + "Import ARR_" + currModule + "_levels.tcg;\n";
+            importSection = importSection + "Import " + currModule + "_levels.tcg;\n";
             break
 
     importSet = set(dataset.Template);

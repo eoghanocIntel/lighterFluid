@@ -57,6 +57,7 @@ def flowCursion(dataset, rowCount):
         currTest.IB = dataset.IB[i];
         currTest.FB = dataset.FB[i];
         currTest.Counter = dataset.Counter[i];
+        currTest.WritePassCounter = dataset.WritePassCounter[i];
         currTest.KillEnabled = dataset.killEnabled[i];
 
         # This is ugly and I hate it but I'm doing it to get this done quick.
@@ -83,7 +84,7 @@ def flowCursion(dataset, rowCount):
 ##############################
 ##### INSTANCE PRINT OUT #####
 ##############################
-def printASmolBoi(currTest, parentModule):
+def printASmolBoi(currTest, currModule):
 
     currKill = currTest.KillEnabled;
     killOrEdc = "";
@@ -125,15 +126,28 @@ def printASmolBoi(currTest, parentModule):
             nextTest = "GoTo " + currTest.PortList[i];
 
         if (str(i) in str(currTest.passPorts)):
-            body = body + """
+            if currTest.WritePassCounter == "FALSE":
+                body = body + """
 		Result {portNo}
 		{{
 			Property PassFail = "Pass";
 			{nextTest};
 		}}""".format(portNo=i, nextTest=nextTest);
+            else:    
+                currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
+                dummyCounter = "p" + currPheoBin + "_pass_" + currTest.TestName + "_" + str(i); 
+                body = body + """
+		Result {portNo}
+		{{
+			Property PassFail = "Pass";
+	        IncrementCounters {currModule}::{dummyCounter};
+			{nextTest};
+		}}""".format(portNo=i, currModule=currModule, dummyCounter=dummyCounter, nextTest=nextTest);
+
+
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + parentModule + "_" + currTest.TestName + "_" + str(i);
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + currModule + "_" + currTest.TestName;
             if (not currKill or currKill == "FALSE"):
                 sharedBin = "##EDC## " + sharedBin;
 
@@ -142,10 +156,10 @@ def printASmolBoi(currTest, parentModule):
         Result {portNo}
         {{
 	        Property PassFail = "Fail";
-	        IncrementCounters ARR_{parentModule}::{dummyCounter};
+	        IncrementCounters {currModule}::{dummyCounter};
 	        {sharedBin};
 			{nextTest};
-        }}""".format(portNo=i, parentModule=parentModule, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
+        }}""".format(portNo=i, currModule=currModule, dummyCounter=dummyCounter, nextTest=nextTest, sharedBin=sharedBin);
 
 
     return header + body + footer;
@@ -200,7 +214,7 @@ def printABigBoi(currComp):
 #############################
 ##### COMPOSITE WRAPPER #####
 #############################
-def printAHugeBoi(currComp, body):
+def printAHugeBoi(currComp, body, currModule):
 
     protectedFlows = ["INIT",
                       "START",
@@ -227,7 +241,7 @@ def printAHugeBoi(currComp, body):
 
     currName = currComp.CompositeName;
     if currComp.CompositeName in protectedFlows:
-        currName = "ARR_" + currComp.Module + "_" + currName + " @" + currName + "_SubFlow";
+        currName = currModule + "_" + currName + " @" + currName + "_SubFlow";
     header = """
 DUTFlow {name}
 {{""".format(name = currName);
@@ -238,7 +252,7 @@ DUTFlow {name}
 #############################
 ##### PRINT OUT MACHINE #####
 #############################
-def printMeBaby(flowComposite, superString):
+def printMeBaby(flowComposite, superString, currModule):
     
     compositeContents = "";
     for flowItem in flowComposite.Contents:
@@ -246,14 +260,14 @@ def printMeBaby(flowComposite, superString):
         if (isinstance(flowItem, type(Composite.Composite()))):
             compositeContents = compositeContents + printABigBoi(flowItem);
         if (isinstance(flowItem, type(TestInstance.TestInstance()))):
-            compositeContents = compositeContents + printASmolBoi(flowItem, flowComposite.Module);  
-    fullComposite = printAHugeBoi(flowComposite, compositeContents);
+            compositeContents = compositeContents + printASmolBoi(flowItem, currModule);  
+    fullComposite = printAHugeBoi(flowComposite, compositeContents, currModule);
     
     for flowItem in flowComposite.Contents:
         if (isinstance(flowItem, type(Composite.Composite()))):
             #print("composite found!");
             #print(flowItem.CompositeName);
-            subCompositeString = printMeBaby(flowItem, "");
+            subCompositeString = printMeBaby(flowItem, "", currModule);
             superString = superString + subCompositeString;
             
 
@@ -264,13 +278,13 @@ def printMeBaby(flowComposite, superString):
 ####################
 ##### FUNCTION #####
 ####################
-def dutflowBuilder(dataset):
+def dutflowBuilder(dataset, currModule):
 
     flowList = set(dataset.Flow);
     
     flowComposite = flowCursion(dataset, 0);
     outstring = "";
     for flow in flowComposite.Contents:
-        outstring = outstring + printMeBaby(flow, "");
+        outstring = outstring + printMeBaby(flow, "", currModule);
 
     return outstring;

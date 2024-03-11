@@ -8,5 +8,6 @@ class TestInstance:
         self.IB = "";
         self.FB = "";
         self.Counter = "";
+        self.WritePassCounter = "FALSE";
         self.KillEnabled = "";
         self.PortList = [];

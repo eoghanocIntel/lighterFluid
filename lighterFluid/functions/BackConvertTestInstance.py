@@ -33,6 +33,7 @@ class BackConvertTestInstance:
         self.IB = "";
         self.FB = "";
         self.Counter = "";
+        self.WritePassCounter = "FALSE";
         self.bypassGlobal = "";
         self.killEnabled = "";
         
