@@ -5,4 +5,5 @@ Test AuxiliaryTC ###TestName###
     ResultToken = "###ResultToken###";
     Storage = "DFF";
     DataType = "String";
+    ResultPort = "###ResultPort###";
 }
