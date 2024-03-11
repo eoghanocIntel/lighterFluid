@@ -89,6 +89,7 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
             #Style Section! Create a style format object for each flow type. We then apply each based on the flow name in the first column of each sheet
             #Composite_BEGIN/END and FLOW_BEGIN/END have bolder colours
             #https://htmlcolorcodes.com/color-names/
+            #https://xlsxwriter.readthedocs.io/format.html#format-methods-and-format-properties
             header_format = workbook.add_format({
                 #'fg_color': 'yellow', # You can change the background color here
                 'bold': True,
