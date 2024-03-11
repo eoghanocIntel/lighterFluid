@@ -57,8 +57,10 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                 
                 elif test in testInstanceDict[module].keys():
                     for col in addedColsList:
-                        if col in testInstanceDict[module][test].bonusCols.keys():
-                            newRow[col] = testInstanceDict[module][test].bonusCols[col].strip("\"");
+                        if col in testInstanceDict[module][test].bonusColsStrings.keys():
+                            newRow[col] = testInstanceDict[module][test].bonusColsStrings[col].strip("\"");
+                        elif col in testInstanceDict[module][test].bonusColsIntegers.keys():
+                            newRow[col] = testInstanceDict[module][test].bonusColsIntegers[col];
                         else:
                             if col in ["passPorts"]:
                                 newRow[col] = ",".join(testInstanceDict[module][test].passPorts).strip("\"");  

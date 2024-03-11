@@ -71,21 +71,29 @@ def BuildTemplates(testInstanceDict, templateDir):
                 templateDict[currTemplate]["Levels"] = set([instance.Levels]);
                 templateDict[currTemplate]["Timings"] = set([instance.Timings]);
                 templateDict[currTemplate]["plist"] = set([instance.plist]);
-                templateDict[currTemplate]["bonusCols"] = {};
+                templateDict[currTemplate]["bonusColsStrings"] = {};
+                templateDict[currTemplate]["bonusColsIntegers"] = {};
                 
-                for bonusCol in instance.bonusCols:
-                    templateDict[currTemplate]["bonusCols"][bonusCol] = set([instance.bonusCols[bonusCol]]);
+                for bonusCol in instance.bonusColsStrings:
+                    templateDict[currTemplate]["bonusColsStrings"][bonusCol] = set([instance.bonusColsStrings[bonusCol]]);
+                for bonusCol in instance.bonusColsIntegers:
+                    templateDict[currTemplate]["bonusColsIntegers"][bonusCol] = set([instance.bonusColsIntegers[bonusCol]]);
 
             else:
                 templateDict[currTemplate]["Levels"].add(instance.Levels);
                 templateDict[currTemplate]["Timings"].add(instance.Timings);
                 templateDict[currTemplate]["plist"].add(instance.plist);
                 
-                for bonusCol in instance.bonusCols:
-                    if bonusCol in templateDict[currTemplate]["bonusCols"].keys():
-                        templateDict[currTemplate]["bonusCols"][bonusCol].add(instance.bonusCols[bonusCol]);
+                for bonusCol in instance.bonusColsStrings:
+                    if bonusCol in templateDict[currTemplate]["bonusColsStrings"].keys():
+                        templateDict[currTemplate]["bonusColsStrings"][bonusCol].add(instance.bonusColsStrings[bonusCol]);
                     else:
-                        templateDict[currTemplate]["bonusCols"][bonusCol] = set([instance.bonusCols[bonusCol]]);
+                        templateDict[currTemplate]["bonusColsStrings"][bonusCol] = set([instance.bonusColsStrings[bonusCol]]);
+                for bonusCol in instance.bonusColsIntegers:
+                    if bonusCol in templateDict[currTemplate]["bonusColsIntegers"].keys():
+                        templateDict[currTemplate]["bonusColsIntegers"][bonusCol].add(instance.bonusColsIntegers[bonusCol]);
+                    else:
+                        templateDict[currTemplate]["bonusColsIntegers"][bonusCol] = set([instance.bonusColsIntegers[bonusCol]]);
     
     # Build the list of parameters called in each template.
     for template in templateDict:
@@ -143,15 +151,30 @@ def BuildTemplates(testInstanceDict, templateDir):
             else:
                 paramList.append("Patlist = \"###plist###\";");
         
-        for param in templateDict[template]["bonusCols"]:
+        fullBonusList = list(templateDict[template]["bonusColsStrings"].keys()) + list(templateDict[template]["bonusColsIntegers"].keys());
+        
+        for param in fullBonusList:
             
-            if (len(templateDict[template]["bonusCols"][param]) > 1):
-                paramList.append("{0} = \"###{0}###\";".format(param));
-                if param not in columnList:
-                    columnList.append(param);
-            else:
-                [element] = templateDict[template]["bonusCols"][param]
-                paramList.append("{0} = {1};".format(param,element));
+            if ((param in templateDict[template]["bonusColsStrings"].keys()) and (param in templateDict[template]["bonusColsIntegers"].keys())):
+                print("how is a param in both lists?")
+                
+            if (param in templateDict[template]["bonusColsStrings"].keys()):
+                if (len(templateDict[template]["bonusColsStrings"][param]) > 1):
+                    paramList.append("{0} = \"###{0}###\";".format(param));
+                    if param not in columnList:
+                        columnList.append(param);
+                else:
+                    [element] = templateDict[template]["bonusColsStrings"][param]
+                    paramList.append("{0} = {1};".format(param,element));
+            
+            if (param in templateDict[template]["bonusColsIntegers"].keys()):
+                if (len(templateDict[template]["bonusColsIntegers"][param]) > 1):
+                    paramList.append("{0} = ###{0}###;".format(param));
+                    if param not in columnList:
+                        columnList.append(param);
+                else:
+                    [element] = templateDict[template]["bonusColsIntegers"][param]
+                    paramList.append("{0} = {1};".format(param,element));
 
         testMiddle = "\n    ".join(paramList);
         finalTest = testStart + testMiddle + testEnd;

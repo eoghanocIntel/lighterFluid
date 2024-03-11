@@ -6,9 +6,9 @@ Test MbistRasterTC ###TestName###
     Patlist = "###plist###";
     CtvCapturePins = "XXTDO";
     EnableRepair = "FALSE";
+    RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER.json";
     FailuresToCapturePerPattern = 100;
     FailuresToCaptureTotal = 1000;
     MaxFailuresPerPatternToItuff = 100;
     MaxFailuresToItuff = 1000;
-    RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER.json";
 }

@@ -9,21 +9,18 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     VoltageTargets = "###VoltageTargets###";
     StartVoltages = "###StartVoltages###";
     EndVoltageLimits = "###EndVoltageLimits###";
-    StepSize = 0.02;
     PatternNameMap = "9,10,11,12,13,14,15";
-    ScoreboardEdgeTicks = 0;
-    MaxRepetitionCount = 0;
     CtvPins = "XXTDO";
     TestMode = "Scoreboard";
     LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
     BisrMode = "uncompress"; # Compressed_skippatmod, Off;
-    FailCaptureCount = "###FailCaptureCount###";
-    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
-    # DffOperation = ; # Do we need to set?;
-    # VFDMconfig = ; # Do we need to set?;
     ItuffNameExtenstion = "###ItuffNameExtenstion###";
     PrintToItuff = "###PrintToItuff###";
     DffOperation = "###DffOperation###";
+    StepSize = 0.02;
+    ScoreboardEdgeTicks = 0;
+    MaxRepetitionCount = 0;
+    FailCaptureCount = ###FailCaptureCount###;
 }

@@ -27,6 +27,8 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.NameEnding = "_".join(nameComponents[10:]);
     
     for line in block_lines:
+        tempLine = re.sub(r';\s*#.*',";",line);
+        
         flowItems = line.strip().rstrip(";").split(' = ');
         if len(flowItems) == 2:
             key = flowItems[0];
@@ -35,6 +37,9 @@ def parseTestInstanceItem(name, template, block_lines):
             # The first item should be "Test BLABLABLA", which doesn't split).
             continue
         
+        if key.startswith("#"):
+            continue
+
         if (key in ["LevelsTc","level"]):
             testInstance.Levels = value;
         elif(key in ["TimingsTc","timings"]):
@@ -44,7 +49,14 @@ def parseTestInstanceItem(name, template, block_lines):
         elif(key in ["BypassPort","bypass_global"]):
             testInstance.bypassGlobal = value;
         else:
-            testInstance.bonusCols[key] = value;
+            if(value.startswith("\"")):
+                testInstance.bonusColsStrings[key] = value;
+            else:
+                try:
+                    testInstance.bonusColsIntegers[key] = int(value);
+                except :
+                    testInstance.bonusColsIntegers[key] = float(value);
+                
 
     return testInstance;
 
