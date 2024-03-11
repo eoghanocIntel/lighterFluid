@@ -64,7 +64,10 @@ def testBuilder(dataset, product):
                 
             if value == "RecString":
                 currValue = currValue.replace('"', '')
-            currTest = currTest.replace(replaceStr,currValue);
+            if value == "TestName":
+                currTest = currTest.replace(replaceStr,currValue.rstrip("_"));
+            else:
+                currTest = currTest.replace(replaceStr,currValue);
 
         testList.append(currTest);
 
