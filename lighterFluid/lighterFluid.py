@@ -38,23 +38,22 @@ product = "lnl442";
 file = "heavierExcel_PTL.xlsx";
 product = "ptl";
 
-
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
 #userName = "eoghanoc";
 # file = "lnlArrayCommon.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
+module = "ARR";
+
 definitionList = [];
-definitionList.append("arr_common");
 definitionList.append("arr_atom");
 definitionList.append("arr_ccf");
-# definitionList.append("arr_core");
+definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
 definitionList.append("arr_vpu");
-# definitionList.append("arr_atom");
-definitionList.append("arr_npu");
+definitionList.append("arr_common");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 

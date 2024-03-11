@@ -8,8 +8,8 @@ Test LNLVminSearchF ###TestName###
     StartVoltages = "###StartVoltages###";
     StepSize = 0.02;
     VoltageTargets = "###VoltageTargets###";
-    PatternNameCounterIndexes = "9,10,11,12,13,14,15";
-    BaseNumbers = "###BaseNumbers###";
+    PatternNameMap = "9,10,11,12,13,14,15";
+    ScoreboardBaseNumber = "###ScoreboardBaseNumber###";
     ExecutionMode = "###ExecutionMode###";
     SetPointsPlistMode = "###SetPointsPlistMode###";
     SetPointsPreInstance = "###SetPointsPreInstance###";
@@ -20,10 +20,10 @@ Test LNLVminSearchF ###TestName###
     SetPointsPostInstance = "###SetPointsPostInstance###";
     DtsConfigName = "###DtsConfigName###";
     CTVContent = "###CTVContent###";
-    PinMap = "CORE";
+    PinMap = "###PinMap###";
     RecoveryRule = "###RecoveryRule###";
-    TrackingStructure = "CORE";
-    MaxRepetitionCount = "1";
-    IncomingPinMask = "ENABLED";
-    MaxFails = 1;
+    TrackingStructure = "###TrackingStructure###";
+    MaxRepetitionCount = "###MaxRepetitionCount###";
+    IncomingPinMask = "###IncomingPinMask###";
+    MaxFails = "###MaxFails###";
 }

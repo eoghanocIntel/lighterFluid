@@ -9,5 +9,5 @@ Test PrimeShmooTestMethod ###TestName###
     XAxisParamType = "###XAxisParamType###";
     YAxisParam = "###YAxisParam###";
     YAxisRange = "###YAxisRange###";
-    YAxisParamType = "LevelsTestCondition";
+    YAxisParamType = "###YAxisParamType###";
 }

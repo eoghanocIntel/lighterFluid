@@ -4,7 +4,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
-    ClearVariables = "all,initialize";
+    ClearVariables = "###ClearVariables###";
     FeatureSwitchSettings = "";
     VoltageTargets = "###VoltageTargets###";
     StartVoltages = "###StartVoltages###";
@@ -20,9 +20,9 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     MbistTestMode = "###MbistTestMode###";
     BisrMode = "###BisrMode###";
     FailCaptureCount = "###FailCaptureCount###";
-    # FuseOutputMode = "Direct_Padding_Left"; # Virtual, Disabled;
-    # DffOperation = ; # Do we need to set?;
-    # VFDMconfig = ; # Do we need to set?;
+    # FuseOutputMode = "#### FuseOutputMode###";
+    # DffOperation = "#### DffOperation###";
+    # VFDMconfig = "#### VFDMconfig###";
     ItuffNameExtenstion = "###ItuffNameExtenstion###";
     PrintToItuff = "###PrintToItuff###";
     DffOperation = "###DffOperation###";

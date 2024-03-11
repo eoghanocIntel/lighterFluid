@@ -11,6 +11,6 @@ Test iCHVQKTest ###TestName###
     postinstance = "###postinstance###";
     ifpm_input_file = "###ifpm_input_file###";
     ifpm_modifygroups = "###ifpm_modifygroups###";
-    preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
-    mask_pins = "G.U.S.HVQK_PIN_MASKING";
+    preplist = "###preplist###";
+    mask_pins = "###mask_pins###";
 }
