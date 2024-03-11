@@ -1,0 +1,13 @@
+Test PrimeShmooTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    XAxisParam = "###XAxisParam###";
+    XAxisRange = "###XAxisRange###";
+    XAxisParamType = "###XAxisParamType###";
+    YAxisParam = "###YAxisParam###";
+    YAxisRange = "###YAxisRange###";
+    YAxisParamType = "LevelsTestCondition";
+}
