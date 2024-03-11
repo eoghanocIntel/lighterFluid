@@ -29,12 +29,13 @@ file2 = "lnlArrayMasterSheet.xlsm";
 file = "heavierExcel.xlsx";
 product = "lnl442";
 
-
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
 #userName = "eoghanoc";
 #file = "lnlArrayCommon.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
+
+module = "ARR";
 
 definitionList = [];
 definitionList.append("arr_atom");
