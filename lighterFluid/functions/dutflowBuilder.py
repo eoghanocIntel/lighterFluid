@@ -133,7 +133,7 @@ def printASmolBoi(currTest, parentModule):
 		}}""".format(portNo=i, nextTest=nextTest);
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + parentModule + "_" + currTest.TestName
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_ARR_" + parentModule + "_" + currTest.TestName + "_" + str(i);
             if (not currKill or currKill == "FALSE"):
                 sharedBin = "##EDC## " + sharedBin;
 
@@ -211,6 +211,7 @@ def printAHugeBoi(currComp, body):
                       "END",
                       "ENDXFM",
                       "ENDTFM",
+                      "EXVF",
                       "FINAL",
                       "SDTSTART",
                       "SDTBEGIN",

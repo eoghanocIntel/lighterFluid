@@ -1,7 +1,7 @@
 Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	EndVoltageLimits = "###EndVoltageLimits###"; 
+	EndVoltageLimits = "###EndVoltage###"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
 	StartVoltages = "###StartVoltages###";
@@ -16,6 +16,7 @@ Test LNLVminSearchF ###TestName###
 	SetPointsPostInstance = "###SetPointsPostInstance###";
 	ResetSeparationMode = "###ResetSeparationMode###";
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
 	DtsConfigName = "###DtsConfigName###";
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";

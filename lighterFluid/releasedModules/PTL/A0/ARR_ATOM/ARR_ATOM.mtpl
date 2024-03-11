@@ -1,0 +1,5958 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+# adambyrn_2024_01_11_14_00_12
+TestPlan ARR_ATOM;
+Import ARR_ATOM.usrv;
+
+Import PrimeLSARasterTestMethod.xml;
+Import PrimePatConfigTestMethod.xml;
+Import PrimeShmooTestMethod.xml;
+Import VminTC.xml;
+Import OASIS_CapturePackets_tt.xml;
+Import OASIS_HSR_tt.xml;
+Import OASIS_HVQK_tt.xml;
+Import OASIS_LYA.xml;
+Import OASIS_Repair_tt.xml;
+Import OASIS_Screen_tt.xml;
+Import OASIS_UserFunc_tt.xml;
+Import OASIS_VFDM_tt.xml;
+
+Counters
+{
+	n90600150_fail_ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ_0,
+	n60600400_fail_SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL_0,
+	n60600410_fail_LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL_0,
+	n60600000_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY_0,
+	n60600000_fail_SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA_0,
+	n60600010_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE_0,
+	n60600020_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_0,
+	n60600030_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE_0,
+	n60600040_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE_0,
+	n60600050_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_0,
+	n60600060_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE_0,
+	n60600070_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE_0,
+	n60600080_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_0,
+	n60600090_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE_0,
+	n60600100_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_0,
+	n60600110_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_0,
+	n60600112_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_2,
+	n60600120_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_0,
+	n60600130_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY_0,
+	n60600200_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY_0,
+	n60600210_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE_0,
+	n60600220_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_0,
+	n60600230_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE_0,
+	n60600240_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE_0,
+	n60600250_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_0,
+	n60600260_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE_0,
+	n60600270_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE_0,
+	n60600280_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_0,
+	n60600290_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE_0,
+	n60600300_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN_0,
+	n60600310_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN_0,
+	n60600312_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN_2,
+	n60600320_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN_0,
+	n60600330_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY_0,
+	n20600000_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY_0,
+	n20600010_fail_LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE_0,
+	n20600020_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_0,
+	n20600030_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE_0,
+	n20600040_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_0,
+	n20600050_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY_0,
+	n20600052_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY_2,
+	n20600060_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE_0,
+	n20600070_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY_0,
+	n20600200_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY_0,
+	n20600210_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER_0,
+	n20600213_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER_3,
+	n20600220_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_0,
+	n20600230_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE_0,
+	n20600240_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM_0,
+	n20600250_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY_0,
+	n20600252_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY_2,
+	n20600260_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE_0,
+	n20600270_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY_0,
+	n20600400_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY_0,
+	n20600410_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER_0,
+	n20600413_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER_3,
+	n60612030_fail_SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_0,
+	n20612000_fail_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0,
+	n61908740_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN_0,
+	n61908742_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN_2,
+	n20600100_fail_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY_0,
+	n20600110_fail_LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE_0,
+	n20600120_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_0,
+	n20600130_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE_0,
+	n20600140_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN_0,
+	n20600150_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN_0,
+	n20600152_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN_2,
+	n20600160_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN_0,
+	n20600300_fail_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY_0,
+	n20600310_fail_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER_0,
+	n20600313_fail_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER_3,
+	n20600320_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_0,
+	n20600330_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE_0,
+	n20600340_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN_0,
+	n20600350_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN_0,
+	n20600352_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN_2,
+	n20600360_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN_0,
+	n20612010_fail_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP_0,
+	n61906020_fail_SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN_0,
+	n61906030_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN_0,
+	n17208000_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0,
+	n17208003_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_3,
+	n17208004_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_4,
+	n17608010_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_0,
+	n17608013_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_3,
+	n17608014_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_4,
+	n17203020_fail_ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0,
+	n17603030_fail_SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_0,
+	n20677000_fail_ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0,
+	n60677010_fail_SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA_0,
+	n17207020_fail_ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0,
+	n17607030_fail_SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA_0,
+	n26203500_fail_ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0,
+	n26603510_fail_SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA_0,
+	n60625000_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_0,
+	n20625010_fail_LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_0,
+	n20625020_fail_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0,
+	n20625030_fail_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM_0,
+	n20625040_fail_CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM_0,
+	n60625100_fail_SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI_0,
+	n20625110_fail_LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI_0,
+	n20625120_fail_LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI_0,
+	n17203100_fail_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM_0,
+	n17603110_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA_0,
+	n17203120_fail_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM_0,
+	n17603130_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA_0,
+	n60626500_fail_SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_0,
+	n60626510_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_0,
+	n20626520_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0,
+	n20626530_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM_0,
+	n20626540_fail_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM_0,
+	n60905170_fail_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED_0,
+	n60905172_fail_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED_2,
+	n60635130_fail_ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM_0,
+	n60635140_fail_SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA_0,
+	n60905180_fail_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED_0,
+	n60905182_fail_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED_2,
+	n60645150_fail_ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM_0,
+	n60645160_fail_SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA_0
+} # End of Test Counter Definition
+
+Test PrimePatConfigTestMethod ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/dummy.setpoints.json";
+	SetPointsPlistMode = "Global";
+	SetPoint = "Dummy";
+	SetPointsPreInstance = "MAarr:atom_clk:800MHz";
+	RegEx = "";
+}
+Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_vccl2_spec";
+	XAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_vccatom_spec";
+	XAxisRange = "0.5:0.05:9"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "LevelsTestCondition";
+}
+Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_ssa_list.xml";
+	hry_execution_mode = "PRE";
+	mode = "HRY";
+	ifpm_input_file = "./Modules/ARR_ATOM/InputFiles/nblatom.xml";
+	ifpm_modifygroups = "bt!nbl!ON";
+}
+Test iCLYATest SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA
+{
+	basenumber = "";
+	bitline_barpin = "XX_CORE_VIEW_LYA_1";
+	bitline_pin = "XX_CORE_VIEW_LYA_0";
+	bypass_global = -1;
+	config_file = "./Modules/ARR_CCFRR/InputFiles/MTL_C0.lya.xml";
+	debug_mode = "DISABLED";
+	execution_mode = "###LYA_execution_mode###";
+	input_string_tag = "###LYA_Tag###";
+	level = "BASE::SBF_nom_lvl";
+	mapper_file = "./Modules/ARR_COMMON_CXX/InputFiles/MTL_ArrayMap.XML";
+	max_lya_count = 40;
+	postinstance = "NHM_UF!SmartTcSetToEnable";
+	pre_pause = 0.0;
+	preinstance = "NHM_UF!SmartTcSetToDisable";
+	target_array = "L2_DAT";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	vcc_maxlevel = 1.0;
+	vcc_pin = "VCCATOM_HV";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE
+{
+	bypass_global = "-1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_data_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_nom_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2DAT";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2DAT";
+	map_array = "l2d";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2DAT";
+	map_array = "l2d";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE
+{
+	bypass_global = "-1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_c6s_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_nom_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2C6S";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2C6S";
+	map_array = "l2c6";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2C6S";
+	map_array = "l2c6";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE
+{
+	bypass_global = "-1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_tsp_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_nom_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2TSP";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2TSP";
+	map_array = "l2tsp";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2TSP";
+	map_array = "l2tsp";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY
+{
+	bypass_global = "-1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.DEFECTREPAIR_ATOM=1";
+}
+Test PrimePatConfigTestMethod SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_ssa_list.xml";
+	hry_execution_mode = "POST";
+	mode = "HRY";
+}
+Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY
+{
+	bypass_global = "1";
+	level = "BASE::SBF_l2_560mV_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_ssa_list.xml";
+	hry_execution_mode = "PRE";
+	mode = "HRY";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE
+{
+	bypass_global = "1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_data_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_l2_560mV_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2DAT";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2DAT";
+	map_array = "l2d";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2DAT";
+	map_array = "l2d";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE
+{
+	bypass_global = "1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_c6s_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_l2_560mV_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2C6S";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2C6S";
+	map_array = "l2c6";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2C6S";
+	map_array = "l2c6";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCCapturePacketsTest SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE
+{
+	bypass_global = "1";
+	patlist = "array_pbist_raster_tito_atom_direct_ssa_l2_tsp_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_l2_560mV_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2TSP";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2TSP";
+	map_array = "l2tsp";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE
+{
+	bypass_global = "1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2TSP";
+	map_array = "l2tsp";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN
+{
+	bypass_global = "1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN
+{
+	bypass_global = "1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.VMINREPAIR=1";
+}
+Test PrimePatConfigTestMethod SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN
+{
+	BypassPort = 1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test iCHSRTest SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY
+{
+	bypass_global = "1";
+	level = "BASE::SBF_l2_560mV_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_ssa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_ssa_list.xml";
+	hry_execution_mode = "POST";
+	mode = "HRY";
+}
+Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_lsa_list.xml";
+	hry_execution_mode = "PRE";
+	mode = "HRY";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE
+{
+	bypass_global = "-1";
+	patlist = "array_pbist_raster_tito_atom_direct_lsa_l2_lru_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_nom_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2LRU";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2LRU";
+	map_array = "l2lru";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "T-File";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2LRU";
+	map_array = "l2lru";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY
+{
+	bypass_global = "-1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.DEFECTREPAIR_ATOM=1";
+}
+Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_lsa_list.xml";
+	hry_execution_mode = "POST";
+	mode = "HRY";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY
+{
+	BypassPort = -1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "PRESCREEN";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_indirect_lsa_repairable_list.xml";
+	OutputTag = "ATOMRF";
+	Patlist = "array_pbist_hry_tito_atom_indirect_lsa_repairable_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "True";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER
+{
+	BypassPort = -1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "RASTER";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
+	OutputTag = "ATOMRF";
+	Patlist = "array_pbist_raster_tito_atom_indirect_lsa_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "True";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "ATOMRF";
+	map_array = "corerfall";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "lsaraster";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "ATOMRF";
+	map_array = "corerfall";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "lsaraster";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY
+{
+	bypass_global = "-1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.DEFECTREPAIR_ATOM=1";
+}
+Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test iCHSRTest LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "array_pbist_hry_tito_atom_indirect_lsa_repairable_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_indirect_lsa_repairable_list.xml";
+	hry_execution_mode = "POST";
+	mode = "HRY";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY
+{
+	BypassPort = -1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "PRESCREEN";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_indirect_lsa_non_repairable_list.xml";
+	OutputTag = "ATOMNONREP";
+	Patlist = "array_pbist_hry_tito_atom_indirect_lsa_non_repairable_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "None";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "RASTER";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
+	OutputTag = "ATOMNONREP";
+	Patlist = "array_pbist_raster_tito_atom_indirect_lsa_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "None";
+}
+Test VminTC SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2101";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "0.45";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_SSA_LFM_PRE_VMIN";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test VminTC ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2100";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:800MHz";
+	StartVoltages = "0.45";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_XSA_LFM_PRE_VMIN";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test iCScreenTest ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetupCustom.txt";
+	screen_custom_setpoint = "DUMMY";
+	preinstance = "";
+	screen_test_set = "LSA_ROM_FORK_VMIN";
+	screen_tests_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetup.txt";
+}
+
+Test iCHSRTest LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_atom_560mV_lvl";
+	patlist = "array_pbist_hry_tito_atom_direct_lsa_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	xml_config_file_path = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_direct_lsa_list.xml";
+	hry_execution_mode = "PRE";
+	mode = "HRY";
+	ifpm_input_file = "";
+	ifpm_modifygroups = "";
+}
+Test iCCapturePacketsTest LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE
+{
+	bypass_global = "-1";
+	patlist = "array_pbist_raster_tito_atom_direct_lsa_l2_lru_list";
+	data_pins = "XXTDO";
+	level = "BASE::SBF_atom_560mV_lvl";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	output_tag = "L2LRU";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2LRU";
+	map_array = "l2lru";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "L2LRU";
+	map_array = "l2lru";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "raster(module0)";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN
+{
+	bypass_global = "-1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.VMINREPAIR=1";
+}
+Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY
+{
+	BypassPort = -1;
+	LevelsTc = "BASE::SBF_atom_560mV_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "PRESCREEN";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_hry_tito_atom_indirect_lsa_repairable_list.xml";
+	OutputTag = "ATOMRF";
+	Patlist = "array_pbist_hry_tito_atom_indirect_lsa_repairable_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "True";
+}
+Test PrimeLSARasterTestMethod LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER
+{
+	BypassPort = -1;
+	LevelsTc = "BASE::SBF_atom_560mV_lvl";
+	MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+	PinMappingSetName = "ATOM_ALL";
+	PrescreenHryFlowToken = "CORE_NOM";
+	PrescreenHryFrequencyToken = "800MHz";
+	PrescreenMapName = "LSA_CORERF_ATOM";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	ExecutionMode = "RASTER";
+	HryMapPath = "./Modules/ARR_ATOM/InputFiles/array_pbist_tito_hry_atom_indirect_lsa_repairable_sort_list.xml";
+	OutputTag = "ATOMRF";
+	Patlist = "array_pbist_raster_tito_atom_indirect_lsa_list";
+	PrescreenPrintMode = "CTVMODE";
+	RasterConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_RasterConfigATOM.json";
+	TfileRasterPrint = "None";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_ATOM/InputFiles/SKT_ATOM_ArrayRepairDefinition.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "ATOMRF";
+	map_array = "corerfall";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "lsaraster";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCRepairTest LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE
+{
+	bypass_global = "-1";
+	configuration = "./Modules/ARR_COMMON/InputFiles/SKT_ATOM_Repair_to_fuse.xml!LNL";
+	fuse_removal = "Outgoing_Only";
+	hry_data_log = "OFF";
+	input_tag = "ATOMRF";
+	map_array = "corerfall";
+	mapper_file = "./Modules/ARR_ATOM/InputFiles/ArrayMap_SKT_ATOM.xml";
+	mode_of_decoding = "lsaraster";
+	mode_of_execution = "Manufacturing";
+	mode_of_operation = "Repair_To_Fuse";
+	raster_data_log = "None";
+	redundancy_fuse_active = "ON";
+}
+Test iCVFDMTest LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN
+{
+	bypass_global = "-1";
+	fuse_module = "ALL";
+	xml_config_file_path = "./Modules/ARR_COMMON/InputFiles/SSKTR_CORE0.vfdm.xml";
+	descriptor_operation = "REFRESH";
+	descriptor_console = "LOCAL";
+	descriptor_ituff = "ENABLE";
+	descriptor_results = "ENABLE";
+}
+Test iCUserFuncTest LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN
+{
+	bypass_global = "-1";
+	function_name = "VFDM_UF!ProcessVFDMOutputs";
+	function_parameter = "hcs_size=ARR_COMMON.I.HCS_SIZE,fds_size=ARR_COMMON.I.FDS_SIZE,WA=disable";
+	postinstance = "GSDS_UF!SetGSDS G.U.S.VMINREPAIR=1";
+}
+Test PrimePatConfigTestMethod LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/ARR_COMMON/InputFiles/cpu_configsetpoint_sort.setpoints.json";
+	SetPoint = "VFDM_SORT";
+	RegEx = "LNL_pre.*_MAarr_.*";
+}
+Test VminTC ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2100";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:800MHz";
+	StartVoltages = "0.45";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_XSA_LFM_PRE_VMIN";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test iCScreenTest SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetupCustom.txt";
+	screen_custom_setpoint = "DUMMY";
+	preinstance = "";
+	screen_test_set = "PRINT_SSA_VMIN";
+	screen_tests_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetup.txt";
+}
+
+Test iCScreenTest ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetupCustom.txt";
+	screen_custom_setpoint = "DUMMY";
+	preinstance = "";
+	screen_test_set = "PRINT_LSA_ROM_VMIN";
+	screen_tests_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetup.txt";
+}
+
+Test iCHVQKTest ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_ATOM_HVQK";
+	patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_ATOM/InputFiles/atom_cache_lsa_rom_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "./Modules/ARR_ATOM/InputFiles/nblatom.xml";
+	ifpm_modifygroups = "bt!nbl!OFF at!nbl!ON";
+}
+Test iCHVQKTest SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA
+{
+	bypass_global = "-1";
+	level = "BASE::SBF_HVQK_SDT_ATOM_HVQK";
+	patlist = "array_pbist_hvqk_tito_atom_ssa_ecc_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	voltage_step_config_file = "./Modules/ARR_ATOM/InputFiles/atom_cache_l2_stress_HOT.hvqk.config.xml";
+	power_up_level = "BASE::SBF_nom_lvl";
+	power_down_level = "BASE::Power_Up_TC_force_0V";
+	preplist = "CPD_DEBUG!EnableDMEMCapture XXTDO";
+	preinstance = "";
+	postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+	ifpm_input_file = "./Modules/ARR_ATOM/InputFiles/nblatom.xml";
+	ifpm_modifygroups = "bt!nbl!OFF at!nbl!ON";
+}
+Test PrimeShmooTestMethod ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccl2_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test VminTC ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2154";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:800MHz";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2155";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test PrimeShmooTestMethod ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccl2_spec";
+	YAxisRange = "0.5:0.05:23"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test VminTC ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2110";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:800MHz";
+	StartVoltages = "ARR_ATOM_XSA_LFM_PRE_VMIN";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_XSA_LFM_POST_VMIN";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2111";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "ARR_ATOM_SSA_LFM_PRE_VMIN";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_SSA_LFM_POST_VMIN";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test VminTC SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2120";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:1700MHz";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test VminTC LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2121";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2122";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2123";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2124";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_pmovi_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2130";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test VminTC LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_pmovi_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2131";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_pmovi_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2132";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2140";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2141";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test VminTC ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2142";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA
+{
+	BypassPort = 1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "SearchWithScoreboard";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2143";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test PrimeShmooTestMethod SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_ssa_ds_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccl2_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_l2_lsa_ds_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_lsa_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_rom_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test PrimeShmooTestMethod CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl";
+	Patlist = "array_pbist_tito_atomclk_sort_lfm_atomcore_ks_cam_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "9e-9:0.5e-9:8"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccatom_spec";
+	YAxisRange = "0.5:0.05:12"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+Test iCScreenTest ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetupCustom.txt";
+	screen_custom_setpoint = "DUMMY";
+	preinstance = "";
+	screen_test_set = "PredictEndHFM";
+	screen_tests_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetup.txt";
+}
+
+Test VminTC ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2150";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:3000MHz";
+	StartVoltages = "ARR_ATOM_XSA_HFM_VMIN_PRED";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_XSA_HFM_END_VMIN";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2151";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "ARR_ATOM_SSA_HFM_VMIN_PRED";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_SSA_HFM_END_VMIN";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+Test iCScreenTest ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED
+{
+	bypass_global = "-1";
+	screen_custom_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetupCustom.txt";
+	screen_custom_setpoint = "DUMMY";
+	preinstance = "";
+	screen_test_set = "PredictEndTFM";
+	screen_tests_file = "./Modules/ARR_ATOM/InputFiles/ATOM_PredictionSetup.txt";
+}
+
+Test VminTC ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_lsa_rom_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2152";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Global";
+	SetPointsPreInstance = "MAarr:atom_clk:3300MHz";
+	StartVoltages = "ARR_ATOM_XSA_TFM_VMIN_PRED";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_XSA_TFM_END_VMIN";
+	VoltageTargets = "VCCATOM_HC";
+}
+
+Test VminTC SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA
+{
+	BypassPort = -1;
+	EndVoltageLimits = "0.85"; 
+	ExecutionMode = "Search";
+	FailCaptureCount = "###FailCaptureCount###";
+	FeatureSwitchSettings = "recovery_update_always,disable_masked_targets,return_on_global_sticky_error";
+	ForwardingMode = "Input";
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "array_pbist_hvqk_tito_atom_ssa_list";
+	PatternNameMap = "9,10,11,12,13,14,15";
+	PinMap = "###PinMap###";
+	RecoveryMode = "RecoveryPort";
+	RecoveryOptions = "TBD";
+	RecoveryTrackingIncoming = "###RecoveryTrackingIncoming###";
+	RecoveryTrackingOutgoing = "###RecoveryTrackingOutgoing###";
+	ScoreboardBaseNumber = "2153";
+	ScoreboardEdgeTicks = "###ScoreboardEdgeTicks###";
+	ScoreboardMaxFails = "###ScoreboardMaxFails###";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPlistMode = "Local";
+	SetPointsPreInstance = "";
+	StartVoltages = "ARR_ATOM_SSA_TFM_VMIN_PRED";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
+	StepSize = 0.02;
+	TestMode = "###TestMode###";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk200_bclk400";
+	#TriggerLevelsCondition = "BASE::SEARCH_VBUMP_CORE_lvl_force_search";
+	#TriggerMap = "FAST_VBUMP_CORE_Search_TriggerMap";
+	VminResult = "ARR_ATOM_SSA_TFM_END_VMIN";
+	VoltageTargets = "VCCATOM_HV";
+}
+
+
+DUTFlow ATOM_PREREPAIR_SHMOOS
+{
+	DUTFlowItem SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600400_fail_SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL_0;
+	        ##EDC## SetBin SoftBins.b60600400_fail_ARR_ATOM_SSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+			GoTo LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+		}
+	}
+	DUTFlowItem LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600410_fail_LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL_0;
+	        ##EDC## SetBin SoftBins.b60600410_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_BEGIN_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow L2_SSA_NOM_REP
+{
+	DUTFlowItem SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600000_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b60600000_fail_ARR_ATOM_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_PRE_HRY;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo L2_SSA_MIN_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600000_fail_SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA_0;
+	        ##EDC## SetBin SoftBins.b60600000_fail_ARR_ATOM_SSA_ATOM_LYA_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_Data_GoodcellLYA;
+			GoTo L2_SSA_MIN_REP;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo L2_SSA_MIN_REP;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600010_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600010_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_CAPTURE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600020_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600020_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600030_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600030_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600040_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600040_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_CAPTURE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600050_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600050_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600060_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600060_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600070_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600070_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_CAPTURE;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600080_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600080_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600090_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600090_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600100_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_0;
+	        ##EDC## SetBin SoftBins.b60600100_fail_ARR_ATOM_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600110_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_0;
+	        ##EDC## SetBin SoftBins.b60600110_fail_ARR_ATOM_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600112_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_2;
+	        ##EDC## SetBin SoftBins.b60600112_fail_ARR_ATOM_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE;
+        }
+	}
+	DUTFlowItem SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600120_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600120_fail_ARR_ATOM_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY;
+		}
+	}
+	DUTFlowItem SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600130_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY_0;
+	        ##EDC## SetBin SoftBins.b60600130_fail_ARR_ATOM_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_NOM_LFM_0800_L2_ALL_POST_HRY;
+			Return 2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+}
+DUTFlow L2_SSA_MIN_REP
+{
+	DUTFlowItem SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600200_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b60600200_fail_ARR_ATOM_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_PRE_HRY;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600210_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600210_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_CAPTURE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600220_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600220_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600230_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600230_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_DAT_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600240_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600240_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_CAPTURE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600250_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600250_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600260_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600260_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_C6S_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+		}
+	}
+	DUTFlowItem SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600270_fail_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b60600270_fail_ARR_ATOM_SSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_CAPTURE;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600280_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b60600280_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+	}
+	DUTFlowItem SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600290_fail_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b60600290_fail_ARR_ATOM_SSA_ATOM_REPAIR_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_TSP_REPAIR_TO_FUSE;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600300_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN_0;
+	        ##EDC## SetBin SoftBins.b60600300_fail_ARR_ATOM_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_MIN;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600310_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN_0;
+	        ##EDC## SetBin SoftBins.b60600310_fail_ARR_ATOM_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600312_fail_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN_2;
+	        ##EDC## SetBin SoftBins.b60600312_fail_ARR_ATOM_SSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_ALL_VFDM_APPLY_MIN;
+			GoTo SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN;
+        }
+	}
+	DUTFlowItem SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600320_fail_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN_0;
+	        ##EDC## SetBin SoftBins.b60600320_fail_ARR_ATOM_SSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_ALL_FUSE_MIN;
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY;
+		}
+	}
+	DUTFlowItem SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60600330_fail_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY_0;
+	        ##EDC## SetBin SoftBins.b60600330_fail_ARR_ATOM_SSA_ATOM_HRY_E_BEGIN_TITO_ATOML_MIN_LFM_0800_L2_ALL_POST_HRY;
+			Return 2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+}
+DUTFlow L2_LRU_NOM_REP
+{
+	DUTFlowItem LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600000_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600000_fail_ARR_ATOM_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_PRE_HRY;
+			GoTo LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE;
+		}
+	}
+	DUTFlowItem LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600010_fail_LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b20600010_fail_ARR_ATOM_LSA_ATOM_CAPTURE_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_CAPTURE;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600020_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b20600020_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600030_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600030_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600040_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_0;
+	        ##EDC## SetBin SoftBins.b20600040_fail_ARR_ATOM_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600050_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY_0;
+	        ##EDC## SetBin SoftBins.b20600050_fail_ARR_ATOM_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600052_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY_2;
+	        ##EDC## SetBin SoftBins.b20600052_fail_ARR_ATOM_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_L2_LRU_VFDM_APPLY;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE;
+        }
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600060_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600060_fail_ARR_ATOM_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_L2_LRU_FUSE;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+		}
+	}
+	DUTFlowItem LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600070_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600070_fail_ARR_ATOM_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_L2_LRU_POST_HRY;
+			Return 2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+}
+DUTFlow RF_NOM_REP
+{
+	DUTFlowItem LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600200_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600200_fail_ARR_ATOM_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_PRE_HRY;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER;
+		}
+	}
+	DUTFlowItem LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600210_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER_0;
+	        ##EDC## SetBin SoftBins.b20600210_fail_ARR_ATOM_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600213_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER_3;
+	        ##EDC## SetBin SoftBins.b20600213_fail_ARR_ATOM_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_RASTER;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600220_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b20600220_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600230_fail_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600230_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_REPAIR_TO_FUSE;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600240_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM_0;
+	        ##EDC## SetBin SoftBins.b20600240_fail_ARR_ATOM_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_VFDM;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600250_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY_0;
+	        ##EDC## SetBin SoftBins.b20600250_fail_ARR_ATOM_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600252_fail_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY_2;
+	        ##EDC## SetBin SoftBins.b20600252_fail_ARR_ATOM_LSA_ATOM_UF_E_BEGIN_X_X_X_X_0800_RF_VFDM_APPLY;
+			GoTo LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE;
+        }
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600260_fail_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600260_fail_ARR_ATOM_LSA_ATOM_VFDM_E_BEGIN_X_X_X_X_0800_RF_FUSE;
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+		}
+	}
+	DUTFlowItem LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600270_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600270_fail_ARR_ATOM_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_POST_HRY;
+			Return 2;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+}
+DUTFlow RF_NON_REPAIRABLE
+{
+	DUTFlowItem LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600400_fail_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600400_fail_ARR_ATOM_LSA_ATOM_HRY_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_HRY;
+			GoTo LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER;
+		}
+	}
+	DUTFlowItem LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600410_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER_0;
+	        ##EDC## SetBin SoftBins.b20600410_fail_ARR_ATOM_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600413_fail_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER_3;
+	        ##EDC## SetBin SoftBins.b20600413_fail_ARR_ATOM_LSA_ATOM_RASTER_E_BEGIN_TITO_ATOM_NOM_LFM_0800_RF_NON_REP_RASTER;
+			Return 1;
+        }
+	}
+}
+DUTFlow ARR_ATOM_BEGIN @BEGIN_SubFlow
+{
+	DUTFlowItem ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n90600150_fail_ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ_0;
+	        SetBin SoftBins.b90600150_fail_ARR_ATOM_ALL_ATOM_PATMOD_K_BEGIN_X_X_X_X_X_RESET_FREQ;
+			GoTo ATOM_PREREPAIR_SHMOOS;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ATOM_PREREPAIR_SHMOOS;
+		}
+	}
+    DUTFlowItem ATOM_PREREPAIR_SHMOOS ATOM_PREREPAIR_SHMOOS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo L2_SSA_NOM_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo L2_SSA_NOM_REP;
+		}
+	}
+    DUTFlowItem L2_SSA_NOM_REP L2_SSA_NOM_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo L2_LRU_NOM_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo L2_LRU_NOM_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo L2_LRU_NOM_REP;
+		}
+	}
+    DUTFlowItem L2_SSA_MIN_REP L2_SSA_MIN_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo L2_LRU_NOM_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo L2_LRU_NOM_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo L2_LRU_NOM_REP;
+		}
+	}
+    DUTFlowItem L2_LRU_NOM_REP L2_LRU_NOM_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo RF_NOM_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo RF_NOM_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo RF_NOM_REP;
+		}
+	}
+    DUTFlowItem RF_NOM_REP RF_NOM_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo RF_NON_REPAIRABLE;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo RF_NON_REPAIRABLE;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo RF_NON_REPAIRABLE;
+		}
+	}
+    DUTFlowItem RF_NON_REPAIRABLE RF_NON_REPAIRABLE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow L2_LRU_MIN_REP
+{
+	DUTFlowItem LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600100_fail_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600100_fail_ARR_ATOM_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_PRE_HRY;
+			GoTo LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE;
+		}
+	}
+	DUTFlowItem LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600110_fail_LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE_0;
+	        ##EDC## SetBin SoftBins.b20600110_fail_ARR_ATOM_LSA_ATOM_CAPTURE_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_CAPTURE;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600120_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b20600120_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600130_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600130_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_L2_LRU_REPAIR_TO_FUSE;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600140_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600140_fail_ARR_ATOM_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600150_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600150_fail_ARR_ATOM_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600152_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN_2;
+	        ##EDC## SetBin SoftBins.b20600152_fail_ARR_ATOM_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_L2_LRU_VFDM_APPLY_MIN;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN;
+        }
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600160_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600160_fail_ARR_ATOM_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_L2_LRU_FUSE_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow RF_MIN_REP
+{
+	DUTFlowItem LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600300_fail_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY_0;
+	        ##EDC## SetBin SoftBins.b20600300_fail_ARR_ATOM_LSA_ATOM_HRY_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_PRE_HRY;
+			GoTo LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER;
+		}
+	}
+	DUTFlowItem LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600310_fail_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER_0;
+	        ##EDC## SetBin SoftBins.b20600310_fail_ARR_ATOM_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600313_fail_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER_3;
+	        ##EDC## SetBin SoftBins.b20600313_fail_ARR_ATOM_LSA_ATOM_RASTER_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_RASTER;
+			Return 1;
+        }
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600320_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_0;
+	        ##EDC## SetBin SoftBins.b20600320_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+	}
+	DUTFlowItem LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600330_fail_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE_0;
+	        ##EDC## SetBin SoftBins.b20600330_fail_ARR_ATOM_LSA_ATOM_REPAIR_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_RF_REPAIR_TO_FUSE;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600340_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600340_fail_ARR_ATOM_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_VFDM_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600350_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600350_fail_ARR_ATOM_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600352_fail_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN_2;
+	        ##EDC## SetBin SoftBins.b20600352_fail_ARR_ATOM_LSA_ATOM_UF_E_PREHVQK_X_X_X_X_0800_RF_VFDM_APPLY_MIN;
+			GoTo LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN;
+        }
+	}
+	DUTFlowItem LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20600360_fail_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN_0;
+	        ##EDC## SetBin SoftBins.b20600360_fail_ARR_ATOM_LSA_ATOM_VFDM_E_PREHVQK_X_X_X_X_0800_RF_FUSE_MIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_PREHVQK @PREHVQK_SubFlow
+{
+	DUTFlowItem SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60612030_fail_SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_0;
+	        SetBin SoftBins.b60612030_fail_ARR_ATOM_SSA_ATOM_VMIN_K_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA;
+			GoTo ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM;
+		}
+	}
+	DUTFlowItem ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20612000_fail_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0;
+	        SetBin SoftBins.b20612000_fail_ARR_ATOM_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM;
+			GoTo ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN;
+		}
+	}
+	DUTFlowItem ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n61908740_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN_0;
+	        ##EDC## SetBin SoftBins.b61908740_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN;
+			GoTo L2_LRU_MIN_REP;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n61908742_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN_2;
+	        ##EDC## SetBin SoftBins.b61908742_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_FORK_VMIN;
+			GoTo L2_LRU_MIN_REP;
+        }
+	}
+    DUTFlowItem L2_LRU_MIN_REP L2_LRU_MIN_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo RF_MIN_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo RF_MIN_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo RF_MIN_REP;
+		}
+	}
+    DUTFlowItem RF_MIN_REP RF_MIN_REP
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP;
+		}
+	}
+	DUTFlowItem ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20612010_fail_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP_0;
+	        SetBin SoftBins.b20612010_fail_ARR_ATOM_ALL_ATOM_VMIN_K_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_POST_REP;
+			GoTo SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN;
+		}
+	}
+	DUTFlowItem SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n61906020_fail_SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN_0;
+	        ##EDC## SetBin SoftBins.b61906020_fail_ARR_ATOM_SSA_ATOM_SCREEN_E_PREHVQK_TITO_ATOML_MIN_LFM_0800_SSA_VMIN;
+			GoTo ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN;
+		}
+	}
+	DUTFlowItem ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n61906030_fail_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN_0;
+	        ##EDC## SetBin SoftBins.b61906030_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_PREHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_VMIN;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO_SDTSTRESS
+{
+	DUTFlowItem ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17203020_fail_ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b17203020_fail_ARR_ATOM_ALL_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17603030_fail_SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_0;
+	        ##EDC## SetBin SoftBins.b17603030_fail_ARR_ATOM_SSA_ATOM_SHMOO_E_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_HOTSTRESS @HOTSTRESS_SubFlow
+{
+	DUTFlowItem ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17208000_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b17208000_fail_ARR_ATOM_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17208003_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_3;
+	        ##EDC## SetBin SoftBins.b17208003_fail_ARR_ATOM_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17208004_fail_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM_4;
+	        ##EDC## SetBin SoftBins.b17208004_fail_ARR_ATOM_ALL_ATOM_HVQK_K_HOTSTRESS_TITO_ATOM_MAX_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+        }
+	}
+	DUTFlowItem SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17608010_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_0;
+	        ##EDC## SetBin SoftBins.b17608010_fail_ARR_ATOM_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+        Result 3
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17608013_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_3;
+	        ##EDC## SetBin SoftBins.b17608013_fail_ARR_ATOM_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+			Return 1;
+        }
+        Result 4
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17608014_fail_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA_4;
+	        ##EDC## SetBin SoftBins.b17608014_fail_ARR_ATOM_SSA_ATOM_HVQK_K_HOTSTRESS_TITO_ATOML_MAX_LFM_0800_SSA;
+			Return 1;
+        }
+	}
+    DUTFlowItem SHMOO_SDTSTRESS SHMOO_SDTSTRESS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SDTEND_SHMOO
+{
+	DUTFlowItem ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17207020_fail_ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b17207020_fail_ARR_ATOM_ALL_ATOM_SHMOO_E_SDTEND_TITO_ATOM_MAX_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17607030_fail_SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA_0;
+	        ##EDC## SetBin SoftBins.b17607030_fail_ARR_ATOM_SSA_ATOM_SHMOO_E_SDTEND_TITO_ATOML_MAX_LFM_0800_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_SDTEND @SDTEND_SubFlow
+{
+	DUTFlowItem ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20677000_fail_ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0;
+	        SetBin SoftBins.b20677000_fail_ARR_ATOM_ALL_ATOM_VMIN_K_SDTEND_TITO_ATOM_MIN_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60677010_fail_SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA_0;
+	        SetBin SoftBins.b60677010_fail_ARR_ATOM_SSA_ATOM_VMIN_K_SDTEND_TITO_ATOML_MIN_LFM_0800_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SDTEND_SHMOO SDTEND_SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_POSTHVQK @POSTHVQK_SubFlow
+{
+	DUTFlowItem ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n26203500_fail_ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM_0;
+	        SetBin SoftBins.b26203500_fail_ARR_ATOM_ALL_ATOM_VMIN_K_POSTHVQK_TITO_ATOM_MIN_LFM_0800_LSA_ROM;
+			GoTo SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n26603510_fail_SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA_0;
+	        SetBin SoftBins.b26603510_fail_ARR_ATOM_SSA_ATOM_VMIN_K_POSTHVQK_TITO_ATOML_MIN_LFM_0800_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow KS
+{
+	DUTFlowItem SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60625000_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_0;
+	        SetBin SoftBins.b60625000_fail_ARR_ATOM_SSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625010_fail_LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_0;
+	        SetBin SoftBins.b20625010_fail_ARR_ATOM_LSA_ATOM_VCHK_K_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625020_fail_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0;
+	        SetBin SoftBins.b20625020_fail_ARR_ATOM_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625030_fail_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM_0;
+	        SetBin SoftBins.b20625030_fail_ARR_ATOM_LSA_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_ROM;
+			GoTo CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM;
+		}
+	}
+	DUTFlowItem CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625040_fail_CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM_0;
+	        SetBin SoftBins.b20625040_fail_ARR_ATOM_CAM_ATOM_VCHK_K_END_TITO_ATOM_NOM_LFM_1700_CAM;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow PMOVI
+{
+	DUTFlowItem SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60625100_fail_SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b60625100_fail_ARR_ATOM_SSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_PMOVI;
+			GoTo LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625110_fail_LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b20625110_fail_ARR_ATOM_LSA_ATOM_VCHK_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_PMOVI;
+			GoTo LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI;
+		}
+	}
+	DUTFlowItem LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20625120_fail_LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI_0;
+	        ##EDC## SetBin SoftBins.b20625120_fail_ARR_ATOM_LSA_ATOM_VCHK_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_PMOVI;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow VMAX
+{
+	DUTFlowItem ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17203100_fail_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b17203100_fail_ARR_ATOM_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_LFM_1700_LSA_ROM;
+			GoTo SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17603110_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA_0;
+	        ##EDC## SetBin SoftBins.b17603110_fail_ARR_ATOM_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_LFM_1700_SSA;
+			GoTo ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM;
+		}
+	}
+	DUTFlowItem ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17203120_fail_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b17203120_fail_ARR_ATOM_ALL_ATOM_VCHK_K_END_TITO_ATOM_MAX_HFM_3900_LSA_ROM;
+			GoTo SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n17603130_fail_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA_0;
+	        ##EDC## SetBin SoftBins.b17603130_fail_ARR_ATOM_SSA_ATOM_VCHK_K_END_TITO_ATOML_MAX_HFM_3900_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SHMOO
+{
+	DUTFlowItem SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60626500_fail_SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL_0;
+	        ##EDC## SetBin SoftBins.b60626500_fail_ARR_ATOM_SSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_ALL;
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+		}
+	}
+	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60626510_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU_0;
+	        ##EDC## SetBin SoftBins.b60626510_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOML_NOM_LFM_1700_L2_LRU;
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+		}
+	}
+	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20626520_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL_0;
+	        ##EDC## SetBin SoftBins.b20626520_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_RF_ALL;
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
+		}
+	}
+	DUTFlowItem LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20626530_fail_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM_0;
+	        ##EDC## SetBin SoftBins.b20626530_fail_ARR_ATOM_LSA_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_ROM;
+			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
+		}
+	}
+	DUTFlowItem CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n20626540_fail_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM_0;
+	        ##EDC## SetBin SoftBins.b20626540_fail_ARR_ATOM_CAM_ATOM_SHMOO_E_END_TITO_ATOM_NOM_LFM_1700_CAM;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_END @END_SubFlow
+{
+    DUTFlowItem KS KS
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo PMOVI;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PMOVI;
+		}
+	}
+    DUTFlowItem PMOVI PMOVI
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo VMAX;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAX;
+		}
+	}
+    DUTFlowItem VMAX VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+    DUTFlowItem SHMOO SHMOO
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_ENDTFM @ENDTFM_SubFlow
+{
+	DUTFlowItem ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60905170_fail_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED_0;
+	        ##EDC## SetBin SoftBins.b60905170_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED;
+			GoTo ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60905172_fail_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED_2;
+	        ##EDC## SetBin SoftBins.b60905172_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_ENDTFM_X_X_X_HFM_SET_VMIN_PRED;
+			GoTo ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM;
+        }
+	}
+	DUTFlowItem ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60635130_fail_ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM_0;
+	        ##EDC## SetBin SoftBins.b60635130_fail_ARR_ATOM_ALL_ATOM_VMIN_K_ENDTFM_TITO_ATOM_NOM_HFM_3000_LSA_ROM;
+			GoTo SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60635140_fail_SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA_0;
+	        ##EDC## SetBin SoftBins.b60635140_fail_ARR_ATOM_SSA_ATOM_VMIN_K_ENDTFM_TITO_ATOML_MIN_HFM_3000_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ENDHFM
+{
+	DUTFlowItem ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60905180_fail_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED_0;
+	        ##EDC## SetBin SoftBins.b60905180_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED;
+			GoTo ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM;
+		}
+        Result 2
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60905182_fail_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED_2;
+	        ##EDC## SetBin SoftBins.b60905182_fail_ARR_ATOM_ALL_ATOM_SCREEN_E_ENDHFM_X_X_X_TFM_SET_VMIN_PRED;
+			GoTo ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM;
+        }
+	}
+	DUTFlowItem ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60645150_fail_ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM_0;
+	        SetBin SoftBins.b60645150_fail_ARR_ATOM_ALL_ATOM_VMIN_K_ENDHFM_TITO_ATOM_NOM_TFM_3300_LSA_ROM;
+			GoTo SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA;
+		}
+	}
+	DUTFlowItem SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA 
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+	        IncrementCounters ARR_ATOM::n60645160_fail_SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA_0;
+	        SetBin SoftBins.b60645160_fail_ARR_ATOM_SSA_ATOM_VMIN_K_ENDHFM_TITO_ATOML_MIN_TFM_3300_SSA;
+			Return 1;
+        }
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow ARR_ATOM_EXVF @EXVF_SubFlow
+{
+    DUTFlowItem ENDTFM ENDTFM
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo ENDHFM;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ENDHFM;
+		}
+	}
+    DUTFlowItem ENDHFM ENDHFM
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+        Result 0
+        {
+	        Property PassFail = "Fail";
+			GoTo ;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo ;
+		}
+	}
+}

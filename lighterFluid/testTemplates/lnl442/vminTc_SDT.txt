@@ -4,7 +4,7 @@ Test LNLVminSearchF ###TestName###
 	EndVoltageLimits = "1.2"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
-	StartVoltages = "0.45";
+	StartVoltages = "0.42";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";
@@ -16,5 +16,6 @@ Test LNLVminSearchF ###TestName###
 	DtsConfigName = "###DtsConfigName###";
 	ResetSeparationMode = "###ResetSeparationMode###";
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
+	TriggerMapName = "###TriggerMapName###";
 	CTVContent = ###CTVContent###;
 }

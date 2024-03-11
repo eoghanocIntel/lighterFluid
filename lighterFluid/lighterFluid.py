@@ -24,14 +24,23 @@ userName = "eoghanoc";
 # userName = "dgiardin";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
+#definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
+definitionDir = r"C:\Users\adambyrn\source\repos\lighterFluid\lighterFluid\heavierFluidOutputs";
+userName = "adambyrn";
 
-file2 = "lnlArrayMasterSheet.xlsm";
-file = "heavierExcel.xlsx";
+file = "uriPoC.xlsm";
+# file = "PTLArrayMasterSheet.xlsm";
+# file = "LNLArrayMasterSheet.xlsm";
+# file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
+# product = "ptl";
+#file = "PTLArrayMasterSheet.xlsm";
+file = "heavierExcel_PTL.xlsx";
+product = "ptl";
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
 #userName = "eoghanoc";
-#file = "lnlArrayCommon.xlsx";
+# file = "lnlArrayCommon.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
@@ -68,9 +77,9 @@ fileToUse = outDir + file;
 if not os.path.exists(outDir):
     os.makedirs(outDir);
 
-#shutil.copyfile(definitionDir + "\\" + file, fileToUse)
-inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
-# inFile = definitionDir + "\\" + file;
+shutil.copyfile(definitionDir + "\\" + file, fileToUse)
+#inFile = "heavierFluidOutputs\\heavierExcel.xlsx";
+inFile = definitionDir + "\\" + file;
 
 
 #subprocess.call(["dir"], shell=True);

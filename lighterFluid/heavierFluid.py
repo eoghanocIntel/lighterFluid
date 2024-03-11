@@ -17,12 +17,16 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
+definitionDir = r"C:\Users\adambyrn\source\repos\applications.manufacturing.ate-test.torch.client.ptl.sort.ptl-cdie484\Modules";
+#definitionDir = r"C:\Users\adambyrn\source\repos\LNL_CPU_SORT\Modules";
+userName = "adambyrn";
 definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
 definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid";
 userName = "eoghanoc";
 
 file = "lnlBackConvert.xlsm";
-product = "lnl442";
+product = "ptl";
+#product = "lnl442";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
@@ -70,6 +74,7 @@ moduleFlowList = ["TESTPLANSTARTFLOW",
                   "END",
                   "ENDTFM",
                   "ENDXFM",
+                  "EXVF",
                   "FINAL",
                   "ALARM",
                   "STARTFAILFLOW",
@@ -116,7 +121,8 @@ for module in moduleList:
 
 # Finally we want to create the actual Excel
 
-outFile = outDir + "heavierExcel.xlsx";
+outFile = outDir + "heavierExcel_PTL.xlsx";
+#outFile = outDir + "heavierExcel_LNL.xlsx";
 ExcelWriter.WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstanceDict, flowList);
 
 
