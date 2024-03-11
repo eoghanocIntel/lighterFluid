@@ -27,8 +27,8 @@ userName = "eoghanoc";
 # definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
 # userName = "adambyrn";
 
-file = "uriPoC.xlsm";
-# file = "PTLArrayMasterSheet.xlsm";
+# file = "uriPoC.xlsm";
+file = "PTLArrayMasterSheet.xlsm";
 # file = "LNLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
