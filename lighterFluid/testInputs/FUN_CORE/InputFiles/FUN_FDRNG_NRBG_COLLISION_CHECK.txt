@@ -1,0 +1,19 @@
+START_SCREEN:DRBG_FNCOLLISION_COMPARE
+#RunOn : TestName	: DataType	: ParamType	: Param1				: Operation	: ParamType : Param2				: TmpStore	: OnTrue 	: OnFalse
+EXEC   : Check1		: STRING 	: GSDS		: U.S.FNCOLLISION1		: ==		: GSDS   	: U.S.FNCOLLISION2	    : -			: 2			: Check2
+EXEC   : Check2		: STRING 	: GSDS		: U.S.FNCOLLISION1		: ==		: GSDS   	: U.S.FNCOLLISION3	    : -			: 2			: Check3
+EXEC   : Check3		: STRING 	: GSDS		: U.S.FNCOLLISION1		: ==		: GSDS   	: U.S.FNCOLLISION4	    : -			: 2			: Check4
+
+EXEC   : Check4		: STRING 	: GSDS		: U.S.FNCOLLISION2		: ==		: GSDS   	: U.S.FNCOLLISION1	    : -			: 2			: Check5
+EXEC   : Check5		: STRING 	: GSDS		: U.S.FNCOLLISION2		: ==		: GSDS   	: U.S.FNCOLLISION3	    : -			: 2			: Check6
+EXEC   : Check6		: STRING 	: GSDS		: U.S.FNCOLLISION2		: ==		: GSDS   	: U.S.FNCOLLISION4	    : -			: 2			: Check7
+
+EXEC   : Check7		: STRING 	: GSDS		: U.S.FNCOLLISION3		: ==		: GSDS   	: U.S.FNCOLLISION1	    : -			: 2			: Check8
+EXEC   : Check8		: STRING 	: GSDS		: U.S.FNCOLLISION3		: ==		: GSDS   	: U.S.FNCOLLISION2	    : -			: 2			: Check9
+EXEC   : Check9		: STRING 	: GSDS		: U.S.FNCOLLISION3		: ==		: GSDS   	: U.S.FNCOLLISION4	    : -			: 2			: Check10
+
+EXEC   : Check10		: STRING 	: GSDS		: U.S.FNCOLLISION4		: ==		: GSDS   	: U.S.FNCOLLISION1	    : -			: 2			: Check11
+EXEC   : Check11		: STRING 	: GSDS		: U.S.FNCOLLISION4		: ==		: GSDS   	: U.S.FNCOLLISION2	    : -			: 2			: Check12
+EXEC   : Check12		: STRING 	: GSDS		: U.S.FNCOLLISION4		: ==		: GSDS   	: U.S.FNCOLLISION3	    : -			: 2			: 1
+
+END_SCREEN

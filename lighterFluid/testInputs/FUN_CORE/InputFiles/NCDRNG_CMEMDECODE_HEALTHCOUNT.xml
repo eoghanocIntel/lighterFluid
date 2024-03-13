@@ -1,0 +1,27 @@
+<cmem_setup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GEN_cmemDecode_tt.xsd">
+  <set name="NCDRNG_ES">
+    <pin name="XXTDO" expected_bits="18">
+      <token name="DRNG_HEALTH_COUNT_NOXOR">
+        <bits>8-0</bits>
+        <base>10</base>
+        <limit_min>64</limit_min>
+        <limit_max>256</limit_max>
+        <ituff>
+          <tname usetestname="ALWAYS">DRNG_HEALTH_COUNT_NOXOR</tname>
+          <result>mrslt</result>
+        </ituff>
+      </token>
+
+      <token name="DRNG_HEALTH_COUNT_XOR">
+        <bits>17-9</bits>
+        <base>10</base>
+        <limit_min>200</limit_min>
+        <limit_max>256</limit_max>
+        <ituff>
+          <tname usetestname="ALWAYS">DRNG_HEALTH_COUNT_XOR</tname>
+          <result>mrslt</result>
+        </ituff>
+      </token>
+    </pin>
+  </set>
+</cmem_setup>

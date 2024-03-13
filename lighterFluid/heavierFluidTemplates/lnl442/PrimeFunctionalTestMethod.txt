@@ -4,4 +4,8 @@ Test PrimeFunctionalTestMethod ###TestName###
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
+    FailuresToCaptureTotal = 10;
+    FailuresToCapturePerPattern = 2;
+    MaxFailuresToItuff = 1;
+    MaxFailuresPerPatternToItuff = 0;
 }

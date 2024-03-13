@@ -1,0 +1,1443 @@
+{
+  "Configurations": [
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_BCLK_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__BCLK_DIVIDER_SEL_CONFIG_BCLK_DIVIDER_SEL"
+          ],
+          "EndAddressOffset": [
+            1
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_BCLK_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__BCLK_DIVIDER_SEL_CONFIG_BCLK_DIVIDER_SEL"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_BCLK_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__BCLK_DIVIDER_SEL_CONFIG_BCLK_DIVIDER_SEL"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMAX"
+          ],
+          "EndAddressOffset": [
+            6
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMAX"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMAX"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMIN"
+          ],
+          "EndAddressOffset": [
+            6
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMIN"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_vpu_clk_FuseOverrideString__patmod_in__vpu_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_VPU_FMIN"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_vpu_tile_dis_FuseOverrideString__patmod_in__vpu_tile_dis_VPU_BTRS_FUSE_VPU_BTRS_FUSE_VPU_TILE_SKU"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_vpu_tile_dis_FuseOverrideString__patmod_in__vpu_tile_dis_VPU_BTRS_FUSE_VPU_BTRS_FUSE_VPU_TILE_SKU"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_vpu_tile_dis_FuseOverrideString__patmod_in__vpu_tile_dis_VPU_BTRS_FUSE_VPU_BTRS_FUSE_VPU_TILE_SKU"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_display_clk_Config_GDM_Reg_for_IPs_Reset__patmod_in__display_clk_display_clk"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_display_clk_Config_GDM_Reg_for_IPs_Reset__patmod_in__display_clk_display_clk"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_display_clk_Config_GDM_Reg_for_IPs_Reset__patmod_in__display_clk_display_clk"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_CRO_CLK_OVRD_CONFIG_SET_BCLK_PLL_MODE__patmod_in__CRO_CLK_OVRD_CONFIG_CRO_CLK_OVRD"
+          ],
+          "EndAddressOffset": [
+            1
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_CRO_CLK_OVRD_CONFIG_SET_BCLK_PLL_MODE__patmod_in__CRO_CLK_OVRD_CONFIG_CRO_CLK_OVRD"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_CRO_CLK_OVRD_CONFIG_SET_BCLK_PLL_MODE__patmod_in__CRO_CLK_OVRD_CONFIG_CRO_CLK_OVRD"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE2_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "EndAddressOffset": [
+            8
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE2_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE2_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE1_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "EndAddressOffset": [
+            8
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE1_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE1_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE0_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "EndAddressOffset": [
+            8
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE0_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE0_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE3_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "EndAddressOffset": [
+            8
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE3_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_clk_FuseOverrideString__patmod_in__core_clk_CORE3_FUSE_CORE_FUSE_CORE_FUSE_CORE_FUSE_PMA_BOOT_RATIO_FUSE"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MIN"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MIN"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MIN"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MAX"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MAX"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ps_clk_FuseOverrideString__patmod_in__ps_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_PS_RATIO_MAX"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ab63c328_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ab63c328_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ab63c328_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "EndAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_d37d4f42_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_d37d4f42_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_TAP_ALL_Mft_c_08_RAGN_d37d4f42_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_8ae5fe60_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_8ae5fe60_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_8ae5fe60_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "EndAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_c1b9bc0c_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_c1b9bc0c_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_TAP_ALL_Mft_c_08_RAGN_c1b9bc0c_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_bee2d6fb_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_bee2d6fb_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_bee2d6fb_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_191e55d5_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_191e55d5_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_191e55d5_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ec7b8831_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ec7b8831_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_ec7b8831_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_FAB_CTF_ALL"
+          ],
+          "EndAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_0fa3788b_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_FAB_CTF_ALL_Mft_c_08_RAGN_0fa3788b_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_FAB_CTF_ALL_Mft_c_08_RAGN_0fa3788b_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "EndAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_2883c1cd_patmod"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_com_A_0B_F_0"
+          ],
+          "StartAddress": [
+            "CPU_TAP_ALL_Mft_c_08_RAGN_2883c1cd_patmod"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "INSTRUCTION"
+        }
+      ],
+      "Name": "MfunIa_CPU_TAP_ALL_Mft_c_08_RAGN_2883c1cd_patmod"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MIN"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MIN"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MIN"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MAX"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MAX"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_is_clk_FuseOverrideString__patmod_in__is_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IPU_IS_RATIO_MAX"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_CD2DPLL_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_CD2DPLL_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_CD2DPLL_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_CD2DPLL_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_CD2DPLL_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_d2d_clk_FuseOverrideString__patmod_in__d2d_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_CD2DPLL_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P0_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P0_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P0_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P1_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P1_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_P1_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_PN_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_PN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_PN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_MIN_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_MIN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_gt_clk_FuseOverrideString__patmod_in__gt_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_GT_MIN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_MIN_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_MIN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_MIN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_PN_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_PN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_atom_clk_FuseOverrideString__patmod_in__atom_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_IA_PN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_keep_pcode_alive_Config_Pcode_Run_For_Hvm_Reset__patmod_in__keep_pcode_alive_KEEP_PCODE_ALIVE"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_keep_pcode_alive_Config_Pcode_Run_For_Hvm_Reset__patmod_in__keep_pcode_alive_KEEP_PCODE_ALIVE"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_keep_pcode_alive_Config_Pcode_Run_For_Hvm_Reset__patmod_in__keep_pcode_alive_KEEP_PCODE_ALIVE"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_XTAL_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__XTAL_DIVIDER_SEL_CONFIG_XTAL_DIVIDER_SEL"
+          ],
+          "EndAddressOffset": [
+            2
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_XTAL_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__XTAL_DIVIDER_SEL_CONFIG_XTAL_DIVIDER_SEL"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_XTAL_DIVIDER_SEL_CONFIG_CLK_AND_MUX_CONFIGURATION__patmod_in__XTAL_DIVIDER_SEL_CONFIG_XTAL_DIVIDER_SEL"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_MIN_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_MIN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_MIN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_PN_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_PN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_PN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P1_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P1_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P1_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P0_RATIO"
+          ],
+          "EndAddressOffset": [
+            5
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010U1D0w_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081x04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P0_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_ring_clk_FuseOverrideString__patmod_in__ring_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_RING_P0_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_NOCPLL_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_NOCPLL_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MAX_NOCPLL_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_NOCPLL_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_NOCPLL_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_noc_clk_FuseOverrideString__patmod_in__noc_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MIN_NOCPLL_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE31"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE31"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE31"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3__patmod_in__core_disable_ucode_run_core3_CORE_CONFIG_REQUEST_BOOTFSM_CORE3"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE21"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE21"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE21"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2__patmod_in__core_disable_ucode_run_core2_CORE_CONFIG_REQUEST_BOOTFSM_CORE2"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE11"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE11"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE11"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1__patmod_in__core_disable_ucode_run_core1_CORE_CONFIG_REQUEST_BOOTFSM_CORE1"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE01"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE01"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE01"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0"
+          ],
+          "EndAddressOffset": [
+            0
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0__patmod_in__core_disable_ucode_run_core0_CORE_CONFIG_REQUEST_BOOTFSM_CORE0"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P0_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P0_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P0_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_MIN_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_MIN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_MIN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_PN_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_PN_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_PN_RATIO"
+    },
+    {
+      "ConfigurationElement": [
+        {
+          "EndAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P1_RATIO"
+          ],
+          "EndAddressOffset": [
+            7
+          ],
+          "IsChannelLink": false,
+          "PatternsRegEx": [
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x081n04010s0i0v_Mfun_LA2P_HDMT2_hvm__0",
+            "LNL_pre_L9999991_A_C130410505a18axgh1904x041n04010R1A0l_Mfun_LA2P_HDMT2_hvm__0"
+          ],
+          "Pin": [
+            "XXTDI"
+          ],
+          "StartAddress": [
+            "patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P1_RATIO"
+          ],
+          "StartAddressOffset": [
+            0
+          ],
+          "Type": "PINDATA"
+        }
+      ],
+      "Name": "MfunIa_patmod_media_clk_FuseOverrideString__patmod_in__media_clk_PUNIT_FUSES_PUNIT_FUSES_FW_FUSES_MEDIA_P1_RATIO"
+    }
+  ]
+}

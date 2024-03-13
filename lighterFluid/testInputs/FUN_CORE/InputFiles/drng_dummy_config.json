@@ -1,0 +1,24 @@
+{
+  "SetPoints": [
+    {
+      "Name": "SetPoint1",
+      "Configurations": [
+        {
+          "Configuration": "test1",
+          "Data": "1010"
+        },
+        {
+          "Configuration": "test3",
+          "Data": "1+"
+        },
+        {
+          "Configuration": "test2"
+        },
+        {
+          "Configuration": "test4",
+          "ConfigurationElement": "subTest1",
+          "Data": "1010"
+        }
+      ]
+    }
+}

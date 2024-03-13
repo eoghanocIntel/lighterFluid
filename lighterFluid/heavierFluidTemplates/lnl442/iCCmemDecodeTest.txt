@@ -1,0 +1,9 @@
+Test iCCmemDecodeTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    config_file = "./Modules/FUN_CORE/InputFiles/DRNG_CMEMDECODE_COMPUTE_MC.xml";
+    config_set = "DRNG_ES";
+}

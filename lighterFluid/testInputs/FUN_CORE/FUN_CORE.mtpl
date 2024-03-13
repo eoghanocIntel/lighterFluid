@@ -1,0 +1,4250 @@
+
+Version 1.0;
+
+ProgramStyle = Modular;
+
+TestPlan FUN_CORE;
+
+Import PrimeVminSearchTestMethod.xml;
+Import PrimeVminSearchTestMethodCommonParams.xml;
+Import PrimePatConfigTestMethod.xml;
+Import PrimeFunctionalTestMethod.xml;
+Import PrimeFunctionalTestMethodCommonParams.xml;
+Import PrimeCtvDecoderTestMethod.xml;
+Import ScreenTC.xml;
+Import OASIS_CmemDecode_tt.xml;
+Import NAPBISTCallback.xml;
+Import PrimeShmooTestMethod.xml;
+Import AuxiliaryTC.xml;
+Import OASIS_PatternModify_tt.xml;
+Import PrimeSampleRateTestMethod.xml;
+Import LNLVminSearchF.xml;
+Import DrngTC.xml;
+
+Counters
+{
+	n44000000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_0,
+	n44000001_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_2,
+	n44000002_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_4,
+	n44000003_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_5,
+	n44000004_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_2,
+	n44000005_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_4,
+	n44000006_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_5,
+	n44300000_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_0,
+	n44000008_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_2,
+	n44000009_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_4,
+	n44000010_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_5,
+	n44100011_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_0,
+	n44000012_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_2,
+	n44000013_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_4,
+	n44000014_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_5,
+	n17440015_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_0,
+	n44000016_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_2,
+	n44000017_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_4,
+	n44000018_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_5,
+	n44000085_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_0,
+	n44010000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0,
+	n45370000_fail_SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST_0,
+	n70010000_fail_DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0,
+	n70010002_fail_DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM_0,
+	n70020000_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0,
+	n70020001_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2,
+	n70020002_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0,
+	n70020003_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2,
+	n70020004_fail_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_0,
+	n70020005_fail_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_2,
+	n70020006_fail_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_0,
+	n70020007_fail_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_2,
+	n70020008_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_0,
+	n70020009_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_2,
+	n70020010_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_0,
+	n70020011_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_2,
+	n70050001_fail_DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0,
+	n70050002_fail_DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM_0,
+	n70060000_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0,
+	n70060001_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2,
+	n70060002_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0,
+	n70060003_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2,
+	n70060004_fail_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_0,
+	n70060005_fail_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_2,
+	n70060006_fail_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_0,
+	n70060007_fail_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_2,
+	n70060008_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_0,
+	n70060009_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_2,
+	n70060010_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_0,
+	n70060011_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_2,
+	n90440001_fail_SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER_0,
+	n90440025_fail_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_0,
+	n90440026_fail_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_2,
+	n90440027_fail_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_0,
+	n90440028_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_2,
+	n90440030_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_4,
+	n90440032_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_5,
+	n90440033_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_2,
+	n90440049_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_4,
+	n90440050_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_5,
+	n90440051_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_2,
+	n90440053_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_4,
+	n90440054_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_5,
+	n90440055_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_2,
+	n90440056_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_4,
+	n90440057_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_5,
+	n90440058_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_2,
+	n90440060_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_4,
+	n90440061_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_5,
+	n90440062_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_2,
+	n90440063_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_4,
+	n90440064_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_5,
+	n90440065_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_2,
+	n90440067_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_4,
+	n90440068_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_5,
+	n90440069_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_2,
+	n90440070_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_4,
+	n90440071_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_5,
+	n90440072_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_2,
+	n90440073_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_4,
+	n90440074_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_5,
+	n45300000_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_0,
+	n90440082_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_2,
+	n90440083_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_4,
+	n90440084_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_5,
+	n44110000_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_0,
+	n90440086_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_2,
+	n90440087_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_4,
+	n90440088_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_5,
+	n45100000_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_0,
+	n90440090_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_2,
+	n90440091_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_4,
+	n90440092_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_5,
+	n17450000_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_0,
+	n90440094_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_2,
+	n90440095_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_4,
+	n90440096_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_5,
+	n90440097_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_0,
+	n90440098_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_2,
+	n90440099_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_0,
+	n90440100_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_2,
+	n90440101_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_0,
+	n90440102_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_2,
+	n90440103_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_0,
+	n90440104_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_2,
+	n90440105_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_0,
+	n90440106_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_2,
+	n90440107_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_0,
+	n90440108_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_2,
+	n90440109_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_0,
+	n90440111_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_2,
+	n70000280_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_0,
+	n70000286_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_2,
+	n90440116_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_0,
+	n90440117_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_2,
+	n90440131_fail_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_2,
+	n90440132_fail_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_0,
+	n90440133_fail_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_2,
+	n90440134_fail_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_0,
+	n90440135_fail_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_2,
+	n90440136_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_0,
+	n90440137_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_2,
+	n90441000_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_0,
+	n90441001_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_0,
+	n90441002_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_0,
+	n45360120_fail_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_0,
+	n45370122_fail_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_0,
+	n45380124_fail_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_0,
+	n45000162_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0,
+	n44000164_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0,
+	n44010166_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0,
+	n44020168_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0,
+	n44030170_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0,
+	n90441068_fail_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_0,
+	n90441069_fail_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_2,
+	n70000184_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0,
+	n70000186_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2,
+	n90441090_fail_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_0,
+	n90441091_fail_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_2,
+	n70000202_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0,
+	n70000204_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2,
+	n44020002_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0,
+	n44030000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0,
+	n90441104_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_0,
+	n45360000_fail_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_0,
+	n45000000_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0,
+	n45390000_fail_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_0,
+	n90441129_fail_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_2,
+	n90441130_fail_SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG_0,
+	n90441131_fail_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_0,
+	n90441132_fail_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_0,
+	n90441133_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_2,
+	n90441134_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_0,
+	n90441135_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_2,
+	n90441138_fail_SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST_0,
+	p99440000_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_1,
+	p99440001_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_1,
+	p99440002_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_1,
+	p99440003_pass_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_1,
+	p99440004_pass_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_1,
+	p99440005_pass_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_1,
+	p99440006_pass_DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_1,
+	p99440007_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_1,
+	p99440008_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_1,
+	p99440009_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_1,
+	p99440010_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_1,
+	p99440011_pass_DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_1,
+	p99440012_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_1,
+	p99440013_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_1,
+	p99440014_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_1,
+	p99440015_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_1,
+	p99440016_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_1,
+	p99440017_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_1,
+	p99440019_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_1,
+	p99440026_pass_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_1,
+	p99440027_pass_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_1,
+	p99440028_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_1,
+	p99440029_pass_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_1,
+	p99440030_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_1,
+	p99440031_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_1,
+	p99440032_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1,
+	p99440033_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1,
+	p99440034_pass_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_1,
+	p99440035_pass_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_1,
+	p99440036_pass_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_1,
+	p99440037_pass_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_1,
+	p99440038_pass_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_1,
+	p99440040_pass_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_1,
+	p99440041_pass_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_1,
+	p99440042_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1,
+	p99440043_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1,
+	p99440044_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_1,
+	p99440045_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_1,
+	p99440051_pass_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_1,
+	p99440053_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1,
+	p99440054_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1,
+	p99440056_pass_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_3,
+	p99440057_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1,
+	p99440058_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1,
+	p99440059_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1,
+	p99440060_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_1,
+	p99440061_pass_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_1,
+	p99440062_pass_SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST_1,
+	p99440063_pass_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1,
+	p99440069_pass_DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM_1,
+	p99440073_pass_DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM_1,
+	p99440076_pass_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_1,
+	p99440077_pass_SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG_1,
+	p99440078_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_1,
+	p99440079_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_1,
+	p99440080_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_2,
+	p99440081_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_3,
+	p99440082_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_1,
+	p99440083_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_3,
+	p99440084_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_1,
+	p99440085_pass_SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST_1,
+	p99440086_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_3,
+	p99440087_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_3,
+	p99440088_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_3,
+	p99440090_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_3,
+	p99440091_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_3,
+	p99440096_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_3,
+	p99440097_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_3,
+	p99440098_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_3,
+	p99440099_pass_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_3,
+	p99440100_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_3,
+	p99440101_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_1,
+	p99440102_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_3,
+	p99440103_pass_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_1,
+	p99440104_pass_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_3,
+	p99440105_pass_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_1,
+	p99440106_pass_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_3,
+	p99440107_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_1,
+	p99440108_pass_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_1,
+	p99440109_pass_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_3,
+	p99440110_pass_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_1,
+	p99440111_pass_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_3,
+	p99440112_pass_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_1,
+	p99440113_pass_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_3,
+	p99440123_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_1,
+	p99440124_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_1,
+	p99440126_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_1
+	# TODO add counters here
+} # End of Test Counter Definition
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1001";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPreInstance = "";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLC_LFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+	# ## VMINSEARCHF Params
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1003";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "slc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_SLC_LFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1004";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_dragon_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets,recovery_update_always";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLCDRAG_LFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1005";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "slc_dragon_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets,recovery_update_always";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_SLCDRAG_LFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1006";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "fullchip_dragon_full_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPreInstance = "";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CCF_FC_LFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1007";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_sdtend_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLC_SDT_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1008";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "slc_lfm_sdtend_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_SLC_SDT_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1009";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_dragon_lfm_sdtend_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLCDRAG_SDT_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1010";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "slc_dragon_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_SLCDRAG_SDT_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1011";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "fullchip_dragon_full_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CCF_FC_SDT_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test PrimePatConfigTestMethod SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA
+{
+	BypassPort = 1;
+	ConfigurationFile = "./Modules/FUN_CORE/InputFiles/fun_core.setpoints.json"; # USER TODO: define value
+	SetPoint = "FN_SLC,FN_SLC_SW,FN_SLC_SW_CTF100,FN_SLC_SUBR,FN_SLC_SUBR_CTF100,FN_SLC_DW,FN_SLC_DW_CTF100,FN_SLC_TTR,FN_SLC_TTR_CTF100"; # USER TODO: define value
+}
+
+Test PrimePatConfigTestMethod SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS
+{
+	BypassPort = -1;
+	ConfigurationFile = "./Modules/FUN_CORE/InputFiles/fun_core.setpoints.json"; # USER TODO: define value
+	SetPoint = "DRNG_fuse"; # USER TODO: define value
+}
+
+Test PrimePatConfigTestMethod SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS
+{
+	BypassPort = 1;
+	ConfigurationFile = "./Modules/FUN_CORE/InputFiles/fun_core_patmod.json"; # USER TODO: define value
+	SetPoint = "SetPoint1"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_idi_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_ring_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_nap_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_idi_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_ring_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM
+{
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "func_i_drng_sort_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	FailuresToCaptureTotal = 10;
+	FailuresToCapturePerPattern = 2;
+	MaxFailuresToItuff = 1;
+	MaxFailuresPerPatternToItuff = 0;
+}
+
+Test DrngTC DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_nrbg_collision_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "COLLISION";
+	CollisionDataSize = 256;
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION
+{
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_nrbg_collision_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "COLLISION";
+	CollisionDataSize = 256;
+}
+
+Test PrimeFunctionalTestMethod DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM
+{
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "func_fuse_drng_sort_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	FailuresToCaptureTotal = 10;
+	FailuresToCapturePerPattern = 2;
+	MaxFailuresToItuff = 1;
+	MaxFailuresPerPatternToItuff = 0;
+}
+
+Test PrimeCtvDecoderTestMethod SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV
+{
+	BypassPort = 1;
+	ConfigurationFile = "./Modules/FUN_CORE/InputFiles/nap_bist_config.csv"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_nap_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	CtvCapturePins = "XXTDO";
+}
+
+Test PrimePatConfigTestMethod SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG
+{
+	BypassPort = 1;
+	ConfigurationFile = "./Modules/FUN_CORE/InputFiles/fun_core.setpoints.json"; # USER TODO: define value
+	SetPoint = "test"; # USER TODO: define value
+}
+
+Test PrimeFunctionalTestMethod SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "mlc_lfm_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeShmooTestMethod SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SHMOO_nom_lvl"; # USER TODO: define value
+	Patlist = "mlc_lfm_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	XAxisParam = "p_mtd_per";
+	XAxisRange = "8e-9:0.4e-9:10"; # Start: Resolution: NumberOfPoints
+	XAxisParamType = "TimingTestCondition";
+	YAxisParam = "p_vccsa_spec";
+	YAxisRange = "0.5:0.05:10"; # Start: Resolution: NumberOfPoints
+	YAxisParamType = "LevelsTestCondition";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_mode_change_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+
+Test iCCmemDecodeTest DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE
+{
+	bypass_global = "1";
+	config_file = "./Modules/FUN_CORE/InputFiles/DRNG_CMEMDECODE_COMPUTE_MC.xml";
+	config_set = "DRNG_ES";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "func_fuse_drng_CMEM_mode_change_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+
+Test PrimeFunctionalTestMethod SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "bist_corebo_end_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+}
+
+Test PrimeSampleRateTestMethod SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER
+{
+	BypassPort = 1;
+	SamplingRateValue = "12";
+	SampleOption = "DUT_SAMPLING";
+	PrintItuffExitPort = "True";
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1002";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_end_sample_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1,";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPreInstance = "";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLC_TOPOFF_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1031";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets,recovery_update_always";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLC_TFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1032";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "fullchip_dragon_full_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CCF_FC_TFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1021";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets,recovery_update_always";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_MLC_HFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1022";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "slc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets,recovery_update_always";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CORE_SLC_HFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1023";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "fullchip_dragon_full_list";
+	StepSize = 0.02;
+	StartVoltages = "0.5";
+	EndVoltageLimits = "1";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	VminResultKey = "FUN_CCF_FC_HFM_VMIN";
+	MaxRepetitionCount = 2;
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+}
+
+Test LNLVminSearchF SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_max_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1026";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "mlc_lfm_end_list";
+	StepSize = 0.02;
+	StartVoltages = "1.3";
+	EndVoltageLimits = "1.3";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPreInstance = "";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+	# VminResultKey = "FUN_CORE_SLC_SDT_VMIN";
+	# MaxRepetitionCount = 2;
+}
+
+Test LNLVminSearchF SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON
+{
+	BypassPort = 1;
+	LogLevel = "Disabled";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	LevelsTc = "BASE::SBF_max_lvl"; # USER TODO: define value
+	ExecutionMode = "SearchWithScoreboard";
+	BaseNumbers = "1027";
+	ScoreboardEdgeTicks = 1;
+	Patlist = "fullchip_dragon_full_list";
+	StepSize = 0.02;
+	StartVoltages = "1.3";
+	EndVoltageLimits = "1.3";
+	FeatureSwitchSettings = "disable_masked_targets";
+	VoltageTargets = "VCCIA_HC";
+	PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+	SetPointsPlistParamName = "Patlist";
+	SetPointsPreInstance = "";
+	PinMap = "CORE";
+	TrackingStructure = "CORE";
+	IncomingPinMask = "ENABLED";
+	MaxFails = 1;
+	# VminResultKey = "FUN_CORE_SLC_SDT_VMIN";
+	# MaxRepetitionCount = 2;
+}
+
+Test PrimeFunctionalTestMethod DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "func_i_drng_sort_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	FailuresToCaptureTotal = 10;
+	FailuresToCapturePerPattern = 2;
+	MaxFailuresToItuff = 1;
+	MaxFailuresPerPatternToItuff = 0;
+}
+
+Test DrngTC DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_nrbg_collision_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "COLLISION";
+	CollisionDataSize = 256;
+}
+
+Test DrngTC DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_i_drng_sort_CMEM_mode_change_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+
+Test PrimeFunctionalTestMethod DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl"; # USER TODO: define value
+	Patlist = "func_fuse_drng_sort_list"; # USER TODO: define value
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400"; # USER TODO: define value
+	FailuresToCaptureTotal = 10;
+	FailuresToCapturePerPattern = 2;
+	MaxFailuresToItuff = 1;
+	MaxFailuresPerPatternToItuff = 0;
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_nom_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_nrbg_collision_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "COLLISION";
+	CollisionDataSize = 256;
+}
+
+Test iCCmemDecodeTest DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE
+{
+	bypass_global = "1";
+	config_file = "./Modules/FUN_CORE/InputFiles/DRNG_CMEMDECODE_COMPUTE_MC.xml";
+	config_set = "DRNG_ES";
+	level = "BASE::SBF_nom_lvl";
+	patlist = "func_fuse_drng_CMEM_mode_change_list";
+	timings = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS
+{
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT
+{
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_i_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_min_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_metrics_noxor_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "METRICS";
+}
+
+Test DrngTC DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT
+{
+	BypassPort = 1;
+	LevelsTc = "BASE::SBF_max_lvl";
+	Patlist = "func_fuse_drng_sort_CMEM_healthcount_list";
+	TimingsTc = "BASE::cpu_ctf_timing_tclk100_cclk100_bclk400";
+	CtvCapturePins = "XXTDO";
+	Mode = "HEALTH_COUNT";
+	HealthCountLimits = "63,257,199,257";
+}
+
+# TODO add content here
+Flow FUN_CORE_INIT @INIT
+{
+	DUTFlowItem SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA
+	{
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441000_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_0;
+			Return 0;
+			# SetBin SoftBins.b44000114_fail_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440000_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_1;
+			GoTo SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS;
+			# SetBin SoftBins.b44000115_pass_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_IA_1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS
+	{
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441001_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_0;
+			Return 0;
+			# SetBin SoftBins.b44000116_fail_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440001_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_1;
+			GoTo SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS;
+			# SetBin SoftBins.b44000117_pass_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_FCS_1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS
+	{
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441002_fail_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_0;
+			Return 0;
+			# SetBin SoftBins.b44000118_fail_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440002_pass_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_1;
+			Return 1;
+			# SetBin SoftBins.b44000119_pass_FUN_CORE_SBFT_CORE_PATMOD_K_INIT_X_X_X_X_DTS_1;
+		}		
+	}
+}
+
+DUTFlow BIST_SDTEND
+{
+	DUTFlowItem SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45360120_fail_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_0;
+			Return 0;
+			##EDC## SetBin SoftBins.b45360120_fail_FUN_CORE_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440003_pass_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_1;
+			GoTo SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST;
+			# SetBin SoftBins.b45000121_pass_FUN_CORE_SBFT_FULLCHIP_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_NAP_BIST_1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45370122_fail_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_0;
+			##EDC## SetBin SoftBins.b45370122_fail_FUN_CORE_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_0;
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440004_pass_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_1;
+			GoTo SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST;
+			# SetBin SoftBins.b45000123_pass_FUN_CORE_SBFT_CORE_FUNC_E_SDTEND_X_CR_NOM_LFM_0800_IDI_BIST_1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45380124_fail_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_0;
+			##EDC## SetBin SoftBins.b45380124_fail_FUN_CORE_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_0;
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440005_pass_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_1;
+			Return 1;
+			# SetBin SoftBins.b45000125_pass_FUN_CORE_SBFT_CCF_FUNC_E_SDTEND_X_CLR_NOM_LFM_0800_RING_BIST_1;
+		}		
+	}
+}
+
+DUTFlow FUSEDRNG_SDTEND
+{
+	DUTFlowItem DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70050001_fail_DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0;
+			##EDC## SetBin SoftBins.b70050001_fail_FUN_CORE_DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440006_pass_DRNG_FUSE_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_1;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440097_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_0;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440009_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_1;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440098_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_2;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060000_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			##EDC## SetBin SoftBins.b70060000_fail_FUN_CORE_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440123_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060001_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			##EDC## SetBin SoftBins.b70060001_fail_FUN_CORE_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440101_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_0;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+			# SetBin SoftBins.b70000202_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440124_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_1;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+			# SetBin SoftBins.b70000203_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440102_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_2;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+			# SetBin SoftBins.b70000204_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440105_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_0;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440126_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_1;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440106_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_2;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440099_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440007_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_1;
+			Return 1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440100_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_2;
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060008_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440008_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060009_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440103_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_0;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440010_pass_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_1;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440104_fail_DRNG_FUSE_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_2;
+			GoTo DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060010_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440045_pass_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060011_fail_DRNG_FUSE_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+		}		
+	}
+}
+
+DUTFlow TOPDRNG_SDTEND
+{
+	DUTFlowItem DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70010000_fail_DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0;
+			##EDC## SetBin SoftBins.b70010000_fail_FUN_CORE_DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_0;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440011_pass_DRNG_NC_SB_E_SDTEND_X_CR_NOM_LFM_0800_NOM_1;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440107_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440014_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440108_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020000_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			##EDC## SetBin SoftBins.b70020000_fail_FUN_CORE_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440016_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020001_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			##EDC## SetBin SoftBins.b70020001_fail_FUN_CORE_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000280_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_0;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440017_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_1;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000185_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000286_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_2;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000186_fail_FUN_CORE_DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_COLLISION_2;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440116_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_0;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440019_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_1;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440117_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_NOM_LFM_0800_MODECHANGE_2;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_NOM_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440109_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440012_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440111_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MIN_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020008_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440013_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020009_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MIN_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440136_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440015_pass_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440137_fail_DRNG_NC_CMEM_E_SDTEND_X_CR_MAX_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020010_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440044_pass_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_1;
+			Return 1;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020011_fail_DRNG_NC_CMEM_K_SDTEND_X_CR_MAX_LFM_0800_HEALTHCOUNT_2;
+			Return 1;
+		}		
+	}
+}
+
+DUTFlow SA_LOGIC_SDTEND
+{
+	DUTFlowItem SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45000162_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+			GoTo BIST_SDTEND;
+			##EDC## SetBin SoftBins.b45000162_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440029_pass_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+			GoTo BIST_SDTEND;
+			# SetBin SoftBins.b44000163_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440028_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_2;
+			GoTo BIST_SDTEND;
+			# SetBin SoftBins.b45000162_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440056_pass_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_3;
+			GoTo BIST_SDTEND;
+			# SetBin SoftBins.b44000163_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440030_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_4;
+			GoTo BIST_SDTEND;
+			# SetBin SoftBins.b45000162_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440032_fail_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_5;
+			GoTo BIST_SDTEND;
+			# SetBin SoftBins.b45000162_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_SDTEND_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+	}
+	
+	DUTFlowItem TOPDRNG_SDTEND TOPDRNG_SDTEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FUSEDRNG_SDTEND; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUSEDRNG_SDTEND; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem FUSEDRNG_SDTEND FUSEDRNG_SDTEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem BIST_SDTEND BIST_SDTEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TOPDRNG_SDTEND; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TOPDRNG_SDTEND; # USER TODO: define value
+		}		
+	}
+}
+
+DUTFlow IA_LOGIC_SDTEND
+{
+	DUTFlowItem SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000164_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0;
+			##EDC## SetBin SoftBins.b44000164_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440030_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_1;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+			# SetBin SoftBins.b44000165_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440033_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_2;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+			# SetBin SoftBins.b44000164_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440083_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_3;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+			# SetBin SoftBins.b44000165_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440049_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_4;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+			# SetBin SoftBins.b44000164_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440050_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_5;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC;
+			# SetBin SoftBins.b44000164_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLC_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44010166_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0;
+			##EDC## SetBin SoftBins.b44010166_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440031_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_1;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44000167_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440051_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_2;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010166_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440086_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_3;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44000167_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440053_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_4;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010166_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440054_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_5;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010166_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44020168_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+			##EDC## SetBin SoftBins.b44020168_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440032_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44000169_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440055_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_2;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020168_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440087_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_3;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44000169_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440056_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_4;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020168_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440057_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_5;
+			GoTo SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020168_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44030170_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+			##EDC@# SetBin SoftBins.b44030170_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440033_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+			Return 1;
+			# SetBin SoftBins.b44000171_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440058_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_2;
+			Return 0;
+			# SetBin SoftBins.b44030170_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440088_pass_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_3;
+			Return 1;
+			# SetBin SoftBins.b44000171_pass_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440060_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_4;
+			Return 0;
+			# SetBin SoftBins.b44030170_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440061_fail_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_5;
+			Return 0;
+			# SetBin SoftBins.b44030170_fail_FUN_CORE_SBFT_CORE_VMIN_K_SDTEND_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+	}
+}
+
+DUTFlow FUN_CORE_SDTEND @SDTEND_SubFlow
+{
+	DUTFlowItem IA_LOGIC_SDTEND IA_LOGIC_SDTEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SA_LOGIC_SDTEND; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem SA_LOGIC_SDTEND SA_LOGIC_SDTEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1; # USER TODO: define value
+		}		
+	}
+}
+
+DUTFlow TOPDRNG
+{
+	DUTFlowItem DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70010002_fail_DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM_0;
+			##EDC## SetBin SoftBins.b70010002_fail_FUN_CORE_DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM_0;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440069_pass_DRNG_NC_SB_K_END_X_CR_NOM_LFM_0800_NOM_1;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441068_fail_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440040_pass_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441069_fail_DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020002_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			##EDC## SetBin SoftBins.b70020002_fail_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440042_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020003_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			##EDC## SetBin SoftBins.b70020003_fail_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000184_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0;
+			##EDC## SetBin SoftBins.b70000184_fail_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440043_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000186_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2;
+			##EDC## SetBin SoftBins.b70000186_fail_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441104_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_0;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440060_pass_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_1;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441133_fail_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_2;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440025_fail_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440026_pass_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440026_fail_DRNG_NC_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020004_fail_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440027_pass_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020005_fail_DRNG_NC_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440027_fail_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_0;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440034_pass_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_1;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440131_fail_DRNG_NC_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_2;
+			GoTo DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020006_fail_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440035_pass_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_1;
+			Return 1;
+			# SetBin SoftBins.b70000182_pass_FUN_CORE_DRNG_NC_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70020007_fail_DRNG_NC_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_2;
+			Return 1;
+		}		
+	}
+}
+
+DUTFlow FUSEDRNG
+{
+	DUTFlowItem DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70050002_fail_DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM_0;
+			##EDC## SetBin SoftBins.b70050002_fail_FUN_CORE_DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM_0;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440073_pass_DRNG_FUSE_SB_K_END_X_CR_NOM_LFM_0800_NOM_1;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441090_fail_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_0;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440051_pass_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_1;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441091_fail_DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS_2;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060002_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			##EDC## SetBin SoftBins.b70060002_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440053_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060003_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			##EDC## SetBin SoftBins.b70060003_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000202_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0;
+			##EDC## SetBin SoftBins.b70000202_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_0;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440054_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+			# SetBin SoftBins.b70000203_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70000204_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2;
+			##EDC## SetBin SoftBins.b70000204_fail_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_COLLISION_2;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441134_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_0;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440082_pass_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_1;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441135_fail_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_MODECHANGE_2;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_NOM_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440132_fail_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440036_pass_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_1;
+			Return 1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440133_fail_DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS_2;
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060006_fail_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440037_pass_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060007_fail_DRNG_FUSE_CMEM_K_END_X_CR_MIN_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440134_fail_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_0;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440038_pass_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_1;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440135_fail_DRNG_FUSE_CMEM_E_END_X_CR_MIN_LFM_0800_METRICS_2;
+			GoTo DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT;
+		}		
+	}
+	
+	DUTFlowItem DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060004_fail_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_0;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440041_pass_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_1;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+			# SetBin SoftBins.b70000200_pass_FUN_CORE_DRNG_FUSE_CMEM_K_END_X_CR_NOM_LFM_0800_HEALTHCOUNT_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n70060005_fail_DRNG_FUSE_CMEM_K_END_X_CR_MAX_LFM_0800_HEALTHCOUNT_2;
+			GoTo DRNG_FUSE_CMEM_E_END_X_CR_MAX_LFM_0800_METRICS;
+		}		
+	}
+}
+
+DUTFlow DEBUG_FLOW
+{
+	DUTFlowItem SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441130_fail_SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG_0;
+			GoTo SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440077_pass_SBFT_CORE_PATMOD_E_END_X_X_X_LFM_0800_DEBUG_1;
+			GoTo SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441131_fail_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_0;
+			GoTo SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440078_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_1;
+			GoTo SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441132_fail_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440079_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_1;
+			Return 1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440080_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_2;
+			Return 1;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440081_pass_SBFT_CORE_FUNC_E_END_X_CR_NOM_LFM_0800_DEBUG_SHMOO_3;
+			Return 1;
+		}		
+	}
+}
+
+DUTFlow IA_LOGIC_END
+{
+	DUTFlowItem SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_0;
+			##EDC## SetBin SoftBins.b44000000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_0;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440084_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_1;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000001_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_2;
+			##EDC## SetBin SoftBins.b44000001_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_2;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440090_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_3;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000002_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_4;
+			##EDC## SetBin SoftBins.b44000002_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_4;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000003_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_5;
+			##EDC## SetBin SoftBins.b44000003_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_5;
+			GoTo SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44010000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+			##EDC## SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440057_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44000211_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440062_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_2;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440091_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_3;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44000211_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440063_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_4;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440064_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_5;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44020002_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+			##EDC## SetBin SoftBins.b44020002_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440058_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44000213_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440065_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_2;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020212_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440096_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_3;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44000213_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440067_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_4;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020212_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440068_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_5;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON;
+			# SetBin SoftBins.b44020212_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLCDRAGON_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44030000_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+			Return 0;
+			##EDC## SetBin SoftBins.b44030000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440059_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+			Return 1;
+			# SetBin SoftBins.b44000215_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440069_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_2;
+			Return 0;
+			# SetBin SoftBins.b44030000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440097_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_3;
+			Return 1;
+			# SetBin SoftBins.b44000215_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440070_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_4;
+			Return 0;
+			# SetBin SoftBins.b44030000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440071_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_5;
+			Return 0;
+			# SetBin SoftBins.b44030000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLCDRAGON_0;
+		}		
+	}
+	
+	DUTFlowItem DEBUG_FLOW DEBUG_FLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440001_fail_SBFT_X_SAMPLE_E_END_X_X_X_X_MLC_TOPOFF_SAMPLER_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF;
+		}		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000085_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_0;
+			##EDC## SetBin SoftBins.b44000085_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_0;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440028_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_1;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000004_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_2;
+			##EDC## SetBin SoftBins.b44000004_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_2;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440098_pass_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_3;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000005_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_4;
+			##EDC## SetBin SoftBins.b44000005_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_4;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000006_fail_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_5;
+			##EDC## SetBin SoftBins.b44000006_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_MLC_TOPOFF_5;
+			GoTo SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC;
+		}		
+	}
+}
+
+DUTFlow BIST
+{
+	DUTFlowItem SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45360000_fail_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_0;
+			##EDC## SetBin SoftBins.b45360000_fail_FUN_CORE_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_0;
+			GoTo SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440061_pass_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_1;
+			GoTo SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST;
+			# SetBin SoftBins.b45000219_pass_FUN_CORE_SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST_1;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45370000_fail_SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST_0;
+			##EDC## SetBin SoftBins.b45370000_fail_FUN_CORE_SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST_0;
+			GoTo SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440062_pass_SBFT_CCF_FUNC_K_END_X_CLR_NOM_LFM_0400_RING_BIST_1;
+			GoTo SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST;
+		}		
+	}
+	
+	DUTFlowItem SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45390000_fail_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_0;
+			##EDC## SetBin SoftBins.b45390000_fail_FUN_CORE_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_0;
+			GoTo SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440076_pass_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_1;
+			GoTo SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST;
+			# SetBin SoftBins.b44000173_pass_FUN_CORE_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441129_fail_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_2;
+			GoTo SBFT_CORE_FUNC_K_END_X_CR_NOM_LFM_0400_IDI_BIST;
+			# SetBin SoftBins.b44000174_fail_SBFT_FULLCHIP_FUNC_E_END_X_CLR_NOM_LFM_0800_NAP_BIST_CTV_2;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90441138_fail_SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST_0;
+			##EDC## SetBin SoftBins.b45380000_fail_FUN_CORE_SBFT_CCF_FUNC_E_END_X_VCCR_NOM_LFM_0800_CBO_BIST_0;
+			Return 0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440085_pass_SBFT_CCF_FUNC_E_END_X_CLR_NOM_LFM_0800_CBO_BIST_1;
+			Return 1;
+			# SetBin SoftBins.b45000221_pass_FUN_CORE_SBFT_CCF_FUNC_E_END_X_VCCR_NOM_LFM_0800_RING_BIST_1;
+		}		
+	}
+}
+
+DUTFlow SA_LOGIC_AND_BIST_END
+{
+	DUTFlowItem SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45000000_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+			GoTo BIST;
+			##EDC## SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440063_pass_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+			GoTo BIST;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440072_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_2;
+			GoTo BIST;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440099_pass_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_3;
+			GoTo BIST;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440073_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_4;
+			GoTo BIST;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440074_fail_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_5;
+			GoTo BIST;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+	}
+	
+	DUTFlowItem BIST BIST
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TOPDRNG; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TOPDRNG; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem TOPDRNG TOPDRNG
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FUSEDRNG; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUSEDRNG; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem FUSEDRNG FUSEDRNG
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1; # USER TODO: define value
+		}		
+	}
+}
+
+DUTFlow FUN_CORE_END @END_SubFlow
+{
+	DUTFlowItem IA_LOGIC_END IA_LOGIC_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo SA_LOGIC_AND_BIST_END; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SA_LOGIC_AND_BIST_END; # USER TODO: define value
+		}		
+	}
+	
+	DUTFlowItem SA_LOGIC_AND_BIST_END SA_LOGIC_AND_BIST_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0; # USER TODO: define value
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1; # USER TODO: define value
+		}		
+	}
+}
+
+Flow FUN_CORE_ENDTFM @ENDTFM
+{
+	DUTFlowItem SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44300000_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_0;
+			##EDC##SetBin SoftBins.b44300000_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_0;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440103_pass_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_1;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000008_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_2;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440104_pass_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_3;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000009_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_4;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000010_fail_SBFT_CORE_VMIN_K_ENDTFM_X_CR_NOM_TFM_4500_CR_MLC_5;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON;
+		}		
+	}
+	
+	DUTFlowItem SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45300000_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_0;
+			##EDC## SetBin SoftBins.b45300000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440105_pass_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_1;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440082_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_2;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440106_pass_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_3;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440083_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_4;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440084_fail_SBFT_FULLCHIP_VMIN_K_ENDTFM_X_CLR_NOM_TFM_4500_CLR_DRAGON_5;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+	}
+}
+
+DUTFlow XFM_VMIN
+{
+	DUTFlowItem SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44100011_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_0;
+			##EDC## SetBin SoftBins.b44100011_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_0;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440107_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_1;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000012_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_2;
+			##EDC## SetBin SoftBins.b44000012_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_2;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440100_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_3;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000013_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_4;
+			##EDC## SetBin SoftBins.b44000013_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_4;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000014_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_5;
+			##EDC## SetBin SoftBins.b44000014_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_MLC_5;
+			GoTo SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC;
+		}		
+	}
+	
+	DUTFlowItem SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44110000_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_0;
+			##EDC## SetBin SoftBins.b44110000_fail_FUN_CORE_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_0;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440101_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_1;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+			# SetBin SoftBins.b44000211_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440086_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_2;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440102_pass_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_3;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+			# SetBin SoftBins.b44000211_pass_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440087_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_4;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440088_fail_SBFT_CORE_VMIN_K_ENDXFM_X_CR_NOM_HFM_2000_CR_SLC_5;
+			GoTo SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON;
+			# SetBin SoftBins.b44010000_fail_FUN_CORE_SBFT_CORE_VMIN_K_END_X_CR_NOM_LFM_0800_CR_SLC_0;
+		}		
+	}
+	
+	DUTFlowItem SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n45100000_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_0;
+			##EDC## SetBin SoftBins.b45100000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440108_pass_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_1;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440090_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_2;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440109_pass_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_3;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440091_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_4;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440092_fail_SBFT_FULLCHIP_VMIN_K_ENDXFM_X_CLR_NOM_HFM_2000_CLR_DRAGON_5;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+	}
+}
+
+DUTFlow XFM_VMAX
+{
+	DUTFlowItem SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n17440015_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_0;
+			##EDC## SetBin SoftBins.b17440015_fail_FUN_CORE_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_0;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440110_pass_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_1;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000016_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_2;
+			##EDC## SetBin SoftBins.b44000016_fail_FUN_CORE_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_2;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440111_pass_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_3;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000017_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_4;
+			##EDC## SetBin SoftBins.b44000017_fail_FUN_CORE_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_4;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n44000018_fail_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_5;
+			##EDC## SetBin SoftBins.b44000018_fail_FUN_CORE_SBFT_CORE_SB_K_ENDXFM_X_CR_MAX_LFM_0800_CR_MLC_5;
+			GoTo SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON;
+		}		
+	}
+	
+	DUTFlowItem SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON @EDC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n17450000_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_0;
+			##EDC## SetBin SoftBins.b17450000_fail_FUN_CORE_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_0;
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440112_pass_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_1;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440094_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_2;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			IncrementCounters FUN_CORE::p99440113_pass_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_3;
+			Return 1;
+			# SetBin SoftBins.b44000223_pass_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_1;
+		}		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440095_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_4;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			IncrementCounters FUN_CORE::n90440096_fail_SBFT_FULLCHIP_SB_K_ENDXFM_X_CLR_MAX_LFM_0800_CLR_DRAGON_5;
+			Return 1;
+			# SetBin SoftBins.b45000000_fail_FUN_CORE_SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON_0;
+		}		
+	}
+}
+
+Flow FUN_CORE_ENDXFM @ENDXFM
+{
+	DUTFlowItem XFM_VMIN XFM_VMIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo XFM_VMAX;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo XFM_VMAX;
+		}		
+	}
+	
+	DUTFlowItem XFM_VMAX XFM_VMAX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}

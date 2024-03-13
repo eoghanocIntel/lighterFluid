@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+EDIS:
+Pass core Reset, Tap reset
+Pass BIST good part
+Combination KAT good/fail and BIST passing/failing
+Health count >125 good vs. <125 bad 
+
+4 bits  need to be decoded to reflect:
+bit0  bist completed
+Bit 1 - BIST All complete and passed
+Bit 2 - ES Good
+bit 3 - KAT Good
+
+
+-->
+<cmem_setup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GEN_cmemDecode_tt.xsd">
+<set name="FUSEDRNG_ES">
+    <pin name="XXTDO" expected_bits="18">
+        <token name="FUSEDRNG_HEALTH_COUNT_NOXOR">
+            <bits>8-0</bits>
+            <base>10</base>
+			<limit_min>64</limit_min>
+			<limit_max>256</limit_max>
+            <ituff>
+                <tname usetestname="ALWAYS">FUSEDRNG_HEALTH_COUNT_NOXOR</tname>
+                <result>mrslt</result>
+            </ituff>
+        </token>		
+	<token name="FUSEDRNG_HEALTH_COUNT_XOR">
+            <bits>17-9</bits>
+            <base>10</base>
+			<limit_min>200</limit_min>
+			<limit_max>256</limit_max>
+            <ituff>
+                <tname usetestname="ALWAYS">FUSEDRNG_HEALTH_COUNT_XOR</tname>
+                <result>mrslt</result>
+            </ituff>
+        </token>
+    </pin>
+</set>
+</cmem_setup>

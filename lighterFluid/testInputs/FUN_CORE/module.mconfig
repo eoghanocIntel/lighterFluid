@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModuleConfiguration>
+  <Patterns>
+    <!--The PORRoot section is used to declare production plists used by the module.
+				PORRoot can be declared per BomGroup or decorated with the IP name if, in Itradut TP,  IP plists are used by package module.
+				<PORRoot IP="" BomGroup="" Path="" Rev="" Patch="">-->
+    <PORRoot Path="I:\program\1001\eng\hdmtpats\lnc\MfunSa" Rev="RevTLA0.1" Patch="p1">
+      <PlistFiles>
+        <PlistFile> fun_bist_sort_allplist.plist </PlistFile>
+        <PlistFile> fun_drng_sort_allplist.plist </PlistFile>
+        <!--<PlistFile BomGroup=""> </PlistFile> -->
+      </PlistFiles>
+    </PORRoot>
+    <PORRoot Path="I:\program\1001\eng\hdmtpats\lnc\MfunIa" Rev="RevTLA1.0" Patch="p5">
+      <PlistFiles>
+        <PlistFile> fun_mlc_sort_allplist.plist </PlistFile>
+        <PlistFile> fun_mlcdragon_sort_allplist.plist </PlistFile>
+        <PlistFile> fun_fcsdragon_sort_allplist.plist </PlistFile>
+        <!--<PlistFile BomGroup=""> </PlistFile> -->
+      </PlistFiles>
+    </PORRoot>
+
+    <!--The ENGRoot section is used to declare engineering plists used by the module.
+			  IP attribute can be used for ENGRoot: <ENGRoot IP="" Path="">-->
+    <ENGRoot Path = "..\..\Shared\Common\Supersedes\patterns\">
+      <PlistFiles>
+        <PlistFile>  </PlistFile>
+      </PlistFiles>
+    </ENGRoot>
+  </Patterns>
+
+  <!--The AlephFiles section is used to declare Aleph json files which are used by the module. 
+		  Alpeh files must reside inside the repository. -->
+  <AlephFiles>
+    <AlephFile>InputFiles\fun_core.patmod.json</AlephFile>
+    <AlephFile>InputFiles\merged_fun_mlc_sort_allplist.PatConfigSetpoints.json</AlephFile>
+    <AlephFile>InputFiles\merged_fun_mlc_sort_allplist.patmod.json</AlephFile>
+  </AlephFiles>
+
+  <!--The IPName is used for modules in IntraDut test program to declare the IP it belongs to.
+		  For package level modules do not add the <IPName> element at all-->
+  <!--<IPName></IPName>-->
+
+
+</ModuleConfiguration>

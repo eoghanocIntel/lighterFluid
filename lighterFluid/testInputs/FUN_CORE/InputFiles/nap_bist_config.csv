@@ -1,0 +1,8 @@
+Pin,source,source_sub_port,destination,protocol,byte,Field,Size,Base,LowLimit,HighLimit,ExpectedData,Function,StringData,ItuffToken,ItuffDescriptor
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte0,DATA1,32,-,-,-,-,-,-,-,-
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte1,DATA2,32,-,-,-,-,-,-,-,-
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte2,DATA3,32,-,-,-,-,-,-,-,-
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte3,DATA4,32,-,-,-,-,-,-,-,-
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte4,DATA5,32,-,-,-,-,-,-,-,-
+XXTDO,deiosf,req_vc0_req,memss00,CXM,byte5,DATA6,32,-,-,-,-,-,-,-,-
+XXTDO,-,-,-,-,-,DCOMPARE1,0,-,-,-,1,NAPCompare([deiosf.req_vc0_req.memss00.CXM.byte0.DATA1]_[deiosf.req_vc0_req.memss00.CXM.byte3.DATA4]),-,comp1,-

@@ -1,0 +1,7 @@
+Test PrimeSampleRateTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    SamplingRateValue = "12";
+    SampleOption = "DUT_SAMPLING";
+    PrintItuffExitPort = "True";
+}

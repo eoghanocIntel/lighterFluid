@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+EDIS:
+Pass core Reset, Tap reset
+Pass BIST good part
+Combination KAT good/fail asdasdand BIST passing/failing
+Health count >125 good vs. <125 bad 
+
+4 bits  need to be decoded to reflect:
+bit0  bist completed
+Bit 1 - BIST All complete and passed
+Bit 2 - ES Good
+bit 3 - KAT Good
+
+
+-->
+<cmem_setup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GEN_cmemDecode_tt.xsd">
+<set name="DRNG_ES">
+    <pin name="XXTDO" expected_bits="592">
+		
+        <token name="DRNG_METRICS_NOXOR_0x800">
+            <bits>15-0</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x800</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x801">
+            <bits>31-16</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x801</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x802">
+            <bits>47-32</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x802</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x803">
+            <bits>63-48</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x803</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x804">
+            <bits>79-64</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x804</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+		
+		
+        <token name="DRNG_METRICS_NOXOR_0x805">
+            <bits>95-80</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x805</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x806">
+            <bits>111-96</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x806</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x807">
+            <bits>127-112</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x807</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x808">
+            <bits>143-128</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x808</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x809">
+            <bits>159-144</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x809</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+
+        <token name="DRNG_METRICS_NOXOR_0x80A">
+            <bits>175-160</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x80A</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x80B">
+            <bits>191-176</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x80B</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x80C">
+            <bits>207-192</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x80C</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x80D">
+            <bits>223-208</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x80D</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x810">
+            <bits>239-224</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x810</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+		
+		
+        <token name="DRNG_METRICS_NOXOR_0x811">
+            <bits>255-240</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x811</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x812">
+            <bits>271-256</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x812</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x813">
+            <bits>287-272</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x813</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x814">
+            <bits>303-288</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x814</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x815">
+            <bits>319-304</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x815</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+
+        <token name="DRNG_METRICS_NOXOR_0x816">
+            <bits>335-320</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x816</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x817">
+            <bits>351-336</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x817</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x818">
+            <bits>367-352</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x818</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x819">
+            <bits>383-368</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x819</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x81A">
+            <bits>399-384</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x81A</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x900">
+            <bits>415-400</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x900</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x901">
+            <bits>431-416</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x901</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x902">
+            <bits>447-432</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x902</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x903">
+            <bits>463-448</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x903</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x904">
+            <bits>479-464</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x904</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+		
+		
+        <token name="DRNG_METRICS_NOXOR_0x905">
+            <bits>495-480</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x905</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+	
+        <token name="DRNG_METRICS_NOXOR_0x906">
+            <bits>511-496</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x906</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x907">
+            <bits>527-512</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x907</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x908">
+            <bits>543-528</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x908</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x909">
+            <bits>559-544</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x909</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>		
+
+        <token name="DRNG_METRICS_NOXOR_0x90A">
+            <bits>575-560</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x90A</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+
+        <token name="DRNG_METRICS_NOXOR_0x90B">
+            <bits>591-576</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_METRICS_NOXOR_0x90B</tname>
+                <result>strgval</result>
+            </ituff>
+		</token>
+		
+    </pin>
+</set>
+</cmem_setup>

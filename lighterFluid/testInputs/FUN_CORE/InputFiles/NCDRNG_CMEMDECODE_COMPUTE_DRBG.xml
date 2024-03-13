@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+EDIS:
+Pass core Reset, Tap reset
+Pass BIST good part
+Combination KAT good/fail asdasdand BIST passing/failing
+Health count >125 good vs. <125 bad 
+
+4 bits  need to be decoded to reflect:
+bit0  bist completed
+Bit 1 - BIST All complete and passed
+Bit 2 - ES Good
+bit 3 - KAT Good
+
+
+-->
+<cmem_setup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GEN_cmemDecode_tt.xsd">
+<set name="NCDRNG_ES">
+    <pin name="XXTDO" expected_bits="256">
+		
+        <token name="DRNG_COLLISION_DRBG1">
+            <bits>63-0</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_COLLISION_DRBG1</tname>
+                <result>strgval</result>
+            </ituff>
+				<actions>
+					<gsds scope="UNT" data_type="STR">NCDCOLLISION1</gsds>
+				</actions>			
+		</token>
+	 
+		<token name="DRNG_COLLISION_DRBG2">
+            <bits>127-64</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_COLLISION_DRBG2</tname>
+                <result>strgval</result>
+            </ituff>
+				<actions>
+					<gsds scope="UNT" data_type="STR">NCDCOLLISION2</gsds>
+				</actions>
+		</token>
+
+        <token name="DRNG_COLLISION_DRBG3">
+            <bits>191-128</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_COLLISION_DRBG3</tname>
+                <result>strgval</result>
+            </ituff>
+				<actions>
+					<gsds scope="UNT" data_type="STR">NCDCOLLISION3</gsds>
+				</actions>
+			</token>
+	 
+		<token name="DRNG_COLLISION_DRBG4">
+            <bits>255-192</bits>
+            <base>2</base>
+            <ituff>
+                <tname usetestname="ALWAYS">DRNG_COLLISION_DRBG4</tname>
+                <result>strgval</result>
+            </ituff>	
+				<actions>
+					<gsds scope="UNT" data_type="STR">NCDCOLLISION4</gsds>
+				</actions>
+			</token>
+
+    </pin>
+</set>
+</cmem_setup>

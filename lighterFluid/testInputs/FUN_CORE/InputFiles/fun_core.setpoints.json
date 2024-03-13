@@ -1,0 +1,54 @@
+{
+  "SetPoints": [
+    {
+      "Name": "DRNG_fuse",
+      "Configurations": [
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line3",
+          "Data": "RPT 600"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line4",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line5",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line6",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line7",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line8",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line9",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line10",
+          "Data": "RPT 300"
+        },
+        {
+          "Configuration": "FUN_CORE_DRNG_fuse",
+          "ConfigurationElement": "line11",
+          "Data": "RPT 600"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "Configurations": [
+    {
+      "Name": "FUN_CORE_DRNG_fuse",
+      "ConfigurationElement": [
+        {
+          "Name": "line3",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173648C_.*_fuse_drng_reg_drng_BIST"
+          ],
+          "Data": "RPT 600"
+        },
+        {
+          "Name": "line11",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS_0"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS_0"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*7173648C_.*_fuse_drng_reg_drng_BIST"
+          ],
+          "Data": "RPT 600"
+        },
+        {
+          "Name": "line4",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173649C_.*_fuse_drng_reg_drng_HealthCount_NOXOR"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line5",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173650C_.*_fuse_drng_reg_drng_HealthCount_XOR"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line6",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173651C_.*_fuse_drng_reg_drng_collision_drbg"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line7",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173652C_.*_fuse_drng_reg_drng_collision_nrbg"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line8",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173653C_.*_fuse_drng_reg_drng_metrics_noxor"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line9",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173654C_.*_fuse_drng_reg_drng_metrics_xor"
+          ],
+          "Data": "RPT 300"
+        },
+        {
+          "Name": "line10",
+          "Type": "INSTRUCTION",
+          "Domain": [
+            "CPU_TAP_ALL"
+          ],
+          "StartAddress": [
+            "StartDr__STATUS"
+          ],
+          "StartAddressOffset": [
+            -89
+          ],
+          "EndAddress": [
+            "StartDr__STATUS"
+          ],
+          "EndAddressOffset": [
+            -89
+          ],
+          "PatternsRegEx": [
+            "d.*L7173655C_.*_fuse_drng_reg_drng_mode_change"
+          ],
+          "Data": "RPT 300"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Test DrngTC ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    CtvCapturePins = "XXTDO";
+    Mode = "###Mode###";
+    HealthCountLimits = "63,257,199,257";
+    CollisionDataSize = 256;
+}
