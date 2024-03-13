@@ -49,7 +49,7 @@ definitionList = [];
 definitionList.append("arr_common");
 # definitionList.append("arr_atom");
 # definitionList.append("arr_ccf");
-# definitionList.append("arr_core");
+definitionList.append("arr_core");
 # definitionList.append("arr_gfx");
 # definitionList.append("arr_soc");
 # definitionList.append("arr_vpu");

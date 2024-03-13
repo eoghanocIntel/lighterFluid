@@ -15,7 +15,7 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
-    BisrMode = "uncompress"; # Compressed_skippatmod, Off;
+    BisrMode = "###BisrMode###";
     ItuffNameExtenstion = "###ItuffNameExtenstion###";
     PrintToItuff = "###PrintToItuff###";
     DffOperation = "###DffOperation###";

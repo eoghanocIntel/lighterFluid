@@ -34,7 +34,7 @@ moduleList = [];
 moduleList.append("arr_common");
 # moduleList.append("arr_atom");
 # moduleList.append("arr_ccf");
-# moduleList.append("arr_core");
+moduleList.append("arr_core");
 # moduleList.append("arr_gfx");
 # moduleList.append("arr_soc");
 # moduleList.append("arr_npu");
