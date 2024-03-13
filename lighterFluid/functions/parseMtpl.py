@@ -173,7 +173,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
                 continue;
         
         # Now we move on to our flows! 
-        if ((line.startswith('DUTFlow') or line.startswith('Flow')) and not line.startswith("DUTFlowItem")):
+        if ((line.startswith('DUTFlow') or line.startswith('Flow')) and not (line.startswith("DUTFlowItem") or line.startswith("FlowItem"))):
             setFlowSection = 1;
             flowItems = line.strip().split(' ');
             if (len(flowItems) == 3 and flowItems[2].endswith("_SubFlow")):
@@ -187,7 +187,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
                 compositeDict[currComp] = parseFlowItem(currComp, module);
             
         
-        elif line.startswith('DUTFlowItem'):
+        elif (line.startswith('DUTFlowItem') or line.startswith('FlowItem')):
             setFlowItemSection = 1;
             flowItems = line.strip().split(' ');
             
