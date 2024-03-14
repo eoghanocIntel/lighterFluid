@@ -23,8 +23,15 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.PowerRail = nameComponents[6];
     testInstance.VoltageCorner = nameComponents[7];
     testInstance.FreqCorner = nameComponents[8];
-    testInstance.FreqNum = nameComponents[9];
-    testInstance.NameEnding = "_".join(nameComponents[10:]);
+    
+    if len(nameComponents) < 9:
+        testInstance.FreqNum = "X";
+    else:
+        testInstance.FreqNum = nameComponents[9];
+    if len(nameComponents) < 10:
+        testInstance.NameEnding = "";
+    else:
+        testInstance.NameEnding = "_".join(nameComponents[10:]);
     
     for line in block_lines:
         tempLine = re.sub(r';\s*#.*',";",line);
