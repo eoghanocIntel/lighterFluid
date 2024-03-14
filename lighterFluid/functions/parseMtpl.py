@@ -212,13 +212,24 @@ def parseMtpl(inputFile, module, moduleFlowList):
             
         elif line.startswith('Result'):
             setResultSection = 1;
-            _, currPort = line.strip().rstrip(";").split(' ')
-            if(currPort in ["-2", "-1"]):
-                setAlarmPort = 1;
+
+            lineContents = line.strip().split(' ');
+            
+            # This is the "standard" format, where we have the result called and then the routing and binning etc later
+            if len(lineContents) == 2:
+                _, currPort = line.strip().rstrip(";").split(' ')
+                if(currPort in ["-2", "-1"]):
+                    setAlarmPort = 1;
+                    continue;
+                else:
+                    setAlarmPort = 0;
+            
+            # This is the inline workaround format, where we have all info on one line (typically used for alarms)
+            # Until I see other use-cases I am only setting up a WA for alarms...
+            elif ("Return" in line):
+                setResultSection
                 continue;
-            else:
-                setAlarmPort = 0;
-        
+                
         
         # I'm structuring the code so it uses "}" as a key trigger. 
         # That means i need to make sure the priorities make sense.

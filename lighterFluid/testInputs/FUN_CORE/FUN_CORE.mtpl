@@ -3612,18 +3612,9 @@ DUTFlow SA_LOGIC_AND_BIST_END
 {
 	DUTFlowItem SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON SBFT_FULLCHIP_VMIN_K_END_X_CLR_NOM_LFM_0800_CLR_DRAGON @EDC
 	{
-		Result -2
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;
-			Return -2;
-		}		
-		Result -1
-		{
-			Property PassFail = "Fail";
-			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
-			Return -1;
-		}		
+        Result -2 { Property PassFail = "Fail";SetBin SoftBins.b99010001_fail_FAIL_DPS_ALARM;Return -1;}                 
+        Result -1 { Property PassFail = "Fail";SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;Return -1;}
+
 		Result 0
 		{
 			Property PassFail = "Fail";
