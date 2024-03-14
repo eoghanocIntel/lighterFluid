@@ -29,7 +29,7 @@ def parseTestInstanceItem(name, template, block_lines):
     for line in block_lines:
         tempLine = re.sub(r';\s*#.*',";",line);
         
-        flowItems = line.strip().rstrip(";").split(' = ');
+        flowItems = tempLine.strip().rstrip(";").split(' = ');
         if len(flowItems) == 2:
             key = flowItems[0];
             value = str(flowItems[1]);

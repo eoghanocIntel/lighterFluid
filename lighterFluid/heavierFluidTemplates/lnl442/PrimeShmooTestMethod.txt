@@ -5,9 +5,9 @@ Test PrimeShmooTestMethod ###TestName###
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
     XAxisParam = "p_mtd_per";
-    XAxisRange = "8e-9:0.4e-9:10"; # Start: Resolution: NumberOfPoints;
+    XAxisRange = "8e-9:0.4e-9:10";
     XAxisParamType = "TimingTestCondition";
     YAxisParam = "p_vccsa_spec";
-    YAxisRange = "0.5:0.05:10"; # Start: Resolution: NumberOfPoints;
+    YAxisRange = "0.5:0.05:10";
     YAxisParamType = "LevelsTestCondition";
 }
