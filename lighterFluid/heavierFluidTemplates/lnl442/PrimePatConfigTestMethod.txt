@@ -2,5 +2,6 @@ Test PrimePatConfigTestMethod ###TestName###
 {
     BypassPort = ###bypassGlobal###;
     ConfigurationFile = "###ConfigurationFile###";
+    testMode = "###testMode###";
     SetPoint = "###SetPoint###";
 }

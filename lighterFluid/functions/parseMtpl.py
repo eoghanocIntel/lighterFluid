@@ -152,7 +152,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
         # 2. A Flow Item (This is really the rest of our test instance info, like porting and bins)
         # 3. A Flow (Either a composite or a full on flow like PREHVQK)
         # 4. A Result (This is the actual porting and bin info from our test - I have it split out because it's easier to distinguish section enders that way)
-        if (line.startswith('Test') and not line.startswith("TestPlan") and not line.startswith("TestMode")):
+        if (line.startswith('Test') and not line.startswith("TestPlan") and not "=" in line):
             setTestSection = 1;
             _, value1, value2 = line.strip().split(' ')
 
