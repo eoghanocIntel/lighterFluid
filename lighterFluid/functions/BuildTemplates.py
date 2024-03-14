@@ -7,6 +7,18 @@
 ##### FUNCTION #####
 ####################
 
+def checkParamExistsInAllTestsOfTheSameTemplate(testInstances, template, param):
+    instanceDict = {};
+    for module in testInstances:
+        for instance_name, testInstance in testInstances[module].items():
+            currTemplate = testInstance.Template
+            if currTemplate == template:
+                instanceDict[testInstance.TestName] = testInstances[module][instance_name];
+        
+    for testInstanceName, testInstance in instanceDict.items():
+        if param not in testInstance.bonusCols:
+            return False
+    return True
 
 def BuildTemplates(testInstanceDict, templateDir):
     # This function should build the test templates and .
