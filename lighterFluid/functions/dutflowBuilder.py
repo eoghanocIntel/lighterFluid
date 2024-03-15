@@ -123,7 +123,7 @@ def printASmolBoi(currTest, currModule):
             float(currTest.PortList[i]);
             nextTest = "Return " + str(int(float(currTest.PortList[i])));
         except:
-            nextTest = "GoTo " + currTest.PortList[i];
+            nextTest = "GoTo " + currTest.PortList[i].rstrip("_");
 
         if (str(i) in str(currTest.passPorts)):
             if currTest.WritePassCounter == "FALSE":
@@ -192,7 +192,7 @@ def printABigBoi(currComp):
             float(currComp.PortList[i]);
             nextTest = "Return " + str(int(float(currComp.PortList[i])));
         except:
-            nextTest = "GoTo " + currComp.PortList[i];
+            nextTest = "GoTo " + currComp.PortList[i].rstrip("_");
 
         if (str(i) in str(currComp.passPorts)):
             body = body + """
