@@ -53,7 +53,7 @@ def flowFileCursion(dataset, rowCount, parent):
     contentList = [];
 
     currComposite = FlowComposite.FlowComposite();
-    currComposite.CompositeName = dataset.TestName[i];
+    currComposite.CompositeName = dataset.TestName[i].rstrip("_");
     currComposite.flowX = dataset.flowX[i];
     currComposite.flowY = dataset.flowY[i];
     currComposite.Contents = [];
@@ -83,7 +83,7 @@ def flowFileCursion(dataset, rowCount, parent):
 
         currTest = FlowTestInstance.FlowTestInstance();
         # Assuming this is a chain ender - we need to assign ports
-        currTest.TestName = dataset.TestName[i];
+        currTest.TestName = dataset.TestName[i].rstrip("_");
         currTest.flowX = dataset.flowX[i];
         currTest.flowY = dataset.flowY[i];
         currTest.Module = dataset.Module[i];
@@ -102,7 +102,7 @@ def flowFileCursion(dataset, rowCount, parent):
 def printASmolBoiFlow(currTest, currModule):
     
     parentComposite = currTest.parentComposite;
-    testInstance = currTest.TestName;
+    testInstance = currTest.TestName.rstrip("_");
     x = str(int(float(currTest.flowX) * 150));
     y = str(int(float(currTest.flowY) * 250));
     

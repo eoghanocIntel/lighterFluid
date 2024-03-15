@@ -19,7 +19,7 @@ def flowCursion(dataset, rowCount):
     contentList = [];
 
     currComposite = Composite.Composite();
-    currComposite.CompositeName = dataset.TestName[i];
+    currComposite.CompositeName = dataset.TestName[i].rstrip("_");
     currComposite.portCount = dataset.portCount[i];
     currComposite.passPorts = dataset.passPorts[i];
     currComposite.PortList.append(dataset.Port0[i]);
@@ -50,7 +50,7 @@ def flowCursion(dataset, rowCount):
 
         currTest = TestInstance.TestInstance();
         # Assuming this is a chain ender - we need to assign ports
-        currTest.TestName = dataset.TestName[i];
+        currTest.TestName = dataset.TestName[i].rstrip("_");
         currTest.passPorts = dataset.passPorts[i];
         currTest.portCount = dataset.portCount[i];
         currTest.Module = dataset.Module[i];
@@ -106,7 +106,7 @@ def printASmolBoi(currTest, currModule):
 			Property PassFail = "Fail";
 			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
-		}}""".format(name = currTest.TestName, killOrEdc = killOrEdc);
+		}}""".format(name = currTest.TestName.rstrip("_"), killOrEdc = killOrEdc);
     footer = "\n\t}";
     body = "";
 
@@ -135,7 +135,7 @@ def printASmolBoi(currTest, currModule):
 		}}""".format(portNo=i, nextTest=nextTest);
             else:    
                 currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-                dummyCounter = "p" + currPheoBin + "_pass_" + currTest.TestName + "_" + str(i); 
+                dummyCounter = "p" + currPheoBin + "_pass_" + currTest.TestName.rstrip("_") + "_" + str(i); 
                 body = body + """
 		Result {portNo}
 		{{
@@ -147,11 +147,11 @@ def printASmolBoi(currTest, currModule):
 
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + currModule + "_" + currTest.TestName;
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + currModule + "_" + currTest.TestName.rstrip("_");
             if (not currKill or currKill == "FALSE"):
                 sharedBin = "##EDC## " + sharedBin;
 
-            dummyCounter = "n" + currPheoBin + "_fail_" + currTest.TestName + "_" + str(i);
+            dummyCounter = "n" + currPheoBin + "_fail_" + currTest.TestName.rstrip("_") + "_" + str(i);
             body = body + """
         Result {portNo}
         {{

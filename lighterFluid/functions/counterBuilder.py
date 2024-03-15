@@ -29,7 +29,7 @@ def counterBuilder(dataset):
         if(("COMPOSITE" in dataset.Template[i]) or ("TP_BEGIN" in dataset.Template[i]) or ("TP_END" in dataset.Template[i])):
             continue;
 
-        currTest = dataset.TestName[i];
+        currTest = dataset.TestName[i].rstrip("_");
         currIb = str(int(dataset.IB[i]));
         currFb = str(int(dataset.FB[i]));
         currCounter = int(dataset.Counter[i])*10;
