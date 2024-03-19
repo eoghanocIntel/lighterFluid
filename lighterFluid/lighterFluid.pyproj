@@ -137,15 +137,10 @@
     <Content Include="testTemplates\lnl442\vfdmUserFunc.txt" />
     <Content Include="testTemplates\lnl442\hsrPre.txt" />
     <Content Include="testTemplates\lnl442\evgScreen.txt" />
+    <Content Include="testTemplates\lnl442\vminTcLNL.txt" />
     <Content Include="testTemplates\lnl442\vminLNLF.txt" />
-    <Content Include="testTemplates\lnl442\vminTc_1P6.txt" />
-    <Content Include="testTemplates\lnl442\vminTc_Prepost.txt" />
-    <Content Include="testTemplates\lnl442\vminTc.txt" />
     <Content Include="testTemplates\lnl442\mbistRepairCORE.txt" />
-    <Content Include="testTemplates\lnl442\vminTc_SDT.txt" />
-    <Content Include="testTemplates\lnl442\vminTc_VPU_REC.txt" />
     <Content Include="testTemplates\lnl442\vminTc_VPU_REC_FLAG.txt" />
-    <Content Include="testTemplates\lnl442\vminTc_XFM.txt" />
     <Content Include="testTemplates\ptl\auxExpression.txt" />
     <Content Include="testTemplates\ptl\auxiliary.txt" />
     <Content Include="testTemplates\ptl\aux_recovery.txt" />
