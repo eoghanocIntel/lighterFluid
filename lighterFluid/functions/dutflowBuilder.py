@@ -223,6 +223,7 @@ def printAHugeBoi(currComp, body):
                       "TESTPLANENDFLOW",
                       "DUTCHANGEFLOW",
                       "LOTSTARTFLOW",
+                      "BIN",
                       "LOTENDFLOW"];
 
     currName = currComp.CompositeName;

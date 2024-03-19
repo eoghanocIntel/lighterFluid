@@ -36,6 +36,7 @@ protectedFlows = ["INIT",
                 "TESTPLANENDFLOW",
                 "DUTCHANGEFLOW",
                 "LOTSTARTFLOW",
+                "BIN",
                 "LOTENDFLOW"];
 
 
