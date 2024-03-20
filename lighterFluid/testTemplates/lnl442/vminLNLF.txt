@@ -18,6 +18,7 @@ Test LNLVminSearchF ###TestName###
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
 	TriggerMapName = "###TriggerMapName###";
 	DtsConfigName = "###DtsConfigName###";
+	CTVContent = ###CTVContent###;
 	PinMap = "###pinMap###";
 	RecoveryRule = "###recoveryRule###";
 	TrackingStructure = "###trackingStructure###";
@@ -25,5 +26,4 @@ Test LNLVminSearchF ###TestName###
 	MaxRepetitionCount = ###maxRepCount###;
 	IncomingPinMask = "###pinMask###";
 	MaxFails = ###maxFails###;
-
 }

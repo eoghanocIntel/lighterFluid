@@ -1,21 +1,23 @@
 Test LNLVminSearchF ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	EndVoltageLimits = "1.2"; 
+	EndVoltageLimits = "###EndVoltage###"; 
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
-	StartVoltages = "0.42";
+	StartVoltages = "###StartVoltages###";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";
 	PatternNameMap = "9,10,11,12,13,14,15";
 	ScoreboardBaseNumber = "###baseNumber###";
+	VminResultKey = "###vminResultKey###";
 	ExecutionMode = "###SearchMode###";
 	SetPointsPlistMode = "###SetPointsPlistMode###";
 	SetPointsPreInstance = "###SetPointsPreInstance###";
-	DtsConfigName = "###DtsConfigName###";
+	SetPointsPostInstance = "###SetPointsPostInstance###";
 	ResetSeparationMode = "###ResetSeparationMode###";
 	PatternTriggerMapLevel = "###PatternTriggerMapLevel###";
 	TriggerMapName = "###TriggerMapName###";
+	DtsConfigName = "###DtsConfigName###";
 	CTVContent = ###CTVContent###;
 }

@@ -14,10 +14,10 @@ import shutil
 #########################
 ##### CONFIGURATION #####
 #########################
-#definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-#userName = "lsuareza";
-definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "eoghanoc";
+definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+userName = "lsuareza";
+#definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
+#userName = "eoghanoc";
 #definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "brownm1";
 #definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
@@ -28,8 +28,8 @@ userName = "eoghanoc";
 # userName = "adambyrn";
 
 # file = "uriPoC.xlsm";
-file = "PTLArrayMasterSheet.xlsm";
-# file = "LNLArrayMasterSheet.xlsm";
+#file = "PTLArrayMasterSheet.xlsm";
+file = "LNLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 product = "lnl442";
 # product = "ptl";
@@ -44,11 +44,11 @@ powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe
 definitionList = [];
 definitionList.append("arr_common");
 definitionList.append("arr_ccf");
-# definitionList.append("arr_core");
+definitionList.append("arr_core");
 definitionList.append("arr_gfx");
 definitionList.append("arr_soc");
 definitionList.append("arr_vpu");
-# definitionList.append("arr_atom");
+definitionList.append("arr_atom");
 #definitionList.append("arr_doe");
 #findAndReplaceFile = "inputs\\findAndReplaceFile.csv";
 
