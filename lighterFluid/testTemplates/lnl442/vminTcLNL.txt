@@ -5,6 +5,7 @@ Test LNLVminSearchF ###TestName###
 	LevelsTc = "###Levels###";
 	Patlist = "###plist###";
 	StartVoltages = "###StartVoltages###";
+	StartVoltagesForRetry = "###StartVoltagesForRetry###";
 	StepSize = 0.02;
 	TimingsTc = "###Timings###";
 	VoltageTargets = "###Supply###";
