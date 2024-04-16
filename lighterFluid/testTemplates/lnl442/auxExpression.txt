@@ -1,7 +1,7 @@
 Test AuxiliaryTC ###TestName###
 {
 	BypassPort = ###bypassGlobal###;
-	Expression = "###Expression###";
+	Expression = "###expression###";
 	Storage = "DFF";
 	DataType = "String";
 	ResultToken = "###resultToken###";
