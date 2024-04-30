@@ -21,8 +21,8 @@ import shutil
 #definitionDir = r"C:\Users\adambyrn\source\repos\LNL_CPU_SORT\Modules";
 # userName = "adambyrn";
 
-definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
-# definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
+# definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
+definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
 userName = "eoghanoc";
 
 file = "lnlBackConvert.xlsx";
@@ -32,10 +32,11 @@ product = "lnl442";
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
-moduleList.append("arr_common");
-moduleList.append("arr_atom");
-moduleList.append("arr_ccf");
-moduleList.append("arr_core");
+# moduleList.append("arr_common");
+# moduleList.append("arr_atom");
+# moduleList.append("arr_ccf");
+# moduleList.append("arr_core");
+moduleList.append("scn_dim");
 # moduleList.append("fun_core");
 # moduleList.append("arr_gfx");
 # moduleList.append("arr_soc");
