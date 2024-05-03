@@ -1,0 +1,9 @@
+Test PrimeScanSPOFITestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    PerPatternFailCaptureCount = SCN_DIM.SPOFIPerPatternFailCaptureCount;
+    TotalFailCaptureCount = SCN_DIM.SPOFITotalFailCaptureCount;
+}

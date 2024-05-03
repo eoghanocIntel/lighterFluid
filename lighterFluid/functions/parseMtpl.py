@@ -62,7 +62,11 @@ def parseTestInstanceItem(name, template, block_lines):
                 try:
                     testInstance.bonusColsIntegers[key] = int(value);
                 except :
-                    testInstance.bonusColsIntegers[key] = float(value);
+                    try:
+                        testInstance.bonusColsIntegers[key] = float(value);
+                    except :
+                        # This should only happen if we are using a Uservar to define an Int (eg startVoltage)
+                        testInstance.bonusColsIntegers[key] = value;
                 
 
     return testInstance;
@@ -294,7 +298,8 @@ def parseMtpl(inputFile, module, moduleFlowList):
                 testInstanceDict[currTest].Counter = binDeetz.group(4);
     
             if (line.startswith("GoTo") or line.startswith("Return")):
-                tempLine = line.split(" ")[1].strip(";");
+                tempList = list(filter(None, line.split(" ")));
+                tempLine = tempList[1].strip(";");
                 tempGoTo = tempLine;
                 
                 if not setAlarmPort:

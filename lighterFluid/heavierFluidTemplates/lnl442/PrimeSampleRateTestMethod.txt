@@ -1,7 +1,8 @@
 Test PrimeSampleRateTestMethod ###TestName###
 {
     BypassPort = ###bypassGlobal###;
-    SamplingRateValue = "12";
-    SampleOption = "DUT_SAMPLING";
-    PrintItuffExitPort = "True";
+    SamplingRateValue = "1";
+    WaferSampleRateValue = "3";
+    SampleOption = "SAMPLE_LOWEST";
+    PrintItuffExitPort = "False";
 }

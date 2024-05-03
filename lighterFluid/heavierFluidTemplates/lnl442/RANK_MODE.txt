@@ -1,0 +1,4 @@
+Test RANK_MODE ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+}

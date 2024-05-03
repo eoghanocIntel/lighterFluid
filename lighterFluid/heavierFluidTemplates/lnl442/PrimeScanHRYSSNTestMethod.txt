@@ -1,0 +1,10 @@
+Test PrimeScanHRYSSNTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    HRYInputFile = "###HRYInputFile###";
+    PerPatFailCaptureCount = SCN_DIM.HRYPerPatFailCaptureCount;
+    TotalFailCaptureCount = SCN_DIM.HRYTotalFailCaptureCount;
+}

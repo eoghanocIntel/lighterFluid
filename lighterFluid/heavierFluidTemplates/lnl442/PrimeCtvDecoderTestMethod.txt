@@ -4,6 +4,6 @@ Test PrimeCtvDecoderTestMethod ###TestName###
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
-    ConfigurationFile = "./Modules/FUN_CORE/InputFiles/nap_bist_config.csv";
+    ConfigurationFile = "###ConfigurationFile###";
     CtvCapturePins = "XXTDO";
 }
