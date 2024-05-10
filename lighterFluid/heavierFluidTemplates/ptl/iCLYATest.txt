@@ -3,7 +3,6 @@ Test iCLYATest ###TestName###
     bypass_global = "###bypassGlobal###";
     level = "###Levels###";
     timings = "###Timings###";
-    basenumber = 2101;
     bitline_barpin = "XX_CORE_VIEW_LYA_1";
     bitline_pin = "XX_CORE_VIEW_LYA_0";
     config_file = "./Modules/ARR_CCF/InputFiles/PTL_C0.lya.xml";
@@ -11,11 +10,12 @@ Test iCLYATest ###TestName###
     execution_mode = "GOODCELLLYA";
     input_string_tag = "L2DAT";
     mapper_file = "./Modules/ARR_COMMON_CXX/InputFiles/MTL_ArrayMap.XML";
-    max_lya_count = 40;
     postinstance = "NHM_UF!SmartTcSetToEnable";
-    pre_pause = 0.0;
     preinstance = "NHM_UF!SmartTcSetToDisable";
     target_array = "L2_DAT";
-    vcc_maxlevel = 1.0;
     vcc_pin = "VCCATOM_HV";
+    basenumber = 2101;
+    max_lya_count = 40;
+    pre_pause = 0.0;
+    vcc_maxlevel = 1.0;
 }
