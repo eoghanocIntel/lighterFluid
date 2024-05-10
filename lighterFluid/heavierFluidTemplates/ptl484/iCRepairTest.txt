@@ -1,0 +1,15 @@
+Test iCRepairTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    configuration = "./Modules/ARR_ATOM/InputFiles/PTL_Repair_to_fuse_ATOM.xml!PTL";
+    fuse_removal = "Outgoing_Only";
+    hry_data_log = "OFF";
+    input_tag = "none";
+    map_array = "none";
+    mapper_file = "none";
+    mode_of_decoding = "none";
+    mode_of_operation = "Repair_To_Fuse";
+    mode_of_execution = "Manufacturing";
+    raster_data_log = "None";
+    redundancy_fuse_active = "ON";
+}

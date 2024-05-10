@@ -57,8 +57,13 @@ def flowCursion(dataset, rowCount):
         currTest.IB = dataset.IB[i];
         currTest.FB = dataset.FB[i];
         currTest.Counter = dataset.Counter[i];
-        currTest.WritePassCounter = dataset.WritePassCounter[i];
+        currTest.WritePassCounter = str(dataset.WritePassCounter[i]);
         currTest.KillEnabled = dataset.killEnabled[i];
+        
+        if "b9899Counter" in dataset.columns:
+            currTest.b9899Counter = dataset.b9899Counter[i];
+        else:
+            currTest.b9899Counter = "oldschool"
 
         # This is ugly and I hate it but I'm doing it to get this done quick.
         # I'm certain a better coder will look at this and vomit.
@@ -91,8 +96,15 @@ def printASmolBoi(currTest, currModule):
     if (not currKill or currKill == "FALSE"):
         killOrEdc = "@EDC";
     
-
-    header = """
+    currIb =        str(int(currTest.IB));
+    currFb =        str(int(currTest.FB));
+    currCounter =   int(currTest.Counter)*10;
+    
+    footer = "\n\t}";
+    body = "";
+    
+    if (currTest.b9899Counter == "oldschool"):
+        header = """
 	DUTFlowItem {name} {name} {killOrEdc}
 	{{
 		Result -2
@@ -107,14 +119,26 @@ def printASmolBoi(currTest, currModule):
 			SetBin SoftBins.b98010001_fail_FAIL_SYSTEM_SOFTWARE;
 			Return -1;
 		}}""".format(name = currTest.TestName.rstrip("_"), killOrEdc = killOrEdc);
-    footer = "\n\t}";
-    body = "";
 
-
-    
-    currIb =        str(int(currTest.IB));
-    currFb =        str(int(currTest.FB));
-    currCounter =   int(currTest.Counter)*10;
+    else:
+        alarmCounter =   str(int(currTest.b9899Counter));
+        alarmBin = currIb.zfill(2) + alarmCounter.zfill(4);
+        header = """
+	DUTFlowItem {name} {name} {killOrEdc}
+	{{
+		Result -2
+		{{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b99{alarmBin}_fail_{currModule}_{name}_n2;
+			Return -2;
+		}}		
+		Result -1
+		{{
+			Property PassFail = "Fail";
+			SetBin SoftBins.b98{alarmBin}_fail_{currModule}_{name}_n1;
+			Return -1;
+		}}""".format(name = currTest.TestName.rstrip("_"), killOrEdc = killOrEdc, alarmBin = alarmBin, currModule = currModule);
+           
     
     #currPheoBin = currIb.zfill(2) + currFb.zfill(2) + currCounter.zfill(4);
     for i in range(0,int(currTest.portCount)):
@@ -126,7 +150,7 @@ def printASmolBoi(currTest, currModule):
             nextTest = "GoTo " + currTest.PortList[i].rstrip("_");
 
         if (str(i) in str(currTest.passPorts)):
-            if currTest.WritePassCounter == "FALSE":
+            if currTest.WritePassCounter.upper() == "FALSE":
                 body = body + """
 		Result {portNo}
 		{{

@@ -1,0 +1,14 @@
+Test MbistRasterRepairTC ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    CtvCapturePins = "XXJTAG_CPU_TDO";
+    EnableRepair = "FALSE";
+    RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER.json";
+    FailuresToCapturePerPattern = 100;
+    FailuresToCaptureTotal = 1000;
+    MaxFailuresPerPatternToItuff = 100;
+    MaxFailuresToItuff = 1000;
+}

@@ -22,22 +22,23 @@ import shutil
 # userName = "adambyrn";
 
 # definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
-definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
+definitionDir = r"C:\Users\eoghanoc\source\repos\torch\ptl-cdie484\Modules";
+# definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
 userName = "eoghanoc";
 
-file = "lnlBackConvert.xlsx";
-# product = "ptl";
-product = "lnl442";
+file = "ptlBackConvert.xlsx";
+product = "ptl484";
+# product = "lnl442";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
-# moduleList.append("arr_common");
+moduleList.append("arr_common");
 # moduleList.append("arr_atom");
 # moduleList.append("arr_ccf");
 # moduleList.append("arr_core");
 # moduleList.append("scn_dim");
-moduleList.append("mio_ddr_ac");
+# moduleList.append("mio_ddr_ac");
 # moduleList.append("fun_core");
 # moduleList.append("arr_gfx");
 # moduleList.append("arr_soc");

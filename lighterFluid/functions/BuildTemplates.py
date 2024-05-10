@@ -41,6 +41,7 @@ def BuildTemplates(testInstanceDict, templateDir):
                      "IB",
                      "FB",
                      "Counter",
+                     "b9899Counter",
                      "WritePassCounter",
                      "bypassGlobal",
                      "killEnabled",

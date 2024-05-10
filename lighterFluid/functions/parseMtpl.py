@@ -143,6 +143,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
     block_lines = [];
 
     binsplitterRegex = ".*::([np])(\d\d)(\d\d)(\d\d\d)\d_.*";   
+    b9899Regex = ".*SoftBins.b9[89]\d\d(\d\d\d\d)_fail.*";   
 
     setTestSection = 0;
     setFlowItemSection = 0;
@@ -297,6 +298,12 @@ def parseMtpl(inputFile, module, moduleFlowList):
                 testInstanceDict[currTest].FB = binDeetz.group(3);
                 testInstanceDict[currTest].Counter = binDeetz.group(4);
     
+            if line.startswith("SetBin") and setAlarmPort:
+                if ("FAIL_DPS_ALARM" in line) or ("FAIL_SYSTEM_SOFTWARE" in line):
+                    continue;
+                alarmDeetz = re.search(b9899Regex,line);
+                testInstanceDict[currTest].b9899Counter = alarmDeetz.group(1);
+                
             if (line.startswith("GoTo") or line.startswith("Return")):
                 tempList = list(filter(None, line.split(" ")));
                 tempLine = tempList[1].strip(";");
@@ -308,6 +315,7 @@ def parseMtpl(inputFile, module, moduleFlowList):
                     
                     if isComposite:
                         compositeDict[currTest].PortList.append(tempGoTo);
+
 
     for subComp in compositeDict:
         if subComp in moduleFlowList:

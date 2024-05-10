@@ -5,6 +5,7 @@ import os
 
 
 def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstanceDict, testPrintOutList):
+    doB9899Counter = 0;
 
     with pd.ExcelWriter(outFile, engine='xlsxwriter') as writer:
         for module in moduleList:
@@ -202,7 +203,7 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                     worksheet.set_row(row_num+1, cell_format=flow_end_format)      
                  
             for i, (passPort) in enumerate(df['passPorts'], start=1):
-                formula_to_write = 'COUNTA(AA{0}:AJ{0})'.format(i+1) 
+                formula_to_write = 'COUNTA(AB{0}:AK{0})'.format(i+1) 
                 worksheet.write_formula(i, df.columns.get_loc('portCount'), formula_to_write);
             
             for i in range(0,10):
