@@ -171,7 +171,7 @@ def printASmolBoi(currTest, currModule):
 
         else:
             currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + i).zfill(4);
-            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + currModule + "_" + currTest.TestName.rstrip("_");
+            sharedBin = "SetBin SoftBins.b" + currPheoBin + "_fail_" + currModule + "_" + currTest.TestName.rstrip("_") + "_" + str(i);
             if (not currKill or currKill == "FALSE"):
                 sharedBin = "##EDC## " + sharedBin;
 
