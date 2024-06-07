@@ -16,9 +16,9 @@ Test PrimeMbistVminSearchTestMethod ###TestName###
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
     BisrMode = "###BisrMode###";
-    ItuffNameExtenstion = "###ItuffNameExtenstion###";
-    PrintToItuff = "###PrintToItuff###";
-    StepSize = 0.02;
+    ItuffNameExtenstion = "";
+    PrintToItuff = "";
+    StepSize = ###StepSize###;
     ScoreboardEdgeTicks = 0;
     MaxRepetitionCount = 0;
     FailCaptureCount = 16;

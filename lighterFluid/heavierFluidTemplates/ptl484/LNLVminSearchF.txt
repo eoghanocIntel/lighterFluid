@@ -1,0 +1,26 @@
+Test LNLVminSearchF ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    StartVoltages = "###StartVoltages###";
+    VoltageTargets = "###VoltageTargets###";
+    PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+    Log1_Mode = ARR_CCF.Log1Mode;
+    Rec_EDC = "ENABLED";
+    BaseNumbers = "###BaseNumbers###";
+    ExecutionMode = "###ExecutionMode###";
+    SetPointsPlistMode = "###SetPointsPlistMode###";
+    VminResultKey = "###VminResultKey###";
+    PinMap = "###PinMap###";
+    RecoveryRule = "###RecoveryRule###";
+    TrackingStructure = "###TrackingStructure###";
+    IncomingPinMask = "ENABLED";
+    SetPointsPreInstance = "###SetPointsPreInstance###";
+    StepSize = ###StepSize###;
+    MaxRepetitionCount = ###MaxRepetitionCount###;
+    MaxFails = ###MaxFails###;
+    EndVoltageLimits = "###EndVoltageLimits###";
+    SetPointName = "Move2R1_ARR_CORE";
+}

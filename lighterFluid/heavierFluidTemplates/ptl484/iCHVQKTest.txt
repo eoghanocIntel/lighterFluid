@@ -1,0 +1,16 @@
+Test iCHVQKTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    voltage_step_config_file = "###voltage_step_config_file###";
+    power_up_level = "###power_up_level###";
+    power_down_level = "BASE::Power_Up_TC_force_0V";
+    preplist = "CPD_DEBUG!EnableDMEMCapture XXJTAG_CPU_TDO";
+    preinstance = "###preinstance###";
+    postinstance = "EmbPython!Execute ./Modules/TPI_BASE/InputFiles/DTS.ProcessDMEMData";
+    ifpm_input_file = "###ifpm_input_file###";
+    ifpm_modifygroups = "###ifpm_modifygroups###";
+    mask_pins = "G.U.S.HVQK_PIN_MASKING";
+}

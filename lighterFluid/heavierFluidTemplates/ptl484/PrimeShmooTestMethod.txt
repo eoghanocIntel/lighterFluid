@@ -5,7 +5,7 @@ Test PrimeShmooTestMethod ###TestName###
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
     YAxisParam = "###YAxisParam###";
-    YAxisRange = "0.5:0.05:9";
+    YAxisRange = "###YAxisRange###";
     XAxisParamType = "TimingTestCondition";
     XAxisParam = "p_mtd_per";
     XAxisRange = "9e-9:0.5e-9:8";

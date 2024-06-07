@@ -3,7 +3,7 @@ Test AuxiliaryTC ###TestName###
     BypassPort = ###bypassGlobal###;
     Expression = "###Expression###";
     ResultToken = "###ResultToken###";
-    Storage = "DFF";
+    Storage = "SharedStorage";
     DataType = "String";
-    ResultPort = "";
+    ResultPort = "###ResultPort###";
 }

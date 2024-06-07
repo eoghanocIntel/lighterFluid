@@ -1,15 +1,15 @@
 Test iCRepairTest ###TestName###
 {
     bypass_global = "###bypassGlobal###";
-    configuration = "./Modules/ARR_ATOM/InputFiles/PTL_Repair_to_fuse_ATOM.xml!PTL";
+    configuration = "###configuration###";
     fuse_removal = "Outgoing_Only";
     hry_data_log = "OFF";
-    input_tag = "none";
-    map_array = "none";
-    mapper_file = "none";
-    mode_of_decoding = "none";
-    mode_of_operation = "Repair_To_Fuse";
+    input_tag = "###input_tag###";
+    map_array = "###map_array###";
+    mapper_file = "./Modules/ARR_ATOM/InputFiles/PTL_ArrayMap_ATOM.xml";
+    mode_of_decoding = "###mode_of_decoding###";
+    mode_of_operation = "###mode_of_operation###";
     mode_of_execution = "Manufacturing";
-    raster_data_log = "None";
+    raster_data_log = "###raster_data_log###";
     redundancy_fuse_active = "ON";
 }
