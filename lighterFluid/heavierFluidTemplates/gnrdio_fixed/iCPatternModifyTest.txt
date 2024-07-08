@@ -1,0 +1,8 @@
+Test iCPatternModifyTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    modify_token = "ATPG_HACK";
+    modify_pattern_type = "MAIN_PATTERN";
+    modification_type = "PATTERN";
+    input_file = ###input_file###;
+}

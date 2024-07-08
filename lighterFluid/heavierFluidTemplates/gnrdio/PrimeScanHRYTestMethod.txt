@@ -1,0 +1,10 @@
+Test PrimeScanHRYTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    HRYInputFile = ###HRYInputFile###;
+    PerPatFailCaptureCount = 1;
+    TotalFailCaptureCount = 10000;
+}

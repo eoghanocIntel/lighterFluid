@@ -37,7 +37,7 @@ def counterBuilder(dataset):
         for j in range(0,int(dataset.portCount[i])):
             # we need to check if the current port is in the pass port list (ignore if so)
             if str(j) in str(dataset.passPorts[i]):
-                if (dataset.WritePassCounter[i] == "TRUE"):
+                if (str(dataset.WritePassCounter[i]).upper() == "TRUE"):
                     currPheoBin = currIb.zfill(2) + currFb.zfill(2) + str(currCounter + j).zfill(4);
                     counterData = "\tp" + currPheoBin + "_pass_" + currTest + "_" + str(j); 
                     counterList.append(counterData);

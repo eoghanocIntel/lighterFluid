@@ -22,18 +22,19 @@ import shutil
 # userName = "adambyrn";
 
 # definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
-definitionDir = r"C:\Users\eoghanoc\source\repos\torch\ptl-cdie484\Modules";
+definitionDir = r"C:\Users\cmichel1\TorchTPs\gnrdio_sort\Modules";
 # definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
-userName = "eoghanoc";
+userName = "cmichel1";
 
-file = "ptlBackConvert.xlsx";
-product = "ptl484";
+file = "gnrdioBackConvert.xlsx";
+product = "gnrdio";
 # product = "lnl442";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
 moduleList = [];
-moduleList.append("arr_common");
+moduleList.append("scn_nac");
+moduleList.append("scn_uncore");
 # moduleList.append("arr_atom");
 # moduleList.append("arr_ccf");
 # moduleList.append("arr_core");
@@ -71,15 +72,12 @@ moduleFlowList = ["TESTPLANSTARTFLOW",
                   "STRESS",
                   "SDTSTART",
                   "SDTBEGIN",
-                  "HOTSTRESS",
+                  "SDTSTRESS",
                   "SDTEND",
                   "SDTFINAL",
                   "RETURN",
                   "POSTHVQK",
                   "END",
-                  "ENDTFM",
-                  "ENDXFM",
-                  "EXVF",
                   "FINAL",
                   "ALARM",
                   "STARTFAILFLOW",

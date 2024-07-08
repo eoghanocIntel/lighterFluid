@@ -24,11 +24,11 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.VoltageCorner = nameComponents[7];
     testInstance.FreqCorner = nameComponents[8];
     
-    if len(nameComponents) < 9:
+    if len(nameComponents) < 10:
         testInstance.FreqNum = "X";
     else:
         testInstance.FreqNum = nameComponents[9];
-    if len(nameComponents) < 10:
+    if len(nameComponents) < 11:
         testInstance.NameEnding = "";
     else:
         testInstance.NameEnding = "_".join(nameComponents[10:]);

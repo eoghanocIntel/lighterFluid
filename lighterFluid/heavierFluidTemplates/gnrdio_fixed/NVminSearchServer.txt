@@ -1,0 +1,31 @@
+Test NVminSearchServer ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    FeatureSwitchSettings = "###FeatureSwitchSettings###";
+    ForwardingMode = "DISABLED";
+    VoltageTargets = ###VoltageTargets###;
+    StartVoltages = ###StartVoltages###;
+    StartVoltagesForRetry = ###StartVoltagesForRetry###;
+    EndVoltageLimits = ###EndVoltageLimits###;
+    StepSize = VminVars.GenericStep;
+    VminResult = "###VminResult###";
+    MaskIncoming = "###MaskIncoming###";
+    UpdateTrackingStructure = "###UpdateTrackingStructure###";
+    DefeatureResult = "###DefeatureResult###";
+    DecoderConfiguration = "###DecoderConfiguration###";
+    MaskBuilderSettings = "###MaskBuilderSettings###";
+    FinalStructureCheckRule = ###FinalStructureCheckRule###;
+    RepetitionCheckRule = ###RepetitionCheckRule###;
+    MaxRepetitionCount = ###MaxRepetitionCount###;
+    PreInstance = "###PreInstance###";
+    SetPointsPlistParamName = "Patlist";
+    ScoreboardEdgeTicks = 0;
+    SetPointsPreInstance = VminVars.DefaultRatios;
+    PatternNameCounterIndexes = "1,2,3,4,5,6,7";
+    PatternTriggerMap = "###PatternTriggerMap###";
+    TestCondition = "###TestCondition###";
+    TotalCaptureCount = 1;
+}

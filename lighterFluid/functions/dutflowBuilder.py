@@ -253,7 +253,7 @@ def printAHugeBoi(currComp, body, currModule):
                       "FINAL",
                       "SDTSTART",
                       "SDTBEGIN",
-                      "HOTSTRESS",
+                      "SDTSTRESS",
                       "SDTEND",
                       "DEDC",
                       "SDTDEDC",
@@ -265,7 +265,10 @@ def printAHugeBoi(currComp, body, currModule):
 
     currName = currComp.CompositeName;
     if currComp.CompositeName in protectedFlows:
-        currName = currModule + "_" + currName + " @" + currName + "_SubFlow";
+        if currName == "INIT":
+            currName = currModule + "_" + currName + " @" + currName;
+        else:
+            currName = currModule + "_" + currName + " @" + currName + "_SubFlow";
     header = """
 DUTFlow {name}
 {{""".format(name = currName);

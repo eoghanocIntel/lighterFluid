@@ -1,0 +1,13 @@
+Test iCHVQKTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    voltage_step_config_file = "###voltage_step_config_file###";
+    meta_data_file = "./Modules/TPI_HVQK/InputFiles/GNRDIO.hvqk.metadata.txt";
+    preplist = "CPD_DEBUG!EnableDMEMCapture TDO_IODIE0";
+    postinstance = "###postinstance###";
+    mask_pins = "G.U.S.DEFEAT_MASK";
+    preinstance = "###preinstance###";
+}

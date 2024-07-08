@@ -14,7 +14,7 @@
     <RootNamespace>csvToTorchBuilder</RootNamespace>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+    <InterpreterId>MSBuild|env_lighterFluid|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +49,7 @@
     <Folder Include="functions\__pycache__\" />
     <Folder Include="heavierFluidOutputs\" />
     <Folder Include="heavierFluidTemplates\" />
+    <Folder Include="heavierFluidTemplates\gnrdio\" />
     <Folder Include="releasedModules\" />
     <Folder Include="outputs\" />
     <Folder Include="releasedModules\LNL\" />
@@ -90,6 +91,17 @@
     <Content Include="functions\__pycache__\importBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\testBuilder.cpython-39.pyc" />
     <Content Include="functions\__pycache__\TestInstance.cpython-39.pyc" />
+    <Content Include="heavierFluidTemplates\gnrdio\iCHVQKTest.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\iCPatternModifyTest.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\iCScanFITest.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\iCScreenTest.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\NStructureTrackerChecker.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\NVminSearchServer.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\PrimeFunctionalTestMethod.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\PrimeScanHRYStfTestMethod.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\PrimeScanHRYTestMethod.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\PrimeScanSPOFITestMethod.txt" />
+    <Content Include="heavierFluidTemplates\gnrdio\PrimeShmooTestMethod.txt" />
     <Content Include="LighterFluid-How2Run_FAQ.one" />
     <Content Include="outputs\.gitignore" />
     <Content Include="releasedModules\LNL\30G\eoghanoc_2023_06_14_12_03_46\ARR_ATOM\ARR_ATOM.mtpl" />
@@ -205,6 +217,17 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env_lighterFluid\">
+      <Id>env_lighterFluid</Id>
+      <Version>3.9</Version>
+      <Description>env_lighterFluid (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

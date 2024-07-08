@@ -1,0 +1,13 @@
+Test PrimeScanHRYStfTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    CompressedMode = "On";
+    PatternsNotToProcessForHRY = "###PatternsNotToProcessForHRY###";
+    HryMappingDescriptorInputFile = ###HryMappingDescriptorInputFile###;
+    HryMappingInputFile = ###HryMappingInputFile###;
+    PerPatternFailCaptureCount = 100;
+    TotalFailCaptureCount = 10000;
+}

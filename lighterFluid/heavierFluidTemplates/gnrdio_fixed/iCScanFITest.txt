@@ -1,0 +1,13 @@
+Test iCScanFITest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    patlist = "###plist###";
+    enable_scanFI = "ENABLED";
+    execute_options = "EXECUTE_ALL_PAT_OFF";
+    scanFI_datalog_mode = "SCANFI_DATA";
+    cat_fail_limit = 500000;
+    max_num_fail = 1000000;
+    min_num_fail = 1;
+}

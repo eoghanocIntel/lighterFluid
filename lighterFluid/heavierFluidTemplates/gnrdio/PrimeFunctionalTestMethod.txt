@@ -1,0 +1,11 @@
+Test PrimeFunctionalTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    FailuresToCaptureTotal = 1;
+    FailuresToCapturePerPattern = 1;
+    MaxFailuresToItuff = 1;
+    MaxFailuresPerPatternToItuff = 1;
+}

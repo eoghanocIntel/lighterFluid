@@ -16,8 +16,6 @@ import shutil
 #########################
 #definitionDir = r"C:\Users\lsuareza\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "lsuareza";
-definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
-userName = "eoghanoc";
 #definitionDir = r"C:\Users\brownm1\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "brownm1";
 # definitionDir = r"C:\Users\dgiardin\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
@@ -25,18 +23,19 @@ userName = "eoghanoc";
 #definitionDir = r"C:\Users\rbilei\OneDrive - Intel Corporation\ARRAY\lighterFluidFiles";
 #userName = "rbilei";
 #definitionDir = r"C:\Users\adambyrn\OneDrive - Intel Corporation\Array - Panther Lake Sort Development\LF";
-definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\heavierFluidOutputs";
+definitionDir = r"C:\Users\cmichel1\source\repos\lighterFluid\lighterFluid\heavierFluidOutputs";
+userName = "cmichel1";
 # userName = "adambyrn";
 
-file = "uriPoC.xlsm";
+# file = "uriPoC.xlsm";
 # file = "PTLArrayMasterSheet.xlsm";
 # file = "LNLArrayMasterSheet.xlsm";
 # file = "flowFileHackyWhackyAdventure.xlsm";
 # product = "lnl442";
-product = "ptl484";
+product = "gnrdio";
 #file = "PTLArrayMasterSheet.xlsm";
-file = "PTL_COMMON_ONLY.xlsx";
-file = "ptlBackConvert.xlsx";
+#file = "GNRDIO_COMMON_ONLY.xlsx";
+file = "gnrdioBackConvert_v1.xlsx";
 # product = "ptl";
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
@@ -45,10 +44,11 @@ file = "ptlBackConvert.xlsx";
 
 powerShellPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
 
-module = "ARR";
+module = "SCN";
 
 definitionList = [];
-definitionList.append("arr_common");
+#definitionList.append("scn_nac");
+definitionList.append("scn_uncore");
 # definitionList.append("arr_atom");
 # definitionList.append("arr_ccf");
 # definitionList.append("arr_core");

@@ -1,0 +1,7 @@
+Test NStructureTrackerChecker ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    UpdateMode = "###UpdateMode###";
+    FinalStructureCheckRule = ###FinalStructureCheckRule###;
+    InputMaskToBeValidated = ###InputMaskToBeValidated###;
+}

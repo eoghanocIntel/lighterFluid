@@ -1,0 +1,8 @@
+Test iCScreenTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    screen_custom_file = "./Modules/TPI_BASE/InputFiles/ScreenCustom_TPChassis.txt";
+    screen_custom_setpoint = "ALL";
+    screen_test_set = "###screen_test_set###";
+    screen_tests_file = "./Modules/SCN_NAC/InputFiles/ScreenTest_NACREP_Flow.txt";
+}

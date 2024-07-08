@@ -27,7 +27,7 @@ def importBuilder(dataset, timeStamp, currModule):
     #    currModule = "COMMON";
     testPlan = "TestPlan " + currModule + ";\n";
     uservar = "Import " + currModule + ".usrv;\n";
-    basespecs = "Import BaseSpecs.usrv;\n"
+    basespecs = "\n"
     
     importSection = importBegin + importTimeStamp + testPlan + uservar + basespecs + "\n";
     
