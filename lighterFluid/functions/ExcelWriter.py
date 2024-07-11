@@ -72,7 +72,8 @@ def WriteToExcel(outFile, moduleList, addedColsList, compositeDict, testInstance
                                 continue;
                     for i, port in enumerate(testInstanceDict[module][test].PortList):
                         newRow["Port" + str(i)] = port;
-                    newRow["TestName"] = '=D{0}&"_"&E{0}&"_"&F{0}&"_"&G{0}&"_"&A{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(lineNo+2);
+#                    newRow["TestName"] = '=D{0}&"_"&E{0}&"_"&F{0}&"_"&G{0}&"_"&A{0}&"_"&H{0}&"_"&I{0}&"_"&J{0}&"_"&K{0}&"_"&L{0}&"_"&M{0}'.format(lineNo+2);
+                    newRow["TestName"] = '=TEXTJOIN("_",TRUE,D{0}:G{0},A{0},H{0}:M{0})'.format(lineNo+2);
 
                 elif test in ["TP_BEGIN","TP_END"]:
                     newRow["Flow"] = "TP";

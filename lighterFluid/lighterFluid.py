@@ -35,7 +35,7 @@ userName = "cmichel1";
 product = "gnrdio";
 #file = "PTLArrayMasterSheet.xlsm";
 #file = "GNRDIO_COMMON_ONLY.xlsx";
-file = "gnrdioBackConvert_v1.xlsx";
+file = "gnrdioBackConvert_v2_stf200_flow.xlsx";
 # product = "ptl";
 
 #definitionDir = r"C:\Users\eoghanoc\OneDrive - Intel Corporation\Documents\CLIENT\LNL\Array\WW32";
