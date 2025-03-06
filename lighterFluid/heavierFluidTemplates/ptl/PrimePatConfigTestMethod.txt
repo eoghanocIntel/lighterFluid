@@ -4,6 +4,4 @@ Test PrimePatConfigTestMethod ###TestName###
     ConfigurationFile = "###ConfigurationFile###";
     SetPoint = "###SetPoint###";
     RegEx = "###RegEx###";
-    # SetPointsPlistMode = "#### SetPointsPlistMode###";
-    # SetPointsPreInstance = "#### SetPointsPreInstance###";
 }

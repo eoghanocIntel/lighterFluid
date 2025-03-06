@@ -27,8 +27,9 @@ def importBuilder(dataset, timeStamp, currModule):
     #    currModule = "COMMON";
     testPlan = "TestPlan " + currModule + ";\n";
     uservar = "Import " + currModule + ".usrv;\n";
+    basespecs = "Import BaseSpecs.usrv;\n"
     
-    importSection = importBegin + importTimeStamp + testPlan + uservar + "\n";
+    importSection = importBegin + importTimeStamp + testPlan + uservar + basespecs + "\n";
     
     timingsList = list(filter(None, dataset.Timings.dropna()))
     levelsList = list(filter(None, dataset.Levels.dropna()))

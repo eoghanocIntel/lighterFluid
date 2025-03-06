@@ -2,5 +2,5 @@ Test RecoveryUpdate ###TestName###
 {
     BypassPort = ###bypassGlobal###;
     RecoveryOption = "###RecoveryOption###";
-    TrackerName = "VPU";
+    TrackerName = "###TrackerName###";
 }

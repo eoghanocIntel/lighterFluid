@@ -6,5 +6,4 @@ Test iCCapturePacketsTest ###TestName###
     patlist = "###plist###";
     data_pins = "XXJTAG_CPU_TDO";
     output_tag = "###output_tag###";
-    mask_pins = "XXJTAG_CPU_TDO";
 }
