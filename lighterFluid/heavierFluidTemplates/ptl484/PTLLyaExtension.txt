@@ -1,0 +1,13 @@
+Test PTLLyaExtension ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    BitLineBarPin = "XXLYA_1";
+    BitLinePin = "XXLYA_0";
+    LyaConfigFile = "./Modules/ARR_COMMON/InputFiles/LYA_CCF_config_goodcell.lya.json";
+    StorageTag = "LYA_CCF";
+    TargetArray = "LLCDAT";
+    VccPin = "VCCIA_HC";
+    ExecutionMode = "GoodCell";
+}

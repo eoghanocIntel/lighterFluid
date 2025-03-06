@@ -1,0 +1,5 @@
+Test RecoveryInit ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    Parameter = "";
+}

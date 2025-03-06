@@ -1,0 +1,31 @@
+Test LNLVminSearchF ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    StartVoltages = "###StartVoltages###";
+    StartVoltagesForRetry = "###StartVoltagesForRetry###";
+    VoltageTargets = "VCCSA_HC";
+    PatternNameCounterIndexes = "9,10,11,12,13,14,15";
+    BaseNumbers = "###BaseNumbers###";
+    ExecutionMode = "###ExecutionMode###";
+    SetPointsPlistMode = "###SetPointsPlistMode###";
+    VminResultKey = "###VminResultKey###";
+    PinMap = "CORE";
+    RecoveryRule = "###RecoveryRule###";
+    TrackingStructure = "NPU";
+    IncomingPinMask = "ENABLED";
+    Log1_Mode = "DISABLED";
+    SetPointsPreInstance = "###SetPointsPreInstance###";
+    PatternTriggerMapLevel = "VBUMP_SA_SEARCH_search";
+    TriggerMapName = "VBUMP_VCCSA_TriggerMap";
+    ResetSeparationMode = "ENABLED";
+    DtsConfigName = "ALL";
+    DTSIndex = "0-38|87-129";
+    EndVoltageLimits = "###EndVoltageLimits###";
+    StepSize = 0.02;
+    MaxRepetitionCount = 1;
+    MaxFails = ###MaxFails###;
+    CTVContent = 1;
+}

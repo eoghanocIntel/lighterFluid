@@ -40,9 +40,9 @@ moduleList.append("arr_common");
 # moduleList.append("scn_dim");
 # moduleList.append("mio_ddr_ac");
 # moduleList.append("fun_core");
-# moduleList.append("arr_gfx");
+# moduleList.append("arr_dim");
 # moduleList.append("arr_soc");
-# moduleList.append("arr_npu");
+moduleList.append("arr_npu");
 #moduleList.append("arr_doe");
 
 #########################
@@ -80,7 +80,7 @@ moduleFlowList = ["TESTPLANSTARTFLOW",
                   "ENDTFM",
                   "ENDXFM",
                   "EXVF",
-                  "FINAL",
+                  "FINAL", 
                   "ALARM",
                   "STARTFAILFLOW",
                   ];

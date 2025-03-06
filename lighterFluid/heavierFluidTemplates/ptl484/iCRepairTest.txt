@@ -1,7 +1,7 @@
 Test iCRepairTest ###TestName###
 {
     bypass_global = "###bypassGlobal###";
-    configuration = "./Modules/ARR_ATOM/InputFiles/PTL_Repair_to_fuse_ATOM.xml!PTL";
+    configuration = "./Modules/ARR_COMMON/InputFiles/PTL_Repair_to_fuse_ATOM.xml!PTL";
     fuse_removal = "Outgoing_Only";
     hry_data_log = "OFF";
     input_tag = "none";
@@ -12,4 +12,6 @@ Test iCRepairTest ###TestName###
     mode_of_execution = "Manufacturing";
     raster_data_log = "None";
     redundancy_fuse_active = "ON";
+    ifpm_input_file = "./Modules/ARR_COMMON/InputFiles/nblcore.xml";
+    ifpm_modifygroups = "bt!nbl_core!ON";
 }

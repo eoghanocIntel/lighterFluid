@@ -1,0 +1,10 @@
+Test iCScreenTest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    screen_custom_file = "./Modules/ARR_COMMON/InputFiles/SCREENGENERIC.txt";
+    screen_custom_setpoint = "ALL";
+    screen_test_set = "DUMMY";
+    screen_tests_file = "./Modules/ARR_COMMON/InputFiles/SCREENDUMMY.txt";
+    ifpm_input_file = "###ifpm_input_file###";
+    ifpm_modifygroups = "###ifpm_modifygroups###";
+}

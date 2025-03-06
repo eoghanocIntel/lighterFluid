@@ -1,25 +1,27 @@
-Test PrimeMbistVminSearchTestMethod ###TestName###
+Test MbistVminTC ###TestName###
 {
     BypassPort = ###bypassGlobal###;
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
-    ClearVariables = "all,initialize";
+    ClearVariables = "###ClearVariables###";
     FeatureSwitchSettings = "";
     VoltageTargets = "###VoltageTargets###";
     StartVoltages = "###StartVoltages###";
     EndVoltageLimits = "###EndVoltageLimits###";
-    PatternNameMap = "9,10,11,12,13,14,15";
     CtvPins = "XXJTAG_CPU_TDO";
-    TestMode = "Scoreboard";
-    LookupTableConfigurationFile = "./Modules/ARR_COMMON/InputFiles/MBIST_HRY_ALL.json";
+    TestMode = "SingleVmin";
+    LookupTableConfigurationFile = "###LookupTableConfigurationFile###";
     MappingConfig = "./Modules/ARR_COMMON/InputFiles/SharedStortoDFFMap.json";
     MbistTestMode = "###MbistTestMode###";
-    BisrMode = "###BisrMode###";
-    ItuffNameExtenstion = "";
-    PrintToItuff = "";
-    StepSize = ###StepSize###;
+    BisrMode = "uncompress";
+    ItuffNameExtenstion = "###ItuffNameExtenstion###";
+    PrintToItuff = "###PrintToItuff###";
+    PreInstance = "###PreInstance###";
+    DffOperation = "###DffOperation###";
+    SetPointsPreInstance = "###SetPointsPreInstance###";
+    StepSize = 0.02;
     ScoreboardEdgeTicks = 0;
     MaxRepetitionCount = 0;
-    FailCaptureCount = 16;
+    FailCaptureCount = 150000;
 }

@@ -1,7 +1,7 @@
 ###################
 ###### SETUP ######
 ###################
-
+from collections import OrderedDict
 
 ####################
 ##### FUNCTION #####
@@ -165,11 +165,17 @@ def BuildTemplates(testInstanceDict, templateDir):
                 paramList.append("Patlist = \"###plist###\";");
         
         fullBonusList = list(templateDict[template]["bonusColsStrings"].keys()) + list(templateDict[template]["bonusColsIntegers"].keys());
-        
+        fullBonusList = list(OrderedDict.fromkeys(fullBonusList));
+
         for param in fullBonusList:
             
+            if param in ["EndVoltageLimits"]:
+                print("debug")
+
             if ((param in templateDict[template]["bonusColsStrings"].keys()) and (param in templateDict[template]["bonusColsIntegers"].keys())):
-                print("how is a param in both lists?")
+                templateDict[template]["bonusColsStrings"][param].union(templateDict[template]["bonusColsIntegers"][param]);
+                del templateDict[template]["bonusColsIntegers"][param];
+                print("how is a param in both lists? Removing from INT and making string")
                 
             if (param in templateDict[template]["bonusColsStrings"].keys()):
                 if (len(templateDict[template]["bonusColsStrings"][param]) > 1):

@@ -12,6 +12,9 @@ def parseTestInstanceItem(name, template, block_lines):
     testInstance.Template = template;
     testInstance.TestName = name;
     
+    if "RECBYPASS" in name:
+        print("recbypass");
+
     nameComponents = name.split("_");
 
     testInstance.IP = nameComponents[0];

@@ -1,0 +1,21 @@
+Test iCLYATest ###TestName###
+{
+    bypass_global = "###bypassGlobal###";
+    level = "###Levels###";
+    timings = "###Timings###";
+    bitline_barpin = "XXLYA_1";
+    bitline_pin = "XXLYA_0";
+    config_file = "###config_file###";
+    debug_mode = "DISABLED";
+    execution_mode = "###execution_mode###";
+    input_string_tag = "L2DAT";
+    mapper_file = "./Modules/ARR_ATOM/InputFiles/PTL_ArrayMap_ATOM.XML";
+    postinstance = "NHM_UF!SmartTcSetToEnable";
+    preinstance = "NHM_UF!SmartTcSetToDisable";
+    target_array = "l2dat";
+    vcc_pin = "###vcc_pin###";
+    basenumber = ###basenumber###;
+    max_lya_count = ###max_lya_count###;
+    pre_pause = 0.0;
+    vcc_maxlevel = 1.0;
+}

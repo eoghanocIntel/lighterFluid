@@ -1,0 +1,9 @@
+Test RWA ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    Module = "###Module###";
+    ArrayName = "###ArrayName###";
+    InputFile = "###InputFile###";
+    TestToExecute = "###TestToExecute###";
+    Repetition = 0;
+}

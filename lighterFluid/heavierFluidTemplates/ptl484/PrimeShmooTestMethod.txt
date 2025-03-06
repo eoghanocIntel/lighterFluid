@@ -4,10 +4,10 @@ Test PrimeShmooTestMethod ###TestName###
     LevelsTc = "###Levels###";
     TimingsTc = "###Timings###";
     Patlist = "###plist###";
-    YAxisParam = "###YAxisParam###";
-    YAxisRange = "0.5:0.05:9";
+    YAxisParam = "p_vccsa_spec";
+    YAxisRange = "1.05:0.05:10";
     XAxisParamType = "TimingTestCondition";
     XAxisParam = "p_mtd_per";
-    XAxisRange = "9e-9:0.5e-9:8";
+    XAxisRange = "0.9e-9:0.1e-9:3";
     YAxisParamType = "LevelsTestCondition";
 }

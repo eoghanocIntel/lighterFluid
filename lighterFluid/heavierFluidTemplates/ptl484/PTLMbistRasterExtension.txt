@@ -1,0 +1,15 @@
+Test PTLMbistRasterExtension ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    ArrayFile = "./Modules/ARR_COMMON/InputFiles/PTL_ArrayDefinition.json";
+    TargetArray = "LLCDAT";
+    DecoderMatchLabel = "All";
+    BaseNumber = "1";
+    DataLog = "Lya";
+    OperationMode = "Raster";
+    InputForDebug = "";
+    DeleteInputStorage = "Enabled";
+    TelemetryLevel = "Debug";
+    LyaStorageTag = "LYA_CCF";
+    InputStorageKey = "LYA_CCF";
+}

@@ -1,4 +1,4 @@
-Test MbistRasterRepairTC ###TestName###
+Test MbistRasterTC ###TestName###
 {
     BypassPort = ###bypassGlobal###;
     LevelsTc = "###Levels###";
@@ -8,9 +8,6 @@ Test MbistRasterRepairTC ###TestName###
     EnableRepair = "FALSE";
     RasterInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER_allplist.json";
     RasterOffHry = "0,F,N,P";
-    LYASharedStorage = "LYA_CCF";
-    RepairInputFile = "./Modules/ARR_COMMON/InputFiles/MBIST_RASTER_allplist.json";
-    HRYLimit = ###HRYLimit###;
     FailuresToCapturePerPattern = 100;
     FailuresToCaptureTotal = 1000;
     MaxFailuresPerPatternToItuff = 0;

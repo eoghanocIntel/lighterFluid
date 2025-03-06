@@ -1,0 +1,19 @@
+Test PrimeLSARasterTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    LevelsTc = "###Levels###";
+    TimingsTc = "###Timings###";
+    Patlist = "###plist###";
+    MetadataConfigPath = "./Modules/ARR_ATOM/InputFiles/SKT_PrimeMetaDataATOM.json";
+    PinMappingSetName = "###PinMappingSetName###";
+    PrescreenHryFlowToken = "###PrescreenHryFlowToken###";
+    PrescreenHryFrequencyToken = "800MHz";
+    PrescreenMapName = "###PrescreenMapName###";
+    ExecutionMode = "###ExecutionMode###";
+    HryMapPath = "###HryMapPath###";
+    OutputTag = "###OutputTag###";
+    PrescreenPrintMode = "CTVMODE";
+    RasterConfigPath = "###RasterConfigPath###";
+    TfileRasterPrint = "###TfileRasterPrint###";
+    PrescreenMafLimit = 500;
+}
