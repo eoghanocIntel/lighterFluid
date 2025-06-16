@@ -1,0 +1,7 @@
+Test PrimeRepairToFuseTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    ResourcesFilePath = "./Modules/ARR_ATOM/InputFiles/PTL_ArrayMap_ATOM.json";
+    FuseNamespace = "CPU0";
+    RepairToFuseFilePath = "./Modules/ARR_COMMON/InputFiles/PTL_Repair_to_fuse_ATOM.json";
+}

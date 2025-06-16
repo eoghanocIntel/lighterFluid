@@ -22,9 +22,9 @@ import shutil
 # userName = "adambyrn";
 
 # definitionDir = r"C:\Users\eoghanoc\source\repos\torch\lnl-cpu-v3\Modules";
-definitionDir = r"C:\Users\eoghanoc\source\repos\torch\ptl-cdie484\Modules";
+definitionDir = r"C:\Users\rbilei\source\repos\ptl-cdie-404\Modules";
 # definitionDir = r"C:\Users\eoghanoc\source\repos\lighterFluid\lighterFluid\testInputs";
-userName = "eoghanoc";
+userName = "rbilei";
 
 file = "ptlBackConvert.xlsx";
 product = "ptl484";
@@ -42,7 +42,7 @@ moduleList.append("arr_common");
 # moduleList.append("fun_core");
 # moduleList.append("arr_dim");
 # moduleList.append("arr_soc");
-moduleList.append("arr_npu");
+# moduleList.append("arr_npu");
 #moduleList.append("arr_doe");
 
 #########################

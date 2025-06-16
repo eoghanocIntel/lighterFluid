@@ -43,6 +43,7 @@
     <Compile Include="functions\TestInstance.py" />
     <Compile Include="heavierFluid.py" />
     <Compile Include="lighterFluid.py" />
+    <Compile Include="pandasInstall.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="functions\" />

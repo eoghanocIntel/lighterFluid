@@ -1,8 +1,8 @@
 Test PrimeSampleRateTestMethod ###TestName###
 {
     BypassPort = ###bypassGlobal###;
-    SamplingRateValue = "###SamplingRateValue###";
-    SampleOption = "###SampleOption###";
+    SamplingRateValue = "1";
+    SampleOption = "SAMPLE_LOWEST";
     PrintItuffExitPort = "False";
-    SampleLowestValue = "";
+    SampleLowestValue = EDCVars.SAMPLE_MBIST_RASTER;
 }

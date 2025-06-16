@@ -1,0 +1,11 @@
+Test PrimeVirtualFuseExportToSharedStorageTestMethod ###TestName###
+{
+    BypassPort = ###bypassGlobal###;
+    Namespace = "CPU0";
+    Tags = "";
+    HcsSharedStorageKey = "FUSE_EMB_VFDM_HCS_BINARY";
+    FdsSharedStorageKey = "FUSE_EMB_VFDM_FDS_BINARY";
+    FuseDataGap = "CPU0.VF_Heap_Data_Gap.VF_Heap_Data_Gap";
+    FuseDescriptorGap = "CPU0.VF_Heap_Descriptor_Gap.VF_Heap_Descriptor_Gap";
+    Threshold = 100;
+}
